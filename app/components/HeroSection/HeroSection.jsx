@@ -5,7 +5,7 @@ const HeroSection = () => {
     <>
       <div className="imgBg">
         <div className=" home-hero__content text-center">
-          <h1 className="heading-primary">Hey, I&apos;m Muhammad Asad</h1>
+          <h1 className="heading-primary Tilt">Hey, I&apos;m Muhammad Asad</h1>
           <div className="mt-[30px] max-w-[700px] leading-9 mx-auto text-[#333] text-[22px]">
             <p>
               A Result-Oriented Web Developer building and managing Websites and
@@ -17,6 +17,9 @@ const HeroSection = () => {
               Projects
             </a>
           </div>
+        </div>
+        <div class="home-hero__mouse-scroll-cont">
+          <div class="mouse"></div>
         </div>
       </div>
     </>

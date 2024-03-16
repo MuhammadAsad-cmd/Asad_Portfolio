@@ -2,12 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
+/* body {
   font-family: "Source Sans Pro", sans-serif;
+} */
+.Source {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 600;
+}
+.Tilt {
+  font-family: "Tilt Warp", sans-serif;
+}
+.Open-Sans {
+  font-family: "Open Sans", sans-serif;
 }
 
 .SpacingLetter {
   letter-spacing: 1px;
+}
+.HeaderShadows {
+  box-shadow: 0 10px 100px rgba(0, 0, 0, 0.3);
 }
 
 .imgBg {
@@ -19,14 +32,12 @@ body {
     url(../public/images/common-bg.svg);
   background-position: center;
   height: 100vh;
-  min-height: 80rem;
-  max-height: 120rem;
   position: relative;
 }
 
 .home-hero__content {
   position: absolute;
-  top: 18%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   max-width: 90rem;
@@ -39,7 +50,6 @@ body {
   letter-spacing: 2px;
   text-align: center;
   color: #111;
-  font-weight: 900;
 }
 
 .Btn-Bg {
@@ -56,4 +66,90 @@ body {
 
 .Btn-Bg:hover {
   transform: translateY(-3px);
+}
+
+.home-hero__mouse-scroll-cont {
+  position: absolute;
+  bottom: 3%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-family: inherit;
+}
+
+.mouse {
+  width: 25px;
+  height: 40px;
+  border: 2px solid #333;
+  border-radius: 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+.mouse::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  top: 7px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  border-radius: 50%;
+  opacity: 1;
+  animation: wheel 1.3s infinite;
+  -webkit-animation: wheel 1.3s infinite;
+}
+
+@keyframes wheel {
+  100% {
+    opacity: 0;
+    top: 27px;
+  }
+}
+
+.Spacing {
+  letter-spacing: 3px;
+}
+
+.BtnShadow {
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+  background: #7843e9;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: inline-block;
+  font-weight: 700;
+  border-radius: 5px;
+  transition: transform 0.3s;
+}
+
+.BtnShadow:hover {
+  transform: translateY(-3px);
+}
+
+.skills__skill {
+  padding: 10px 20px;
+  margin-bottom: 15px;
+  margin-right: 15px;
+  font-size: 16px;
+  background: rgba(153, 153, 153, 0.2);
+  border-radius: 5px;
+  font-weight: 600;
+  color: #666;
+}
+
+.HoverImg {
+  transition: transform 0.6s;
+}
+
+.HoverImg:hover {
+  transform: translateY(-10px);
 }
