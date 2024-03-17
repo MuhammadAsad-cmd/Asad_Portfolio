@@ -7,7 +7,7 @@ const Projects = () => {
   return (
     <>
       <div className="container mx-auto max-w-[1200px]">
-        <div className="Source mb-[100px] flex flex-col items-center justify-center pt-[120px] text-center">
+        <div className="Source mb-[100px] flex flex-col items-center justify-center px-5 pt-[120px] text-center">
           <h2 className="text-[40px] font-semibold uppercase  tracking-wider text-[#111] ">
             PROJECTS
           </h2>
@@ -18,8 +18,8 @@ const Projects = () => {
           </p>
         </div>
 
-        <div className="mb-28 grid grid-cols-2 gap-14">
-          <div className="">
+        <div className="mb-28 grid grid-cols-1 gap-0 gap-y-8 lg:grid-cols-2  xl:gap-14">
+          <div className="px-5 lg:px-9">
             <Image
               width={300}
               height={300}
@@ -31,7 +31,7 @@ const Projects = () => {
           </div>
           <div className="Open-Sans flex flex-col items-center justify-center text-center">
             <h3 className="text-xl font-bold uppercase">DashStack Dashboard</h3>
-            <p className="mt-3 px-20 text-base leading-7 text-[#666]">
+            <p className="mt-3 px-5 text-base leading-7 text-[#666] xl:px-10">
               Developed a sleek and responsive dashboard with Next.js, Tailwind
               CSS, and Redux Toolkit for efficient data management and
               visualization.Seamlessly integrated state management for enhanced
@@ -62,22 +62,22 @@ const Projects = () => {
             </div>
           </div>
         </div>
-        <div className="mb-28 grid grid-cols-2 gap-14">
+        <div className="mb-28 grid grid-cols-1 gap-0 gap-y-8 lg:grid-cols-2  xl:gap-14">
           <div className="Open-Sans flex flex-col items-center justify-center text-center">
             <div className="flex items-center gap-2">
               <h3 className="text-xl font-bold uppercase">
                 Supergear E-Commerce
               </h3>
               <Image
-                width={100}
-                height={100}
+                width={30}
+                height={30}
                 unoptimized
                 src="/images/next-js-template1-nbt-vercel-app-removebg-preview.png"
                 alt=""
-                className="h-full w-full"
+                className=""
               />
             </div>
-            <p className="mt-3 px-20 text-base leading-7 text-[#666]">
+            <p className="mt-3 px-5 text-base leading-7 text-[#666] xl:px-10">
               Crafted SuperGear, a sleek e-commerce interface using Next.js,
               Tailwind CSS, and Redux Toolkit. Implemented seamless frontend
               functionalities such as &apos;Add to Cart&apos; and
@@ -106,7 +106,7 @@ const Projects = () => {
               </a>
             </div>
           </div>
-          <div className="">
+          <div className="px-5 lg:px-9">
             <Image
               width={300}
               height={300}
@@ -117,8 +117,8 @@ const Projects = () => {
             />
           </div>
         </div>
-        <div className="mb-28 grid grid-cols-2 gap-14">
-          <div className="">
+        <div className="mb-28 grid grid-cols-1 gap-0 gap-y-8 lg:grid-cols-2  xl:gap-14">
+          <div className="px-5 lg:px-9">
             <Image
               width={300}
               height={300}
@@ -132,16 +132,16 @@ const Projects = () => {
             <div className="flex items-center gap-2">
               <h3 className="text-xl font-bold uppercase">Dental Health</h3>
               <Image
-                width={100}
-                height={100}
+                width={30}
+                height={30}
                 unoptimized
                 src="/images/Iconlogo.svg"
-                className="h-full w-full"
+                className=""
                 alt=""
               />
             </div>
 
-            <p className="mt-3 px-20 text-base leading-7 text-[#666]">
+            <p className="mt-3 px-5 text-base leading-7 text-[#666] xl:px-10">
               Developed the Dental Health frontend with Next.js and Tailwind
               CSS, creating a visually appealing and user-friendly interface.
               Leveraged Next.js for efficient routing and Tailwind CSS for rapid
@@ -170,20 +170,20 @@ const Projects = () => {
             </div>
           </div>
         </div>
-        <div className="mb-28 grid grid-cols-2 gap-14">
+        <div className="mb-28 grid grid-cols-1 gap-0 gap-y-8 lg:grid-cols-2  xl:gap-14">
           <div className="Open-Sans flex flex-col items-center justify-center text-center">
             <div className="flex items-center gap-2">
               <h3 className="text-xl font-bold uppercase">Logoipsum</h3>
               <Image
-                width={100}
-                height={100}
+                width={30}
+                height={30}
                 unoptimized
                 src="/images/tablogo.svg"
-                className="h-full w-full"
+                className=""
                 alt=""
               />
             </div>
-            <p className="mt-3 px-20 text-base leading-7 text-[#666]">
+            <p className="mt-3 px-5 text-base leading-7 text-[#666] xl:px-10">
               Developed a sleek and responsive Logoipsum Frontend with Next.js,
               Tailwind CSS, and Redux Toolkit for efficient data management and
               visualization.Seamlessly integrated state management for enhanced
@@ -210,7 +210,7 @@ const Projects = () => {
               </a>
             </div>
           </div>
-          <div className="">
+          <div className="px-5 lg:px-9">
             <Image
               width={300}
               height={300}
@@ -221,11 +221,11 @@ const Projects = () => {
             />
           </div>
         </div>
-        <div className="mb-28 grid grid-cols-2 gap-14">
-          <div className="">
+        <div className="mb-28 grid grid-cols-1 gap-0 gap-y-8 lg:grid-cols-2  xl:gap-14">
+          <div className="px-5 lg:px-9">
             <Image
-              width={300}
-              height={300}
+              width={30}
+              height={30}
               unoptimized
               src="/images/Bizzy-Front-End.png"
               alt="main image"
@@ -244,7 +244,7 @@ const Projects = () => {
                 className="h-8 w-8"
               />
             </div>
-            <p className="mt-3 px-20 text-base leading-7 text-[#666]">
+            <p className="mt-3 px-5 text-base leading-7 text-[#666] xl:px-10">
               Developed a sleek and responsive Bizzy Frontend with Next.js,
               Tailwind CSS, and Redux Toolkit for efficient data management and
               visualization.Seamlessly integrated state management for enhanced
