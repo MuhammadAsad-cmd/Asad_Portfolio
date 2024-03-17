@@ -8,7 +8,7 @@ const AboutMe = () => {
     { image: "/images/javascript.webp" },
     { name: "React", image: "/images/react.webp" },
     { image: "/images/node.png" },
-    { image: "/images/mongodb.webp" },
+    { image: "/images/mongoDB.webp" },
     { image: "/images/next.webp" },
     { image: "/images/tailwind.webp" },
     { image: "/images/redux toolkit.webp" },
