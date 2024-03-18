@@ -3,18 +3,18 @@ import React from "react";
 
 const AboutMe = () => {
   const skills = [
-    { name: "HTML", image: "/images/html.webp" },
-    { name: "CSS", image: "/images/css.webp" },
-    { image: "/images/javascript.webp" },
+    { image: "/images/next.webp" },
     { name: "React", image: "/images/react.webp" },
+    { image: "/images/tailwind.webp" },
+    { name: "Javascript", image: "/images/javascript.webp" },
     { image: "/images/node.png" },
     { image: "/images/mongoDB.webp" },
-    { image: "/images/next.webp" },
-    { image: "/images/tailwind.webp" },
     { image: "/images/redux toolkit.webp" },
-    { image: "/images/Git-logo.svg.png" },
     { image: "/images/github.png" },
+    { image: "/images/Git-logo.svg.png" },
     { image: "/images/vs_code.webp" },
+    { name: "HTML", image: "/images/html.webp" },
+    { name: "CSS", image: "/images/css.webp" },
   ];
 
   return (

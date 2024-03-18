@@ -42,7 +42,7 @@ const Projects = () => {
               <p>Redux Toolkit</p>
               <p>Tailwind CSS</p>
             </div>
-            <div className="my-6 flex items-center justify-center gap-10 text-base font-semibold leading-6">
+            <div className="my-6 flex items-center justify-center gap-10 font-sans text-base font-medium leading-6">
               <a
                 target="_blank"
                 href="https://github.com/MuhammadAsad-cmd/DashStack-Dashboard"
@@ -89,7 +89,7 @@ const Projects = () => {
               <p>Redux Toolkit</p>
               <p>Tailwind CSS</p>
             </div>
-            <div className="my-6 flex items-center justify-center gap-10 text-base font-semibold leading-6">
+            <div className="my-6 flex items-center justify-center gap-10  font-sans text-base font-medium leading-6">
               <a
                 href="https://github.com/MuhammadAsad-cmd/NextJS-NBT-Template1"
                 className="flex items-center gap-2"
@@ -152,7 +152,7 @@ const Projects = () => {
               <p>Next Js</p>
               <p>Tailwind CSS</p>
             </div>
-            <div className="my-6 flex items-center justify-center gap-10 text-base font-semibold leading-6">
+            <div className="my-6 flex items-center justify-center gap-10 font-sans text-base font-medium leading-6">
               <a
                 href="https://github.com/MuhammadAsad-cmd/Ui-Fry"
                 className="flex items-center gap-2"
@@ -193,7 +193,7 @@ const Projects = () => {
               <p>Next Js</p>
               <p>Tailwind CSS</p>
             </div>
-            <div className="my-6 flex items-center justify-center gap-10 text-base font-semibold leading-6">
+            <div className="my-6 flex items-center justify-center gap-10 font-sans text-base font-medium leading-6">
               <a
                 href="https://github.com/MuhammadAsad-cmd/Logoipsum-Template"
                 className="flex items-center gap-2"
@@ -254,7 +254,7 @@ const Projects = () => {
               <p>Next Js</p>
               <p>Tailwind CSS</p>
             </div>
-            <div className="my-6 flex items-center justify-center gap-10 text-base font-semibold leading-6">
+            <div className="my-6 flex items-center justify-center gap-10 font-sans text-base font-medium leading-6">
               <a
                 href="https://github.com/MuhammadAsad-cmd/Bizzy-FrontEnd"
                 className="flex items-center gap-2"

@@ -14,7 +14,7 @@ const Header = () => {
   return (
     <>
       <div className={`Source fixed z-50 w-full`}>
-        <div className="flex  items-center justify-between bg-white px-2 py-4 md:px-5 lg:px-[50px]">
+        <div className="HeaderShadows flex items-center justify-between  bg-white px-2 py-4 md:px-5 lg:px-[50px]">
           <div className="flex cursor-pointer items-center gap-2 text-[#333] duration-300 ease-in-out hover:text-[#7843E9] lg:gap-5">
             <div className="rounded-full bg-[#7843E9]">
               <Image
