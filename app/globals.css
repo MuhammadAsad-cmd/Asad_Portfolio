@@ -2,9 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-/* body {
-  font-family: "Source Sans Pro", sans-serif;
-} */
+body {
+  scroll-behavior: smooth;
+}
 .Source {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 600;

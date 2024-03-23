@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const HeroSection = () => {
@@ -15,9 +16,9 @@ const HeroSection = () => {
             </p>
           </div>
           <div className="mt-[50px]">
-            <a href="./#projects" className="Btn-Bg px-20 py-4 ">
-              Projects
-            </a>
+            <Link href="#Projects">
+              <p className="Btn-Bg px-20 py-4 ">Projects</p>
+            </Link>
           </div>
         </div>
         <div className="home-hero__mouse-scroll-cont hidden md:block">

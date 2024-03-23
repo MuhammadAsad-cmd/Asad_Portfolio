@@ -19,7 +19,7 @@ export default function Home() {
       <div id="Projects">
         <Projects />
       </div>
-      <div>
+      <div id="Contact">
         <Contact />
       </div>
     </>

@@ -49,9 +49,11 @@ const Header = () => {
                   <p> Projects </p>
                 </li>
               </Link>
-              <li className="cursor-pointer  px-5 py-[22px] text-[#333] duration-300 ease-in-out hover:text-[#7843E9] lg:px-[30px]">
-                <p> Contact </p>
-              </li>
+              <Link href="#Contact">
+                <li className="cursor-pointer  px-5 py-[22px] text-[#333] duration-300 ease-in-out hover:text-[#7843E9] lg:px-[30px]">
+                  <p> Contact </p>
+                </li>
+              </Link>
             </ul>
             <div>
               <button onClick={toggleMenu} className="md:hidden">

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const AboutMe = () => {
@@ -77,12 +78,9 @@ const AboutMe = () => {
                   to <strong>contact</strong> me.
                 </p>
               </div>
-              <a
-                href="./#contact"
-                className="BtnShadow px-[50px] py-4 text-base"
-              >
-                Contact
-              </a>
+              <Link href="#Contact">
+                <p className="BtnShadow px-[50px] py-4 text-base">Contact</p>
+              </Link>
             </div>
             <div className="px-0 lg:px-9">
               <h3 className="mb-[30px] hidden px-5 text-[28px] font-bold lg:block">
