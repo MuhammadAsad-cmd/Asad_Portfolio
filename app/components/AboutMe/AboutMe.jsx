@@ -37,7 +37,7 @@ const AboutMe = () => {
 
             <div className="mt-5 h-[5px] w-[30px] rounded-md bg-[#7843E9]"></div>
             <p
-              className={`mt-3  max-w-[800px] text-xl font-medium ${darkMode ? "text-[#979797]" : "text-[#4B5563] "} leading-8 `}
+              className={`mt-3  max-w-[800px] text-xl font-medium ${darkMode ? "text-[#979797]" : "text-[#4B5563]"} leading-8 `}
             >
               Here you will find more information about me, what I do, and my
               current skills mostly in terms of programming and technology
@@ -45,10 +45,14 @@ const AboutMe = () => {
           </div>
           <div className="grid grid-cols-1 gap-0 gap-y-10 lg:grid-cols-2 xl:gap-14">
             <div className="px-5 lg:px-9">
-              <h3 className="mb-[30px] text-[28px] font-bold">
+              <h3
+                className={`mb-[30px] ${darkMode ? "text-[#fff]" : "text-[#374151]"} text-[28px] font-bold`}
+              >
                 Get to know me!
               </h3>
-              <div className="text-lg leading-7 text-[#666]">
+              <div
+                className={`text-lg ${darkMode ? "text-[#979797]" : "text-[#4B5563] "} leading-7 text-[#666]`}
+              >
                 <p className="mb-3">
                   I&apos;m a <strong>Frontend Focused Web Developer</strong>{" "}
                   building and managing the Front-end of Websites and Web
@@ -94,15 +98,17 @@ const AboutMe = () => {
               </Link>
             </div>
             <div className="px-0 lg:px-9">
-              <h3 className="mb-[30px] hidden px-5 text-[28px] font-bold lg:block">
+              <h3
+                className={`mb-[30px] ${darkMode ? "text-[#fff]" : "text-[#374151]"} hidden px-5 text-[28px] font-bold lg:block`}
+              >
                 My Skills
               </h3>
               <div className="flex flex-col items-center justify-center">
-                <div className="grid grid-cols-2  items-center justify-center gap-x-6 sm:grid-cols-3 md:grid-cols-4">
+                <div className="grid grid-cols-3  items-center justify-center gap-x-6 sm:grid-cols-4 md:grid-cols-4">
                   {skills.map((skill, index) => (
                     <div
                       key={index}
-                      className="Skills-Shadow flex h-[85px] w-[110px] flex-col items-center justify-center rounded-2xl bg-white"
+                      className={`Skills-Shadow flex h-[85px] ${darkMode ? "bg-white" : "bg-white"}  w-[110px] flex-col items-center justify-center rounded-2xl `}
                     >
                       <Image
                         width={80}

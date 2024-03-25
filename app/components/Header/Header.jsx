@@ -73,9 +73,13 @@ const Header = () => {
             <div>
               <button onClick={toggleMenu} className="md:hidden">
                 {menuOpen ? (
-                  <RxCross1 className="ReadMore text-2xl" />
+                  <RxCross1
+                    className={`ReadMore ${darkMode ? "text-white hover:text-[#7843E9]" : "text-[#333]"} text-2xl`}
+                  />
                 ) : (
-                  <TiThMenuOutline className="ReadMore text-2xl" />
+                  <TiThMenuOutline
+                    className={`ReadMore ${darkMode ? "text-white hover:text-[#7843E9]" : "text-[#333]"} text-2xl`}
+                  />
                 )}
               </button>
             </div>
@@ -84,27 +88,37 @@ const Header = () => {
       </div>
 
       {menuOpen && (
-        <div className="z-50 flex flex-col bg-[#FFFFFF] px-5 text-end lg:hidden">
-          <p
-            className={`mt-24 cursor-pointer border-b border-t p-4 text-base font-bold ${darkMode ? "text-white hover:text-[#7843E9]" : "text-[#333]"} duration-500 ease-in-out hover:text-[#7843E9]`}
-          >
-            Home
-          </p>
-          <p
-            className={`cursor-pointer border-b p-4 text-base font-bold ${darkMode ? "text-white hover:text-[#7843E9]" : "text-[#333]"} duration-500 ease-in-out hover:text-[#7843E9]`}
-          >
-            About
-          </p>
-          <p
-            className={`cursor-pointer border-b p-4 text-base font-bold ${darkMode ? "text-white hover:text-[#7843E9]" : "text-[#333]"} duration-500 ease-in-out hover:text-[#7843E9]`}
-          >
-            Projects
-          </p>
-          <p
-            className={`cursor-pointer border-b p-4 text-base font-bold ${darkMode ? "text-white hover:text-[#7843E9]" : "text-[#333]"} duration-500 ease-in-out hover:text-[#7843E9]`}
-          >
-            Contact
-          </p>
+        <div
+          className={`z-50 flex flex-col ${darkMode ? "bg-[#343f4b]" : "bg-[#ecf0f3]"} px-5 text-end lg:hidden`}
+        >
+          <Link href="/">
+            <p
+              className={`mt-6 cursor-pointer border-b border-t p-4 text-base font-bold ${darkMode ? "text-white hover:text-[#7843E9]" : "text-[#333]"} duration-500 ease-in-out hover:text-[#7843E9]`}
+            >
+              Home
+            </p>
+          </Link>
+          <Link href="/#About">
+            <p
+              className={`cursor-pointer border-b p-4 text-base font-bold ${darkMode ? "text-white hover:text-[#7843E9]" : "text-[#333]"} duration-500 ease-in-out hover:text-[#7843E9]`}
+            >
+              About
+            </p>
+          </Link>
+          <Link href="/#Projects">
+            <p
+              className={`cursor-pointer border-b p-4 text-base font-bold ${darkMode ? "text-white hover:text-[#7843E9]" : "text-[#333]"} duration-500 ease-in-out hover:text-[#7843E9]`}
+            >
+              Projects
+            </p>
+          </Link>
+          <Link href="/#Contact">
+            <p
+              className={`cursor-pointer border-b p-4 text-base font-bold ${darkMode ? "text-white hover:text-[#7843E9]" : "text-[#333]"} duration-500 ease-in-out hover:text-[#7843E9]`}
+            >
+              Contact
+            </p>
+          </Link>
         </div>
       )}
     </>
