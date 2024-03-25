@@ -9,7 +9,10 @@ const Projects = () => {
   const { darkMode } = useTheme();
   return (
     <>
-      <div className={`${darkMode ? "bg-[#343f4b]" : "bg-[#FAFAFA]"}`}>
+      <div
+        id="Projects"
+        className={`${darkMode ? "bg-[#343f4b]" : "bg-[#ecf0f3]"}`}
+      >
         <div className="container mx-auto max-w-[1200px]">
           <div className="Source mb-[100px] flex flex-col items-center justify-center px-5 pt-[120px] text-center">
             <h2 className="text-[40px] font-semibold uppercase  tracking-wider text-[#111] ">

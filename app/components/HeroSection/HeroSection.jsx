@@ -8,14 +8,21 @@ const HeroSection = () => {
   return (
     <>
       <div
-        className={`pb-0 pt-[120px]   ${darkMode ? "bg-[#343f4b]" : "bg-white"}`}
+        className={`flex flex-col items-center justify-center pb-0 pt-[100px] ${darkMode ? "bg-[#343f4b]" : "bg-[#ecf0f3]"}`}
       >
         <div className=" home-hero__content  text-center">
-          <h1 className="heading-primary Tilt text-3xl uppercase text-[#111] md:text-[40px] lg:text-[60px]">
-            Hey, I&apos;m Muhammad Asad
+          <h1
+            className={`heading-primary Raleway LeadingLetter py-[10px] font-bold ${darkMode ? "text-[#fff]" : "text-[#374151]"}  text-3xl  md:text-[40px] lg:text-[60px]`}
+          >
+            Hi, I&apos;m Asad
           </h1>
-          <div className="mx-auto mt-[30px] text-[22px] leading-9 text-[#333] lg:max-w-[700px]">
-            <p>
+          <h2
+            className={`LeadingLetter Raleway ${darkMode ? "text-[#fff]" : "text-[#374151]"} mt-[8px] text-6xl font-bold`}
+          >
+            A Front-End Web Developer
+          </h2>
+          <div className="mx-auto mt-[30px] text-[22px] leading-9 lg:max-w-[700px]">
+            <p className={`${darkMode ? "text-[#979797]" : "text-[#4B5563] "}`}>
               A Result-Oriented Web Developer building and managing Websites and
               Web Applications that leads to the success of the overall product
             </p>
@@ -26,9 +33,9 @@ const HeroSection = () => {
             </Link>
           </div>
         </div>
-        <div className="home-hero__mouse-scroll-cont hidden md:block">
+        {/* <div className="home-hero__mouse-scroll-cont hidden md:block">
           <div className="mouse"></div>
-        </div>
+        </div> */}
       </div>
     </>
   );

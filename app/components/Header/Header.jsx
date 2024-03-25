@@ -18,7 +18,7 @@ const Header = () => {
     <>
       <div className={`Source  z-50 w-full`}>
         <div
-          className={`HeaderShadows ${darkMode ? "bg-[#343f4b]" : "bg-white"} flex items-center justify-between px-2 py-4 md:px-5 lg:px-[50px]`}
+          className={`HeaderShadows ${darkMode ? "bg-[#343f4b]" : "bg-[#ecf0f3]"} flex items-center justify-between px-2 py-4 md:px-5 lg:px-[50px]`}
         >
           <div
             className={`flex cursor-pointer items-center gap-2  ${darkMode ? "text-white hover:text-[#7843E9]" : "text-[#333]"} duration-300 ease-in-out hover:text-[#7843E9] lg:gap-5`}
@@ -41,28 +41,28 @@ const Header = () => {
           </div>
           <div className="">
             <ul class="SpacingLetter hidden items-center text-base font-bold md:flex">
-              <Link href="#/">
+              <Link href="/">
                 <li
                   className={`cursor-pointer px-5 py-[22px] ${darkMode ? "text-white hover:text-[#7843E9]" : "text-[#333]"} duration-300 ease-in-out hover:text-[#7843E9] lg:px-[30px]`}
                 >
                   <p> Home </p>
                 </li>
               </Link>
-              <Link href="#About">
+              <Link href="/#About">
                 <li
                   className={`cursor-pointer px-5 py-[22px] ${darkMode ? "text-white hover:text-[#7843E9]" : "text-[#333]"} duration-300 ease-in-out hover:text-[#7843E9] lg:px-[30px]`}
                 >
                   <p>About </p>
                 </li>
               </Link>
-              <Link href="#Projects">
+              <Link href="/#Projects">
                 <li
                   className={`cursor-pointer px-5 py-[22px] ${darkMode ? "text-white hover:text-[#7843E9]" : "text-[#333]"} duration-300 ease-in-out hover:text-[#7843E9] lg:px-[30px]`}
                 >
                   <p> Projects </p>
                 </li>
               </Link>
-              <Link href="#Contact">
+              <Link href="/#Contact">
                 <li
                   className={`cursor-pointer px-5 py-[22px] ${darkMode ? "text-white hover:text-[#7843E9]" : "text-[#333]"} duration-300 ease-in-out hover:text-[#7843E9] lg:px-[30px]`}
                 >

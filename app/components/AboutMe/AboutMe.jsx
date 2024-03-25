@@ -23,14 +23,22 @@ const AboutMe = () => {
 
   return (
     <>
-      <div className={`${darkMode ? "bg-[#343f4b]" : "bg-[#FAFAFA]"}`}>
+      <div
+        id="About"
+        className={`${darkMode ? "bg-[#343f4b]" : "bg-[#ecf0f3]"}`}
+      >
         <div className="container mx-auto max-w-[1200px] py-0 md:py-[60px] lg:py-[110px]">
           <div className="Source mb-[35px] flex flex-col items-center justify-center px-5 pt-[120px] text-center">
-            <h2 className="text-[40px] font-bold  uppercase text-[#111] ">
+            <h2
+              className={`text-[40px]  ${darkMode ? "text-[#fff]" : "text-[#374151]"} font-bold  uppercase text-[#111]`}
+            >
               About Me
             </h2>
+
             <div className="mt-5 h-[5px] w-[30px] rounded-md bg-[#7843E9]"></div>
-            <p className="mt-3  max-w-[800px] text-xl font-medium leading-8 text-[#555]">
+            <p
+              className={`mt-3  max-w-[800px] text-xl font-medium ${darkMode ? "text-[#979797]" : "text-[#4B5563] "} leading-8 `}
+            >
               Here you will find more information about me, what I do, and my
               current skills mostly in terms of programming and technology
             </p>

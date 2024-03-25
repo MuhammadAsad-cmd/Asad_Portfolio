@@ -7,7 +7,8 @@ const Contact = () => {
   return (
     <>
       <div
-        className={`py-[100px] ${darkMode ? "bg-[#343f4b]" : "bg-[#FAFAFA]"}`}
+        id="Contact"
+        className={`py-[100px] ${darkMode ? "bg-[#343f4b]" : "bg-[#ecf0f3]"}`}
       >
         <div className="flex flex-col items-center justify-center px-5 text-center">
           <h2 className="text-[40px] font-bold uppercase  tracking-wider text-[#111] ">
@@ -22,7 +23,7 @@ const Contact = () => {
         <div className="container mx-auto mt-[50px]  max-w-[630px]">
           <form>
             <fieldset
-              className={`mx-5 rounded-2xl border  ${darkMode ? "border-[#979797] bg-[#343f4b] text-white" : "border-gray-300 bg-black text-white"} p-[30px] pr-12`}
+              className={`mx-5 rounded-2xl border  ${darkMode ? "border-[#979797] bg-[#343f4b] text-white" : "border-gray-300 bg-white text-[#333333]"} p-[30px] pr-12`}
             >
               <legend className="mx-auto flex items-center justify-center">
                 <img src="/images/Icon Container.png" alt="msg" />
