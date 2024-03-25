@@ -1,10 +1,15 @@
+"use client";
+import { useTheme } from "@/app/ThemeContext";
 import Link from "next/link";
 import React from "react";
 
 const HeroSection = () => {
+  const { darkMode } = useTheme();
   return (
     <>
-      <div className="imgBg pb-0 pt-[130px] lg:pb-20  xl:pb-0 xl:pt-0">
+      <div
+        className={`pb-0 pt-[120px]   ${darkMode ? "bg-[#343f4b]" : "bg-white"}`}
+      >
         <div className=" home-hero__content  text-center">
           <h1 className="heading-primary Tilt text-3xl uppercase text-[#111] md:text-[40px] lg:text-[60px]">
             Hey, I&apos;m Muhammad Asad

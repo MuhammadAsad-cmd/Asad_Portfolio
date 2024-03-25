@@ -1,3 +1,5 @@
+import { ThemeProvider } from "./ThemeContext";
+import ThemeToggle from "./components/ThemeToggle/ThemeToggle";
 import "./globals.css";
 
 export const metadata = {
@@ -32,7 +34,12 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
         />
       </head>
-      <body>{children}</body>
+      <body>
+        <ThemeProvider>
+          {children}
+          <ThemeToggle />
+        </ThemeProvider>
+      </body>
     </html>
   );
 }

@@ -1,8 +1,11 @@
+"use client";
+import { useTheme } from "@/app/ThemeContext";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
 const AboutMe = () => {
+  const { darkMode } = useTheme();
   const skills = [
     { image: "/images/next.webp" },
     { name: "React", image: "/images/react.webp" },
@@ -20,7 +23,7 @@ const AboutMe = () => {
 
   return (
     <>
-      <div className=" bg-[#FAFAFA]">
+      <div className={`${darkMode ? "bg-[#343f4b]" : "bg-[#FAFAFA]"}`}>
         <div className="container mx-auto max-w-[1200px] py-0 md:py-[60px] lg:py-[110px]">
           <div className="Source mb-[35px] flex flex-col items-center justify-center px-5 pt-[120px] text-center">
             <h2 className="text-[40px] font-bold  uppercase text-[#111] ">

@@ -4,6 +4,7 @@ import Header from "./components/Header/Header";
 import HeroSection from "./components/HeroSection/HeroSection";
 import ScrollToTopButton from "./components/ScrollToTopButton/ScrollToTopButton";
 import Contact from "./components/Contact/Contact";
+import Footer from "./components/Footer/Footer";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
       <div id="Contact">
         <Contact />
       </div>
+      <Footer />
     </>
   );
 }
