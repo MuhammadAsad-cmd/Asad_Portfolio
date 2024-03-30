@@ -35,6 +35,72 @@ const Projects = () => {
                 width={300}
                 height={300}
                 unoptimized
+                src="/images/Medicalathletic-Medical-Athletic (14).png"
+                alt="main image"
+                className="HoverImg h-full w-full cursor-pointer rounded-xl"
+              />
+            </div>
+            <div className="Open-Sans flex flex-col items-center justify-center text-center">
+              <div className="flex items-center gap-2">
+                <h3
+                  className={`text-xl ${darkMode ? "text-[#fff]" : "text-[#374151]"} font-bold uppercase`}
+                >
+                  Medical Athletic
+                </h3>
+                <Image
+                  width={30}
+                  height={30}
+                  unoptimized
+                  src="/images/Medical-Athletic logo.webp"
+                  alt=""
+                  className=""
+                />
+              </div>
+              <p
+                className={`mt-3 ${darkMode ? "text-[#979797]" : "text-[#4B5563]"} px-5 text-base leading-7 xl:px-10`}
+              >
+                Developed a sleek and responsive website with Next.js, Tailwind
+                CSS, and Redux Toolkit for efficient data management and
+                visualization.Seamlessly integrated state management for
+                enhanced data handling, resulting in an intuitive user
+                experience
+              </p>
+              <div
+                className={`my-10 flex items-center justify-center gap-10 text-base ${darkMode ? "text-[#fff]" : "text-[#374151]"} font-bold`}
+              >
+                <p>Next Js</p>
+                <p>Redux Toolkit</p>
+                <p>Tailwind CSS</p>
+              </div>
+              <div
+                className={`my-6 flex items-center justify-center gap-10 font-sans text-base ${darkMode ? "text-[#fff]" : "text-[#374151]"} font-medium leading-6`}
+              >
+                <a
+                  target="_blank"
+                  href="https://github.com/waleedahmad-nbt/Medical-Athletics--Template"
+                  className="flex items-center gap-2"
+                >
+                  <p>Code </p>
+                  <FaGithub className="text-2xl " />
+                </a>
+                <a
+                  target="_blank"
+                  href="https://medical-athletics-template.vercel.app/"
+                  className="group flex items-center gap-2"
+                >
+                  <p>Live Demo </p>
+                  <PiArrowSquareOutBold className="text-2xl duration-300 ease-in-out" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div className="mb-28 grid grid-cols-1 gap-0 gap-y-8 lg:grid-cols-2  xl:gap-14">
+            <div className="px-5 lg:px-9">
+              <Image
+                width={300}
+                height={300}
+                unoptimized
                 src="/images/dash-stack-frontend-vercel-app.png"
                 alt="main image"
                 className="HoverImg h-full w-full cursor-pointer rounded-xl"

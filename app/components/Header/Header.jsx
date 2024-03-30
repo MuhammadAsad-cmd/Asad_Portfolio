@@ -29,7 +29,7 @@ const Header = () => {
                 height={50}
                 unoptimized
                 src="/images/asad1.jpg"
-                alt=""
+                alt="imgg"
                 className="h-[50px] w-[50px] overflow-hidden rounded-full object-cover object-center p-1"
               />
             </div>
@@ -40,7 +40,7 @@ const Header = () => {
             </div>
           </div>
           <div className="">
-            <ul class="SpacingLetter hidden items-center text-base font-bold md:flex">
+            <ul className="SpacingLetter hidden items-center text-base font-bold md:flex">
               <Link href="/">
                 <li
                   className={`cursor-pointer px-5 py-[22px] ${darkMode ? "text-white hover:text-[#7843E9]" : "text-[#333]"} duration-300 ease-in-out hover:text-[#7843E9] lg:px-[30px]`}

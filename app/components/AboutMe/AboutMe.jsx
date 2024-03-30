@@ -7,18 +7,23 @@ import React from "react";
 const AboutMe = () => {
   const { darkMode } = useTheme();
   const skills = [
-    { image: "/images/next.webp" },
-    { name: "React", image: "/images/react.webp" },
-    { image: "/images/tailwind.webp" },
-    { name: "Javascript", image: "/images/javascript.webp" },
-    { image: "/images/node.png" },
-    { image: "/images/mongoDB.webp" },
-    { image: "/images/redux toolkit.webp" },
-    { image: "/images/github.png" },
-    { image: "/images/Git-logo.svg.png" },
-    { image: "/images/vs_code.webp" },
-    { name: "HTML", image: "/images/html.webp" },
-    { name: "CSS", image: "/images/css.webp" },
+    { image: "/images/next.webp", width: 80, height: 45 },
+    { name: "React", image: "/images/react.webp", width: 80, height: 45 },
+    { image: "/images/tailwind.webp", width: 80, height: 45 },
+    {
+      name: "Javascript",
+      image: "/images/javascript.webp",
+      width: 80,
+      height: 45,
+    },
+    { image: "/images/node.png", width: 80, height: 45 },
+    { image: "/images/mongoDB.webp", width: 80, height: 45 },
+    { image: "/images/redux toolkit.webp", width: 80, height: 45 },
+    { image: "/images/github.png", width: 80, height: 45 },
+    { image: "/images/Git-logo.svg.png", width: 80, height: 45 },
+    { image: "/images/vs_code.webp", width: 80, height: 45 },
+    { name: "HTML", image: "/images/html.webp", width: 80, height: 45 },
+    { name: "CSS", image: "/images/css.webp", width: 80, height: 45 },
   ];
 
   return (
@@ -111,11 +116,11 @@ const AboutMe = () => {
                       className={`Skills-Shadow flex h-[85px] ${darkMode ? "bg-white" : "bg-white"}  w-[110px] flex-col items-center justify-center rounded-2xl `}
                     >
                       <Image
-                        width={80}
-                        height={45}
+                        width={skill.width}
+                        height={skill.height}
                         unoptimized
                         src={skill.image}
-                        alt={skill.name}
+                        alt={skill.name || "Image"}
                         className="h-[45px] w-[85px] object-contain"
                       />
                       <h3 className="mt-[5px] text-xs font-semibold text-[#0F141E]">

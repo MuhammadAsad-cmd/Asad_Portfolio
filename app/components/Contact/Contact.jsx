@@ -1,9 +1,34 @@
 "use client";
 import { useTheme } from "@/app/ThemeContext";
-import React from "react";
+import axios from "axios";
+import React, { useState } from "react";
 
 const Contact = () => {
   const { darkMode } = useTheme();
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      await axios.post("/api/contact", formData); // Corrected URL
+      alert("Message sent successfully!");
+      // Optionally, clear the form after successful submission
+      setFormData({ name: "", email: "", message: "" });
+    } catch (error) {
+      console.error("Error sending message:", error);
+      alert("Failed to send message. Please try again later.");
+    }
+  };
+
   return (
     <>
       <div
@@ -25,7 +50,7 @@ const Contact = () => {
           </p>
         </div>
         <div className="container mx-auto mt-[50px]  max-w-[630px]">
-          <form>
+          <form onSubmit={handleSubmit}>
             <fieldset
               className={`mx-5 rounded-2xl border  ${darkMode ? "border-[#979797] bg-[#343f4b] text-white" : "border-gray-300 bg-white text-[#333333]"} p-[30px] pr-12`}
             >
@@ -42,7 +67,10 @@ const Contact = () => {
                 </label>
                 <input
                   type="text"
-                  id="first_name"
+                  id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
                   className="block h-[52px] w-full rounded-lg border border-gray-300 bg-transparent px-2 text-base  outline-none"
                   placeholder="Enter your Name"
                   required
@@ -58,6 +86,9 @@ const Contact = () => {
                 <input
                   type="email"
                   id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
                   className="block h-[52px] w-full rounded-lg border border-gray-300 bg-transparent px-2 text-base  outline-none"
                   placeholder="Enter your email"
                   required
@@ -71,8 +102,11 @@ const Contact = () => {
                   Your message
                 </label>
                 <textarea
-                  id="message"
                   rows="9"
+                  id="message"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
                   className="block w-full rounded-lg border border-gray-300 bg-transparent px-2 py-2 text-base outline-none"
                   placeholder="Write your thoughts here..."
                 ></textarea>
