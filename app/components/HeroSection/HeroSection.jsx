@@ -14,7 +14,7 @@ const HeroSection = () => {
           <h1
             className={`heading-primary Raleway LeadingLetter py-1 font-bold lg:py-[10px] ${darkMode ? "text-[#fff]" : "text-[#374151]"}  text-3xl  md:text-[40px] lg:text-[60px]`}
           >
-            Hi, I&apos; Asad
+            Hi, I&apos;m Asad
           </h1>
           <h2
             className={`LeadingLetter Raleway ${darkMode ? "text-[#fff]" : "text-[#374151]"} mt-1 text-3xl  font-bold md:text-[40px] lg:mt-[8px] lg:text-[60px]`}
