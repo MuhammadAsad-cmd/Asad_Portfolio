@@ -36,41 +36,6 @@ html {
   line-height: 60px;
 }
 
-/* .imgBg {
-  background: linear-gradient(
-      to right,
-      rgba(245, 245, 245, 0.8),
-      rgba(245, 245, 245, 0.8)
-    ),
-    url(../public/images/common-bg.svg);
-  background-position: center;
-  height: 120vh;
-  position: relative;
-  top: 10%;
-} */
-
-/* Update your CSS to use CSS variables for background colors */
-.imgBg {
-  background: linear-gradient(
-      to right,
-      var(--bg-gradient-light),
-      var(--bg-gradient-light)
-    ),
-    url(../public/images/common-bg.svg);
-  background-position: center;
-  height: 120vh;
-  position: relative;
-  top: 10%;
-}
-
-.dark-mode .imgBg {
-  --bg-gradient-light: #343f4b;
-}
-
-.light-mode .imgBg {
-  --bg-gradient-light: rgba(245, 245, 245, 0.8);
-}
-
 .heading-primary {
   letter-spacing: 2px;
 }
@@ -158,37 +123,12 @@ html {
   transform: translateY(-3px);
 }
 
-.skills__skill {
-  padding: 10px 20px;
-  margin-bottom: 15px;
-  margin-right: 15px;
-  font-size: 16px;
-  background: rgba(153, 153, 153, 0.2);
-  border-radius: 5px;
-  font-weight: 600;
-  color: #666;
-}
-
 .HoverImg {
   transition: transform 0.6s;
 }
 
 .HoverImg:hover {
   transform: translateY(-10px);
-}
-
-.Skills-case {
-  transform-style: preserve-2d;
-  transform: perspective(1600px) rotateY(-20deg);
-  -webkit-mask-image: linear-gradient(270deg, #000 85%, transparent);
-  mask-image: linear-gradient(270deg, #000 85%, transparent);
-}
-
-.Animate-show {
-  opacity: 1;
-  transition:
-    transform 0.8s,
-    opacity 0.8s;
 }
 
 .Skills-Shadow {
