@@ -17,10 +17,12 @@ const Projects = () => {
     <>
       <div
         id="Projects"
-        className={`${darkMode ? "bg-[#343f4b]" : "bg-[#ecf0f3]"}`}
+        className={`${
+          darkMode ? "bg-[#343f4b]" : "bg-[#ecf0f3]"
+        } overflow-hidden`}
       >
         <div className="container mx-auto max-w-[1200px]">
-          <div className="Source mb-[100px] flex flex-col items-center justify-center px-5 pt-[120px] text-center">
+          <div className="Source mb-[100px] flex flex-col items-center justify-center px-5 pt-16 text-center md:pt-20 lg:pt-[120px]">
             <h2
               className={`text-[40px] ${darkMode ? "text-[#fff]" : "text-[#374151]"} font-semibold uppercase  tracking-wider`}
             >
@@ -77,7 +79,7 @@ const Projects = () => {
                 experience
               </p>
               <div
-                className={`my-10 flex items-center justify-center gap-10 text-base ${darkMode ? "text-[#fff]" : "text-[#374151]"} font-bold`}
+                className={`my-10 flex flex-wrap items-center justify-center gap-10 text-base ${darkMode ? "text-[#fff]" : "text-[#374151]"} font-bold`}
               >
                 <p
                   data-aos="fade-zoom-in"
@@ -153,7 +155,7 @@ const Projects = () => {
                 experience
               </p>
               <div
-                className={`my-10 flex items-center justify-center gap-10 text-base ${darkMode ? "text-[#fff]" : "text-[#374151]"} font-bold`}
+                className={`my-10 flex flex-wrap items-center justify-center gap-10 text-base ${darkMode ? "text-[#fff]" : "text-[#374151]"} font-bold`}
               >
                 <p
                   data-aos="fade-zoom-in"
@@ -247,7 +249,7 @@ const Projects = () => {
                 experience
               </p>
               <div
-                className={`my-10 flex items-center justify-center gap-10 text-base ${darkMode ? "text-[#fff]" : "text-[#374151]"} font-bold`}
+                className={`my-10 flex flex-wrap items-center justify-center gap-10 text-base ${darkMode ? "text-[#fff]" : "text-[#374151]"} font-bold`}
               >
                 <p
                   data-aos="fade-zoom-in"
@@ -354,7 +356,7 @@ const Projects = () => {
                 enhancing user experience in accessing dental health information
               </p>
               <div
-                className={`my-10 flex items-center justify-center gap-10 text-base ${darkMode ? "text-[#fff]" : "text-[#374151]"} font-bold`}
+                className={`my-10 flex flex-wrap items-center justify-center gap-10 text-base ${darkMode ? "text-[#fff]" : "text-[#374151]"} font-bold`}
               >
                 <p
                   data-aos="fade-zoom-in"
@@ -426,7 +428,7 @@ const Projects = () => {
                 user experience
               </p>
               <div
-                className={`my-10 flex items-center justify-center gap-10 text-base ${darkMode ? "text-[#fff]" : "text-[#374151]"} font-bold`}
+                className={`my-10 flex flex-wrap items-center justify-center gap-10 text-base ${darkMode ? "text-[#fff]" : "text-[#374151]"} font-bold`}
               >
                 <p
                   data-aos="fade-zoom-in"
@@ -516,6 +518,7 @@ const Projects = () => {
                 />
               </div>
               <p
+                data-aos="fade-up"
                 className={`mt-3 px-5 text-base leading-7 ${darkMode ? "text-[#979797]" : "text-[#4B5563]"} xl:px-10`}
               >
                 Developed a sleek and responsive Bizzy Frontend with Next.js,
@@ -525,7 +528,7 @@ const Projects = () => {
                 experience
               </p>
               <div
-                className={`my-10 flex items-center justify-center gap-10 text-base ${darkMode ? "text-[#fff]" : "text-[#374151]"} font-bold`}
+                className={`my-10 flex flex-wrap items-center justify-center gap-10 text-base ${darkMode ? "text-[#fff]" : "text-[#374151]"} font-bold`}
               >
                 <p
                   data-aos="fade-zoom-in"

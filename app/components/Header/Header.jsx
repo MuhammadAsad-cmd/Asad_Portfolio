@@ -93,7 +93,7 @@ const Header = () => {
         >
           <Link href="/">
             <p
-              className={`mt-6 cursor-pointer border-b border-t p-4 text-base font-bold ${darkMode ? "text-white hover:text-[#7843E9]" : "text-[#333]"} duration-500 ease-in-out hover:text-[#7843E9]`}
+              className={`mt-6 cursor-pointer border-b p-4 text-base font-bold ${darkMode ? "text-white hover:text-[#7843E9]" : "text-[#333]"} duration-500 ease-in-out hover:text-[#7843E9]`}
             >
               Home
             </p>

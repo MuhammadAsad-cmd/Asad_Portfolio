@@ -33,7 +33,7 @@ const AboutMe = () => {
         className={`${darkMode ? "bg-[#343f4b]" : "bg-[#ecf0f3]"}`}
       >
         <div className="container mx-auto max-w-[1200px] py-0 md:py-[60px] lg:py-[110px]">
-          <div className="Source mb-[35px] flex flex-col items-center justify-center px-5 pt-[120px] text-center">
+          <div className="Source mb-[35px] flex flex-col items-center justify-center px-2 pt-16 text-center md:px-5 md:pt-20 lg:pt-[120px]">
             <h2
               className={`text-[40px]  ${darkMode ? "text-[#fff]" : "text-[#374151]"} font-bold  uppercase text-[#111]`}
             >
@@ -109,7 +109,7 @@ const AboutMe = () => {
                 My Skills
               </h3>
               <div className="flex flex-col items-center justify-center">
-                <div className="grid grid-cols-3  items-center justify-center gap-x-6 sm:grid-cols-4 md:grid-cols-4">
+                <div className="grid grid-cols-2  items-center justify-center gap-x-10 sm:grid-cols-3 md:grid-cols-4 md:gap-x-6">
                   {skills.map((skill, index) => (
                     <div
                       key={index}
