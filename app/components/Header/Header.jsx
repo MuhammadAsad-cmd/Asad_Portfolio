@@ -34,9 +34,12 @@ const Header = () => {
               />
             </div>
             <div>
-              <h2 className="SpacingLetter text-lg  font-bold uppercase">
+              <a
+                href="#"
+                className="SpacingLetter text-lg  font-bold uppercase"
+              >
                 Muhammad Asad
-              </h2>
+              </a>
             </div>
           </div>
           <div className="">

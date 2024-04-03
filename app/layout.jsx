@@ -1,4 +1,6 @@
 import { ThemeProvider } from "./ThemeContext";
+import CustomCursor from "./components/AnimatedCursor/AnimatedCursor";
+import { CursorPAge } from "./components/AnimatedCursor/Cursor";
 import ThemeToggle from "./components/ThemeToggle/ThemeToggle";
 import "./globals.css";
 
@@ -48,6 +50,7 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         <ThemeProvider>
+          <CursorPAge />
           {children}
           <ThemeToggle />
         </ThemeProvider>
