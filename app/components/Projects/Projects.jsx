@@ -38,11 +38,7 @@ const Projects = () => {
           </div>
 
           <div className="mb-28 grid grid-cols-1 gap-0 gap-y-8 lg:grid-cols-2  xl:gap-14">
-            <div
-              className="px-5 lg:px-9"
-              data-aos="fade-right"
-              data-aos-easing="ease-in-sine"
-            >
+            <div className="px-5 lg:px-9">
               <Image
                 width={300}
                 height={300}
@@ -53,7 +49,7 @@ const Projects = () => {
               />
             </div>
             <div className="Open-Sans flex flex-col items-center justify-center text-center">
-              <div data-aos="zoom-out" className="flex items-center gap-2">
+              <div className="flex items-center gap-2">
                 <h3
                   className={`text-xl ${darkMode ? "text-[#fff]" : "text-[#374151]"} font-bold uppercase`}
                 >
@@ -69,7 +65,6 @@ const Projects = () => {
                 />
               </div>
               <p
-                data-aos="fade-up"
                 className={`mt-3 ${darkMode ? "text-[#979797]" : "text-[#4B5563]"} px-5 text-base leading-7 xl:px-10`}
               >
                 Developed a sleek and responsive website with Next.js, Tailwind
@@ -81,37 +76,14 @@ const Projects = () => {
               <div
                 className={`my-10 flex flex-wrap items-center justify-center gap-10 text-base ${darkMode ? "text-[#fff]" : "text-[#374151]"} font-bold`}
               >
-                <p
-                  data-aos="fade-zoom-in"
-                  data-aos-easing="ease-in-back"
-                  data-aos-delay="100"
-                >
-                  Next Js
-                </p>
-                <p
-                  data-aos="fade-zoom-in"
-                  data-aos-easing="ease-in-back"
-                  data-aos-delay="250"
-                >
-                  Redux Toolkit
-                </p>
-                <p
-                  data-aos="fade-zoom-in"
-                  data-aos-easing="ease-in-back"
-                  data-aos-delay="350"
-                >
-                  Tailwind CSS
-                </p>
+                <p>Next Js</p>
+                <p>Redux Toolkit</p>
+                <p>Tailwind CSS</p>
               </div>
               <div
-                data-aos="fade-up"
-                data-aos-anchor-placement="bottom-bottom"
                 className={`my-6 flex items-center justify-center gap-10 font-sans text-base ${darkMode ? "text-[#fff]" : "text-[#374151]"} font-medium leading-6`}
               >
                 <a
-                  data-aos="fade-zoom-in"
-                  data-aos-easing="ease-in-back"
-                  data-aos-delay="250"
                   target="_blank"
                   href="https://github.com/MuhammadAsad-cmd/DashStack-Dashboard"
                   className="flex items-center gap-2"
@@ -120,9 +92,6 @@ const Projects = () => {
                   <FaGithub className="text-2xl " />
                 </a>
                 <a
-                  data-aos="fade-zoom-in"
-                  data-aos-easing="ease-in-back"
-                  data-aos-delay="450"
                   target="_blank"
                   href="https://dash-stack-dashboard.vercel.app/"
                   className="group flex items-center gap-2"
@@ -135,17 +104,13 @@ const Projects = () => {
           </div>
 
           <div className="mb-28 grid grid-cols-1 gap-0 gap-y-8 lg:grid-cols-2  xl:gap-14">
-            <div
-              data-aos="zoom-out"
-              className="Open-Sans flex flex-col items-center justify-center text-center"
-            >
+            <div className="Open-Sans flex flex-col items-center justify-center text-center">
               <h3
                 className={`text-xl ${darkMode ? "text-[#fff]" : "text-[#374151]"} font-bold uppercase`}
               >
                 DashStack Dashboard
               </h3>
               <p
-                data-aos="fade-up"
                 className={`mt-3 ${darkMode ? "text-[#979797]" : "text-[#4B5563]"} px-5 text-base leading-7 xl:px-10`}
               >
                 Developed a sleek and responsive dashboard with Next.js,
@@ -157,35 +122,14 @@ const Projects = () => {
               <div
                 className={`my-10 flex flex-wrap items-center justify-center gap-10 text-base ${darkMode ? "text-[#fff]" : "text-[#374151]"} font-bold`}
               >
-                <p
-                  data-aos="fade-zoom-in"
-                  data-aos-easing="ease-in-back"
-                  data-aos-delay="100"
-                >
-                  Next Js
-                </p>
-                <p
-                  data-aos="fade-zoom-in"
-                  data-aos-easing="ease-in-back"
-                  data-aos-delay="250"
-                >
-                  Redux Toolkit
-                </p>
-                <p
-                  data-aos="fade-zoom-in"
-                  data-aos-easing="ease-in-back"
-                  data-aos-delay="350"
-                >
-                  Tailwind CSS
-                </p>
+                <p>Next Js</p>
+                <p>Redux Toolkit</p>
+                <p>Tailwind CSS</p>
               </div>
               <div
                 className={`my-6 flex items-center justify-center gap-10 font-sans text-base ${darkMode ? "text-[#fff]" : "text-[#374151]"} font-medium leading-6`}
               >
                 <a
-                  data-aos="fade-zoom-in"
-                  data-aos-easing="ease-in-back"
-                  data-aos-delay="250"
                   target="_blank"
                   href="https://github.com/waleedahmad-nbt/Medical-Athletics--Template"
                   className="flex items-center gap-2"
@@ -194,9 +138,6 @@ const Projects = () => {
                   <FaGithub className="text-2xl " />
                 </a>
                 <a
-                  data-aos="fade-zoom-in"
-                  data-aos-easing="ease-in-back"
-                  data-aos-delay="450"
                   target="_blank"
                   href="https://medical-athletics-template.vercel.app/"
                   className="group flex items-center gap-2"
@@ -206,11 +147,7 @@ const Projects = () => {
                 </a>
               </div>
             </div>
-            <div
-              data-aos="fade-right"
-              data-aos-easing="ease-in-sine"
-              className="px-5 lg:px-9"
-            >
+            <div className="px-5 lg:px-9">
               <Image
                 width={300}
                 height={300}
@@ -223,7 +160,7 @@ const Projects = () => {
           </div>
           <div className="mb-28 grid grid-cols-1 gap-0 gap-y-8 lg:grid-cols-2  xl:gap-14">
             <div className="Open-Sans flex flex-col items-center justify-center text-center">
-              <div data-aos="zoom-out" className="flex items-center gap-2">
+              <div className="flex items-center gap-2">
                 <h3
                   className={`text-xl ${darkMode ? "text-[#fff]" : "text-[#374151]"} font-bold uppercase`}
                 >
@@ -239,7 +176,6 @@ const Projects = () => {
                 />
               </div>
               <p
-                data-aos="fade-up"
                 className={`mt-3 px-5 text-base leading-7 ${darkMode ? "text-[#979797]" : "text-[#4B5563]"} xl:px-10`}
               >
                 Crafted SuperGear, a sleek e-commerce interface using Next.js,
@@ -251,35 +187,14 @@ const Projects = () => {
               <div
                 className={`my-10 flex flex-wrap items-center justify-center gap-10 text-base ${darkMode ? "text-[#fff]" : "text-[#374151]"} font-bold`}
               >
-                <p
-                  data-aos="fade-zoom-in"
-                  data-aos-easing="ease-in-back"
-                  data-aos-delay="100"
-                >
-                  Next Js
-                </p>
-                <p
-                  data-aos="fade-zoom-in"
-                  data-aos-easing="ease-in-back"
-                  data-aos-delay="250"
-                >
-                  Redux Toolkit
-                </p>
-                <p
-                  data-aos="fade-zoom-in"
-                  data-aos-easing="ease-in-back"
-                  data-aos-delay="350"
-                >
-                  Tailwind CSS
-                </p>
+                <p>Next Js</p>
+                <p>Redux Toolkit</p>
+                <p>Tailwind CSS</p>
               </div>
               <div
                 className={`my-6 flex items-center justify-center gap-10 font-sans text-base ${darkMode ? "text-[#fff]" : "text-[#374151]"} font-medium leading-6`}
               >
                 <a
-                  data-aos="fade-zoom-in"
-                  data-aos-easing="ease-in-back"
-                  data-aos-delay="250"
                   href="https://github.com/MuhammadAsad-cmd/NextJS-NBT-Template1"
                   className="flex items-center gap-2"
                 >
@@ -287,9 +202,6 @@ const Projects = () => {
                   <FaGithub className="text-2xl " />
                 </a>
                 <a
-                  data-aos="fade-zoom-in"
-                  data-aos-easing="ease-in-back"
-                  data-aos-delay="450"
                   href="https://next-js-template1-nbt.vercel.app/"
                   className="group flex items-center gap-2"
                 >
@@ -298,11 +210,7 @@ const Projects = () => {
                 </a>
               </div>
             </div>
-            <div
-              data-aos="fade-right"
-              data-aos-easing="ease-in-sine"
-              className="px-5 lg:px-9"
-            >
+            <div className="px-5 lg:px-9">
               <Image
                 width={300}
                 height={300}
@@ -314,11 +222,7 @@ const Projects = () => {
             </div>
           </div>
           <div className="mb-28 grid grid-cols-1 gap-0 gap-y-8 lg:grid-cols-2  xl:gap-14">
-            <div
-              data-aos="fade-right"
-              data-aos-easing="ease-in-sine"
-              className="px-5 lg:px-9"
-            >
+            <div className="px-5 lg:px-9">
               <Image
                 width={300}
                 height={300}
@@ -329,7 +233,7 @@ const Projects = () => {
               />
             </div>
             <div className="Open-Sans flex flex-col items-center justify-center text-center">
-              <div data-aos="zoom-out" className="flex items-center gap-2">
+              <div className="flex items-center gap-2">
                 <h3
                   className={`text-xl ${darkMode ? "text-[#fff]" : "text-[#374151]"} font-bold uppercase`}
                 >
@@ -346,7 +250,6 @@ const Projects = () => {
               </div>
 
               <p
-                data-aos="fade-up"
                 className={`mt-3 px-5 text-base leading-7 ${darkMode ? "text-[#979797]" : "text-[#4B5563]"} xl:px-10`}
               >
                 Developed the Dental Health frontend with Next.js and Tailwind
@@ -358,29 +261,14 @@ const Projects = () => {
               <div
                 className={`my-10 flex flex-wrap items-center justify-center gap-10 text-base ${darkMode ? "text-[#fff]" : "text-[#374151]"} font-bold`}
               >
-                <p
-                  data-aos="fade-zoom-in"
-                  data-aos-easing="ease-in-back"
-                  data-aos-delay="100"
-                >
-                  Next Js
-                </p>
+                <p>Next Js</p>
 
-                <p
-                  data-aos="fade-zoom-in"
-                  data-aos-easing="ease-in-back"
-                  data-aos-delay="350"
-                >
-                  Tailwind CSS
-                </p>
+                <p>Tailwind CSS</p>
               </div>
               <div
                 className={`my-6 flex items-center justify-center gap-10 font-sans text-base ${darkMode ? "text-[#fff]" : "text-[#374151]"} font-medium leading-6`}
               >
                 <a
-                  data-aos="fade-zoom-in"
-                  data-aos-easing="ease-in-back"
-                  data-aos-delay="400"
                   href="https://github.com/MuhammadAsad-cmd/Ui-Fry"
                   className="flex items-center gap-2"
                 >
@@ -388,9 +276,6 @@ const Projects = () => {
                   <FaGithub className="text-2xl " />
                 </a>
                 <a
-                  data-aos="fade-zoom-in"
-                  data-aos-easing="ease-in-back"
-                  data-aos-delay="500"
                   href="https://ui-fry-green.vercel.app/"
                   className="group flex items-center gap-2"
                 >
@@ -402,7 +287,7 @@ const Projects = () => {
           </div>
           <div className="mb-28 grid grid-cols-1 gap-0 gap-y-8 lg:grid-cols-2  xl:gap-14">
             <div className="Open-Sans flex flex-col items-center justify-center text-center">
-              <div data-aos="zoom-out" className="flex items-center gap-2">
+              <div className="flex items-center gap-2">
                 <h3
                   className={`text-xl ${darkMode ? "text-[#fff]" : "text-[#374151]"} font-bold uppercase`}
                 >
@@ -418,7 +303,6 @@ const Projects = () => {
                 />
               </div>
               <p
-                data-aos="fade-up"
                 className={`mt-3 px-5 text-base leading-7 ${darkMode ? "text-[#979797]" : "text-[#4B5563]"} xl:px-10`}
               >
                 Developed a sleek and responsive Logoipsum Frontend with
@@ -430,29 +314,14 @@ const Projects = () => {
               <div
                 className={`my-10 flex flex-wrap items-center justify-center gap-10 text-base ${darkMode ? "text-[#fff]" : "text-[#374151]"} font-bold`}
               >
-                <p
-                  data-aos="fade-zoom-in"
-                  data-aos-easing="ease-in-back"
-                  data-aos-delay="100"
-                >
-                  Next Js
-                </p>
+                <p>Next Js</p>
 
-                <p
-                  data-aos="fade-zoom-in"
-                  data-aos-easing="ease-in-back"
-                  data-aos-delay="350"
-                >
-                  Tailwind CSS
-                </p>
+                <p>Tailwind CSS</p>
               </div>
               <div
                 className={`my-6 flex items-center justify-center gap-10 font-sans text-base ${darkMode ? "text-[#fff]" : "text-[#374151]"} font-medium leading-6`}
               >
                 <a
-                  data-aos="fade-zoom-in"
-                  data-aos-easing="ease-in-back"
-                  data-aos-delay="400"
                   href="https://github.com/MuhammadAsad-cmd/Logoipsum-Template"
                   className="flex items-center gap-2"
                 >
@@ -460,9 +329,6 @@ const Projects = () => {
                   <FaGithub className="text-2xl " />
                 </a>
                 <a
-                  data-aos="fade-zoom-in"
-                  data-aos-easing="ease-in-back"
-                  data-aos-delay="500"
                   href="https://logoipsum-template.vercel.app/"
                   className="flex items-center gap-2"
                 >
@@ -471,11 +337,7 @@ const Projects = () => {
                 </a>
               </div>
             </div>
-            <div
-              data-aos="fade-right"
-              data-aos-easing="ease-in-sine"
-              className="px-5 lg:px-9"
-            >
+            <div className="px-5 lg:px-9">
               <Image
                 width={300}
                 height={300}
@@ -487,11 +349,7 @@ const Projects = () => {
             </div>
           </div>
           <div className="grid grid-cols-1 gap-0 gap-y-8 pb-28 lg:grid-cols-2  xl:gap-14">
-            <div
-              data-aos="fade-right"
-              data-aos-easing="ease-in-sine"
-              className="px-5 lg:px-9"
-            >
+            <div className="px-5 lg:px-9">
               <Image
                 width={30}
                 height={30}
@@ -502,7 +360,7 @@ const Projects = () => {
               />
             </div>
             <div className="Open-Sans flex flex-col items-center justify-center text-center">
-              <div data-aos="zoom-out" className="flex items-center gap-2">
+              <div className="flex items-center gap-2">
                 <h3
                   className={`text-xl ${darkMode ? "text-[#fff]" : "text-[#374151]"} font-bold uppercase`}
                 >
@@ -518,7 +376,6 @@ const Projects = () => {
                 />
               </div>
               <p
-                data-aos="fade-up"
                 className={`mt-3 px-5 text-base leading-7 ${darkMode ? "text-[#979797]" : "text-[#4B5563]"} xl:px-10`}
               >
                 Developed a sleek and responsive Bizzy Frontend with Next.js,
@@ -530,29 +387,14 @@ const Projects = () => {
               <div
                 className={`my-10 flex flex-wrap items-center justify-center gap-10 text-base ${darkMode ? "text-[#fff]" : "text-[#374151]"} font-bold`}
               >
-                <p
-                  data-aos="fade-zoom-in"
-                  data-aos-easing="ease-in-back"
-                  data-aos-delay="100"
-                >
-                  Next Js
-                </p>
+                <p>Next Js</p>
 
-                <p
-                  data-aos="fade-zoom-in"
-                  data-aos-easing="ease-in-back"
-                  data-aos-delay="350"
-                >
-                  Tailwind CSS
-                </p>
+                <p>Tailwind CSS</p>
               </div>
               <div
                 className={`my-6 flex items-center justify-center gap-10 font-sans text-base ${darkMode ? "text-[#fff]" : "text-[#374151]"} font-medium leading-6`}
               >
                 <a
-                  data-aos="fade-zoom-in"
-                  data-aos-easing="ease-in-back"
-                  data-aos-delay="400"
                   href="https://github.com/MuhammadAsad-cmd/Bizzy-FrontEnd"
                   className="flex items-center gap-2"
                 >
@@ -560,9 +402,6 @@ const Projects = () => {
                   <FaGithub className="text-2xl " />
                 </a>
                 <a
-                  data-aos="fade-zoom-in"
-                  data-aos-easing="ease-in-back"
-                  data-aos-delay="500"
                   href="https://bizzy-front-end.vercel.app/"
                   className="flex items-center gap-2"
                 >
