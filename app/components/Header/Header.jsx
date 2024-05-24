@@ -20,28 +20,27 @@ const Header = () => {
         <div
           className={`HeaderShadows ${darkMode ? "bg-[#343f4b]" : "bg-[#ecf0f3]"} flex items-center justify-between px-2 py-4 md:px-5 lg:px-[50px]`}
         >
-          <div
-            className={`flex cursor-pointer items-center gap-2  ${darkMode ? "text-white hover:text-[#7843E9]" : "text-[#333]"} duration-300 ease-in-out hover:text-[#7843E9] lg:gap-5`}
-          >
-            <div className="rounded-full bg-[#7843E9]">
-              <Image
-                width={50}
-                height={50}
-                unoptimized
-                src="/images/asad1.jpg"
-                alt="imgg"
-                className="h-[50px] w-[50px] overflow-hidden rounded-full object-cover object-center p-1"
-              />
+          <Link href="/">
+            <div
+              className={`flex cursor-pointer items-center gap-2  ${darkMode ? "text-white hover:text-[#7843E9]" : "text-[#333]"} duration-300 ease-in-out hover:text-[#7843E9] lg:gap-5`}
+            >
+              <div className="rounded-full bg-[#7843E9]">
+                <Image
+                  width={50}
+                  height={50}
+                  unoptimized
+                  src="/images/asad1.jpg"
+                  alt="imgg"
+                  className="h-[50px] w-[50px] overflow-hidden rounded-full object-cover object-center p-1"
+                />
+              </div>
+              <div>
+                <p className="SpacingLetter cursor-pointer  text-lg font-bold uppercase">
+                  Muhammad Asad
+                </p>
+              </div>
             </div>
-            <div>
-              <a
-                href="#"
-                className="SpacingLetter text-lg  font-bold uppercase"
-              >
-                Muhammad Asad
-              </a>
-            </div>
-          </div>
+          </Link>
           <div className="">
             <ul className="SpacingLetter hidden items-center text-base font-bold md:flex">
               <Link href="/">

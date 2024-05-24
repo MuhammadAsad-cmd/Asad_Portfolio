@@ -16,19 +16,6 @@ const Contact = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      await axios.post("/api/contact", formData); // Corrected URL
-      alert("Message sent successfully!");
-      // Optionally, clear the form after successful submission
-      setFormData({ name: "", email: "", message: "" });
-    } catch (error) {
-      console.error("Error sending message:", error);
-      alert("Failed to send message. Please try again later.");
-    }
-  };
-
   return (
     <>
       <div
@@ -50,7 +37,7 @@ const Contact = () => {
           </p>
         </div>
         <div className="container mx-auto mt-[50px]  max-w-[630px]">
-          <form onSubmit={handleSubmit}>
+          <form>
             <fieldset
               className={`mx-5 rounded-2xl border  ${darkMode ? "border-[#979797] bg-[#343f4b] text-white" : "border-gray-300 bg-white text-[#333333]"} p-[30px] pr-12`}
             >

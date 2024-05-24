@@ -11,7 +11,6 @@ export default function Home() {
     <>
       <ScrollToTopButton />
       <div id="/">
-        <Header />
         <HeroSection />
       </div>
       <div id="About">
@@ -23,7 +22,6 @@ export default function Home() {
       <div id="Contact">
         <Contact />
       </div>
-      <Footer />
     </>
   );
 }

@@ -1,5 +1,8 @@
 import { ThemeProvider } from "./ThemeContext";
 import { CursorPAge } from "./components/AnimatedCursor/Cursor";
+import Footer from "./components/Footer/Footer";
+import Header from "./components/Header/Header";
+import HeroSection from "./components/HeroSection/HeroSection";
 import ThemeToggle from "./components/ThemeToggle/ThemeToggle";
 import "./globals.css";
 
@@ -50,8 +53,13 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         <ThemeProvider>
+          <div id="/">
+            <Header />
+          </div>
           <CursorPAge />
           {children}
+          <Footer />
+
           <ThemeToggle />
         </ThemeProvider>
       </body>

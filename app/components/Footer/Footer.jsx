@@ -1,5 +1,6 @@
 "use client";
 import { useTheme } from "@/app/ThemeContext";
+import Link from "next/link";
 import React from "react";
 import {
   FaFacebook,
@@ -34,35 +35,31 @@ const Footer = () => {
                 </span>
               </h2>
               <div className="mt-5 flex gap-5 md:items-center md:justify-center">
-                <a
+                <Link
                   target="_blank"
-                  rel="noreferrer"
                   href="https://www.linkedin.com/in/muhammad-asad-2a75b0276/"
                 >
                   <FaLinkedinIn className="text-[22px]" />
-                </a>
-                <a
+                </Link>
+                <Link
                   target="_blank"
-                  rel="noreferrer"
                   href="https://github.com/MuhammadAsad-cmd"
                 >
                   <FaGithub className="text-[22px]" />
-                </a>
-                <a
+                </Link>
+                <Link
                   target="_blank"
-                  rel="noreferrer"
                   href="https://www.instagram.com/muhammadasad9017?igsh=b3plYndiaDVuN2Rl"
                 >
                   <FaInstagram className="text-[22px]" />
-                </a>
+                </Link>
 
-                <a
+                <Link
                   target="_blank"
-                  rel="noreferrer"
                   href="https://www.facebook.com/profile.php?id=100071035773905&mibextid=ZbWKwL"
                 >
                   <FaFacebook className="text-[22px]" />
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -71,14 +68,13 @@ const Footer = () => {
             className={`mx-10  ${darkMode ? "border-t border-[#fff]" : "border-t border-[#444]"}  p-10 text-center text-xs lg:mx-20`}
           >
             © Copyright 2024 . Made by
-            <a
-              rel="noreferrer"
+            <Link
               target="_blank"
               href="https://asad-portfolio-ai.vercel.app/"
               className="ml-2"
             >
               Muhammad Asad
-            </a>
+            </Link>
           </div>
         </div>
       </div>

@@ -7,14 +7,12 @@ import Link from "next/link";
 import React, { useEffect } from "react";
 import { FaGithub } from "react-icons/fa";
 import { PiArrowSquareOutBold } from "react-icons/pi";
-
-const Projects = () => {
+const ProjectPage = () => {
   const { darkMode } = useTheme();
 
   useEffect(() => {
     initAOS();
   }, []);
-
   return (
     <>
       <div
@@ -23,23 +21,17 @@ const Projects = () => {
           darkMode ? "bg-[#343f4b]" : "bg-[#ecf0f3]"
         } overflow-hidden`}
       >
-        <div className="container mx-auto max-w-[1200px]">
-          <div className="Source mb-[100px] flex flex-col items-center justify-center px-5 pt-16 text-center md:pt-20 lg:pt-[120px]">
+        <div className="container mx-auto mb-10 max-w-[1200px]">
+          <div className="Source mb-12 flex flex-col items-center justify-center px-5 pt-10 text-center">
             <h2
               className={`text-[40px] ${darkMode ? "text-[#fff]" : "text-[#374151]"} font-semibold uppercase  tracking-wider`}
             >
               PROJECTS
             </h2>
-            <div className="mt-5 h-[5px] w-[30px] rounded-md bg-[#7843E9]"></div>
-            <p
-              className={`mt-3  max-w-[800px] text-xl ${darkMode ? "text-[#979797]" : "text-[#4B5563]"} font-medium leading-8`}
-            >
-              Here you will find some of the personal and clients projects that
-              I created with each project containing its own case study
-            </p>
+            <div className="mt-5 h-[5px] w-20 rounded-md bg-[#7843E9]"></div>
           </div>
 
-          {ProjectsData.slice(0, 6).map((project, index) => (
+          {ProjectsData.map((project, index) => (
             <div
               key={index}
               className="mb-28 grid grid-cols-1 gap-0 gap-y-8 lg:grid-cols-2 xl:gap-14"
@@ -117,16 +109,10 @@ const Projects = () => {
               </div>
             </div>
           ))}
-
-          <Link href="/pages/projects">
-            <p className="mx-auto flex w-40 items-center justify-center rounded-[5px] bg-[#7843e9] py-4 text-base text-white">
-              See All Projects
-            </p>
-          </Link>
         </div>
       </div>
     </>
   );
 };
 
-export default Projects;
+export default ProjectPage;

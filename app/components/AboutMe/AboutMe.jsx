@@ -70,23 +70,21 @@ const AboutMe = () => {
                   in <strong>Web Development</strong> over the past year, hoping
                   it can benefit others in the Dev Community. Feel free to
                   connect or follow me on my{" "}
-                  <a
-                    rel="noreferrer"
+                  <Link
                     href="https://www.linkedin.com/in/muhammad-asad-2a75b0276/"
                     target="_blank"
                     className="mx-1 font-bold text-[#7843E9] underline"
                   >
                     Linkedin
-                  </a>{" "}
+                  </Link>{" "}
                   and{" "}
-                  <a
-                    rel="noreferrer"
+                  <Link
                     href="https://github.com/MuhammadAsad-cmd"
                     target="_blank"
                     className="mx-1 font-bold text-[#7843E9] underline"
                   >
                     GitHub
-                  </a>{" "}
+                  </Link>{" "}
                   where I post useful content related to Web Development and
                   Programming
                 </p>
