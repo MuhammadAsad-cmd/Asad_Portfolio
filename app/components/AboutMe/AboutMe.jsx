@@ -71,7 +71,7 @@ const AboutMe = () => {
                   it can benefit others in the Dev Community. Feel free to
                   connect or follow me on my{" "}
                   <Link
-                    href="https://www.linkedin.com/in/muhammad-asad-2a75b0276/"
+                    href="https://www.linkedin.com/in/asad189/"
                     target="_blank"
                     className="mx-1 font-bold text-[#7843E9] underline"
                   >
