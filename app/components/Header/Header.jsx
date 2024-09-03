@@ -29,7 +29,7 @@ const Header = () => {
 
   return (
     <div
-      className={`h-full w-full border-b border-[#373a3d] bg-raisin-black p-1 md:h-12 ${
+      className={`h-full w-full border-b border-[#373a3d] max-h-16 bg-raisin-black p-1 md:h-12 ${
         isSticky ? "fixed left-0 top-0 z-50" : ""
       } transition-all duration-1000`}
     >
