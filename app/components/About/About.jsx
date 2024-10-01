@@ -11,12 +11,12 @@ const About = () => {
   };
   return (
     <>
-      <div className="bg-raisin-black rounded-lg p-[19px] my-2">
-        <div className="flex justify-between items-center">
+      <div className="my-2 rounded-lg bg-raisin-black p-[19px]">
+        <div className="flex items-center justify-between">
           <div>
             <p className="text-xl font-semibold">About</p>
           </div>
-          <div className="w-12 h-12 rounded-full hover:bg-[#2c2f33] flex items-center justify-center">
+          {/* <div className="w-12 h-12 rounded-full hover:bg-[#2c2f33] flex items-center justify-center">
             <svg
               role="img"
               aria-hidden="false"
@@ -31,7 +31,7 @@ const About = () => {
             >
               <path d="M21.7,2.3c-1.1-1.1-2.9-1.1-4,0L15.1,4.9L19.1,9l2.6-2.6C22.8,5.1,22.8,3.4,21.7,2.3z M14.1,5.9L3,17v4h4L18.1,9.9L14.1,5.9z"></path>
             </svg>
-          </div>
+          </div> */}
         </div>
         <div className="py-5 text-sm">
           <p>
@@ -40,11 +40,11 @@ const About = () => {
             I specialize in React.js, Next.js, JavaScript, Redux Toolkit, and
             Tailwind CSS.
           </p>{" "}
-          <div className="flex mt-4 items-center mb-1 justify-between">
+          <div className="mb-1 mt-4 flex items-center justify-between">
             <h3 className="font-medium">My Expertise:</h3>
             <button
               onClick={toggleReadMore}
-              className="hover:text-Sky-Blue text-[#a4a5a7]"
+              className="text-[#a4a5a7] hover:text-Sky-Blue"
             >
               {isExpanded ? "" : "...see more"}
             </button>
@@ -52,7 +52,7 @@ const About = () => {
           {isExpanded && (
             <>
               <p className="">
-                <ul className="list-disc list-inside space-y-1">
+                <ul className="list-inside list-disc space-y-1">
                   {" "}
                   <li>
                     React.js & Next.js: Building responsive and high-performance
@@ -95,10 +95,10 @@ const About = () => {
           )}
         </div>
 
-        <div className="border rounded-lg border-darkGray flex items-center justify-between p-3 my-3 ">
+        <div className="my-3 flex items-center justify-between rounded-lg border border-darkGray p-3 ">
           <div className="flex gap-2">
             <div>
-              <IoDiamondOutline className="text-2xl mt-1.5" />
+              <IoDiamondOutline className="mt-1.5 text-2xl" />
             </div>
             <div>
               <h2 className="text-base font-semibold">Top Skills</h2>
@@ -108,7 +108,7 @@ const About = () => {
               </p>
             </div>
           </div>
-          <div className="h-8 w-8 rounded-full flex items-center text-[#FFFFFFE6] hover:bg-[#2c2f33] cursor-pointer justify-center">
+          <div className="flex h-8 w-8 cursor-pointer items-center justify-center rounded-full text-[#FFFFFFE6] hover:bg-[#2c2f33]">
             <IoMdArrowRoundForward className="text-xl" />
           </div>
         </div>
