@@ -109,13 +109,13 @@ const Certifications = () => {
             </div>
           </div>
         </div>
-        <Link
+        {/* <Link
           href="/details/education"
           className="ShowH flex h-[41px] w-full cursor-pointer items-center justify-center gap-2 rounded-b-lg border-t border-darkGray duration-200 ease-in-out hover:bg-[#2c2f33]"
         >
           <p className="text-base font-semibold">Show all</p>
           <IoMdArrowRoundForward className="text-xl" />
-        </Link>
+        </Link> */}
       </div>
     </>
   );

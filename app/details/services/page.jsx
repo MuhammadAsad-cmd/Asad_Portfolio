@@ -4,20 +4,16 @@ import { AiOutlinePlus } from "react-icons/ai";
 import { FaArrowLeft } from "react-icons/fa";
 
 const page = () => {
-  const SkillsData = [
-    { name: "Next.js" },
-    { name: "React" },
-    { name: "JavaScript" },
-    { name: "Node.js" },
-    { name: "Express.js" },
-    { name: "Tailwind CSS" },
-    { name: "Redux" },
-    { name: "MongoDB" },
-    { name: "HTML" },
-    { name: "CSS" },
-    { name: "Git" },
-    { name: "GitHub" },
+  const ServicesData = [
+    { name: "Website Development" },
+    { name: "UI/UX Design Implementation" },
+    { name: "E-commerce Solutions" },
+    { name: "Web Application Development" },
+    { name: "API Integration" },
+    { name: "Performance Optimization" },
+    { name: "Front End Development" },
   ];
+
   return (
     <>
       <div className="mb-10 rounded-lg bg-raisin-black">
@@ -26,7 +22,7 @@ const page = () => {
             <Link href="/">
               <FaArrowLeft />
             </Link>
-            <p className="text-xl font-semibold">Skills</p>
+            <p className="text-xl font-semibold">Services</p>
           </div>
           {/* <div className="flex items-center gap-3">
             <div className="flex h-12 w-12 cursor-pointer items-center justify-center rounded-full hover:bg-[#2c2f33]">
@@ -36,7 +32,7 @@ const page = () => {
         </div>
         <div className="px-5 pb-5">
           <div>
-            {SkillsData.map((skill, index) => (
+            {ServicesData.map((skill, index) => (
               <h2
                 key={index}
                 className="cursor-pointer border-b border-darkGray py-6 text-base font-semibold hover:text-Sky-Blue hover:underline"

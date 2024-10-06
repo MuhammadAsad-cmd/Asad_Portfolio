@@ -15,6 +15,30 @@ const ProjectDetails = () => {
 
   const projectsData = [
     {
+      title: "KAF – Premium Dried Fruits, Nuts, Spices & Much More",
+      date: "May 2024 - May 2024",
+      shortDescription:
+        "The KAF website offers premium dried fruits, nuts, spices, and related products. Built using Node.js, Next.js, and Redux Toolkit, it provides a seamless shopping experience with fast navigation and dynamic content updates.",
+      longDescription: ` The site integrates modern e-commerce features like product filtering, a secure checkout process, and responsive design. With a focus on healthy and high-quality foods, it caters to customers looking for nutritious snacks and cooking essentials. KAF’s design is user-friendly a`,
+      keyFeatures: [
+        "Premium range of products (dried fruits, nuts, spices, etc.).",
+        "User-friendly e-commerce platform.",
+        "Product filtering and search functionality.",
+        "Secure checkout process.",
+        "Responsive design for multiple devices.",
+        "Fast and dynamic content loading.",
+        "Integration with modern technologies (Node.js, Next.js, Redux Toolkit).",
+        "Smooth product management (adding to cart, category-based filtering).",
+        "Focus on health-conscious consumers with high-quality food products.",
+      ],
+      technologies:
+        "Kaf e-commerce is built with modern web technologies including Node.js, Express, Mongodb React.js, Next.js, JavaScript, Redux Toolkit, and Tailwind CSS, ensuring a responsive and dynamic user experience.",
+      conclusion:
+        "Check out the project to see how it can enhance your workflow and task management!",
+      Link: "https://www.kaf.ae/",
+      image: "/images/4c9e4120-12d1-4f01-bb29-bc3951578a15.png",
+    },
+    {
       title: "Kanban Board Project",
       date: "May 2024 - May 2024",
       shortDescription:
@@ -88,11 +112,11 @@ const ProjectDetails = () => {
               </Link>
               <p className="text-xl font-semibold">Projects</p>
             </div>
-            <div className="flex items-center gap-3">
+            {/* <div className="flex items-center gap-3">
               <div className="flex h-12 w-12 cursor-pointer items-center justify-center rounded-full hover:bg-[#2c2f33]">
                 <AiOutlinePlus className="text-2xl" />
               </div>
-            </div>
+            </div> */}
           </div>
           {projectsData.map((project, index) => (
             <div

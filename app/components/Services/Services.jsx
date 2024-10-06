@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import { IoMdArrowRoundForward } from "react-icons/io";
 
@@ -37,10 +38,12 @@ const Services = () => {
             </ul>
           </div>
         </div>
-        <div className="ShowH flex h-[41px] w-full cursor-pointer items-center justify-center gap-2 rounded-b-lg border-t border-darkGray duration-200 ease-in-out hover:bg-[#2c2f33]">
-          <p className="text-base font-semibold">Show all</p>
-          <IoMdArrowRoundForward className="text-xl" />
-        </div>
+        <Link href="/details/services">
+          <div className="ShowH flex h-[41px] w-full cursor-pointer items-center justify-center gap-2 rounded-b-lg border-t border-darkGray duration-200 ease-in-out hover:bg-[#2c2f33]">
+            <p className="text-base font-semibold">Show all</p>
+            <IoMdArrowRoundForward className="text-xl" />
+          </div>
+        </Link>
       </div>
     </>
   );

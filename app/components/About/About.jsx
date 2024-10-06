@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import React, { useState } from "react";
 import { IoMdArrowRoundForward } from "react-icons/io";
 import { IoDiamondOutline } from "react-icons/io5";
@@ -108,9 +109,12 @@ const About = () => {
               </p>
             </div>
           </div>
-          <div className="flex h-8 w-8 cursor-pointer items-center justify-center rounded-full text-[#FFFFFFE6] hover:bg-[#2c2f33]">
+          <Link
+            href="/details/skills"
+            className="flex h-8 w-8 cursor-pointer items-center justify-center rounded-full text-[#FFFFFFE6] hover:bg-[#2c2f33]"
+          >
             <IoMdArrowRoundForward className="text-xl" />
-          </div>
+          </Link>
         </div>
       </div>
     </>

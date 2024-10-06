@@ -67,9 +67,23 @@ const ContactInfo = () => {
           <div>
             <h3 className="text-base font-semibold">Phone</h3>
             <p className="mb-6 text-sm font-semibold">
-              03059971189
+              <a
+                href="tel:+923059971189"
+                className="text-Sky-Blue hover:underline"
+              >
+                03059971189
+              </a>
               <span className="ml-1 font-normal text-[#FFFFFF99]">
-                (Mobile/Whatsapp)
+                (
+                <a
+                  href="https://wa.me/923059971189"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-inherit"
+                >
+                  Mobile/Whatsapp
+                </a>
+                )
               </span>
             </p>
           </div>

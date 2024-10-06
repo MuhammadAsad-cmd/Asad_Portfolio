@@ -33,6 +33,7 @@ const Experience = () => {
       company: "EVS Training Institute Lahore",
       image: "/images/evs.jfif",
       location: "Lahore, Punjab, Pakistan · On-site",
+      link: "https://www.linkedin.com/company/evsinstitute/",
       roles: [
         {
           title: "Web Developer",
@@ -51,43 +52,24 @@ const Experience = () => {
             <div>
               <p className="text-xl font-semibold">Experience</p>
             </div>
-            {/* <div className="flex items-center gap-3">
-              <div className="flex h-12 w-12 cursor-pointer items-center justify-center rounded-full hover:bg-[#2c2f33]">
-                <AiOutlinePlus className="text-2xl" />
-              </div>
-              <div className="flex h-12 w-12 cursor-pointer items-center justify-center rounded-full hover:bg-[#2c2f33]">
-                <svg
-                  role="img"
-                  aria-hidden="false"
-                  className="cursor-pointer"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  data-supported-dps="24x24"
-                  data-test-icon="edit-medium"
-                  fill="#FFFFFFE6"
-                >
-                  <path d="M21.7,2.3c-1.1-1.1-2.9-1.1-4,0L15.1,4.9L19.1,9l2.6-2.6C22.8,5.1,22.8,3.4,21.7,2.3z M14.1,5.9L3,17v4h4L18.1,9.9L14.1,5.9z"></path>
-                </svg>
-              </div>
-            </div> */}
           </div>
           <div className="flex flex-col space-y-8">
             {experiences.map((experience, index) => (
               <div key={index}>
                 {experience.roles.length === 1 ? (
                   <div className="flex gap-2">
-                    <div className="h-12 w-12 cursor-pointer rounded-full bg-blue-500">
-                      <Image
-                        width={48}
-                        height={48}
-                        unoptimized
-                        src={experience.image}
-                        alt={experience.company}
-                        className=""
-                      />
-                    </div>
+                    <Link href={experience.link || "#"} passHref>
+                      <div className="h-12 w-12 cursor-pointer rounded-full bg-blue-500">
+                        <Image
+                          width={48}
+                          height={48}
+                          unoptimized
+                          src={experience.image}
+                          alt={experience.company}
+                          className=""
+                        />
+                      </div>
+                    </Link>
                     <div>
                       <div className="flex-shrink-0 text-sm">
                         <h4 className="text-base font-semibold">
@@ -109,11 +91,9 @@ const Experience = () => {
                         <p className="text-[#a4a5a7]">
                           {experience.roles[0].duration}
                         </p>
-                        {/* {experience.roles.description && ( */}
                         <p className="text-[#a4a5a7]">
                           {experience.roles[0].description}
                         </p>
-                        {/* )} */}
                         <p className="text-[#a4a5a7]"> {experience.location}</p>
                       </div>
                       <div className="mt-2 flex items-center gap-3 text-sm">
@@ -126,15 +106,17 @@ const Experience = () => {
                   <div>
                     <div className="flex">
                       <div className="flex-shrink-0">
-                        <div className="h-12 w-12 cursor-pointer bg-blue-500">
-                          <Image
-                            width={48}
-                            height={48}
-                            unoptimized
-                            src={experience.image}
-                            alt={experience.company}
-                          />
-                        </div>
+                        <Link href={experience.link || "#"} passHref>
+                          <div className="h-12 w-12 cursor-pointer bg-blue-500">
+                            <Image
+                              width={48}
+                              height={48}
+                              unoptimized
+                              src={experience.image}
+                              alt={experience.company}
+                            />
+                          </div>
+                        </Link>
                       </div>
                       <div className="ml-2">
                         <Link href={experience.link}>
@@ -184,13 +166,6 @@ const Experience = () => {
             ))}
           </div>
         </div>
-        {/* <Link
-          href="/details/experience"
-          className="ShowH flex h-[41px] w-full cursor-pointer items-center justify-center gap-2 rounded-b-lg border-t border-darkGray duration-200 ease-in-out hover:bg-[#2c2f33]"
-        >
-          <p className="text-base font-semibold">Show all</p>
-          <IoMdArrowRoundForward className="text-xl" />
-        </Link> */}
       </div>
     </>
   );
