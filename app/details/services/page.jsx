@@ -1,48 +1,54 @@
-import Link from "next/link";
 import React from "react";
-import { AiOutlinePlus } from "react-icons/ai";
-import { FaArrowLeft } from "react-icons/fa";
+import SerDetails from "@/app/components/SerDetails/SerDetails";
+
+export const metadata = {
+  title: "Services | M. Asad - Web Development & Front-End Expertise",
+  description:
+    "Discover a range of web development services offered by Muhammad Asad, including front-end development, UI/UX design, and full-stack solutions using React, Next.js, and modern web technologies.",
+  authors: [{ name: "M. Asad" }],
+  creator: "Muhammad Asad",
+  publisher: "Muhammad Asad",
+  applicationName: "Portfolio | Muhammad Asad",
+  keywords: [
+    "Services",
+    "Web Development Services",
+    "Front-End Development",
+    "Full-Stack Development",
+    "UI/UX Design",
+    "React.js",
+    "Next.js",
+    "JavaScript",
+    "Tailwind CSS",
+    "Muhammad Asad",
+  ],
+  openGraph: {
+    title: "Muhammad Asad - Web Development Services",
+    description:
+      "Explore professional web development services by Muhammad Asad, offering custom front-end solutions, UI/UX design, and full-stack development expertise.",
+    url: "https://asad-portfolio-ai.vercel.app/details/services", // Update with the correct URL
+    images: [
+      {
+        url: "/images/service.png", // Update with a relevant image
+        width: 1200,
+        height: 630,
+        alt: "Web development services by Muhammad Asad",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Services | M. Asad - Web Development & Front-End Expertise",
+    description:
+      "Check out the range of web development services offered by Muhammad Asad, specializing in modern, user-focused solutions.",
+    images: ["/images/service.png"], // Update with a relevant image
+  },
+};
 
 const page = () => {
-  const ServicesData = [
-    { name: "Website Development" },
-    { name: "UI/UX Design Implementation" },
-    { name: "E-commerce Solutions" },
-    { name: "Web Application Development" },
-    { name: "API Integration" },
-    { name: "Performance Optimization" },
-    { name: "Front End Development" },
-  ];
-
   return (
     <>
-      <div className="mb-10 rounded-lg bg-raisin-black">
-        <div className="flex items-center justify-between px-5 pt-3">
-          <div className="flex items-center gap-3">
-            <Link href="/">
-              <FaArrowLeft />
-            </Link>
-            <p className="text-xl font-semibold">Services</p>
-          </div>
-          {/* <div className="flex items-center gap-3">
-            <div className="flex h-12 w-12 cursor-pointer items-center justify-center rounded-full hover:bg-[#2c2f33]">
-              <AiOutlinePlus className="text-2xl" />
-            </div>
-          </div> */}
-        </div>
-        <div className="px-5 pb-5">
-          <div>
-            {ServicesData.map((skill, index) => (
-              <h2
-                key={index}
-                className="cursor-pointer border-b border-darkGray py-6 text-base font-semibold hover:text-Sky-Blue hover:underline"
-              >
-                {skill.name}
-              </h2>
-            ))}
-          </div>
-        </div>
-      </div>
+      <SerDetails />
     </>
   );
 };
