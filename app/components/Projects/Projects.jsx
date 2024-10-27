@@ -131,9 +131,11 @@ const Projects = () => {
                 index < 3 ? "border-b border-darkGray" : ""
               }`}
             >
-              <h2 className="cursor-pointer text-base font-semibold">
-                {project.title}
-              </h2>
+              <Link target="_blank" href={project.Link}>
+                <h2 className="cursor-pointer text-base font-semibold">
+                  {project.title}
+                </h2>
+              </Link>
               <p className="cursor-pointer text-sm">{project.date}</p>
               <div className="text-[13px]">
                 {project.shortDescription && (
@@ -172,6 +174,7 @@ const Projects = () => {
                 )}
               </div>
               <Link
+                target="_blank"
                 href={project.Link}
                 className="mt-3 flex items-center gap-3"
               >

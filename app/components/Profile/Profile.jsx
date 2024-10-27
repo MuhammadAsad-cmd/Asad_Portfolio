@@ -68,6 +68,7 @@ const Profile = () => {
           <div className="relative mt-2">
             <div className="absolute right-3 hidden w-[232px] lg:block">
               <Link
+                target="_blank"
                 href="https://www.linkedin.com/company/motivecoder/"
                 className="mb-2 flex items-center gap-3"
               >
@@ -84,6 +85,7 @@ const Profile = () => {
                 </p>
               </Link>
               <Link
+                target="_blank"
                 href="https://www.linkedin.com/school/vupakistan/"
                 className="flex items-center gap-3"
               >

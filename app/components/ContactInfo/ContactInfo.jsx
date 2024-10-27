@@ -38,7 +38,7 @@ const ContactInfo = () => {
           </div>
           <div>
             <h3 className="text-base font-semibold">Linkedin Profile URL</h3>
-            <Link href="https://www.linkedin.com/in/asad189/">
+            <Link target="_blank" href="https://www.linkedin.com/in/asad189/">
               <p className="mb-6 max-w-[220px] overflow-hidden text-ellipsis text-sm font-semibold text-Sky-Blue hover:underline">
                 https://www.linkedin.com/in/asad189/
               </p>
@@ -52,7 +52,7 @@ const ContactInfo = () => {
           </div>
           <div>
             <h3 className="text-base font-semibold">GitHub</h3>
-            <Link href="https://github.com/MuhammadAsad-cmd">
+            <Link target="_blank" href="https://github.com/MuhammadAsad-cmd">
               <p className="mb-6 max-w-[220px] overflow-hidden truncate text-sm font-semibold text-Sky-Blue hover:underline">
                 https://github.com/MuhammadAsad-cmd
               </p>
@@ -95,7 +95,7 @@ const ContactInfo = () => {
           </div>
           <div>
             <h3 className="text-base font-semibold">Email</h3>
-            <Link href={`mailto:ma6530028@gmail.com`}>
+            <Link target="_blank" href={`mailto:ma6530028@gmail.com`}>
               <p className="mb-6 overflow-hidden truncate text-sm font-semibold text-Sky-Blue hover:underline">
                 ma6530028@gmail.com
               </p>
@@ -109,7 +109,10 @@ const ContactInfo = () => {
           </div>
           <div>
             <h3 className="text-base font-semibold">Address</h3>
-            <Link href="https://www.google.com/maps/search/?api=1&query=Lahore">
+            <Link
+              target="_blank"
+              href="https://www.google.com/maps/search/?api=1&query=Lahore"
+            >
               <p className="mb-6 overflow-hidden truncate text-sm font-semibold text-Sky-Blue">
                 Lahore
               </p>
