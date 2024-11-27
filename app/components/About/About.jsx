@@ -10,6 +10,7 @@ const About = () => {
   const toggleReadMore = () => {
     setIsExpanded(!isExpanded);
   };
+
   return (
     <>
       <div className="my-2 rounded-lg bg-raisin-black p-[19px]">
@@ -17,32 +18,43 @@ const About = () => {
           <div>
             <p className="text-xl font-semibold">About</p>
           </div>
-          {/* <div className="w-12 h-12 rounded-full hover:bg-[#2c2f33] flex items-center justify-center">
-            <svg
-              role="img"
-              aria-hidden="false"
-              className="cursor-pointer"
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              data-supported-dps="24x24"
-              data-test-icon="edit-medium"
-              fill="#FFFFFFE6"
-            >
-              <path d="M21.7,2.3c-1.1-1.1-2.9-1.1-4,0L15.1,4.9L19.1,9l2.6-2.6C22.8,5.1,22.8,3.4,21.7,2.3z M14.1,5.9L3,17v4h4L18.1,9.9L14.1,5.9z"></path>
-            </svg>
-          </div> */}
         </div>
         <div className="py-5 text-sm">
           <p>
-            Hi, I’m Muhammad Asad, a dedicated Frontend Developer with over a
-            year of experience in creating seamless and dynamic user interfaces.
-            I specialize in React.js, Next.js, JavaScript, Redux Toolkit, and
-            Tailwind CSS.
-          </p>{" "}
+            <strong>About Me</strong>
+            <br />
+            Hi, I’m Muhammad Asad, a passionate Frontend Developer with over a
+            year of hands-on experience in crafting modern, interactive, and
+            high-performance web applications. My expertise lies in React.js,
+            Next.js, JavaScript, Redux Toolkit, and Tailwind CSS, enabling me to
+            build solutions that are not just functional but also visually
+            appealing.
+          </p>
+          <p className="mt-4">
+            <strong>What I Do</strong>
+            <br />I specialize in delivering:
+          </p>
+          <ul className="mt-2 list-inside list-disc space-y-1">
+            <li>
+              <strong>Custom Websites for Businesses:</strong> Tailored to your
+              brand’s identity and goals.
+            </li>
+            <li>
+              <strong>Responsive & Scalable Applications:</strong> Ensuring
+              seamless performance across all devices.
+            </li>
+            <li>
+              <strong>Cutting-Edge Frontend Solutions:</strong> Using the latest
+              tools and technologies to bring your ideas to life.
+            </li>
+          </ul>
+          <p className="mt-4">
+            Whether you need a business website to establish your online
+            presence or a robust frontend solution for your project, I’m here to
+            make it happen.
+          </p>
           <div className="mb-1 mt-4 flex items-center justify-between">
-            <h1 className="font-medium">My Expertise:</h1>
+            <h1 className="font-medium">Why Choose Me?</h1>
             <button
               onClick={toggleReadMore}
               className="text-[#a4a5a7] hover:text-Sky-Blue"
@@ -52,51 +64,32 @@ const About = () => {
           </div>
           {isExpanded && (
             <>
-              <p className="">
-                <ul className="list-inside list-disc space-y-1">
-                  {" "}
-                  <li>
-                    React.js & Next.js: Building responsive and high-performance
-                    web applications.
-                  </li>{" "}
-                  <li>
-                    JavaScript: Writing clean, efficient, and maintainable code.
-                  </li>{" "}
-                  <li>
-                    Redux Toolkit: Managing state effectively in complex
-                    applications.
-                  </li>
-                  <li>
-                    Tailwind CSS: Designing visually appealing and responsive
-                    UIs.
-                  </li>
-                </ul>
-              </p>
+              <ul className="mt-2 list-inside list-disc space-y-1">
+                <li>
+                  <strong>Modern Technologies:</strong> Expert in advanced
+                  frameworks like React and Next.js.
+                </li>
+                <li>
+                  <strong>Attention to Detail:</strong> Committed to clean,
+                  efficient, and user-friendly designs.
+                </li>
+                <li>
+                  <strong>Client-Centric Approach:</strong> Your vision is my
+                  priority, delivered with precision.
+                </li>
+              </ul>
               <p className="mt-4">
-                {" "}
-                I am passionate about the MERN stack and constantly strive to
-                enhance my skills and stay updated with the latest technologies.
-                My career goal is to become a top-notch Frontend Developer and a
-                successful entrepreneur, bringing innovative tech solutions to
-                life.
-              </p>
-              <p className="mt-4">
-                Career Goals: Frontend Excellence: Master advanced JavaScript
-                frameworks and deliver high-quality web applications.
-                Entrepreneurship: Explore innovative ideas and create impactful
-                tech solutions.
-              </p>
-              <p className="mt-4">
-                I am actively seeking new opportunities as a Frontend Developer
-                where I can contribute my skills and grow professionally. If
-                you’re looking for a passionate and skilled developer to join
-                your team, let’s connect!
+                <strong>Let’s Collaborate!</strong>
+                <br />I also offer freelance services for businesses and
+                individuals who need impactful websites that drive results. Feel
+                free to reach out through the Contact Us section or send me a
+                message to discuss your project.
               </p>
             </>
           )}
         </div>
 
-        <div className="my-3 flex items-center justify-between rounded-lg border border-darkGray p-3 ">
+        <div className="my-3 flex items-center justify-between rounded-lg border border-darkGray p-3">
           <div className="flex gap-2">
             <div>
               <IoDiamondOutline className="mt-1.5 text-2xl" />
