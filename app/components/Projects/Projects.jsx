@@ -186,6 +186,7 @@ const Projects = () => {
                     src={project.image}
                     alt="kanban"
                     className="h-14 rounded-lg object-cover"
+                    priority={false}
                   />
                 </div>
                 <p className="text-sm font-semibold">{project.title}</p>

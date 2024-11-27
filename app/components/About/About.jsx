@@ -42,7 +42,7 @@ const About = () => {
             Tailwind CSS.
           </p>{" "}
           <div className="mb-1 mt-4 flex items-center justify-between">
-            <h3 className="font-medium">My Expertise:</h3>
+            <h1 className="font-medium">My Expertise:</h1>
             <button
               onClick={toggleReadMore}
               className="text-[#a4a5a7] hover:text-Sky-Blue"
@@ -111,6 +111,7 @@ const About = () => {
           </div>
           <Link
             href="/details/skills"
+            aria-label="View details about skills"
             className="flex h-8 w-8 cursor-pointer items-center justify-center rounded-full text-[#FFFFFFE6] hover:bg-[#2c2f33]"
           >
             <IoMdArrowRoundForward className="text-xl" />

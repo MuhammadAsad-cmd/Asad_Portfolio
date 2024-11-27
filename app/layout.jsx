@@ -6,7 +6,7 @@ import "./globals.css";
 export const metadata = {
   title: "Portfolio | M. Asad - Web Developer | Front-End Developer",
   description:
-    "Experienced web developer with a passion for building dynamic and responsive web applications. Combining technical expertise with creativity to deliver tailored digital solutions that elevate user experiences.",
+    "Welcome to the portfolio of Muhammad Asad, a creative and detail-oriented web developer specializing in front-end development. Explore innovative solutions, modern designs, and seamless user experiences crafted to bring ideas to life.",
   authors: [{ name: "M. Asad" }],
   creator: "Muhammad Asad",
   publisher: "Muhammad Asad",
@@ -34,9 +34,9 @@ export const metadata = {
 
   // Open Graph metadata
   openGraph: {
-    title: "Muhammad Asad - Professional Web Developer",
+    title: "Muhammad Asad - Front End Developer",
     description:
-      "Expert in creating modern, responsive, and user-centered web applications. Let's bring your ideas to life with cutting-edge solutions.",
+      "Showcasing the work of Muhammad Asad, a web developer passionate about creating cutting-edge digital solutions and intuitive user interfaces.",
     images: [
       {
         url: "/images/asad.png",
@@ -56,7 +56,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Portfolio | M. Asad - Web Developer",
     description:
-      "Discover the portfolio of Muhammad Asad, a professional web developer specializing in modern web technologies and exceptional user experiences.",
+      "Explore Muhammad Asad's portfolio, featuring expertise in front-end development, modern web technologies, and exceptional digital experiences.",
     site: "@yourTwitterHandle",
     creator: "@yourTwitterHandle",
     images: ["/images/asad.png"],
