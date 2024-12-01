@@ -38,6 +38,32 @@ const Projects = () => {
       image: "/images/4c9e4120-12d1-4f01-bb29-bc3951578a15.png",
     },
     {
+      title: "CodesInc – IT Solutions & Services",
+      date: "November 2024 - November 2024",
+      shortDescription:
+        "A professional IT company website showcasing its services and expertise. Built with Next.js and Tailwind CSS for a modern, responsive design and seamless navigation.",
+      longDescription: `CodesInc website was developed to highlight the company's expertise in providing IT solutions and services. The site features an elegant and responsive design with optimized loading times, ensuring a smooth user experience. It incorporates custom animations, an intuitive layout, and a clean structure to reflect the company's professionalism.`,
+      keyFeatures: [
+        "Modern and professional UI/UX design.",
+        "Responsive layout for desktops, tablets, and mobile devices.",
+        "Seamless navigation with smooth page transitions.",
+        "Custom animations and interactive elements.",
+        "Optimized for fast loading and performance.",
+        "Showcase of company services and expertise.",
+      ],
+      technologies:
+        "The CodesInc website is crafted using Next.js, Tailwind CSS, and JavaScript, ensuring responsiveness, performance, and scalability.",
+      conclusion:
+        "This project demonstrates expertise in building corporate websites that align with the company’s branding and mission.",
+      Link: "https://codes-inc.com/",
+      image: "/images/codesinc.png",
+    },
+    {
+      title: "Medical Athletic",
+      Link: "https://medical-athletics-template.vercel.app/",
+      image: "/images/medical.jfif",
+    },
+    {
       title: "Kanban Board Project",
       date: "May 2024 - May 2024",
       shortDescription:
