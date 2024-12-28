@@ -97,8 +97,8 @@ const About = () => {
             <div>
               <h2 className="text-base font-semibold">Top Skills</h2>
               <p className="text-sm">
-                Next.js • React.js • JavaScript • Redux Toolkit • Front-End
-                Development
+                Next.js • React.js • TypeScript • JavaScript • Redux Toolkit •
+                Front-End Development
               </p>
             </div>
           </div>

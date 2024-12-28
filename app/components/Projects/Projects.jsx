@@ -1,4 +1,5 @@
 "use client";
+import { projectsData } from "@/app/Data/ProjectsData";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
@@ -12,114 +13,6 @@ const Projects = () => {
     setExpandedProjectIndex(index === expandedProjectIndex ? null : index);
   };
 
-  const projectsData = [
-    {
-      title: "KAF – Premium Dried Fruits, Nuts, Spices & Much More",
-      date: "May 2024 - May 2024",
-      shortDescription:
-        "The KAF website offers premium dried fruits, nuts, spices, and related products. Built using Node.js, Next.js, and Redux Toolkit, it provides a seamless shopping experience with fast navigation and dynamic content updates.",
-      longDescription: ` The site integrates modern e-commerce features like product filtering, a secure checkout process, and responsive design. With a focus on healthy and high-quality foods, it caters to customers looking for nutritious snacks and cooking essentials. KAF’s design is user-friendly a`,
-      keyFeatures: [
-        "Premium range of products (dried fruits, nuts, spices, etc.).",
-        "User-friendly e-commerce platform.",
-        "Product filtering and search functionality.",
-        "Secure checkout process.",
-        "Responsive design for multiple devices.",
-        "Fast and dynamic content loading.",
-        "Integration with modern technologies (Node.js, Next.js, Redux Toolkit).",
-        "Smooth product management (adding to cart, category-based filtering).",
-        "Focus on health-conscious consumers with high-quality food products.",
-      ],
-      technologies:
-        "Kaf e-commerce is built with modern web technologies including Node.js, Express, Mongodb React.js, Next.js, JavaScript, Redux Toolkit, and Tailwind CSS, ensuring a responsive and dynamic user experience.",
-      conclusion:
-        "Check out the project to see how it can enhance your workflow and task management!",
-      Link: "https://www.kaf.ae/",
-      image: "/images/4c9e4120-12d1-4f01-bb29-bc3951578a15.png",
-    },
-    {
-      title: "CodesInc – IT Solutions & Services",
-      date: "November 2024 - November 2024",
-      shortDescription:
-        "A professional IT company website showcasing its services and expertise. Built with Next.js and Tailwind CSS for a modern, responsive design and seamless navigation.",
-      longDescription: `CodesInc website was developed to highlight the company's expertise in providing IT solutions and services. The site features an elegant and responsive design with optimized loading times, ensuring a smooth user experience. It incorporates custom animations, an intuitive layout, and a clean structure to reflect the company's professionalism.`,
-      keyFeatures: [
-        "Modern and professional UI/UX design.",
-        "Responsive layout for desktops, tablets, and mobile devices.",
-        "Seamless navigation with smooth page transitions.",
-        "Custom animations and interactive elements.",
-        "Optimized for fast loading and performance.",
-        "Showcase of company services and expertise.",
-      ],
-      technologies:
-        "The CodesInc website is crafted using Next.js, Tailwind CSS, and JavaScript, ensuring responsiveness, performance, and scalability.",
-      conclusion:
-        "This project demonstrates expertise in building corporate websites that align with the company’s branding and mission.",
-      Link: "https://codes-inc.com/",
-      image: "/images/codesinc.png",
-    },
-    {
-      title: "Medical Athletic",
-      Link: "https://medical-athletics-template.vercel.app/",
-      image: "/images/medical.jfif",
-    },
-    {
-      title: "Kanban Board Project",
-      date: "May 2024 - May 2024",
-      shortDescription:
-        "A Kanban Board, designed to streamline task management and boost productivity. This tool features a user-friendly interface that allows users to seamlessly manage their tasks through various stages, ensuring efficient workflow and clear visualization",
-      longDescription: `of progress.`,
-      keyFeatures: [
-        "Projects Section: Add and manage multiple projects with ease.",
-        "Backlog: Keep track of tasks that are yet to be started.",
-        "To-Do: Organize tasks that are ready to be tackled.",
-        "In Progress: Monitor tasks currently being worked on.",
-        "Complete: Track tasks that have been successfully finished.",
-      ],
-      technologies:
-        "This Kanban Board is built with modern web technologies including React.js, Next.js, JavaScript, Redux Toolkit, and Tailwind CSS, ensuring a responsive and dynamic user experience.",
-      conclusion:
-        "Check out the project to see how it can enhance your workflow and task management!",
-      Link: "https://projectkanban.vercel.app/",
-      image: "/images/kanban.jfif",
-    },
-    {
-      title: "Medical Athletic",
-      Link: "https://medical-athletics-template.vercel.app/",
-      image: "/images/medical.jfif",
-    },
-    {
-      title: "E-Commerce Minimog Template",
-      Link: "https://next-js-template1-nbt.vercel.app/",
-      image: "/images/e-commerce.jfif",
-    },
-    {
-      title: "Github Profile Viewer",
-      Link: "https://github-profile-viewer-alpha.vercel.app/",
-      image: "/images/github.png",
-    },
-    {
-      title: "ClickUp Templae",
-      Link: "https://clickup-template-xi.vercel.app/",
-      image: "/images/clickup.jfif",
-    },
-    {
-      title: "Dental Health Frontend",
-      Link: "https://ui-fry-green.vercel.app/",
-      image: "/images/Dental.jfif",
-    },
-    {
-      title: "DashStack-Dashboard",
-      Link: "https://dash-stack-dashboard.vercel.app/",
-      image: "/images/dashboard.jfif",
-    },
-    {
-      title: "ClickUp Templae",
-      Link: "https://clickup-template-xi.vercel.app/",
-      image: "/images/clickup.jfif",
-    },
-  ];
-
   return (
     <>
       <div className="my-2 rounded-lg bg-raisin-black">
@@ -128,27 +21,6 @@ const Projects = () => {
             <div>
               <p className="text-xl font-semibold">Projects</p>
             </div>
-            {/* <div className="flex items-center gap-3">
-              <div className="flex h-12 w-12 cursor-pointer items-center justify-center rounded-full hover:bg-[#2c2f33]">
-                <AiOutlinePlus className="text-2xl" />
-              </div>
-              <div className="flex h-12 w-12 cursor-pointer items-center justify-center rounded-full hover:bg-[#2c2f33]">
-                <svg
-                  role="img"
-                  aria-hidden="false"
-                  className="cursor-pointer"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  data-supported-dps="24x24"
-                  data-test-icon="edit-medium"
-                  fill="#FFFFFFE6"
-                >
-                  <path d="M21.7,2.3c-1.1-1.1-2.9-1.1-4,0L15.1,4.9L19.1,9l2.6-2.6C22.8,5.1,22.8,3.4,21.7,2.3z M14.1,5.9L3,17v4h4L18.1,9.9L14.1,5.9z"></path>
-                </svg>
-              </div>
-            </div> */}
           </div>
           {projectsData.slice(0, 4).map((project, index) => (
             <div

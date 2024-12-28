@@ -1,17 +1,9 @@
+import { servicesData } from "@/app/Data/ProjectsData";
 import Link from "next/link";
 import React from "react";
 import { FaArrowLeft } from "react-icons/fa";
 
 const SerDetails = () => {
-  const ServicesData = [
-    { name: "Website Development" },
-    { name: "UI/UX Design Implementation" },
-    { name: "E-commerce Solutions" },
-    { name: "Web Application Development" },
-    { name: "API Integration" },
-    { name: "Performance Optimization" },
-    { name: "Front End Development" },
-  ];
   return (
     <>
       <div className="mb-10 rounded-lg bg-raisin-black">
@@ -30,7 +22,7 @@ const SerDetails = () => {
         </div>
         <div className="px-5 pb-5">
           <div>
-            {ServicesData.map((skill, index) => (
+            {servicesData.map((skill, index) => (
               <h2
                 key={index}
                 className="cursor-pointer border-b border-darkGray py-6 text-base font-semibold hover:text-Sky-Blue hover:underline"
