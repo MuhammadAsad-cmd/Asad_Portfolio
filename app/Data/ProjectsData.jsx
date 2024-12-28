@@ -15,6 +15,43 @@ export const servicesData = [
   { name: "Testing and Debugging" },
 ];
 
+export const experiences = [
+  {
+    company: "Motive Coder",
+    time: "1 Year - 4 months",
+    location: "Lahore, Punjab, Pakistan · On-site",
+    image: "/images/motivecoder_logo.jfif",
+    link: "https://www.linkedin.com/company/motivecoder/",
+    roles: [
+      {
+        title: "Front End Developer",
+        type: "Full Time",
+        duration: "Dec 2023 - Present . 9mos",
+        skills: "React, Next.js, Tailwind Css, Redux Toolkit, Rest Api",
+      },
+      {
+        title: "Full Stack Developer",
+        type: "Internship",
+        duration: "Sep 2023 - Dec 2023",
+        skills: "React, Next.js, Tailwind Css, Redux Toolkit",
+      },
+    ],
+  },
+  {
+    company: "EVS Training Institute Lahore",
+    image: "/images/evs.jfif",
+    location: "Lahore, Punjab, Pakistan · On-site",
+    link: "https://www.linkedin.com/company/evsinstitute/",
+    roles: [
+      {
+        title: "Web Developer",
+        duration: "May 2023 - Jul 2023",
+      },
+    ],
+    skills: "Html, Css, JavaScript",
+  },
+];
+
 export const projectsData = [
   {
     title: "KAF – Premium Dried Fruits, Nuts, Spices & Much More",

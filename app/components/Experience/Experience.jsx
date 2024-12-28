@@ -1,4 +1,5 @@
 "use client";
+import { experiences } from "@/app/Data/ProjectsData";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -6,43 +7,6 @@ import { IoMdArrowRoundForward } from "react-icons/io";
 import { IoDiamondOutline } from "react-icons/io5";
 
 const Experience = () => {
-  const experiences = [
-    {
-      company: "Motive Coder",
-      time: "1 Year",
-      location: "Lahore, Punjab, Pakistan · On-site",
-      image: "/images/motivecoder_logo.jfif",
-      link: "https://www.linkedin.com/company/motivecoder/",
-      roles: [
-        {
-          title: "Front End Developer",
-          type: "Full Time",
-          duration: "Dec 2023 - Present . 9mos",
-          skills: "React, Next.js, Tailwind Css, Redux Toolkit, Rest Api",
-        },
-        {
-          title: "Full Stack Developer",
-          type: "Internship",
-          duration: "Sep 2023 - Dec 2023",
-          skills: "React, Next.js, Tailwind Css, Redux Toolkit",
-        },
-      ],
-    },
-    {
-      company: "EVS Training Institute Lahore",
-      image: "/images/evs.jfif",
-      location: "Lahore, Punjab, Pakistan · On-site",
-      link: "https://www.linkedin.com/company/evsinstitute/",
-      roles: [
-        {
-          title: "Web Developer",
-          duration: "May 2023 - Jul 2023",
-        },
-      ],
-      skills: "Html, Css, JavaScript",
-    },
-  ];
-
   return (
     <>
       <div className="my-2 rounded-lg bg-raisin-black">
