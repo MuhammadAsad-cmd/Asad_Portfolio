@@ -14,27 +14,6 @@ const Certifications = () => {
             <div>
               <p className="text-xl font-semibold">Licenses & certifications</p>
             </div>
-            {/* <div className="flex items-center gap-3">
-              <div className="flex h-12 w-12 cursor-pointer items-center justify-center rounded-full hover:bg-[#2c2f33]">
-                <AiOutlinePlus className="text-2xl" />
-              </div>
-              <div className="flex h-12 w-12 cursor-pointer items-center justify-center rounded-full hover:bg-[#2c2f33]">
-                <svg
-                  role="img"
-                  aria-hidden="false"
-                  className="cursor-pointer"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  data-supported-dps="24x24"
-                  data-test-icon="edit-medium"
-                  fill="#FFFFFFE6"
-                >
-                  <path d="M21.7,2.3c-1.1-1.1-2.9-1.1-4,0L15.1,4.9L19.1,9l2.6-2.6C22.8,5.1,22.8,3.4,21.7,2.3z M14.1,5.9L3,17v4h4L18.1,9.9L14.1,5.9z"></path>
-                </svg>
-              </div>
-            </div> */}
           </div>
           <div className="mt-3 flex gap-2 border-b border-darkGray pb-4">
             <div>
@@ -106,6 +85,52 @@ const Certifications = () => {
                   Front End Web Development
                 </p>
               </div>
+            </div>
+          </div>
+          <div className="mt-3 flex gap-2 pb-4">
+            <div>
+              <Image
+                width={48}
+                height={48}
+                unoptimized
+                src="/images/c-essentials-1.png"
+                alt="C++"
+              />
+            </div>
+            <div>
+              <h2 className="cursor-pointer text-base font-semibold hover:text-Sky-Blue hover:underline">
+                C++ Essentials 1
+              </h2>
+              <p className="cursor-pointer text-sm">Cisco</p>
+              <p className="ShowH text-[13px]">Issued Dec 2024</p>
+              <p className="ShowH text-[13px]">
+                Issue by{" "}
+                <span>
+                  {" "}
+                  <Link
+                    className="text-Sky-Blue"
+                    href="https://www.netacad.com/"
+                  >
+                    {" "}
+                    Cisco{" "}
+                  </Link>{" "}
+                </span>
+              </p>
+              <Link href="https://www.credly.com/badges/3b4ca55c-51a6-4b24-a65f-1c164e4b949c/public_url">
+                <div className="mt-3 flex items-center gap-3">
+                  <div className="rounded-lg border border-darkGray">
+                    <Image
+                      width={106}
+                      height={56}
+                      unoptimized
+                      src="/images/c-essentials-1.png"
+                      alt="c++"
+                      className="h-14 rounded-lg object-cover"
+                    />
+                  </div>
+                  <p className="text-sm font-semibold">C++ Essentials 1</p>
+                </div>
+              </Link>
             </div>
           </div>
         </div>
