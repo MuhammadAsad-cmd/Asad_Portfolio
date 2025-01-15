@@ -1,6 +1,4 @@
-"use client";
-import Link from "next/link";
-import React, { useState } from "react";
+import React from "react";
 import { FaLinkedin, FaPhoneAlt } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import { IoIosLink } from "react-icons/io";
@@ -9,7 +7,6 @@ import { RxCross2 } from "react-icons/rx";
 
 const ContactModal = ({ onClose }) => {
   const handleClose = () => {
-    console.log("Close button clicked");
     onClose();
   };
   return (
@@ -37,11 +34,11 @@ const ContactModal = ({ onClose }) => {
                 <h3 className="text-base font-semibold">
                   Linkedin Profile URL
                 </h3>
-                <Link href="https://www.linkedin.com/in/asad189/">
+                <a href="https://www.linkedin.com/in/asad189/">
                   <p className="mb-6 overflow-hidden text-sm font-semibold text-Sky-Blue hover:underline">
                     https://www.linkedin.com/in/asad189/
                   </p>
-                </Link>
+                </a>
               </div>
             </div>
             {/* Website */}
@@ -51,11 +48,11 @@ const ContactModal = ({ onClose }) => {
               </div>
               <div>
                 <h3 className="text-base font-semibold">GitHub</h3>
-                <Link href="https://github.com/MuhammadAsad-cmd">
+                <a href="https://github.com/MuhammadAsad-cmd">
                   <p className="mb-6 overflow-hidden text-sm font-semibold text-Sky-Blue hover:underline">
                     https://github.com/MuhammadAsad-cmd
                   </p>
-                </Link>
+                </a>
               </div>
             </div>
             {/* Phone */}
@@ -65,12 +62,18 @@ const ContactModal = ({ onClose }) => {
               </div>
               <div>
                 <h3 className="text-base font-semibold">Phone</h3>
-                <p className="mb-6 text-sm font-semibold">
-                  03059971189
-                  <span className="ml-1 font-normal text-[#FFFFFF99]">
-                    (Mobile/Whatsapp)
-                  </span>
-                </p>
+                <a
+                  href="https://wa.me/923059971189"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <p className="mb-6 text-sm font-semibold">
+                    +923193148320
+                    <span className="ml-1 font-normal text-[#FFFFFF99]">
+                      (Mobile/Whatsapp)
+                    </span>
+                  </p>
+                </a>
               </div>
             </div>
             {/* Email */}
@@ -80,11 +83,11 @@ const ContactModal = ({ onClose }) => {
               </div>
               <div>
                 <h3 className="text-base font-semibold">Email</h3>
-                <Link href={`mailto:ma6530028@gmail.com`}>
+                <a href={`mailto:189asadali@gmail.com`}>
                   <p className="mb-6 overflow-hidden truncate text-sm font-semibold text-Sky-Blue hover:underline">
-                    ma6530028@gmail.com
+                    189asadali@gmail.com
                   </p>
-                </Link>
+                </a>
               </div>
             </div>
             {/* Address */}
@@ -94,14 +97,14 @@ const ContactModal = ({ onClose }) => {
               </div>
               <div>
                 <h3 className="text-base font-semibold">Address</h3>
-                <Link
+                <a
                   target="_blank"
                   href="https://www.google.com/maps/search/?api=1&query=Lahore"
                 >
                   <p className="mb-6 overflow-hidden truncate text-sm font-semibold text-Sky-Blue">
-                    Lahore
+                    Hasilpur, Punjab Pakistan
                   </p>
-                </Link>
+                </a>
               </div>
             </div>
           </div>

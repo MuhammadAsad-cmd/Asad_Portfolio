@@ -3,7 +3,6 @@ import { projectsData } from "@/app/Data/ProjectsData";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
-import { AiOutlinePlus } from "react-icons/ai";
 import { IoMdArrowRoundForward } from "react-icons/io";
 
 const Projects = () => {
@@ -15,7 +14,7 @@ const Projects = () => {
 
   return (
     <>
-      <div className="my-2 rounded-lg bg-raisin-black">
+      <div className="my-2 bg-raisin-black sm:rounded-lg">
         <div className="p-[19px]">
           <div className="mb-4 flex items-center justify-between">
             <div>

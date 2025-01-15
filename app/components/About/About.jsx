@@ -13,28 +13,44 @@ const About = () => {
 
   return (
     <>
-      <div className="my-2 rounded-lg bg-raisin-black p-[19px]">
-        <div className="flex items-center justify-between">
-          <div>
-            <p className="text-xl font-semibold">About</p>
-          </div>
-        </div>
+      <div className="my-2 bg-raisin-black p-5 sm:rounded-lg">
+        <h1 className="text-xl font-semibold">About</h1>
         <div className="py-5 text-sm">
           <p>
-            <strong>About Me</strong>
-            <br />
-            Hi, I’m Muhammad Asad, a passionate Frontend Developer with over a
-            year of hands-on experience in crafting modern, interactive, and
-            high-performance web applications. My expertise lies in React.js,
-            Next.js, JavaScript, Redux Toolkit, and Tailwind CSS, enabling me to
-            build solutions that are not just functional but also visually
-            appealing.
+            I specialize in solving complex front-end challenges with creative,
+            efficient, and scalable solutions.
+          </p>
+          <br />
+          <p>
+            The web development world is full of evolving challenges. Clients
+            want websites that are not only visually stunning but also highly
+            functional, responsive, and optimized for performance. That&apos;s
+            where I come in.
+          </p>
+          <br />
+          <p>
+            Early in my career, I recognized a gap in the market: many
+            businesses struggled to connect their vision with technology. They
+            wanted solutions tailored to their brand but often received generic,
+            uninspired results. I believed there was a better way.
+          </p>
+          <br />
+          <p>
+            By leveraging modern technologies like React.js, Next.js, Redux
+            Toolkit, and Tailwind CSS, I turned this belief into action. My
+            projects deliver results that aren’t just about aesthetics; they are
+            about crafting experiences that drive engagement, conversions, and
+            loyalty.
           </p>
           <p className="mt-4">
-            <strong>What I Do</strong>
+            <strong>What I offer</strong>
             <br />I specialize in delivering:
           </p>
           <ul className="mt-2 list-inside list-disc space-y-1">
+            <li>
+              <strong> Problem-Solving Expertise:</strong>
+              Tackling real-world challenges with tailored solutions.
+            </li>
             <li>
               <strong>Custom Websites for Businesses:</strong> Tailored to your
               brand’s identity and goals.
@@ -46,6 +62,10 @@ const About = () => {
             <li>
               <strong>Cutting-Edge Frontend Solutions:</strong> Using the latest
               tools and technologies to bring your ideas to life.
+            </li>
+            <li>
+              <strong>High-Performance Websites: </strong> Fast, responsive, and
+              user focused.
             </li>
           </ul>
           <p className="mt-4">

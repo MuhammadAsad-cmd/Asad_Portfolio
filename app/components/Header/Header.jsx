@@ -52,8 +52,9 @@ const Header = () => {
           <div>
             <h1 className="text-sm font-semibold">Muhammad Asad</h1>
             <div className="text-wrap text-xs">
-              Skilled Frontend Developer | Proficient in React, Next.js,
-              JavaScript, Redux Toolkit, and Tailwind CSS
+              Front-End Developer | Skilled in Next.js, React.js, Redux Toolkit,
+              Tailwind CSS, JavaScript, and TypeScript | Crafting Scalable and
+              Interactive Web Applications
             </div>
           </div>
         </div>

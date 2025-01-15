@@ -25,13 +25,13 @@ const Profile = () => {
 
   return (
     <>
-      <div className="rounded-xl bg-raisin-black">
+      <div className="rounded-t-lg bg-raisin-black sm:rounded-xl">
         <div>
           <Image
             width={300}
             height={201}
             unoptimized
-            src="/images/banner.jfif"
+            src="/images/linkedin banner.png"
             alt="banner"
             className="w-full rounded-t-xl"
           />
@@ -43,27 +43,11 @@ const Profile = () => {
                 width={160}
                 height={160}
                 unoptimized
-                src="/images/profileimg.jfif"
+                src="/images/profile.jpg"
                 alt="profile"
-                className="rounded-full object-cover"
+                className="h-full w-full rounded-full object-cover"
               />
             </div>
-            {/* <div className="w-10 h-10 rounded-full hover:bg-[#2c2f33] flex items-center justify-center -mt-5">
-              <svg
-                role="img"
-                aria-hidden="false"
-                className="cursor-pointer"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                data-supported-dps="24x24"
-                data-test-icon="edit-medium"
-                fill="#FFFFFFE6"
-              >
-                <path d="M21.7,2.3c-1.1-1.1-2.9-1.1-4,0L15.1,4.9L19.1,9l2.6-2.6C22.8,5.1,22.8,3.4,21.7,2.3z M14.1,5.9L3,17v4h4L18.1,9.9L14.1,5.9z"></path>
-              </svg>
-            </div> */}
           </div>{" "}
           <div className="relative mt-2">
             <div className="absolute right-3 hidden w-[232px] lg:block">
@@ -107,8 +91,9 @@ const Profile = () => {
                 Muhammad Asad
               </h1>
               <div className="text-wrap text-base leading-5">
-                Skilled Frontend Developer | Proficient in React, Next.js,
-                JavaScript, Redux Toolkit, and Tailwind CSS
+                Front-End Developer | Skilled in Next.js, React.js, Redux
+                Toolkit, Tailwind CSS, JavaScript, and TypeScript | Crafting
+                Scalable and Interactive Web Applications
               </div>
               <div className="mt-2 flex">
                 <span className="text-sm leading-5 text-[#a4a5a7]">

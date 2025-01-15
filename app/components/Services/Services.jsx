@@ -1,4 +1,4 @@
-import { services, servicesData } from "@/app/Data/ProjectsData";
+import { servicesData } from "@/app/Data/ProjectsData";
 import Link from "next/link";
 import React from "react";
 import { IoMdArrowRoundForward } from "react-icons/io";
@@ -6,7 +6,7 @@ import { IoMdArrowRoundForward } from "react-icons/io";
 const Services = () => {
   return (
     <>
-      <div className="my-2 rounded-lg bg-raisin-black">
+      <div className="my-2 bg-raisin-black sm:rounded-lg">
         <div className="p-[19px]">
           <div className="flex items-center justify-between">
             <div>

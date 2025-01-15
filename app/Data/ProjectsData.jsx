@@ -18,7 +18,7 @@ export const servicesData = [
 export const experiences = [
   {
     company: "Motive Coder",
-    time: "1 Year - 4 months",
+    time: "1 Year - 5 months",
     location: "Lahore, Punjab, Pakistan · On-site",
     image: "/images/motivecoder_logo.jfif",
     link: "https://www.linkedin.com/company/motivecoder/",
@@ -26,26 +26,31 @@ export const experiences = [
       {
         title: "Front End Developer",
         type: "Full Time",
-        duration: "Dec 2023 - Present . 9mos",
+        startDate: "2023-12", // ISO format (YYYY-MM)
+        endDate: null, // Ongoing role
         skills: "React, Next.js, Tailwind Css, Redux Toolkit, Rest Api",
       },
       {
         title: "Full Stack Developer",
         type: "Internship",
-        duration: "Sep 2023 - Dec 2023",
+        startDate: "2023-09",
+        endDate: "2023-12",
         skills: "React, Next.js, Tailwind Css, Redux Toolkit",
       },
     ],
   },
   {
-    company: "EVS Training Institute Lahore",
+    company: "EVS Professional Training Institute",
     image: "/images/evs.jfif",
     location: "Lahore, Punjab, Pakistan · On-site",
     link: "https://www.linkedin.com/company/evsinstitute/",
     roles: [
       {
         title: "Web Developer",
+        type: "Internship",
         duration: "May 2023 - Jul 2023",
+        startDate: "2023-05",
+        endDate: "2023-08",
       },
     ],
     skills: "Html, Css, JavaScript",
@@ -55,7 +60,7 @@ export const experiences = [
 export const projectsData = [
   {
     title: "KAF – Premium Dried Fruits, Nuts, Spices & Much More",
-    date: "May 2024 - May 2024",
+    date: "May 2024 - Present",
     shortDescription:
       "The KAF website offers premium dried fruits, nuts, spices, and related products. Built using Node.js, Next.js, and Redux Toolkit, it provides a seamless shopping experience with fast navigation and dynamic content updates.",
     longDescription: ` The site integrates modern e-commerce features like product filtering, a secure checkout process, and responsive design. With a focus on healthy and high-quality foods, it caters to customers looking for nutritious snacks and cooking essentials. KAF’s design is user-friendly a`,
@@ -79,7 +84,7 @@ export const projectsData = [
   },
   {
     title: "CodesInc – IT Solutions & Services",
-    date: "November 2024 - November 2024",
+    date: "October 2024 - December 2024",
     shortDescription:
       "A professional IT company website showcasing its services and expertise. Built with Next.js and Tailwind CSS for a modern, responsive design and seamless navigation.",
     longDescription: `CodesInc website was developed to highlight the company's expertise in providing IT solutions and services. The site features an elegant and responsive design with optimized loading times, ensuring a smooth user experience. It incorporates custom animations, an intuitive layout, and a clean structure to reflect the company's professionalism.`,
