@@ -100,7 +100,7 @@ export const projectsData = [
       "The CodesInc website is crafted using Next.js, Tailwind CSS, and JavaScript, ensuring responsiveness, performance, and scalability.",
     conclusion:
       "This project demonstrates expertise in building corporate websites that align with the company’s branding and mission.",
-    Link: "https://codes-inc.com/",
+    Link: "https://codesinc-officials.vercel.app/",
     image: "/images/codesinc.png",
   },
   {
