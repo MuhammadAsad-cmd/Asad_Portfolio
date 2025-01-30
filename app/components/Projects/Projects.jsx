@@ -79,7 +79,6 @@ const Projects = () => {
                   <Image
                     width={106}
                     height={56}
-                    unoptimized
                     src={project.image}
                     alt="kanban"
                     className="h-14 rounded-lg object-cover"

@@ -66,7 +66,7 @@ const Skills = () => {
               <Image
                 width={24}
                 height={24}
-                unoptimized
+                
                 src="/images/evs.jfif"
                 alt="evs"
               />

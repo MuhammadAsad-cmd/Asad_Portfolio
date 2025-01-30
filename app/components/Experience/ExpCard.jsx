@@ -56,7 +56,6 @@ const ExpCard = () => {
                   <Image
                     width={48}
                     height={48}
-                    unoptimized
                     src={experience.image}
                     alt={experience.company}
                     className=""
@@ -111,7 +110,6 @@ const ExpCard = () => {
                       <Image
                         width={48}
                         height={48}
-                        unoptimized
                         src={experience.image}
                         alt={experience.company}
                       />

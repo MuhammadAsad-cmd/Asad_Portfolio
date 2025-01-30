@@ -18,7 +18,6 @@ const Education = () => {
               <Image
                 width={48}
                 height={48}
-                unoptimized
                 src="/images/vupakistan_logo.jfif"
                 alt="Vu Logo"
               />
@@ -38,7 +37,6 @@ const Education = () => {
               <Image
                 width={48}
                 height={48}
-                unoptimized
                 src="/images/evs.jfif"
                 alt="Evs Logo"
               />

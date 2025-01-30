@@ -17,7 +17,6 @@ const Certifications = () => {
               <Image
                 width={48}
                 height={48}
-                unoptimized
                 src="/images/evs.jfif"
                 alt="Vu Logo"
               />
@@ -36,7 +35,6 @@ const Certifications = () => {
                   <Image
                     width={106}
                     height={56}
-                    unoptimized
                     src="/images/frontend.jfif"
                     alt="kanban"
                     className="h-14 rounded-lg object-cover"
@@ -53,7 +51,6 @@ const Certifications = () => {
               <Image
                 width={48}
                 height={48}
-                unoptimized
                 src="/images/evs.jfif"
                 alt="Vu Logo"
               />
@@ -72,7 +69,6 @@ const Certifications = () => {
                   <Image
                     width={106}
                     height={56}
-                    unoptimized
                     src="/images/frontend.jfif"
                     alt="kanban"
                     className="h-14 rounded-lg object-cover"
@@ -89,7 +85,6 @@ const Certifications = () => {
               <Image
                 width={48}
                 height={48}
-                unoptimized
                 src="/images/c-essentials-1.png"
                 alt="C++"
               />
@@ -119,7 +114,6 @@ const Certifications = () => {
                     <Image
                       width={106}
                       height={56}
-                      unoptimized
                       src="/images/c-essentials-1.png"
                       alt="c++"
                       className="h-14 rounded-lg object-cover"

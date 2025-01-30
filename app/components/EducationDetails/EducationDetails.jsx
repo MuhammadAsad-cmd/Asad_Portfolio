@@ -7,7 +7,7 @@ import { FaArrowLeft } from "react-icons/fa";
 const EducationDetails = () => {
   return (
     <>
-      <div className="bg-raisin-black rounded-lg">
+      <div className="rounded-lg bg-raisin-black">
         <div className="flex items-center justify-between px-5 pt-3">
           <div className="flex items-center gap-3">
             <Link href="/">
@@ -22,19 +22,18 @@ const EducationDetails = () => {
           </div>
         </div>
         <div className="px-5 pb-5">
-          <div className="border-darkGray mt-2 flex gap-2 border-b pb-4">
+          <div className="mt-2 flex gap-2 border-b border-darkGray pb-4">
             <div>
               <Image
                 width={48}
                 height={48}
-                unoptimized
                 src="/images/vupakistan_logo.jfif"
                 alt="Vu Logo"
                 className="cursor-pointer"
               />
             </div>
             <div>
-              <h2 className="hover:text-Sky-Blue cursor-pointer text-base font-semibold hover:underline">
+              <h2 className="cursor-pointer text-base font-semibold hover:text-Sky-Blue hover:underline">
                 Virtual University
               </h2>
               <p className="cursor-pointer text-sm">
@@ -43,19 +42,18 @@ const EducationDetails = () => {
               <p className="ShowH text-[13px]">Mar 2024 - Apr 2027</p>
             </div>
           </div>
-          <div className="border-darkGray mt-2 flex gap-2 border-b pb-4">
+          <div className="mt-2 flex gap-2 border-b border-darkGray pb-4">
             <div>
               <Image
                 width={48}
                 height={48}
-                unoptimized
                 src="/images/evs.jfif"
                 alt="Evs Logo"
                 className="cursor-pointer"
               />
             </div>
             <div>
-              <h2 className="hover:text-Sky-Blue cursor-pointer text-base font-semibold hover:underline">
+              <h2 className="cursor-pointer text-base font-semibold hover:text-Sky-Blue hover:underline">
                 EVS Professional Training institute
               </h2>
               {/* <p className="text-sm cursor-pointer">
@@ -69,14 +67,13 @@ const EducationDetails = () => {
               <Image
                 width={48}
                 height={48}
-                unoptimized
                 src="/images/dummy.svg"
                 alt="Vu Logo"
                 className="cursor-pointer"
               />
             </div>
             <div>
-              <h2 className="hover:text-Sky-Blue cursor-pointer text-base font-semibold hover:underline">
+              <h2 className="cursor-pointer text-base font-semibold hover:text-Sky-Blue hover:underline">
                 Science college Hasilpur
               </h2>
               <p className="cursor-pointer text-sm">Computer Science</p>

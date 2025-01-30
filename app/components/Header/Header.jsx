@@ -43,7 +43,6 @@ const Header = () => {
             <Image
               width={32}
               height={32}
-              unoptimized
               src="/images/profileimg.jfif"
               alt="profileimg"
               className="rounded-full"

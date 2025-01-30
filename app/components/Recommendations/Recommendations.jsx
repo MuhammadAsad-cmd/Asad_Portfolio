@@ -40,7 +40,6 @@ const Recommendations = () => {
                   <Image
                     width={48}
                     height={48}
-                    unoptimized
                     src="/images/ali-shan.jpeg"
                     alt="Profile"
                     className="h-full w-full rounded-full object-cover"
@@ -89,7 +88,6 @@ const Recommendations = () => {
                   <Image
                     width={48}
                     height={48}
-                    unoptimized
                     src="/images/ali-shan.jpeg"
                     alt="Profile"
                     className="h-full w-full rounded-full object-cover"

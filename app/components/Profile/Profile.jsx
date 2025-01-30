@@ -30,7 +30,6 @@ const Profile = () => {
           <Image
             width={300}
             height={201}
-            unoptimized
             src="/images/linkedin banner.png"
             alt="banner"
             className="w-full rounded-t-xl"
@@ -42,7 +41,6 @@ const Profile = () => {
               <Image
                 width={160}
                 height={160}
-                unoptimized
                 src="/images/profile.jpg"
                 alt="profile"
                 className="h-full w-full rounded-full object-cover"
@@ -59,7 +57,6 @@ const Profile = () => {
                 <Image
                   width={32}
                   height={32}
-                  unoptimized
                   src="/images/motivecoder_logo.jfif"
                   alt="motivecoder"
                   className="cursor-pointer"
@@ -76,7 +73,6 @@ const Profile = () => {
                 <Image
                   width={32}
                   height={32}
-                  unoptimized
                   src="/images/vupakistan_logo.jfif"
                   alt="motivecoder"
                   className="cursor-pointer"
