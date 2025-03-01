@@ -26,7 +26,7 @@ const SerDetails = () => {
               {servicesData.map((skill, index) => (
                 <h2
                   key={index}
-                  className="border-darkGray cursor-pointer border-b py-6 text-base font-semibold hover:text-SkyBlue hover:underline"
+                  className="cursor-pointer border-b py-6 text-base font-semibold hover:text-SkyBlue hover:underline dark:border-darkSecondaryGray"
                 >
                   {skill.name}
                 </h2>

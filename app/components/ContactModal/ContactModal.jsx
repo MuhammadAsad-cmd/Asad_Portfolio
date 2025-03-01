@@ -16,7 +16,7 @@ const ContactModal = ({ onClose }) => {
         <div className="animated-border my-6 rounded-t-lg  sm:rounded-xl">
           <div className="max-h-[500px] w-full max-w-[552px] overflow-hidden rounded-lg bg-white dark:bg-discordDark">
             {/* Header */}
-            <div className="border-darkGray sticky left-0 right-0 top-0 z-50 flex h-[61px] items-center justify-between rounded-t-lg border-b bg-white px-4 dark:bg-discordDark">
+            <div className="sticky left-0 right-0 top-0 z-50 flex h-[61px] items-center justify-between rounded-t-lg border-b bg-white px-4 dark:border-darkSecondaryGray dark:bg-discordDark">
               <h2 className="text-xl font-semibold">Contact Info</h2>
               <div
                 onClick={handleClose}

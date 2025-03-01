@@ -84,7 +84,7 @@ const Header = () => {
             </div>
             <div
               onClick={() => dispatch(openSidebar("rightSidebar"))}
-              className="border-darkGray flex size-9 cursor-pointer items-center justify-center rounded-md border text-xl lg:hidden"
+              className="flex size-9 cursor-pointer items-center justify-center rounded-md border text-xl dark:border-darkSecondaryGray lg:hidden"
             >
               <LuMenu />
             </div>

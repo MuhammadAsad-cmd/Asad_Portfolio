@@ -25,7 +25,7 @@ const page = () => {
             {SkillsData.map((skill, index) => (
               <h2
                 key={index}
-                className="border-darkGray cursor-pointer border-b py-6 text-base font-semibold hover:text-SkyBlue hover:underline"
+                className="cursor-pointer border-b py-6 text-base font-semibold hover:text-SkyBlue hover:underline dark:border-darkSecondaryGray"
               >
                 <Link href={skill.link} target="_blank">
                   {skill.name}

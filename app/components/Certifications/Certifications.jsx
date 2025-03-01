@@ -34,7 +34,7 @@ const Certifications = () => {
                 <p className="ShowH text-[13px]">Issued Aug 2023</p>
                 <p className="ShowH text-[13px]">Credential ID: L0122110015</p>
                 <div className="mt-3 flex items-center gap-3">
-                  <div className="border-darkGray rounded-lg border">
+                  <div className="rounded-lg border dark:border-darkSecondaryGray">
                     <Image
                       width={106}
                       height={56}
@@ -68,7 +68,7 @@ const Certifications = () => {
                 <p className="ShowH text-[13px]">Issued Aug 2023</p>
                 <p className="ShowH text-[13px]">Credential ID: L0122110015</p>
                 <div className="mt-3 flex items-center gap-3">
-                  <div className="border-darkGray rounded-lg border">
+                  <div className="rounded-lg border dark:border-darkSecondaryGray">
                     <Image
                       width={106}
                       height={56}
@@ -113,7 +113,7 @@ const Certifications = () => {
                 </p>
                 <Link href="https://www.credly.com/badges/3b4ca55c-51a6-4b24-a65f-1c164e4b949c/public_url">
                   <div className="mt-3 flex items-center gap-3">
-                    <div className="border-darkGray rounded-lg border">
+                    <div className="rounded-lg border dark:border-darkSecondaryGray">
                       <Image
                         width={106}
                         height={56}
@@ -130,7 +130,7 @@ const Certifications = () => {
           </div>
           {/* <Link
           href="/details/education"
-          className="ShowH flex h-[41px] w-full cursor-pointer items-center justify-center gap-2 rounded-b-lg border-t border-darkGray duration-200 ease-in-out hover:bg-discordDark"
+          className="ShowH flex h-[41px] w-full cursor-pointer items-center justify-center gap-2 rounded-b-lg border-t dark:border-darkSecondaryGray duration-200 ease-in-out hover:bg-discordDark"
         >
           <p className="text-base font-semibold">Show all</p>
           <IoMdArrowRoundForward className="text-xl" />

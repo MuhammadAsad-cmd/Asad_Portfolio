@@ -77,7 +77,7 @@ const Projects = () => {
                   href={project.Link}
                   className="mt-3 flex items-center gap-3"
                 >
-                  <div className="border-darkGray rounded-lg border">
+                  <div className="rounded-lg border dark:border-darkSecondaryGray">
                     <Image
                       width={106}
                       height={56}

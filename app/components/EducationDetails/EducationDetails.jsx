@@ -16,14 +16,14 @@ const EducationDetails = () => {
               </Link>
               <p className="text-xl font-semibold">Education</p>
             </div>
-            <div className="flex items-center gap-3">
+            {/* <div className="flex items-center gap-3">
               <div className="flex h-12 w-12 cursor-pointer items-center justify-center rounded-full hover:bg-discordDark">
                 <AiOutlinePlus className="text-2xl" />
               </div>
-            </div>
+            </div> */}
           </div>
           <div className="px-5 pb-5">
-            <div className="border-darkGray mt-2 flex gap-2 border-b pb-4">
+            <div className="mt-2 flex gap-2 border-b pb-4 dark:border-darkSecondaryGray">
               <div>
                 <Image
                   width={48}
@@ -43,7 +43,7 @@ const EducationDetails = () => {
                 <p className="ShowH text-[13px]">Mar 2024 - Apr 2027</p>
               </div>
             </div>
-            <div className="border-darkGray mt-2 flex gap-2 border-b pb-4">
+            <div className="mt-2 flex gap-2 border-b pb-4 dark:border-darkSecondaryGray">
               <div>
                 <Image
                   width={48}
