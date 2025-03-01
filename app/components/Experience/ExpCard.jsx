@@ -82,15 +82,18 @@ const ExpCard = () => {
                       </h3>
                     )}
 
-                    <p className="flex items-center text-[#a4a5a7]">
+                    <p className="text-darkPrimaryGray flex items-center">
                       {experience.roles[0].duration}{" "}
                       <span className="mx-2">·</span>
                       <span> {calculateTotalDuration(experience.roles)} </span>
                     </p>
-                    <p className="text-[#a4a5a7]">
+                    <p className="text-darkPrimaryGray">
                       {experience.roles[0].description}
                     </p>
-                    <p className="text-[#a4a5a7]"> {experience.location}</p>
+                    <p className="text-darkPrimaryGray">
+                      {" "}
+                      {experience.location}
+                    </p>
                   </div>
                   <div className="mt-2 flex items-center gap-3 text-sm">
                     <IoDiamondOutline />
@@ -117,12 +120,12 @@ const ExpCard = () => {
                   </div>
                   <div className="ml-2">
                     <Link href={experience.link}>
-                      <h3 className="cursor-pointer text-lg font-semibold hover:text-Sky-Blue hover:underline">
+                      <h3 className="hover:text-SkyBlue cursor-pointer text-lg font-semibold hover:underline">
                         {experience.company}
                       </h3>
                     </Link>
                     <p className="text-sm">{experience.time}</p>
-                    <p className="text-sm text-[#a4a5a7]">
+                    <p className="text-darkPrimaryGray text-sm">
                       {experience.location}
                     </p>
                   </div>
@@ -141,12 +144,12 @@ const ExpCard = () => {
                         }`}
                       ></div>
                       <Link href={experience.link || "#"} passHref>
-                        <h4 className="cursor-pointer text-base font-semibold hover:text-Sky-Blue hover:underline">
+                        <h4 className="hover:text-SkyBlue cursor-pointer text-base font-semibold hover:underline">
                           {role.title}
                         </h4>
                       </Link>
                       <p className="text-sm">{role.type}</p>
-                      <p className="text-sm text-[#a4a5a7]">
+                      <p className="text-darkPrimaryGray text-sm">
                         {formatDate(role.startDate)} -{" "}
                         {formatDate(role.endDate)} ·{" "}
                         {calculateDuration(role.startDate, role.endDate)}

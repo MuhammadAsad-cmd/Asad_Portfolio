@@ -1,9 +1,10 @@
 "use client";
 import Image from "next/image";
-import Link from "next/link";
 import React, { useState } from "react";
 import { BsSendFill } from "react-icons/bs";
 import ContactModal from "../ContactModal/ContactModal";
+import Code from "../Icons/Code";
+import Marquee from "../Marquee/Marquee";
 
 const Profile = () => {
   const [isOpenModal, setIsOpenModal] = useState(false);
@@ -25,19 +26,10 @@ const Profile = () => {
 
   return (
     <>
-      <div className="rounded-t-lg bg-raisin-black sm:rounded-xl">
-        <div>
-          <Image
-            width={300}
-            height={201}
-            src="/images/linkedin banner.png"
-            alt="banner"
-            className="w-full rounded-t-xl"
-          />
-        </div>
-        <div className="p-6">
-          <div className="flex items-center justify-between">
-            <div className="-mt-20 h-[120px] w-[120px] rounded-full border-4 border-[#1b1f23] bg-[#1b1f23] md:-mt-32 md:h-[160px] md:w-[160px]">
+      <div className="animated-border md:rounded-xl">
+        <div className="flex flex-col gap-x-6 bg-white p-4 dark:bg-discordDark max-md:gap-y-8 md:flex-row md:px-6 md:py-16">
+          <div className="flex w-full items-center justify-center md:w-1/2">
+            <div className="relative size-[220px] flex-shrink-0 rounded-full border-4 bg-lightbg dark:border-[#1b1f23] md:size-[300px] lg:h-[350px] lg:w-[350px]">
               <Image
                 width={160}
                 height={160}
@@ -45,71 +37,51 @@ const Profile = () => {
                 alt="profile"
                 className="h-full w-full rounded-full object-cover"
               />
-            </div>
-          </div>{" "}
-          <div className="relative mt-2">
-            <div className="absolute right-3 hidden w-[232px] lg:block">
-              <Link
-                target="_blank"
-                href="https://www.linkedin.com/company/motivecoder/"
-                className="mb-2 flex items-center gap-3"
-              >
-                <Image
-                  width={32}
-                  height={32}
-                  src="/images/motivecoder_logo.jfif"
-                  alt="motivecoder"
-                  className="cursor-pointer"
-                />
-                <p className="cursor-pointer text-sm font-semibold hover:text-Sky-Blue hover:underline">
-                  Motive Coder
-                </p>
-              </Link>
-              <Link
-                target="_blank"
-                href="https://www.linkedin.com/school/vupakistan/"
-                className="flex items-center gap-3"
-              >
-                <Image
-                  width={32}
-                  height={32}
-                  src="/images/vupakistan_logo.jfif"
-                  alt="motivecoder"
-                  className="cursor-pointer"
-                />
-                <p className="cursor-pointer text-sm font-semibold hover:text-Sky-Blue hover:underline">
-                  Virtual University
-                </p>
-              </Link>
-            </div>
-            <div className="w-full max-w-[332px] xl:max-w-[500px]">
-              <h1 className="text-2xl font-semibold leading-8">
-                Muhammad Asad
-              </h1>
-              <div className="text-wrap text-base leading-5">
-                Front-End Developer | Skilled in Next.js, React.js, Redux
-                Toolkit, Tailwind CSS, JavaScript, and TypeScript | Crafting
-                Scalable and Interactive Web Applications
+              <div className="absolute -bottom-8 left-1/2 -translate-x-1/2">
+                <Code />
               </div>
-              <div className="mt-2 flex">
-                <span className="text-sm leading-5 text-[#a4a5a7]">
-                  Lahore, Punjab, Pakistan.
-                </span>
-                <span
-                  onClick={handleContactModal}
-                  className="ml-3 block cursor-pointer text-sm font-semibold text-Sky-Blue hover:underline md:hidden"
-                >
-                  Contact Info
-                </span>
-              </div>
-              <button
-                onClick={openWhatsApp}
-                className="mt-3 flex h-8 w-full max-w-[113px] items-center justify-center gap-2 rounded-full bg-Sky-Blue text-black"
-              >
-                <BsSendFill className="text-lg" />
-                <p className="text-base font-semibold">Message</p>
-              </button>
             </div>
+          </div>
+          <div className="mt-2 w-full md:w-1/2 md:max-w-[500px]">
+            <p className="text-base">
+              <span className="text-SkyBlue">&lt;span&gt; </span>
+              Hey, I&apos;m Muhammad Asad
+              <span className="text-SkyBlue"> &lt;/span&gt;</span>
+            </p>
+
+            <h1 className="mt-5 text-2xl font-semibold md:text-4xl lg:text-5xl">
+              <span className="text-SkyBlue">&#123;</span> Front End Web
+              Developer
+              <span className="text-SkyBlue"> &#125; </span>
+            </h1>
+
+            <p className="mt-3 text-base">
+              <span className="text-SkyBlue">&lt;p&gt; </span>
+              With expertise in React.js, Next.js, Redux Toolkit, and Tailwind
+              CSS, I craft fast, scalable, and modern web applications.
+              <span className="text-SkyBlue"> &lt;/p&gt;</span>
+            </p>
+
+            <Marquee />
+
+            <div className="mt-2 flex flex-col gap-y-2 sm:flex-row">
+              <span className="text-sm leading-5 text-darkPrimaryGray">
+                Lahore, Punjab, Pakistan.
+              </span>
+              <span
+                onClick={handleContactModal}
+                className="block cursor-pointer text-sm font-semibold text-SkyBlue hover:underline md:ml-3 md:hidden"
+              >
+                Contact Info
+              </span>
+            </div>
+            <button
+              onClick={openWhatsApp}
+              className="mt-3 flex h-8 w-full max-w-[113px] items-center justify-center gap-2 rounded-full bg-SkyBlue text-black hover:bg-lightHover dark:hover:bg-darkHover"
+            >
+              <BsSendFill className="text-lg" />
+              <p className="text-base font-semibold">Message</p>
+            </button>
           </div>
         </div>
       </div>

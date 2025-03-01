@@ -178,3 +178,21 @@ export const projectsData = [
     image: "/images/clickup.jfif",
   },
 ];
+
+export const SkillsData = [
+  { name: "Next.js", link: "https://nextjs.org/" },
+  { name: "React", link: "https://react.dev/" },
+  {
+    name: "JavaScript",
+    link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+  },
+  { name: "Node.js", link: "https://nodejs.org/" },
+  { name: "Express.js", link: "https://expressjs.com/" },
+  { name: "Tailwind CSS", link: "https://tailwindcss.com/" },
+  { name: "Redux", link: "https://redux.js.org/" },
+  { name: "MongoDB", link: "https://www.mongodb.com/" },
+  { name: "HTML", link: "https://developer.mozilla.org/en-US/docs/Web/HTML" },
+  { name: "CSS", link: "https://developer.mozilla.org/en-US/docs/Web/CSS" },
+  { name: "Git", link: "https://git-scm.com/" },
+  { name: "GitHub", link: "https://github.com/" },
+];

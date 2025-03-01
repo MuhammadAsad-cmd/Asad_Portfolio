@@ -1,64 +1,107 @@
 "use client";
-import Image from "next/image";
-import React, { useEffect, useState } from "react";
+import { openSidebar } from "@/redux/sidebarSlice";
+import Link from "next/link";
+import React from "react";
+import { FaCode, FaGithub, FaInstagram } from "react-icons/fa";
+import { HiMenuAlt1 } from "react-icons/hi";
+import { LuMenu, LuMoon, LuSun } from "react-icons/lu";
+import { TfiLinkedin } from "react-icons/tfi";
+import { useDispatch, useSelector } from "react-redux";
+import Sidebar from "../Sidebars/Sidebar";
+import LeftSidebar from "../Sidebars/LeftSidebar";
+import { toggleTheme } from "@/redux/themeSlice";
+import RightSidebar from "../Sidebars/RightSidebar";
+import NavLink from "../Navlink/Navlink";
 
 const Header = () => {
-  const [isSticky, setIsSticky] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 500) {
-        // Change 50 to the scroll distance you prefer
-        setIsSticky(true);
-      } else {
-        setIsSticky(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    // Clean up event listener on component unmount
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth", // Optional: Adds a smooth scrolling effect
-    });
-  };
+  const dispatch = useDispatch();
+  const isDark = useSelector((state) => state.theme.isDark);
 
   return (
-    <div
-      className={`h-full max-h-16 w-full border-b border-[#373a3d] bg-raisin-black p-1 md:h-12 ${
-        isSticky ? "fixed left-0 top-0 z-50" : ""
-      } transition-all duration-1000`}
-    >
-      <div className="container mx-auto h-full w-full max-w-[1128px]">
-        <div
-          onClick={scrollToTop}
-          className="flex h-full cursor-pointer items-center gap-3"
-        >
-          <div className="flex-shrink-0">
-            <Image
-              width={32}
-              height={32}
-              src="/images/profileimg.jfif"
-              alt="profileimg"
-              className="rounded-full"
-            />
+    <>
+      <div className="h-16 w-full bg-white transition-all duration-300 dark:bg-discordDark md:mt-6 md:rounded-lg md:border md:border-lightBorder md:dark:border-discordDark">
+        <div className="flex h-full w-full items-center justify-between">
+          <div
+            onClick={() => dispatch(openSidebar("leftSidebar"))}
+            className="hidden h-full cursor-pointer items-center justify-center rounded-l-lg bg-white p-4 dark:bg-lightPrimarytext md:flex"
+          >
+            <p className="text-3xl text-lightPrimarytext dark:text-darkPrimaryGray">
+              <HiMenuAlt1 />
+            </p>
           </div>
-          <div>
-            <h1 className="text-sm font-semibold">Muhammad Asad</h1>
-            <div className="text-wrap text-xs">
-              Front-End Developer | Skilled in Next.js, React.js, Redux Toolkit,
-              Tailwind CSS, JavaScript, and TypeScript | Crafting Scalable and
-              Interactive Web Applications
+          <div className="flex w-full items-center justify-between px-4">
+            <div>
+              <Link href="/" className="flex items-center gap-2">
+                <FaCode className="text-4xl text-SkyBlue" />
+                <h1 className="text-2xl font-semibold text-black dark:text-white">
+                  Asad
+                  <span className="bg-gradient-to-r from-black to-black/20 bg-clip-text text-transparent dark:from-white dark:to-white/20">
+                    .dev
+                  </span>
+                </h1>
+              </Link>
+            </div>
+            <div className="hidden w-full items-center justify-around px-4 lg:flex">
+              <NavLink href="#about">About</NavLink>
+              <NavLink href="#services">Services</NavLink>
+              <NavLink href="#experience">Experience</NavLink>
+              <NavLink href="#education">Education</NavLink>
+              <NavLink href="#projects">Projects</NavLink>
+              <NavLink href="#skills">Skills</NavLink>
+              <NavLink href="#contact">Contact</NavLink>
+            </div>
+
+            <div className="hidden items-center gap-4 text-xl max-lg:justify-center md:flex">
+              <Link
+                target="_blank"
+                href="https://www.linkedin.com/in/asad189"
+                className="text-lightSecondarytext duration-300 ease-in-out hover:text-lightHover dark:text-darkPrimaryGray dark:hover:text-SkyBlue"
+              >
+                <TfiLinkedin />
+              </Link>
+              <Link
+                target="_blank"
+                href="https://github.com/MuhammadAsad-cmd"
+                className="text-lightSecondarytext duration-300 ease-in-out hover:text-lightHover dark:text-darkPrimaryGray dark:hover:text-SkyBlue"
+              >
+                <FaGithub />
+              </Link>
+              <Link
+                target="_blank"
+                href="https://www.instagram.com/muhammadasad9017"
+                className="text-lightSecondarytext duration-300 ease-in-out hover:text-lightHover dark:text-darkPrimaryGray dark:hover:text-SkyBlue"
+              >
+                <FaInstagram />
+              </Link>
+            </div>
+          </div>
+          <div className="flex h-full items-center justify-center gap-4 rounded-r-lg p-4 md:gap-2 lg:bg-white lg:dark:bg-lightPrimarytext">
+            <div
+              onClick={() => dispatch(toggleTheme())}
+              className="cursor-pointer text-2xl text-lightPrimarytext dark:text-darkPrimaryGray md:text-3xl "
+            >
+              {isDark ? <LuMoon /> : <LuSun />}
+            </div>
+            <div
+              onClick={() => dispatch(openSidebar("rightSidebar"))}
+              className="border-darkGray flex size-9 cursor-pointer items-center justify-center rounded-md border text-xl lg:hidden"
+            >
+              <LuMenu />
             </div>
           </div>
         </div>
       </div>
-    </div>
+
+      {/* Left Sidebar */}
+      <Sidebar id="leftSidebar" position="left">
+        <LeftSidebar />
+      </Sidebar>
+
+      {/* Right Sidebar */}
+      <Sidebar id="rightSidebar" position="right">
+        <RightSidebar />
+      </Sidebar>
+    </>
   );
 };
 

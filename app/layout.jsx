@@ -1,8 +1,5 @@
-import ContactInfo from "./components/ContactInfo/ContactInfo";
-import Footer from "./components/Footer/Footer";
-import Header from "./components/Header/Header";
-
 import "./globals.css";
+import MainLayout from "./components/Layouts/MainLayouts";
 
 export const metadata = {
   title: "Portfolio | M. Asad - Web Developer | Front-End Developer",
@@ -80,17 +77,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
-        <Header />
-        <div className="container mx-auto mt-5 flex w-full max-w-[720px] flex-col gap-5 md:flex-row lg:max-w-[960px] xl:max-w-[1128px]">
-          <div className="w-full">{children}</div>
-          {/* Aside */}
-          <aside className="hidden w-full max-w-[300px] md:block">
-            {/* Contact Info */}
-            <ContactInfo />
-          </aside>
-        </div>
-        <Footer />
+      <body className="m-0 scroll-smooth bg-lightbg p-0 text-lightPrimarytext transition-all duration-300 ease-in-out dark:bg-[#1f1f24] dark:text-white">
+        <MainLayout>{children}</MainLayout>
       </body>
     </html>
   );
