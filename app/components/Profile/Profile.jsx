@@ -29,7 +29,7 @@ const Profile = () => {
       <div className="animated-border md:rounded-xl">
         <div className="flex flex-col gap-x-6 bg-white p-4 dark:bg-discordDark max-md:gap-y-8 md:flex-row md:px-6 md:py-16">
           <div className="flex w-full items-center justify-center md:w-1/2">
-            <div className="relative size-[220px] flex-shrink-0 rounded-full border-4 bg-lightbg dark:border-[#1b1f23] md:size-[300px] lg:h-[350px] lg:w-[350px]">
+            <div className="relative size-[250px] flex-shrink-0 rounded-full border-4 bg-lightbg dark:border-[#1b1f23] md:size-[300px] lg:h-[350px] lg:w-[350px]">
               <Image
                 width={160}
                 height={160}
