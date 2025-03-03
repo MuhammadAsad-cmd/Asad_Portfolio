@@ -11,10 +11,9 @@ const ContactForm = () => {
         <div className=" bg-white p-5 dark:bg-discordDark">
           <section>
             <h1 className="text-xl font-semibold">Let’s connect</h1>
-
-            <div className="mt-4 flex flex-col lg:flex-row">
+            <div className="mt-4 flex flex-col-reverse gap-y-6 lg:flex-row">
               <form className="w-full lg:mb-0 lg:w-[60%]">
-                <div className="mb-4 grid grid-cols-2 gap-4">
+                <div className="mb-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
                   <div className="w-full">
                     <label
                       className="mb-[2px] block font-medium"
@@ -52,7 +51,7 @@ const ContactForm = () => {
                     />
                   </div>
                 </div>
-                <div className="mb-4 grid grid-cols-2 gap-4">
+                <div className="mb-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
                   <div className="w-full">
                     <label
                       className="mb-[2px] block font-medium"

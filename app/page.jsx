@@ -1,4 +1,3 @@
-import Image from "next/image";
 import About from "./components/About/About";
 import Certifications from "./components/Certifications/Certifications";
 import Education from "./components/Education/Education";
@@ -8,7 +7,6 @@ import Projects from "./components/Projects/Projects";
 import Recommendations from "./components/Recommendations/Recommendations";
 import Services from "./components/Services/Services";
 import Skills from "./components/Skills/Skills";
-import ContactForm from "./components/ContactForm/ContactForm";
 
 export const metadata = {
   title: "Portfolio | M. Asad - Web Developer | Front-End Developer",
@@ -96,7 +94,6 @@ export default function Home() {
         <Skills />
         <Recommendations />
         <Certifications />
-        {/* <ContactForm /> */}
       </div>
     </>
   );

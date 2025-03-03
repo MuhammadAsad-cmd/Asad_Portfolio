@@ -9,6 +9,7 @@ import { PersistGate } from "redux-persist/integration/react";
 import Image from "next/image";
 import ScrollToTopButton from "../ScrollToTopButton/ScrollToTopButton";
 import TopLoader from "../TopLoader/TopLoader";
+import ContactForm from "../ContactForm/ContactForm";
 
 export default function MainLayout({ children }) {
   return (
@@ -29,11 +30,9 @@ export default function MainLayout({ children }) {
             </div>
             <div className="mt-5 flex w-full flex-col gap-5 md:flex-row">
               <div className="w-full">{children}</div>
-              {/* <aside className="hidden w-full max-w-[300px] md:block">
-              <ContactInfo />
-            </aside> */}
             </div>
             <ScrollToTopButton />
+            <ContactForm />
             <Footer />
           </div>
         </ThemeInitializer>
