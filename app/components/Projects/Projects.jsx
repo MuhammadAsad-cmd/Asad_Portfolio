@@ -4,12 +4,22 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 import { IoMdArrowRoundForward } from "react-icons/io";
+import ProjectModal from "../ProjectModal/ProjectModal";
 
 const Projects = () => {
   const [expandedProjectIndex, setExpandedProjectIndex] = useState(null);
+  const [selectedProject, setSelectedProject] = useState(null);
 
   const toggleReadMore = (index) => {
     setExpandedProjectIndex(index === expandedProjectIndex ? null : index);
+  };
+
+  const openModal = (project) => {
+    setSelectedProject(project);
+  };
+
+  const closeModal = () => {
+    setSelectedProject(null);
   };
 
   return (
@@ -72,10 +82,11 @@ const Projects = () => {
                     </div>
                   )}
                 </div>
-                <Link
-                  target="_blank"
-                  href={project.Link}
-                  className="mt-3 flex items-center gap-3"
+                <div
+                  // target="_blank"
+                  // href={project.Link}
+                  className="mt-3 flex cursor-pointer items-center gap-3"
+                  onClick={() => openModal(project)}
                 >
                   <div className="rounded-lg border dark:border-darkSecondaryGray">
                     <Image
@@ -88,7 +99,7 @@ const Projects = () => {
                     />
                   </div>
                   <p className="text-sm font-semibold">{project.title}</p>
-                </Link>
+                </div>
               </div>
             ))}
           </div>
@@ -96,11 +107,18 @@ const Projects = () => {
             href="/details/projects"
             className="flex h-[41px] w-full cursor-pointer items-center justify-center gap-2 rounded-b-lg border-t text-lightPrimarytext duration-200 ease-in-out dark:border-darkSecondaryGray dark:text-white dark:hover:bg-discordDark"
           >
-            <p className="text-base font-semibold">Show all</p>
+            <p className="text-base font-semibold">
+              Show all ( {projectsData.length} ) projects
+            </p>
             <IoMdArrowRoundForward className="text-xl" />
           </Link>
         </div>
       </div>
+
+      {/* Modal Component */}
+      {selectedProject && (
+        <ProjectModal project={selectedProject} onClose={closeModal} />
+      )}
     </>
   );
 };

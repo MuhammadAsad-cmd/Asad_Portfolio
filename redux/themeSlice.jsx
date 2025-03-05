@@ -1,7 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+// Detect system theme on first load
+const prefersDark =
+  typeof window !== "undefined" &&
+  window.matchMedia("(prefers-color-scheme: dark)").matches;
+
 const initialState = {
-  isDark: false,
+  isDark: prefersDark,
 };
 
 export const themeSlice = createSlice({

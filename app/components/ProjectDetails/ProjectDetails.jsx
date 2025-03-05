@@ -4,12 +4,22 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 import { FaArrowLeft } from "react-icons/fa";
+import ProjectModal from "../ProjectModal/ProjectModal";
 
 const ProjectDetails = () => {
   const [expandedProjectIndex, setExpandedProjectIndex] = useState(null);
+  const [selectedProject, setSelectedProject] = useState(null);
 
   const toggleReadMore = (index) => {
     setExpandedProjectIndex(index === expandedProjectIndex ? null : index);
+  };
+
+  const openModal = (project) => {
+    setSelectedProject(project);
+  };
+
+  const closeModal = () => {
+    setSelectedProject(null);
   };
 
   return (
@@ -78,10 +88,11 @@ const ProjectDetails = () => {
                     </div>
                   )}
                 </div>
-                <Link
-                  target="_blank"
-                  href={project.Link}
-                  className="mt-3 flex items-center gap-3"
+                <div
+                  // target="_blank"
+                  // href={project.Link}
+                  onClick={() => openModal(project)}
+                  className="mt-3 flex cursor-pointer items-center gap-3"
                 >
                   <div className="rounded-lg border dark:border-darkSecondaryGray">
                     <Image
@@ -93,7 +104,7 @@ const ProjectDetails = () => {
                     />
                   </div>
                   <p className="text-sm font-semibold">{project.title}</p>
-                </Link>
+                </div>
                 {project.techUsed && (
                   <p className="mt-3 text-sm">
                     {" "}
@@ -106,6 +117,11 @@ const ProjectDetails = () => {
           </div>
         </div>
       </div>
+
+      {/* Modal Component */}
+      {selectedProject && (
+        <ProjectModal project={selectedProject} onClose={closeModal} />
+      )}
     </>
   );
 };

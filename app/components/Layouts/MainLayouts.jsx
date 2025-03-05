@@ -46,31 +46,24 @@ function ThemeInitializer({ children }) {
   const dispatch = useDispatch();
   const isDark = useSelector((state) => state.theme.isDark);
 
-  // On mount, check localStorage and system preference
+  // On mount, check system preference
   useEffect(() => {
-    const storedTheme = localStorage.getItem("theme");
-    if (storedTheme) {
-      dispatch(setDark(storedTheme === "dark"));
-    } else if (
+    if (
       window.matchMedia &&
       window.matchMedia("(prefers-color-scheme: dark)").matches
     ) {
       dispatch(setDark(true));
-      localStorage.setItem("theme", "dark");
     } else {
       dispatch(setDark(false));
-      localStorage.setItem("theme", "light");
     }
   }, [dispatch]);
 
-  // Update the HTML element’s class and localStorage whenever isDark changes.
+  // Update the HTML element’s class whenever isDark changes.
   useEffect(() => {
     if (isDark) {
       document.documentElement.classList.add("dark");
-      localStorage.setItem("theme", "dark");
     } else {
       document.documentElement.classList.remove("dark");
-      localStorage.setItem("theme", "light");
     }
   }, [isDark]);
 

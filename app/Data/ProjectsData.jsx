@@ -107,8 +107,8 @@ export const projectsData = [
     title: "Kanban Board Project",
     date: "May 2024 - May 2024",
     shortDescription:
-      "A Kanban Board, designed to streamline task management and boost productivity. This tool features a user-friendly interface that allows users to seamlessly manage their tasks through various stages, ensuring efficient workflow and clear visualization",
-    longDescription: `of progress.`,
+      "A Kanban Board, designed to streamline task management and boost productivity. This tool features a user-friendly interface that allows users to seamlessly manage their tasks through various stages, ensuring efficient workflow and clear visualization of progress.",
+    longDescription: ``,
     keyFeatures: [
       "Projects Section: Add and manage multiple projects with ease.",
       "Backlog: Keep track of tasks that are yet to be started.",
