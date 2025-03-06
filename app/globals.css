@@ -116,3 +116,11 @@ html {
 .scrollToTopBtn:hover {
   bottom: 30px;
 }
+
+.inputfeild {
+  @apply w-full rounded-md border border-lightBorder bg-lightbg px-2 py-3 text-lightPrimarytext 
+  outline-none transition duration-300 ease-in-out 
+  hover:border-SkyBlue focus:border-SkyBlue focus:ring-2 focus:ring-SkyBlue
+  dark:border-darkSecondaryGray dark:bg-darkbg dark:text-white dark:placeholder-darkPrimaryGray
+  dark:hover:border-darkHover dark:focus:border-darkHover dark:focus:ring-darkHover;
+}

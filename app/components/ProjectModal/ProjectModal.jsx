@@ -37,10 +37,10 @@ const ProjectModal = ({ project, onClose }) => {
             />
           </div>
           <div className="w-full pb-10 md:w-[40%]">
-            <div className="flex flex-col justify-between sm:flex-row sm:items-center">
+            <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-center">
               <h1 className="text-xl font-semibold">{project.title}</h1>
               <Link target="_blank" href={project.Link}>
-                <button className="my-3 flex items-center justify-center gap-2 rounded-full bg-SkyBlue px-4 py-2 text-black hover:bg-lightHover dark:hover:bg-darkHover">
+                <button className="my-3 flex items-center justify-center gap-2 whitespace-nowrap rounded-full bg-SkyBlue px-4 py-2 text-black hover:bg-lightHover dark:hover:bg-darkHover">
                   <p className="text-base font-semibold">Live Preview</p>
                 </button>
               </Link>

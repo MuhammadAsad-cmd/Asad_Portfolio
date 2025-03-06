@@ -100,7 +100,7 @@ export const projectsData = [
       "The CodesInc website is crafted using Next.js, Tailwind CSS, and JavaScript, ensuring responsiveness, performance, and scalability.",
     conclusion:
       "This project demonstrates expertise in building corporate websites that align with the company’s branding and mission.",
-    Link: "https://codesinc-officials.vercel.app/",
+    Link: "https://codes-inc.com/",
     image: "/images/codesinc.png",
   },
   {
@@ -121,7 +121,26 @@ export const projectsData = [
     conclusion:
       "Check out the project to see how it can enhance your workflow and task management!",
     Link: "https://projectkanban.vercel.app/",
-    image: "/images/kanban.jfif",
+    image: "/images/kanban.png",
+  },
+  {
+    title: "the ENTERTAINER – Ultimate BOGO Deals & Lifestyle Savings",
+    date: "Mar 2025 - Dec 2025",
+    shortDescription:
+      "the ENTERTAINER is a cutting-edge savings platform offering exclusive Buy One Get One Free deals on dining, leisure, wellness, and more across the Middle East. Discover premium experiences at unbeatable prices.",
+    longDescription: `Built with an intuitive design and a user-centric approach, the platform brings together a diverse range of offers from top restaurants, spas, hotels, and attractions. Empowering users to explore local experiences while maximizing savings, the ENTERTAINER redefines how you enjoy life's pleasures. With a seamless interface and a dedicated mobile app, every deal is just a tap away.`,
+    keyFeatures: [
+      "Exclusive Offers: Unlock thousands of BOGO deals across dining, leisure, wellness, and more.",
+      "Diverse Categories: Enjoy savings on restaurants, spas, hotels, attractions, and lifestyle services.",
+      "Intuitive Navigation: Experience a user-friendly interface that makes discovering deals simple.",
+      "Mobile-Optimized: Access premium offers on the go with a fully responsive design and dedicated app.",
+    ],
+    technologies:
+      "the ENTERTAINER leverages modern web and mobile technologies to deliver a fast, secure, and seamless user experience.",
+    conclusion:
+      "Dive into a world of savings and premium experiences. Explore the ENTERTAINER to unlock exclusive deals and transform your lifestyle with just one click.",
+    Link: "https://main.d3n4dxq4vxj5a8.amplifyapp.com/",
+    image: "/images/entertainer.png",
   },
   {
     title: "Breaking Balls Sports – Multi-Sport Analytics",
