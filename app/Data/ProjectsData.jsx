@@ -125,7 +125,7 @@ export const projectsData = [
   },
   {
     title: "the ENTERTAINER – Ultimate BOGO Deals & Lifestyle Savings",
-    date: "Mar 2025 - Dec 2025",
+    date: "Nov 2024 - Dec 2024",
     shortDescription:
       "the ENTERTAINER is a cutting-edge savings platform offering exclusive Buy One Get One Free deals on dining, leisure, wellness, and more across the Middle East. Discover premium experiences at unbeatable prices.",
     longDescription: `Built with an intuitive design and a user-centric approach, the platform brings together a diverse range of offers from top restaurants, spas, hotels, and attractions. Empowering users to explore local experiences while maximizing savings, the ENTERTAINER redefines how you enjoy life's pleasures. With a seamless interface and a dedicated mobile app, every deal is just a tap away.`,
