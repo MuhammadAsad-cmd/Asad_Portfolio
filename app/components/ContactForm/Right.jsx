@@ -16,7 +16,7 @@ const Right = () => {
             </div>
             <div className="grow">
               <p className="mb-1 font-bold tracking-wide">Email</p>
-              <Link target="_blank" href="mailto:189asadali@gmail.com">
+              <Link href="mailto:189asadali@gmail.com">
                 <p className="tracking-wide text-neutral-500">
                   189asadali@gmail.com
                 </p>
@@ -46,7 +46,7 @@ const Right = () => {
             </div>
             <div className="grow">
               <p className="mb-1 font-bold tracking-wide">Phone</p>
-              <Link target="_blank" href="https://wa.me/923193148320">
+              <Link href="https://wa.me/923193148320">
                 <p className="tracking-wide text-neutral-500">+923193148320</p>
               </Link>
             </div>

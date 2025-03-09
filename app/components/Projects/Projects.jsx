@@ -35,10 +35,10 @@ const Projects = () => {
                 Total Projects ( {projectsData.length} )
               </p>
             </div>
-            {projectsData.slice(0, 4).map((project, index) => (
+            {projectsData.slice(0, 7).map((project, index) => (
               <div
                 key={index}
-                className={`mt-3 pb-4 ${index < 3 ? "border-b dark:border-darkSecondaryGray" : ""}`}
+                className={`mt-3 pb-4 ${index < 5 ? "border-b dark:border-darkSecondaryGray" : ""}`}
               >
                 <Link target="_blank" href={project.Link}>
                   <h2 className="cursor-pointer text-base font-semibold">

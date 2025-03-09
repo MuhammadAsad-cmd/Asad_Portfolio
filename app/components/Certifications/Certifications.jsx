@@ -103,6 +103,7 @@ const Certifications = () => {
                   <span>
                     {" "}
                     <Link
+                      target="_blank"
                       className="text-SkyBlue hover:text-lightHover dark:hover:text-darkHover"
                       href="https://www.netacad.com/"
                     >
@@ -111,7 +112,10 @@ const Certifications = () => {
                     </Link>{" "}
                   </span>
                 </p>
-                <Link href="https://www.credly.com/badges/3b4ca55c-51a6-4b24-a65f-1c164e4b949c/public_url">
+                <Link
+                  target="_blank"
+                  href="https://www.credly.com/badges/3b4ca55c-51a6-4b24-a65f-1c164e4b949c/public_url"
+                >
                   <div className="mt-3 flex items-center gap-3">
                     <div className="rounded-lg border dark:border-darkSecondaryGray">
                       <Image

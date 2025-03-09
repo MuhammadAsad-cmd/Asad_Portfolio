@@ -85,7 +85,7 @@ const ContactModal = ({ onClose }) => {
                 </div>
                 <div>
                   <h3 className="text-base font-semibold">Email</h3>
-                  <Link target="_blank" href="mailto:189asadali@gmail.com">
+                  <Link href="mailto:189asadali@gmail.com">
                     <p className="mb-6 overflow-hidden truncate text-sm font-semibold text-SkyBlue hover:underline">
                       189asadali@gmail.com
                     </p>

@@ -60,7 +60,7 @@ export const experiences = [
 export const projectsData = [
   {
     title: "KAF – Premium Dried Fruits, Nuts, Spices & Much More",
-    date: "May 2024 - Present",
+    date: "Established",
     shortDescription:
       "The KAF website offers premium dried fruits, nuts, spices, and related products. Built using Node.js, Next.js, and Redux Toolkit, it provides a seamless shopping experience with fast navigation and dynamic content updates.",
     longDescription: ` The site integrates modern e-commerce features like product filtering, a secure checkout process, and responsive design. With a focus on healthy and high-quality foods, it caters to customers looking for nutritious snacks and cooking essentials. KAF’s design is user-friendly a`,
@@ -84,7 +84,7 @@ export const projectsData = [
   },
   {
     title: "CodesInc – IT Solutions & Services",
-    date: "October 2024 - December 2024",
+    date: "Established",
     shortDescription:
       "A professional IT company website showcasing its services and expertise. Built with Next.js and Tailwind CSS for a modern, responsive design and seamless navigation.",
     longDescription: `CodesInc website was developed to highlight the company's expertise in providing IT solutions and services. The site features an elegant and responsive design with optimized loading times, ensuring a smooth user experience. It incorporates custom animations, an intuitive layout, and a clean structure to reflect the company's professionalism.`,
@@ -103,6 +103,47 @@ export const projectsData = [
     Link: "https://codes-inc.com/",
     image: "/images/codesinc.png",
   },
+  {
+    title: "GL Group UAE",
+    date: "Established",
+    shortDescription:
+      "Corporate showcase for a diversified business conglomerate in the UAE.GL Group UAE is the digital face of a dynamic business conglomerate, presenting an array of projects spanning real estate, hospitality, retail, and more. The website emphasizes the group’s expertise, innovation, and commitment to quality with its clean design and intuitive navigation, appealing to both investors and clients.",
+    longDescription: "",
+    keyFeatures: [
+      "Corporate Branding",
+      "Comprehensive Project Portfolio",
+      "Investor Relations",
+      "Responsive & Modern Design",
+      "User-Friendly Navigation",
+    ],
+    technologies:
+      "Utilizes modern web design principles and responsive development techniques.",
+    conclusion:
+      "Explore GL Group UAE to witness the breadth and quality of their diverse business ventures.",
+    Link: "https://www.glgroupuae.com/",
+    image: "/images/groupuae.png",
+  },
+  {
+    title: "GL Dream Home",
+    date: "Established",
+    shortDescription:
+      "A premium platform for furniture and interior design solutions. GL Dream Home offers a curated collection of high-quality furniture and inspiring interior design ideas. The website features detailed product showcases and inspirational galleries, providing an engaging and user-friendly shopping experience. It seamlessly blends contemporary trends with timeless design to help customers transform their living spaces.",
+    longDescription: "",
+    keyFeatures: [
+      "Curated Furniture Collection",
+      "Inspirational Design Galleries",
+      "Detailed Product Showcases",
+      "User-Friendly Interface",
+      "Responsive Web Design",
+    ],
+    technologies:
+      "Built with modern web technologies to ensure a seamless and dynamic user experience.",
+    conclusion:
+      "Discover furniture that transforms your space into a stylish haven at GL Dream Home.",
+    Link: "https://gldreamhome.com/",
+    image: "/images/gldreamhome.png",
+  },
+
   {
     title: "Kanban Board Project",
     date: "May 2024 - May 2024",
@@ -123,6 +164,7 @@ export const projectsData = [
     Link: "https://projectkanban.vercel.app/",
     image: "/images/kanban.png",
   },
+  ,
   {
     title: "the ENTERTAINER – Ultimate BOGO Deals & Lifestyle Savings",
     date: "Nov 2024 - Dec 2024",
