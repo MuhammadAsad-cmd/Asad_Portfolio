@@ -58,7 +58,7 @@ const ExpCard = () => {
                     height={48}
                     src={experience.image}
                     alt={experience.company}
-                    className=""
+                    className="h-full w-full rounded-full object-cover"
                   />
                 </Link>
                 <div>
@@ -82,7 +82,7 @@ const ExpCard = () => {
                       </h3>
                     )}
 
-                    <p className="text-darkPrimaryGray flex items-center">
+                    <p className="flex items-center text-darkPrimaryGray">
                       {experience.roles[0].duration}{" "}
                       <span className="mx-2">·</span>
                       <span> {calculateTotalDuration(experience.roles)} </span>
@@ -104,28 +104,29 @@ const ExpCard = () => {
             ) : (
               <div>
                 <div className="flex">
-                  <div className="flex-shrink-0">
+                  <div className="h-12 w-12 flex-shrink-0">
                     <Link
                       href={experience.link || "#"}
                       passHref
-                      className="h-12 w-12 cursor-pointer bg-blue-500"
+                      className="h-12 w-12 cursor-pointer rounded-full bg-blue-500"
                     >
                       <Image
                         width={48}
                         height={48}
                         src={experience.image}
                         alt={experience.company}
+                        className="h-full w-full rounded-full object-cover"
                       />
                     </Link>
                   </div>
                   <div className="ml-2">
                     <Link href={experience.link}>
-                      <h3 className="hover:text-SkyBlue cursor-pointer text-lg font-semibold hover:underline">
+                      <h3 className="cursor-pointer text-lg font-semibold hover:text-SkyBlue hover:underline">
                         {experience.company}
                       </h3>
                     </Link>
                     <p className="text-sm">{experience.time}</p>
-                    <p className="text-darkPrimaryGray text-sm">
+                    <p className="text-sm text-darkPrimaryGray">
                       {experience.location}
                     </p>
                   </div>
@@ -144,12 +145,12 @@ const ExpCard = () => {
                         }`}
                       ></div>
                       <Link href={experience.link || "#"} passHref>
-                        <h4 className="hover:text-SkyBlue cursor-pointer text-base font-semibold hover:underline">
+                        <h4 className="cursor-pointer text-base font-semibold hover:text-SkyBlue hover:underline">
                           {role.title}
                         </h4>
                       </Link>
                       <p className="text-sm">{role.type}</p>
-                      <p className="text-darkPrimaryGray text-sm">
+                      <p className="text-sm text-darkPrimaryGray">
                         {formatDate(role.startDate)} -{" "}
                         {formatDate(role.endDate)} ·{" "}
                         {calculateDuration(role.startDate, role.endDate)}
