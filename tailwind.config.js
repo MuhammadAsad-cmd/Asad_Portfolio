@@ -60,6 +60,20 @@ module.exports = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      keyframes: {
+        zoomIn: {
+          "0%": { transform: "scale(0.8)", opacity: "0" },
+          "100%": { transform: "scale(1)", opacity: "1" },
+        },
+        zoomOut: {
+          "0%": { transform: "scale(1)", opacity: "1" },
+          "100%": { transform: "scale(0.8)", opacity: "0" },
+        },
+      },
+      animation: {
+        zoomIn: "zoomIn 0.3s ease-out forwards",
+        zoomOut: "zoomOut 0.3s ease-in forwards",
+      },
     },
   },
   plugins: [],

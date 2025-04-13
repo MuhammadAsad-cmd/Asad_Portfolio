@@ -12,14 +12,14 @@ const Sidebar = ({ id, position = "left", children }) => {
       {/* Overlay (Click outside to close) */}
       {isOpen && (
         <div
-          className="fixed inset-0 z-50 bg-black/50"
+          className="fixed inset-0 z-[100] bg-black/50"
           onClick={() => dispatch(closeSidebar(id))}
         ></div>
       )}
 
       {/* Sidebar */}
       <div
-        className={`fixed top-0 z-50 h-full w-[340px] bg-white shadow-lg transition-transform duration-300 ease-in-out dark:bg-discordDark
+        className={`fixed top-0 z-[100] h-full w-[340px] bg-white shadow-lg transition-transform duration-300 ease-in-out dark:bg-discordDark
         ${position === "left" ? "left-0" : "right-0"}
         ${
           isOpen
@@ -33,7 +33,7 @@ const Sidebar = ({ id, position = "left", children }) => {
         {/* Close Button */}
         <button
           onClick={() => dispatch(closeSidebar(id))}
-          className="text-SkyBlue absolute right-3 top-3"
+          className="absolute right-3 top-3 text-SkyBlue"
         >
           <IoClose className="text-2xl" />
         </button>

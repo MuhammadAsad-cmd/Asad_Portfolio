@@ -16,18 +16,18 @@ export default function MainLayout({ children }) {
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
         <ThemeInitializer>
+          <TopLoader />
+          <div className="absolute start-0 top-0 -z-10 h-full w-full">
+            <Image
+              width={100}
+              height={100}
+              src="/images/bg-dark.png"
+              alt="darkbg"
+              className="h-full w-full object-cover"
+            />
+          </div>
           <div className="container max-w-[1380px]">
-            <TopLoader />
             <Header />
-            <div className="absolute start-0 top-0 -z-10 h-full w-full">
-              <Image
-                width={100}
-                height={100}
-                src="/images/bg-dark.png"
-                alt="darkbg"
-                className="h-full w-full object-cover"
-              />
-            </div>
             <div className="mt-5 flex w-full flex-col gap-5 md:flex-row">
               <div className="w-full">{children}</div>
             </div>

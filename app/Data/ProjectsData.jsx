@@ -17,6 +17,25 @@ export const servicesData = [
 
 export const experiences = [
   {
+    company: "Retrovgames",
+    image: "/images/retrovgameslogo.jpeg",
+    location: "Lahore, Punjab, Pakistan · On-site",
+    link: "https://www.linkedin.com/company/retrovgames-com/",
+    time: "Apr 2025 - Present",
+    roles: [
+      {
+        title: "Front End Next.js Developer",
+        type: "Full Time",
+        startDate: "2025-04",
+        endDate: null,
+        duration: "Apr 2025 - Present",
+        skills: "React, Next.js, Tailwind Css, Redux Toolkit, Rest Api",
+      },
+    ],
+    skills: "React, Next.js, Tailwind Css, Redux Toolkit, Rest Api",
+  },
+
+  {
     company: "Motive Coder",
     time: "1 Year - 5 months",
     location: "Lahore, Punjab, Pakistan · On-site",
@@ -27,7 +46,7 @@ export const experiences = [
         title: "Front End Developer",
         type: "Full Time",
         startDate: "2023-12", // ISO format (YYYY-MM)
-        endDate: null, // Ongoing role
+        endDate: "2025-03", // Ongoing role
         skills: "React, Next.js, Tailwind Css, Redux Toolkit, Rest Api",
       },
       {
@@ -164,7 +183,32 @@ export const projectsData = [
     Link: "https://projectkanban.vercel.app/",
     image: "/images/kanban.png",
   },
-  ,
+  {
+    title: "Canrover Admin Panel",
+    date: "Launched",
+    shortDescription:
+      "A modern admin dashboard to manage scooters, users, and reservations in real time, using Next.js, Tailwind CSS, React Hook Form, Zod, Redux Toolkit, and TypeScript.",
+    longDescription: `The Canrover Admin Panel centralizes all crucial operations for scooter sharing management. From tracking live scooter locations on an integrated map, to locking or unlocking a scooter remotely, to managing user accounts and reviews, this platform was designed to streamline administrative tasks. It also ensures that admins can handle reservations, monitor total rides, and oversee reviews submitted by end users—all in a single, intuitive dashboard. With the power of Next.js, this panel ensures fast server-side rendering and easy code splitting, while TypeScript, Zod, and React Hook Form guarantee robust type safety and form validation.`,
+    keyFeatures: [
+      "Real-time scooter tracking on a live map.",
+      "Remote locking, unlocking, and alarm triggering for scooters.",
+      "Admin management with login and secure access.",
+      "User-friendly interface for viewing all users and their account types.",
+      "Reservation tracking to see which scooters are already reserved.",
+      "Comprehensive reviews section to view and manage user feedback.",
+      "React Hook Form and Zod for scalable and secure form handling and validation.",
+      "Next.js for high-performance server-side rendering and routing.",
+      "Redux Toolkit integration for global state management.",
+      "Tailwind CSS for a consistent, responsive, and modern UI.",
+      "TypeScript for type safety and maintainable code.",
+    ],
+    technologies:
+      "Canrover Admin Panel is built using Next.js, Tailwind CSS, React Hook Form, Zod, Redux Toolkit, and TypeScript. This tech stack ensures a fast, responsive, and user-friendly experience for scooter management and monitoring.",
+    conclusion:
+      "Explore the Canrover Admin Panel to see how efficiently scooter-sharing operations can be managed and monitored, all under one cohesive platform.",
+    Link: "https://canrover.vercel.app/",
+    image: "/images/canrover.png",
+  },
   {
     title: "the ENTERTAINER – Ultimate BOGO Deals & Lifestyle Savings",
     date: "Nov 2024 - Dec 2024",

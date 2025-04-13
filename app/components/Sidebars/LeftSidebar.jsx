@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { FaFacebook, FaGithub, FaInstagram } from "react-icons/fa";
+import { SiUpwork } from "react-icons/si";
 import { TfiLinkedin } from "react-icons/tfi";
 
 const LeftSidebar = () => {
@@ -59,6 +60,13 @@ const LeftSidebar = () => {
                 className="duration-300 ease-in-out hover:text-SkyBlue"
               >
                 <FaGithub />
+              </Link>
+              <Link
+                target="_blank"
+                href="https://www.upwork.com/freelancers/~01a30bffb100551bb2?mp_source=share"
+                className="duration-300 ease-in-out hover:text-SkyBlue"
+              >
+                <SiUpwork />
               </Link>
               <Link
                 href="https://www.instagram.com/muhammadasad9017"

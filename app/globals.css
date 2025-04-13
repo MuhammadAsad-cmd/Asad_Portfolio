@@ -124,3 +124,25 @@ html {
   dark:border-darkSecondaryGray dark:bg-darkbg dark:text-white dark:placeholder-darkPrimaryGray
   dark:hover:border-darkHover dark:focus:border-darkHover dark:focus:ring-darkHover;
 }
+
+/* Custom scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px; /* Slightly wider for better usability */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    180deg,
+    #5daeff,
+    #1d85ff
+  ); /* soft blue gradient */
+  border-radius: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #4da1f7, #1979e6); /* hover gradient */
+}

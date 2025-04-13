@@ -1,10 +1,12 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { RxCross2 } from "react-icons/rx";
 import Link from "next/link";
 
 const ProjectModal = ({ project, onClose }) => {
+  const [isClosing, setIsClosing] = useState(false);
+
   useEffect(() => {
     document.body.style.overflow = "hidden";
     return () => {
@@ -12,14 +14,26 @@ const ProjectModal = ({ project, onClose }) => {
     };
   }, []);
 
+  const handleClose = () => {
+    setIsClosing(true);
+    setTimeout(() => {
+      onClose();
+      setIsClosing(false);
+    }, 300); // match animation duration
+  };
+
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black bg-opacity-50">
-      <div className="h-[550px] w-full max-w-6xl overflow-y-auto rounded-lg bg-white dark:bg-discordDark">
+      <div
+        className={`custom-scrollbar h-[550px] w-full max-w-6xl transform overflow-y-auto rounded-lg bg-white transition-all duration-300 dark:bg-discordDark ${
+          isClosing ? "animate-zoomOut" : "animate-zoomIn"
+        }`}
+      >
         {/* Header */}
         <div className="sticky top-0 flex h-[61px] items-center justify-between rounded-t-lg border-b bg-white px-4 dark:border-darkSecondaryGray dark:bg-discordDark">
           <h2 className="text-xl font-semibold">Media</h2>
           <div
-            onClick={onClose}
+            onClick={handleClose}
             className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full text-xl font-medium hover:bg-discordDark"
           >
             <RxCross2 />
@@ -63,13 +77,13 @@ const ProjectModal = ({ project, onClose }) => {
             )}
             {project.technologies && (
               <>
-                <p className="mt-2 text-base font-semibold"> Technologies: </p>
+                <p className="mt-2 text-base font-semibold">Technologies:</p>
                 <p className="mt-1 text-sm">{project.technologies}</p>
               </>
             )}
             {project.conclusion && (
               <>
-                <p className="mt-2 text-base font-semibold"> conclusion: </p>
+                <p className="mt-2 text-base font-semibold">Conclusion:</p>
                 <p className="mt-1 text-sm">{project.conclusion}</p>
               </>
             )}

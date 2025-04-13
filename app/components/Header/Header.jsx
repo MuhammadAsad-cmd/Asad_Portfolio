@@ -99,7 +99,7 @@ const Header = () => {
 
       {/* Right Sidebar */}
       <Sidebar id="rightSidebar" position="right">
-        <RightSidebar />
+        <RightSidebar id="rightSidebar" />
       </Sidebar>
     </>
   );
