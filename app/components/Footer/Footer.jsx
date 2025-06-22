@@ -21,7 +21,7 @@ const Footer = () => {
       <div className="flex items-center justify-center gap-4 text-xl">
         <Link
           target="_blank"
-          href="https://www.linkedin.com/in/asad189"
+          href="https://www.linkedin.com/in/masadali/"
           className="text-lightSecondarytext duration-300 ease-in-out hover:text-lightHover dark:text-darkPrimaryGray dark:hover:text-SkyBlue"
         >
           <TfiLinkedin />
@@ -56,10 +56,8 @@ const Footer = () => {
         </Link> */}
       </div>
       <div className="flex w-full flex-wrap items-center justify-center gap-x-4 gap-y-2 px-4 md:gap-6">
-        <NavLink href="#about">About</NavLink>
         <NavLink href="#services">Services</NavLink>
         <NavLink href="#experience">Experience</NavLink>
-        <NavLink href="#education">Education</NavLink>
         <NavLink href="#projects">Projects</NavLink>
         <NavLink href="#skills">Skills</NavLink>
         <NavLink href="#contact">Contact</NavLink>

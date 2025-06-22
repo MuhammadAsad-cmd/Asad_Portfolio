@@ -21,9 +21,9 @@ const ContactInfo = () => {
           </div>
           <div>
             <h3 className="text-base font-semibold">Linkedin Profile URL</h3>
-            <a target="_blank" href="https://www.linkedin.com/in/asad189/">
+            <a target="_blank" href="https://www.linkedin.com/in/masadali">
               <p className="mb-6 overflow-hidden text-ellipsis text-sm font-semibold text-SkyBlue hover:underline">
-                https://www.linkedin.com/in/asad189/
+                https://www.linkedin.com/in/masadali
               </p>
             </a>
           </div>

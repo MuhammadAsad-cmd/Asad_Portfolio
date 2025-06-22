@@ -16,39 +16,53 @@ const LeftSidebar = () => {
             innovative minds.
           </p>
           <div className="mb-4 text-base leading-[26px]">
-            <p className="capitalize tracking-widest text-gray-400">
+            <p className="capitalize tracking-widest text-gray-900 dark:text-gray-400">
               Phone Number
             </p>
-            <Link href="tel:+923059971189" className="text-gray-500">
+            <Link
+              href="tel:+923059971189"
+              className="text-gray-700 dark:text-gray-200"
+            >
               +92 305 9971189
             </Link>
           </div>
           <div className="mb-4 text-base leading-[26px]">
-            <p className="capitalize tracking-widest text-gray-400">Whatsapp</p>
-            <Link href="https://wa.me/+923193148320" className="text-gray-500">
+            <p className="capitalize tracking-widest text-gray-900 dark:text-gray-400">
+              Whatsapp
+            </p>
+            <Link
+              href="https://wa.me/+923193148320"
+              className="text-gray-700 dark:text-gray-200"
+            >
               +92 319 3148320
             </Link>
           </div>
           <div className="mb-4 text-base leading-[26px]">
-            <p className="capitalize tracking-widest text-gray-400">Email</p>
+            <p className="capitalize tracking-widest text-gray-900 dark:text-gray-400">
+              Email
+            </p>
             <Link
               target="_blank"
               href="mailto:189asadali@gmail.com"
-              className="text-gray-500"
+              className="text-gray-700 dark:text-gray-200"
             >
               189asadali@gmail.com
             </Link>
           </div>
           <div className="mb-4 text-base leading-[26px]">
-            <p className="capitalize tracking-widest text-gray-400">Address</p>
-            <p className="text-gray-500">Lahore, Pakistan</p>
+            <p className="capitalize tracking-widest text-gray-900 dark:text-gray-400">
+              Address
+            </p>
+            <p className="text-gray-700 dark:text-gray-200">Lahore, Pakistan</p>
           </div>
 
           <div className="mb-4 text-base leading-[26px]">
-            <p className="capitalize tracking-widest text-gray-400">Social</p>
+            <p className="capitalize tracking-widest text-gray-900 dark:text-gray-400">
+              Social
+            </p>
             <div className="mt-1 flex items-center gap-4 text-xl">
               <Link
-                href="https://www.linkedin.com/in/asad189"
+                href="https://www.linkedin.com/in/masadali/"
                 target="_blank"
                 className="duration-300 ease-in-out hover:text-SkyBlue"
               >

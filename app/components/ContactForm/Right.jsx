@@ -17,7 +17,7 @@ const Right = () => {
             <div className="grow">
               <p className="mb-1 font-bold tracking-wide">Email</p>
               <Link href="mailto:189asadali@gmail.com">
-                <p className="tracking-wide text-neutral-500">
+                <p className="tracking-wide text-neutral-700 dark:text-neutral-200">
                   189asadali@gmail.com
                 </p>
               </Link>
@@ -44,10 +44,12 @@ const Right = () => {
                 </svg>
               </div>
             </div>
-            <div className="grow">
-              <p className="mb-1 font-bold tracking-wide">Phone</p>
+            <div className="shrink-0">
+              <p className="mb-1 font-bold tracking-wide">Phone / Whatsapp</p>
               <Link href="https://wa.me/923193148320">
-                <p className="tracking-wide text-neutral-500">+923193148320</p>
+                <p className="tracking-wide text-neutral-700 dark:text-neutral-200">
+                  +923193148320
+                </p>
               </Link>
             </div>
           </div>
@@ -61,9 +63,9 @@ const Right = () => {
             </div>
             <div className="grow">
               <p className="mb-1 font-bold tracking-wide">Linkedin</p>
-              <Link target="_blank" href="https://www.linkedin.com/in/asad189/">
+              <Link target="_blank" href="https://www.linkedin.com/in/masadali">
                 <p className="overflow-hidden text-ellipsis tracking-wide text-SkyBlue underline hover:text-lightHover dark:hover:text-darkHover max-md:w-[60%]">
-                  https://www.linkedin.com/in/asad189/
+                  https://www.linkedin.com/in/masadali
                 </p>
               </Link>
             </div>

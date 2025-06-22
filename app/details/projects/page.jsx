@@ -25,7 +25,7 @@ export const metadata = {
     title: "Muhammad Asad - Project Details",
     description:
       "Discover Muhammad Asad's portfolio of web development projects, showcasing expertise in building high-quality, scalable web applications with modern technologies.",
-    url: "https://asad-portfolio-ai.vercel.app/details/projects", // Update with the correct URL
+    url: "https://masadali.vercel.app/details/projects", // Update with the correct URL
     images: [
       {
         url: "/images/proj.png", // Update with a relevant image

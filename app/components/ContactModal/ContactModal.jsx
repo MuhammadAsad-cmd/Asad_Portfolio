@@ -12,9 +12,9 @@ const ContactModal = ({ onClose }) => {
   };
   return (
     <>
-      <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-black bg-opacity-50">
-        <div className="animated-border my-6 rounded-t-lg  sm:rounded-xl">
-          <div className="max-h-[500px] w-full max-w-[552px] overflow-hidden rounded-lg bg-white dark:bg-discordDark">
+      <div className="fixed inset-0 z-[99999] flex flex-col items-center justify-center bg-black bg-opacity-50">
+        <div className="animated-border my-6 w-full max-w-5xl rounded-t-lg sm:rounded-xl">
+          <div className="max-h-[500px] w-full overflow-hidden rounded-lg bg-white dark:bg-discordDark">
             {/* Header */}
             <div className="sticky left-0 right-0 top-0 z-50 flex h-[61px] items-center justify-between rounded-t-lg border-b bg-white px-4 dark:border-darkSecondaryGray dark:bg-discordDark">
               <h2 className="text-xl font-semibold">Contact Info</h2>
@@ -36,9 +36,9 @@ const ContactModal = ({ onClose }) => {
                   <h3 className="text-base font-semibold">
                     Linkedin Profile URL
                   </h3>
-                  <a href="https://www.linkedin.com/in/asad189/">
+                  <a href="https://www.linkedin.com/in/masadali">
                     <p className="mb-6 overflow-hidden text-sm font-semibold text-SkyBlue hover:underline">
-                      https://www.linkedin.com/in/asad189/
+                      https://www.linkedin.com/in/masadali
                     </p>
                   </a>
                 </div>

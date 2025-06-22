@@ -28,7 +28,13 @@ const ContactForm = () => {
     <div id="contact" className="animated-border my-6 md:rounded-xl">
       <div className="bg-white p-5 dark:bg-discordDark">
         <section>
-          <h1 className="text-xl font-semibold">Let’s connect</h1>
+          <div className="flex items-center gap-3">
+            <div className="h-8 w-1 rounded-full bg-gradient-to-b from-SkyBlue to-lightHover dark:to-darkHover"></div>
+            <h1 className="text-2xl font-bold text-lightPrimarytext dark:text-white">
+              Let’s connect
+            </h1>
+          </div>
+
           <div className="mt-4 flex flex-col-reverse gap-y-6 lg:flex-row">
             <form onSubmit={handleSubmit} className="w-full lg:mb-0 lg:w-[60%]">
               <div className="mb-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
@@ -61,9 +67,6 @@ const ContactForm = () => {
                     className="inputfeild"
                   />
                 </div>
-              </div>
-
-              <div className="mb-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
                 <div className="w-full">
                   <label className="mb-[2px] block font-medium" htmlFor="email">
                     Email
@@ -98,7 +101,6 @@ const ContactForm = () => {
                   />
                 </div>
               </div>
-
               <div className="mb-4 w-full">
                 <label className="mb-[2px] block font-medium" htmlFor="message">
                   Message

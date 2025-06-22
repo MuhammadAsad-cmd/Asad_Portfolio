@@ -23,7 +23,7 @@ export const metadata = {
     title: "Muhammad Asad - Education Details",
     description:
       "Discover the academic achievements and educational background of Muhammad Asad, a dedicated web developer with expertise in building modern, user-friendly web applications.",
-    url: "https://asad-portfolio-ai.vercel.app/details/education", // Update with the correct URL
+    url: "https://masadali.vercel.app/details/education", // Update with the correct URL
     images: [
       {
         url: "/images/educationdet.png",

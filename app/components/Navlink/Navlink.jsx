@@ -9,7 +9,7 @@ const NavLink = ({ href, children, onClick }) => {
     pathname === href || (href.startsWith("#") && pathname === "/");
 
   return (
-    <Link href={href} onClick={onClick}>
+    <Link href={href} onClick={onClick} className="h-full px-4">
       <p
         className={`text-lg font-medium duration-300 ease-in-out 
           ${

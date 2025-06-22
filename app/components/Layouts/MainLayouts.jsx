@@ -28,7 +28,7 @@ export default function MainLayout({ children }) {
           </div>
           <div className="container max-w-[1380px]">
             <Header />
-            <div className="mt-5 flex w-full flex-col gap-5 md:flex-row">
+            <div className="mt-6 flex w-full flex-col gap-5 md:mt-12 md:flex-row">
               <div className="w-full">{children}</div>
             </div>
             <ScrollToTopButton />

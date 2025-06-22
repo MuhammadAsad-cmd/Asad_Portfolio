@@ -3,7 +3,7 @@ import Certifications from "./components/Certifications/Certifications";
 import Education from "./components/Education/Education";
 import Experience from "./components/Experience/Experience";
 import Profile from "./components/Profile/Profile";
-import Projects from "./components/Projects/Projects";
+import Projects2 from "./components/Projects/Projects2";
 import Recommendations from "./components/Recommendations/Recommendations";
 import Services from "./components/Services/Services";
 import Skills from "./components/Skills/Skills";
@@ -34,8 +34,8 @@ export const metadata = {
     "Web Developer",
     "UI/UX Developer",
   ],
-  icons: ["/images/name.avif"],
-  metadataBase: new URL("https://asad-portfolio-ai.vercel.app/"),
+  icons: ["/images/seoimg.png"],
+  metadataBase: new URL("https://masadali.vercel.app/"),
 
   // Open Graph metadata
   openGraph: {
@@ -44,14 +44,14 @@ export const metadata = {
       "Showcasing the work of Muhammad Asad, a web developer passionate about creating cutting-edge digital solutions and intuitive user interfaces.",
     images: [
       {
-        url: "/images/meta.png",
+        url: "/images/seoimg.png",
         width: 1200,
         height: 630,
         alt: "Portfolio of Muhammad Asad, Web Developer",
       },
     ],
     type: "website",
-    url: "https://asad-portfolio-ai.vercel.app/",
+    url: "https://masadali.vercel.app/",
     siteName: "Muhammad Asad Portfolio",
     locale: "en_US",
   },
@@ -64,7 +64,7 @@ export const metadata = {
       "Explore Muhammad Asad's portfolio, featuring expertise in front-end development, modern web technologies, and exceptional digital experiences.",
     site: "@yourTwitterHandle",
     creator: "@yourTwitterHandle",
-    images: ["/images/meta.png"],
+    images: ["/images/seoimg.png"],
   },
 
   // Additional metadata for structured data (JSON-LD)
@@ -73,9 +73,9 @@ export const metadata = {
     "@type": "Person",
     name: "Muhammad Asad",
     jobTitle: "Web Developer",
-    url: "https://asad-portfolio-ai.vercel.app/",
+    url: "https://masadali.vercel.app/",
     sameAs: [
-      "https://www.linkedin.com/in/asad189/",
+      "https://www.linkedin.com/in/masadali",
       "https://github.com/MuhammadAsad-cmd",
     ],
   },
@@ -90,7 +90,7 @@ export default function Home() {
         <Services />
         <Experience />
         <Education />
-        <Projects />
+        <Projects2 />
         <Skills />
         <Recommendations />
         <Certifications />
