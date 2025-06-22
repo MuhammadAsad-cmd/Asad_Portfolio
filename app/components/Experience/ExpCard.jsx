@@ -232,7 +232,7 @@ const ExpCard = () => {
           <div key={index} className="relative">
             {experience.roles.length === 1 ? (
               /* Single Role Experience */
-              <div className="group rounded-xl border border-lightBorder bg-lightbg p-6 transition-all duration-300 hover:border-SkyBlue hover:shadow-lg hover:shadow-SkyBlue/10 dark:border-darkPrimaryGray/30 dark:bg-darkSecondaryGray dark:hover:border-darkHover">
+              <div className="group rounded-xl border border-lightBorder bg-lightbg p-2 transition-all duration-300 hover:border-SkyBlue hover:shadow-lg hover:shadow-SkyBlue/10 dark:border-darkPrimaryGray/30 dark:bg-darkSecondaryGray dark:hover:border-darkHover md:p-6">
                 <div className="flex gap-4">
                   {/* Company Logo */}
                   <div className="flex-shrink-0">
@@ -266,7 +266,7 @@ const ExpCard = () => {
                             href={experience.link || "#"}
                             className="group/company"
                           >
-                            <span className="whitespace-nowrap font-medium text-lightSecondarytext transition-colors duration-300 group-hover/company:text-SkyBlue dark:text-darkPrimaryGray dark:group-hover/company:text-darkHover">
+                            <span className="font-medium text-lightSecondarytext transition-colors duration-300 group-hover/company:text-SkyBlue dark:text-darkPrimaryGray dark:group-hover/company:text-darkHover">
                               {experience.company}
                             </span>
                           </Link>
@@ -282,8 +282,8 @@ const ExpCard = () => {
                         </div>
                       </div>
                       <div className="text-right">
-                        <div className="flex items-center gap-1 whitespace-nowrap text-xs text-lightSecondarytext dark:text-darkPrimaryGray">
-                          <IoCalendarOutline />
+                        <div className="flex items-center gap-1 text-xs text-lightSecondarytext dark:text-darkPrimaryGray">
+                          <IoCalendarOutline className="hidden sm:block" />
                           <span>
                             {calculateTotalDuration(experience.roles)}
                           </span>
@@ -293,7 +293,7 @@ const ExpCard = () => {
 
                     <div className="mb-3 flex flex-wrap items-center gap-4 text-sm text-lightSecondarytext dark:text-darkPrimaryGray">
                       <div className="flex items-center gap-1">
-                        <IoCalendarOutline className="text-xs" />
+                        <IoCalendarOutline className="hidden text-xs sm:block" />
                         <span>{experience.roles[0].duration}</span>
                       </div>
                       <div className="flex items-center gap-1">
@@ -332,7 +332,7 @@ const ExpCard = () => {
               </div>
             ) : (
               /* Multiple Roles Experience */
-              <div className="group rounded-xl border border-lightBorder bg-lightbg p-6 transition-all duration-300 hover:border-SkyBlue hover:shadow-lg hover:shadow-SkyBlue/10 dark:border-darkPrimaryGray/30 dark:bg-darkSecondaryGray dark:hover:border-darkHover">
+              <div className="group rounded-xl border border-lightBorder bg-lightbg p-3 transition-all duration-300 hover:border-SkyBlue hover:shadow-lg hover:shadow-SkyBlue/10 dark:border-darkPrimaryGray/30 dark:bg-darkSecondaryGray dark:hover:border-darkHover md:p-6">
                 {/* Company Header */}
                 <div className="mb-6 flex gap-4">
                   <div className="flex-shrink-0">
@@ -375,7 +375,7 @@ const ExpCard = () => {
                       </div>
                       <div className="text-right">
                         <div className="flex items-center gap-1 text-xs text-lightSecondarytext dark:text-darkPrimaryGray">
-                          <IoCalendarOutline />
+                          <IoCalendarOutline className="hidden sm:block" />
                           <span>
                             {calculateTotalDuration(experience.roles)}
                           </span>
@@ -409,7 +409,7 @@ const ExpCard = () => {
                           </div>
                           <div className="text-right text-xs text-lightSecondarytext dark:text-darkPrimaryGray">
                             <div className="flex items-center gap-1">
-                              <IoCalendarOutline />
+                              <IoCalendarOutline className="hidden sm:block" />
                               <span>
                                 {calculateDuration(
                                   role.startDate,

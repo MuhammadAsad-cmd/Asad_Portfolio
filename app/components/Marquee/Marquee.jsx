@@ -48,7 +48,7 @@ import Image from "next/image";
 export const techLogos = [
   { src: "/images/react.svg", alt: "React.js", category: "Frontend" },
   { src: "/images/next.svg", alt: "Next.js", category: "Framework" },
-  { src: "/images/js.svg", alt: "JavaScript", category: "Language" },
+  { src: "/images/Js.svg", alt: "JavaScript", category: "Language" },
   { src: "/images/ts.svg", alt: "TypeScript", category: "Language" },
   { src: "/images/tailwind.svg", alt: "Tailwind CSS", category: "Styling" },
   { src: "/images/redux.svg", alt: "Redux", category: "State Management" },

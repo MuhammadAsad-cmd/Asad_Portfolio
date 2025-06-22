@@ -148,15 +148,15 @@ const Education = () => {
                         {edu.degree}
                       </p>
 
-                      <div className="flex items-center gap-2">
-                        <div className="flex items-center gap-1 rounded-full bg-gradient-to-r from-SkyBlue/10 to-lightHover/10 px-3 py-1 dark:from-SkyBlue/20 dark:to-darkHover/20">
+                      <div className="flex flex-col gap-2 sm:flex-row sm:items-center">
+                        <div className="flex items-center gap-1 rounded-full bg-gradient-to-r from-SkyBlue/10 to-lightHover/10 px-3 py-1 dark:from-SkyBlue/20 dark:to-darkHover/20 max-sm:justify-center">
                           <FaCalendarAlt className="text-xs text-SkyBlue" />
                           <span className="text-sm font-medium text-lightSecondarytext dark:text-darkPrimaryGray">
                             {edu.duration}
                           </span>
                         </div>
                         <div
-                          className={`rounded-full px-2 py-1 text-xs font-semibold ${
+                          className={`rounded-full px-2 py-1 text-xs font-semibold max-sm:flex max-sm:items-center max-sm:justify-center ${
                             edu.status === "In Progress"
                               ? "bg-SkyBlue/20 text-SkyBlue"
                               : "bg-green-100 text-green-600 dark:bg-green-900/30 dark:text-green-400"
