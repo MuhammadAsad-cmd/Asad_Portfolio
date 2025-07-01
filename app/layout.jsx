@@ -1,5 +1,7 @@
 import "./globals.css";
 import MainLayout from "./components/Layouts/MainLayouts";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata = {
   title: "Portfolio | M. Asad - Web Developer | Front-End Developer",
@@ -79,6 +81,8 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className="custom-scrollbar m-0 scroll-smooth bg-lightbg p-0 text-lightPrimarytext transition-all duration-300 ease-in-out dark:bg-[#1f1f24] dark:text-white">
         <MainLayout>{children}</MainLayout>
+        <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );
