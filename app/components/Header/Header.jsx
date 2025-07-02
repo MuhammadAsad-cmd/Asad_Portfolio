@@ -67,6 +67,7 @@ const Header = () => {
               <Link
                 target="_blank"
                 href="https://www.linkedin.com/in/masadali/"
+                aria-label="LinkedIn profile"
                 className="text-lightSecondarytext duration-300 ease-in-out hover:text-lightHover dark:text-darkPrimaryGray dark:hover:text-SkyBlue"
               >
                 <TfiLinkedin />
@@ -74,6 +75,7 @@ const Header = () => {
               <Link
                 target="_blank"
                 href="https://github.com/MuhammadAsad-cmd"
+                aria-label="GitHub profile"
                 className="text-lightSecondarytext duration-300 ease-in-out hover:text-lightHover dark:text-darkPrimaryGray dark:hover:text-SkyBlue"
               >
                 <FaGithub />
@@ -81,6 +83,7 @@ const Header = () => {
               <Link
                 target="_blank"
                 href="https://www.instagram.com/muhammadasad9017"
+                aria-label="Instagram profile"
                 className="text-lightSecondarytext duration-300 ease-in-out hover:text-lightHover dark:text-darkPrimaryGray dark:hover:text-SkyBlue"
               >
                 <FaInstagram />

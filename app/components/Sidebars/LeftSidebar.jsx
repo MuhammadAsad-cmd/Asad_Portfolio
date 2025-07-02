@@ -64,6 +64,7 @@ const LeftSidebar = () => {
               <Link
                 href="https://www.linkedin.com/in/masadali/"
                 target="_blank"
+                aria-label="LinkedIn profile"
                 className="duration-300 ease-in-out hover:text-SkyBlue"
               >
                 <TfiLinkedin />
@@ -71,6 +72,7 @@ const LeftSidebar = () => {
               <Link
                 href="https://github.com/MuhammadAsad-cmd"
                 target="_blank"
+                aria-label="GitHub profile"
                 className="duration-300 ease-in-out hover:text-SkyBlue"
               >
                 <FaGithub />
@@ -78,6 +80,7 @@ const LeftSidebar = () => {
               <Link
                 target="_blank"
                 href="https://www.upwork.com/freelancers/~01a30bffb100551bb2?mp_source=share"
+                aria-label="Upwork profile"
                 className="duration-300 ease-in-out hover:text-SkyBlue"
               >
                 <SiUpwork />
@@ -85,6 +88,7 @@ const LeftSidebar = () => {
               <Link
                 href="https://www.instagram.com/muhammadasad9017"
                 target="_blank"
+                aria-label="Instagram profile"
                 className="duration-300 ease-in-out hover:text-SkyBlue"
               >
                 <FaInstagram />
@@ -92,6 +96,7 @@ const LeftSidebar = () => {
               <Link
                 href="https://www.facebook.com/profile.php?id=100071035773905"
                 target="_blank"
+                aria-label="Facebook profile"
                 className="duration-300 ease-in-out hover:text-SkyBlue"
               >
                 <FaFacebook />

@@ -68,6 +68,7 @@ const PageHeader = ({
           {/* Back Button */}
           <button
             onClick={handleBack}
+            aria-label="Go back"
             className="group flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg border border-lightBorder bg-lightbg transition-all duration-300 hover:scale-105 hover:border-SkyBlue hover:bg-SkyBlue/5 hover:shadow-lg hover:shadow-SkyBlue/20 dark:border-darkPrimaryGray/30 dark:bg-darkSecondaryGray dark:hover:border-darkHover dark:hover:bg-SkyBlue/10 sm:h-10 sm:w-10 sm:rounded-xl"
           >
             <IoArrowBack className="text-sm text-lightPrimarytext transition-all duration-300 group-hover:-translate-x-0.5 group-hover:text-SkyBlue dark:text-white dark:group-hover:text-darkHover sm:text-lg" />
@@ -107,6 +108,7 @@ const PageHeader = ({
           {/* Action Buttons */}
           <div className="flex items-center gap-1 sm:gap-2">
             <button
+              aria-label="Share this page"
               onClick={handleShare}
               className="group flex h-8 w-8 items-center justify-center rounded-md border border-lightBorder bg-lightbg transition-all duration-300 hover:scale-105 hover:border-SkyBlue hover:bg-SkyBlue/5 dark:border-darkPrimaryGray/30 dark:bg-darkSecondaryGray dark:hover:border-darkHover dark:hover:bg-SkyBlue/10 sm:h-9 sm:w-9 sm:rounded-lg"
               title="Share"

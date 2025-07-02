@@ -22,6 +22,7 @@ const Footer = () => {
         <Link
           target="_blank"
           href="https://www.linkedin.com/in/masadali/"
+          aria-label="LinkedIn profile"
           className="text-lightSecondarytext duration-300 ease-in-out hover:text-lightHover dark:text-darkPrimaryGray dark:hover:text-SkyBlue"
         >
           <TfiLinkedin />
@@ -29,6 +30,7 @@ const Footer = () => {
         <Link
           target="_blank"
           href="https://github.com/MuhammadAsad-cmd"
+          aria-label="GitHub profile"
           className="text-lightSecondarytext duration-300 ease-in-out hover:text-lightHover dark:text-darkPrimaryGray dark:hover:text-SkyBlue"
         >
           <FaGithub />
@@ -36,6 +38,7 @@ const Footer = () => {
         <Link
           target="_blank"
           href="https://www.instagram.com/muhammadasad9017"
+          aria-label="Instagram profile"
           className="text-lightSecondarytext duration-300 ease-in-out hover:text-lightHover dark:text-darkPrimaryGray dark:hover:text-SkyBlue"
         >
           <FaInstagram />
@@ -43,6 +46,7 @@ const Footer = () => {
         <Link
           target="_blank"
           href="https://www.upwork.com/freelancers/~01a30bffb100551bb2?mp_source=share"
+          aria-label="Upwork profile"
           className="text-lightSecondarytext duration-300 ease-in-out hover:text-lightHover dark:text-darkPrimaryGray dark:hover:text-SkyBlue"
         >
           <SiUpwork />

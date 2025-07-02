@@ -292,13 +292,18 @@ const Certifications = () => {
                     <div className="flex-shrink-0">
                       <div className="group/cert relative">
                         {cert.link ? (
-                          <Link href={cert.link} target="_blank">
+                          <Link
+                            href={cert.link}
+                            target="_blank"
+                            aria-label={`View certificate: ${cert.certificateTitle}`}
+                          >
                             <div className="relative cursor-pointer rounded-xl border border-lightBorder bg-white p-3 transition-all duration-300 hover:border-SkyBlue hover:shadow-md dark:border-darkPrimaryGray/30 dark:bg-discordDark dark:hover:border-darkHover">
                               <Image
                                 width={120}
                                 height={80}
                                 src={
-                                  cert.certificateImage || "/placeholder.svg"
+                                  cert.certificateImage ||
+                                  "/images/c-essentials-1.png"
                                 }
                                 alt={cert.certificateTitle}
                                 className="w-30 h-20 rounded-lg object-cover"

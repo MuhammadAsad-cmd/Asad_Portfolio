@@ -36,6 +36,7 @@ const ScrollToTopButton = () => {
           : "pointer-events-none translate-y-4 opacity-0"
       }`}
       onClick={scrollToTop}
+      aria-label="Scroll to top"
     >
       <FaArrowUpLong className="text-xl text-white" />
     </button>

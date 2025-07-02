@@ -303,12 +303,14 @@ const Profile = () => {
                 <div className="flex gap-3">
                   <button
                     onClick={openLinkedIn}
+                    aria-label="Open LinkedIn profile"
                     className="flex h-10 w-10 items-center justify-center rounded-full bg-[#0077B5] text-white transition-transform duration-300 hover:scale-110 hover:shadow-lg"
                   >
                     <FaLinkedin className="text-sm" />
                   </button>
                   <button
                     onClick={openGitHub}
+                    aria-label="Open GitHub profile"
                     className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-800 text-white transition-transform duration-300 hover:scale-110 hover:shadow-lg dark:bg-gray-700"
                   >
                     <FaGithub className="text-sm" />

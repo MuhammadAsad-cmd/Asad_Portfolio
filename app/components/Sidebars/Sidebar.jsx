@@ -33,6 +33,7 @@ const Sidebar = ({ id, position = "left", children }) => {
         {/* Close Button */}
         <button
           onClick={() => dispatch(closeSidebar(id))}
+          aria-label="Close sidebar"
           className="absolute right-3 top-3 text-SkyBlue duration-200 ease-in-out hover:animate-spin"
         >
           <IoClose className="text-2xl" />
