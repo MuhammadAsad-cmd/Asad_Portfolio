@@ -349,6 +349,23 @@ export const projectsData = [
   },
   {
     id: 6,
+    title: "Ryde Admin Dashboard",
+    description: `Ryde Admin Dashboard is a web-based task management tool built around a dynamic Kanban board. Users can create projects, add and organize tasks across Backlog, To‑Do, In‑Progress, and Done columns, and easily move cards via drag‑and‑drop. Real‑time status updates keep teams in sync, while a clean, responsive UI—powered by Tailwind CSS—ensures a seamless experience across devices.`,
+    stackUsed: [
+      "Next.js",
+      "React.js",
+      "Tanstack Query",
+      "Redux Toolkit",
+      "JavaScript",
+      "TypeScript",
+      "Tailwind CSS",
+    ],
+    image: "/images/ryde.png",
+    Link: "https://ryde24.vercel.app",
+    caseStudy: "/case-study/kanban-board",
+  },
+  {
+    id: 7,
     title: "Kanban Board Project",
     description: `A task‑management Kanban board with Backlog, To‑Do, In‑Progress, and Done columns. Features include project creation, drag‑and‑drop cards, and real‑time status updates in a clean, responsive interface.`,
     stackUsed: [
@@ -363,7 +380,7 @@ export const projectsData = [
     caseStudy: "/case-study/kanban-board",
   },
   {
-    id: 7,
+    id: 8,
     title: "the ENTERTAINER – Ultimate BOGO Deals & Lifestyle Savings",
     description: `A savings platform offering Buy One Get One Free deals across dining, wellness, and more in the Middle East. It features intuitive navigation, responsive design, and a dedicated mobile experience to unlock premium offers seamlessly.`,
     stackUsed: ["Next.js", "React.js", "Tailwind CSS", "JavaScript"],
@@ -372,7 +389,7 @@ export const projectsData = [
     caseStudy: "/case-study/the-entertainer",
   },
   {
-    id: 8,
+    id: 9,
     title: "Breaking Balls Sports – Multi‑Sport Analytics",
     description: `A comprehensive fantasy and betting analytics hub covering NFL, NBA, MLB, and more. Offers in‑depth research, community features, and a user‑friendly interface for informed decision‑making in fantasy leagues and betting.`,
     stackUsed: ["Next.js", "React.js", "Tailwind CSS", "JavaScript"],
@@ -459,8 +476,6 @@ export const SkillsData = [
   { name: "Git", link: "https://git-scm.com/" },
   { name: "GitHub", link: "https://github.com/" },
 ];
-
-
 
 export const educationData = [
   {
