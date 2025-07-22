@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import { BsSendFill } from "react-icons/bs";
+import { toast } from "sonner";
 import Right from "./Right";
 import useFormLogic from "@/Hooks/FormLogic";
 
@@ -9,14 +10,20 @@ const ContactForm = () => {
   const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
 
   const onSuccess = () => {
-    alert("Message sent successfully!");
+    toast.success("Message sent successfully!", {
+      description: "Thank you for your message. I'll get back to you soon!",
+      duration: 4000,
+    });
   };
 
   const onError = () => {
-    alert("Failed to send the message. Please try again.");
+    toast.error("Failed to send message", {
+      description: "Please try again or contact me directly.",
+      duration: 4000,
+    });
   };
 
-  const { formData, handleChange, handleSubmit } = useFormLogic(
+  const { formData, handleChange, handleSubmit, isSubmitting } = useFormLogic(
     serviceId,
     templateId,
     publicKey,
@@ -31,7 +38,7 @@ const ContactForm = () => {
           <div className="flex items-center gap-3">
             <div className="h-8 w-1 rounded-full bg-gradient-to-b from-SkyBlue to-lightHover dark:to-darkHover"></div>
             <h1 className="text-2xl font-bold text-lightPrimarytext dark:text-white">
-              Let’s connect
+              Let&apos;s connect
             </h1>
           </div>
 
@@ -118,9 +125,16 @@ const ContactForm = () => {
 
               <button
                 type="submit"
-                className="mt-3 flex h-10 items-center justify-center gap-2 rounded-full bg-SkyBlue px-3 text-black hover:bg-lightHover dark:hover:bg-darkHover"
+                disabled={isSubmitting}
+                className={`mt-3 flex h-10 items-center justify-center gap-2 rounded-full px-3 text-black transition-colors ${
+                  isSubmitting
+                    ? "cursor-not-allowed bg-gray-400"
+                    : "bg-SkyBlue hover:bg-lightHover dark:hover:bg-darkHover"
+                }`}
               >
-                <p className="text-base font-semibold">Send Message</p>
+                <p className="text-base font-semibold">
+                  {isSubmitting ? "Sending..." : "Send Message"}
+                </p>
                 <BsSendFill className="text-lg" />
               </button>
             </form>
@@ -136,5 +150,3 @@ const ContactForm = () => {
 };
 
 export default ContactForm;
-
-// Service

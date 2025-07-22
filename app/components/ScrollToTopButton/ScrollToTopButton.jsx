@@ -37,6 +37,7 @@ const ScrollToTopButton = () => {
       }`}
       onClick={scrollToTop}
       aria-label="Scroll to top"
+      title="Scroll to top"
     >
       <FaArrowUpLong className="text-xl text-white" />
     </button>

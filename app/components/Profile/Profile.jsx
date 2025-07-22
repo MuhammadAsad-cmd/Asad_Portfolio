@@ -1,97 +1,3 @@
-// "use client";
-// import Image from "next/image";
-// import React, { useState } from "react";
-// import { BsSendFill } from "react-icons/bs";
-// import ContactModal from "../ContactModal/ContactModal";
-// import Code from "../Icons/Code";
-// import Marquee from "../Marquee/Marquee";
-
-// const Profile = () => {
-//   const [isOpenModal, setIsOpenModal] = useState(false);
-
-//   const handleContactModal = () => {
-//     setIsOpenModal(true);
-//   };
-//   const handleCloseModal = () => {
-//     setIsOpenModal(false);
-//   };
-
-//   const openWhatsApp = () => {
-//     const phoneNumber = "923193148320";
-//     const message =
-//       "Hello! I found your services online and would like to inquire more about your offerings. Could you please provide me with further details?"; // Customize your message
-//     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-//     window.open(url, "_blank");
-//   };
-
-//   return (
-//     <>
-//       <div className="animated-border md:rounded-xl">
-//         <div className="flex flex-col gap-x-6 bg-white p-4 dark:bg-discordDark max-md:gap-y-8 md:flex-row md:px-6 md:py-16">
-//           <div className="flex w-full items-center justify-center md:w-1/2">
-//             <div className="relative size-[250px] flex-shrink-0 rounded-full border-4 bg-lightbg dark:border-[#1b1f23] md:size-[300px] lg:h-[350px] lg:w-[350px]">
-//               <Image
-//                 width={160}
-//                 height={160}
-//                 src="/images/profile.jpg"
-//                 alt="profile"
-//                 className="h-full w-full rounded-full object-cover"
-//               />
-//               <div className="absolute -bottom-8 left-1/2 -translate-x-1/2">
-//                 <Code />
-//               </div>
-//             </div>
-//           </div>
-//           <div className="mt-2 w-full md:w-1/2 md:max-w-[500px]">
-//             <p className="text-base">
-//               <span className="text-SkyBlue">&lt;span&gt; </span>
-//               Hey, I&apos;m Muhammad Asad
-//               <span className="text-SkyBlue"> &lt;/span&gt;</span>
-//             </p>
-
-//             <h1 className="mt-5 text-2xl font-semibold md:text-4xl lg:text-5xl">
-//               <span className="text-SkyBlue">&#123;</span> Front End Web
-//               Developer
-//               <span className="text-SkyBlue"> &#125; </span>
-//             </h1>
-
-//             <p className="mt-3 text-base">
-//               <span className="text-SkyBlue">&lt;p&gt; </span>
-//               With expertise in React.js, Next.js, Redux Toolkit, and Tailwind
-//               CSS, I craft fast, scalable, and modern web applications.
-//               <span className="text-SkyBlue"> &lt;/p&gt;</span>
-//             </p>
-
-//             <Marquee />
-
-//             <div className="mt-2 flex flex-col gap-y-2 sm:flex-row">
-//               <span className="text-sm leading-5 text-darkPrimaryGray">
-//                 Lahore, Punjab, Pakistan.
-//               </span>
-//               <span
-//                 onClick={handleContactModal}
-//                 className="block cursor-pointer text-sm font-semibold text-SkyBlue hover:underline md:ml-3 md:hidden"
-//               >
-//                 Contact Info
-//               </span>
-//             </div>
-//             <button
-//               onClick={openWhatsApp}
-//               className="mt-3 flex h-8 w-full max-w-[113px] items-center justify-center gap-2 rounded-full bg-SkyBlue text-black hover:bg-lightHover dark:hover:bg-darkHover"
-//             >
-//               <BsSendFill className="text-lg" />
-//               <p className="text-base font-semibold">Message</p>
-//             </button>
-//           </div>
-//         </div>
-//       </div>
-//       {isOpenModal && <ContactModal onClose={handleCloseModal} />}
-//     </>
-//   );
-// };
-
-// export default Profile;
-
 "use client";
 import Image from "next/image";
 import { useState, useEffect } from "react";
@@ -121,11 +27,7 @@ const Profile = () => {
       setCurrentRole((prev) => (prev + 1) % roles.length);
     }, 3000);
     return () => clearInterval(interval);
-  }, []);
-
-  const handleContactModal = () => {
-    setIsOpenModal(true);
-  };
+  }, [roles.length]);
 
   const handleCloseModal = () => {
     setIsOpenModal(false);
@@ -137,14 +39,6 @@ const Profile = () => {
       "Hello Muhammad Asad! I found your portfolio online and would like to discuss a potential project. Could you please provide me with more details about your services?";
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(url, "_blank");
-  };
-
-  const openLinkedIn = () => {
-    window.open("https://www.linkedin.com/in/masadali", "_blank");
-  };
-
-  const openGitHub = () => {
-    window.open("https://github.com/MuhammadAsad-cmd", "_blank");
   };
 
   return (
@@ -278,6 +172,8 @@ const Profile = () => {
               <div className="flex flex-col gap-4 sm:flex-row">
                 <button
                   onClick={openWhatsApp}
+                  title="Start WhatsApp Chat with Muhammad Asad"
+                  aria-label="Start WhatsApp Chat"
                   className="group flex items-center justify-center gap-3 rounded-xl bg-gradient-to-r from-SkyBlue to-lightHover px-6 py-3 font-semibold text-white transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-SkyBlue/30 dark:to-darkHover"
                 >
                   <FaWhatsapp className="text-lg group-hover:animate-bounce" />
@@ -286,8 +182,10 @@ const Profile = () => {
                 </button>
 
                 <a
-                  href="/images/Asad Front-End resume.pdf"
+                  href="/images/Asad Front-End.pdf"
                   download
+                  title="Download Muhammad Asad's Front-End Developer Resume (PDF)"
+                  aria-label="Download Resume PDF"
                   className="group flex items-center justify-center gap-3 rounded-xl border-2 border-lightBorder px-6 py-3 text-lightPrimarytext transition-all duration-300 hover:border-SkyBlue hover:text-SkyBlue dark:border-darkPrimaryGray/30 dark:text-white dark:hover:border-darkHover dark:hover:text-darkHover"
                 >
                   <BsDownload className="text-lg group-hover:animate-bounce" />
@@ -301,20 +199,24 @@ const Profile = () => {
                   Connect:
                 </span>
                 <div className="flex gap-3">
-                  <button
-                    onClick={openLinkedIn}
-                    aria-label="Open LinkedIn profile"
-                    className="flex h-10 w-10 items-center justify-center rounded-full bg-[#0077B5] text-white transition-transform duration-300 hover:scale-110 hover:shadow-lg"
-                  >
-                    <FaLinkedin className="text-sm" />
-                  </button>
-                  <button
-                    onClick={openGitHub}
-                    aria-label="Open GitHub profile"
-                    className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-800 text-white transition-transform duration-300 hover:scale-110 hover:shadow-lg dark:bg-gray-700"
-                  >
-                    <FaGithub className="text-sm" />
-                  </button>
+                  <Link href="https://www.linkedin.com/in/masadali">
+                    <button
+                      title="LinkedIn Profile - Muhammad Asad"
+                      aria-label="Open LinkedIn profile"
+                      className="flex h-10 w-10 items-center justify-center rounded-full bg-[#0077B5] text-white transition-transform duration-300 hover:scale-110 hover:shadow-lg"
+                    >
+                      <FaLinkedin className="text-sm" />
+                    </button>
+                  </Link>
+                  <Link href="https://github.com/MuhammadAsad-cmd">
+                    <button
+                      title="GitHub Profile - Muhammad Asad"
+                      aria-label="Open GitHub profile"
+                      className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-800 text-white transition-transform duration-300 hover:scale-110 hover:shadow-lg dark:bg-gray-700"
+                    >
+                      <FaGithub className="text-sm" />
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>

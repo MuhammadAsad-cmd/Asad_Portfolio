@@ -68,6 +68,7 @@ const Header = () => {
                 target="_blank"
                 href="https://www.linkedin.com/in/masadali/"
                 aria-label="LinkedIn profile"
+                title="LinkedIn - Muhammad Asad"
                 className="text-lightSecondarytext duration-300 ease-in-out hover:text-lightHover dark:text-darkPrimaryGray dark:hover:text-SkyBlue"
               >
                 <TfiLinkedin />
@@ -76,6 +77,7 @@ const Header = () => {
                 target="_blank"
                 href="https://github.com/MuhammadAsad-cmd"
                 aria-label="GitHub profile"
+                title="GitHub - Muhammad Asad"
                 className="text-lightSecondarytext duration-300 ease-in-out hover:text-lightHover dark:text-darkPrimaryGray dark:hover:text-SkyBlue"
               >
                 <FaGithub />
@@ -84,6 +86,7 @@ const Header = () => {
                 target="_blank"
                 href="https://www.instagram.com/muhammadasad9017"
                 aria-label="Instagram profile"
+                title="Instagram - @muhammadasad9017"
                 className="text-lightSecondarytext duration-300 ease-in-out hover:text-lightHover dark:text-darkPrimaryGray dark:hover:text-SkyBlue"
               >
                 <FaInstagram />

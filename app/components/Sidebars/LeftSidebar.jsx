@@ -15,28 +15,34 @@ const LeftSidebar = () => {
             I&apos;m always excited to take on new projects and collaborate with
             innovative minds.
           </p>
+
           <div className="mb-4 text-base leading-[26px]">
             <p className="capitalize tracking-widest text-gray-900 dark:text-gray-400">
               Phone Number
             </p>
             <Link
               href="tel:+923059971189"
+              title="Call Muhammad Asad"
               className="text-gray-700 dark:text-gray-200"
             >
               +92 305 9971189
             </Link>
           </div>
+
           <div className="mb-4 text-base leading-[26px]">
             <p className="capitalize tracking-widest text-gray-900 dark:text-gray-400">
               Whatsapp
             </p>
             <Link
               href="https://wa.me/+923193148320"
+              target="_blank"
+              title="Chat on WhatsApp"
               className="text-gray-700 dark:text-gray-200"
             >
               +92 319 3148320
             </Link>
           </div>
+
           <div className="mb-4 text-base leading-[26px]">
             <p className="capitalize tracking-widest text-gray-900 dark:text-gray-400">
               Email
@@ -44,11 +50,13 @@ const LeftSidebar = () => {
             <Link
               target="_blank"
               href="mailto:189asadali@gmail.com"
+              title="Send email to Muhammad Asad"
               className="text-gray-700 dark:text-gray-200"
             >
               189asadali@gmail.com
             </Link>
           </div>
+
           <div className="mb-4 text-base leading-[26px]">
             <p className="capitalize tracking-widest text-gray-900 dark:text-gray-400">
               Address
@@ -65,6 +73,7 @@ const LeftSidebar = () => {
                 href="https://www.linkedin.com/in/masadali/"
                 target="_blank"
                 aria-label="LinkedIn profile"
+                title="LinkedIn - Muhammad Asad"
                 className="duration-300 ease-in-out hover:text-SkyBlue"
               >
                 <TfiLinkedin />
@@ -73,6 +82,7 @@ const LeftSidebar = () => {
                 href="https://github.com/MuhammadAsad-cmd"
                 target="_blank"
                 aria-label="GitHub profile"
+                title="GitHub - Muhammad Asad"
                 className="duration-300 ease-in-out hover:text-SkyBlue"
               >
                 <FaGithub />
@@ -81,6 +91,7 @@ const LeftSidebar = () => {
                 target="_blank"
                 href="https://www.upwork.com/freelancers/~01a30bffb100551bb2?mp_source=share"
                 aria-label="Upwork profile"
+                title="Upwork Freelancer Profile"
                 className="duration-300 ease-in-out hover:text-SkyBlue"
               >
                 <SiUpwork />
@@ -89,6 +100,7 @@ const LeftSidebar = () => {
                 href="https://www.instagram.com/muhammadasad9017"
                 target="_blank"
                 aria-label="Instagram profile"
+                title="Instagram - @muhammadasad9017"
                 className="duration-300 ease-in-out hover:text-SkyBlue"
               >
                 <FaInstagram />
@@ -97,6 +109,7 @@ const LeftSidebar = () => {
                 href="https://www.facebook.com/profile.php?id=100071035773905"
                 target="_blank"
                 aria-label="Facebook profile"
+                title="Facebook - Muhammad Asad"
                 className="duration-300 ease-in-out hover:text-SkyBlue"
               >
                 <FaFacebook />

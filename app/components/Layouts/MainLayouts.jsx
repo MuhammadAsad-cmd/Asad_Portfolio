@@ -10,6 +10,7 @@ import Image from "next/image";
 import ScrollToTopButton from "../ScrollToTopButton/ScrollToTopButton";
 import TopLoader from "../TopLoader/TopLoader";
 import ContactForm from "../ContactForm/ContactForm";
+import { Toaster } from "sonner";
 
 export default function MainLayout({ children }) {
   return (
@@ -17,6 +18,7 @@ export default function MainLayout({ children }) {
       <PersistGate loading={null} persistor={persistor}>
         <ThemeInitializer>
           <TopLoader />
+          <Toaster position="top-center" richColors closeButton />
           <div className="absolute start-0 top-0 -z-10 h-full w-full">
             <Image
               width={100}

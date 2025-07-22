@@ -3,13 +3,13 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-const NavLink = ({ href, children, onClick }) => {
+const NavLink = ({ href, children, onClick, title }) => {
   const pathname = usePathname();
   const isActive =
     pathname === href || (href.startsWith("#") && pathname === "/");
 
   return (
-    <Link href={href} onClick={onClick} className="h-full px-4">
+    <Link href={href} onClick={onClick} title={title} className="h-full px-4">
       <p
         className={`text-lg font-medium duration-300 ease-in-out 
           ${

@@ -1,48 +1,3 @@
-// import Image from "next/image";
-
-// export const techLogos = [
-//   { src: "/images/react.svg", alt: "React.js" },
-//   { src: "/images/next.svg", alt: "Next.js" },
-//   { src: "/images/js.svg", alt: "JavaScript" },
-//   { src: "/images/ts.svg", alt: "TypeScript" },
-//   { src: "/images/tailwind.svg", alt: "Tailwind CSS" },
-//   { src: "/images/redux.svg", alt: "Redux" },
-//   { src: "/images/html.svg", alt: "HTML" },
-//   { src: "/images/css.svg", alt: "CSS" },
-//   { src: "/images/skills/git.avif", alt: "Git" },
-//   { src: "/images/skills/mongoDB.webp", alt: "MongoDB" },
-//   { src: "/images/skills/node.svg", alt: "Node.js" },
-//   { src: "/images/skills/npm.webp", alt: "NPM" },
-//   { src: "/images/skills/postman.avif", alt: "Postman" },
-//   { src: "/images/skills/vs_code.webp", alt: "VS Code" },
-// ];
-
-// export default function Marquee() {
-//   return (
-//     <div className="relative overflow-hidden  py-4">
-//       <div className="animate-marquee flex w-full space-x-2">
-//         {/* Duplicate logos to create a seamless loop */}
-//         {[...techLogos, ...techLogos].map((logo, index) => (
-//           <div
-//             key={index}
-//             className="flex h-[60px] w-[60px] flex-shrink-0 cursor-pointer items-center justify-center rounded-lg border border-[#c0dcbc] bg-[#f8f8f8] p-2 text-white duration-300 ease-in-out hover:bg-neutral-200 dark:border-[#3b413d] dark:bg-[#24242d] dark:hover:bg-[#242424]"
-//           >
-//             <Image
-//               src={logo.src}
-//               alt={logo.alt}
-//               width={60}
-//               height={60}
-//               loading="eager"
-//               unoptimized
-//               className="h-full w-full object-contain"
-//             />
-//           </div>
-//         ))}
-//       </div>
-//     </div>
-//   );
-// }
-
 import Image from "next/image";
 
 export const techLogos = [
@@ -71,7 +26,8 @@ export default function EnhancedMarquee() {
         {[...techLogos, ...techLogos, ...techLogos].map((logo, index) => (
           <div
             key={index}
-            className="group flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-xl border border-lightBorder bg-white p-2 transition-all duration-300 hover:-translate-y-1 hover:border-SkyBlue hover:shadow-lg hover:shadow-SkyBlue/20 dark:border-darkPrimaryGray/30 dark:bg-darkSecondaryGray dark:hover:border-darkHover"
+            title={`${logo.alt} (${logo.category})`}
+            className="group relative flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-xl border border-lightBorder bg-white p-2 transition-all duration-300 hover:-translate-y-1 hover:border-SkyBlue hover:shadow-lg hover:shadow-SkyBlue/20 dark:border-darkPrimaryGray/30 dark:bg-darkSecondaryGray dark:hover:border-darkHover"
           >
             <Image
               src={logo.src || "/placeholder.svg"}

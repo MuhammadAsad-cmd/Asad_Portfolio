@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { toast } from "sonner";
 import emailjs from "@emailjs/browser";
 
 const useFormLogic = (
@@ -17,12 +18,14 @@ const useFormLogic = (
     message: "",
   });
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     // Simple form validation
@@ -33,23 +36,49 @@ const useFormLogic = (
       !formData.phone ||
       !formData.message
     ) {
-      alert("Please fill in all fields.");
+      toast.error("Please fill in all required fields");
       return;
     }
 
-    emailjs
-      .send(serviceId, templateId, formData, publicKey)
-      .then((response) => {
-        console.log("Email Sent Successfully:", response);
-        successCallback();
-      })
-      .catch((error) => {
-        console.error("Email Sending Failed:", error);
-        errorCallback();
+    setIsSubmitting(true);
+
+    // Show loading toast
+    const loadingToast = toast.loading("Sending message...");
+
+    try {
+      const response = await emailjs.send(
+        serviceId,
+        templateId,
+        formData,
+        publicKey,
+      );
+
+      // Dismiss loading toast
+      toast.dismiss(loadingToast);
+
+      // Clear form
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        subject: "",
+        message: "",
       });
+
+      successCallback();
+    } catch (error) {
+      console.error("Email Sending Failed:", error);
+
+      // Dismiss loading toast
+      toast.dismiss(loadingToast);
+
+      errorCallback();
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
-  return { formData, handleChange, handleSubmit };
+  return { formData, handleChange, handleSubmit, isSubmitting };
 };
 
 export default useFormLogic;
