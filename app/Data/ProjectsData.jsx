@@ -286,9 +286,47 @@ export const experiences = [
 
 export const projectsData = [
   {
+    id: 0,
+    title: "Hector — Inventory & Order Management for Retro Ventures",
+    description: `Hector is a warehouse-first inventory and order-processing system built for Retro Ventures, an e-commerce retailer of gaming consoles and accessories selling across WordPress, Shopify, Amazon, and Walmart. It replaces manual, error-prone Google Sheets with a centralized app that tracks over 19,000 products across multiple warehouses (Mexico, Japan, Cambodia, UAE, Multan — Pakistan, and California, USA) and maps stock to precise locations (shelf → zone → row → bay → BIN).
+
+Core features include guided warehouse workflows (select warehouse → zone → then show relevant locations), bulk CSV imports for products and locations (products CSV and locations CSV), fast retrieval via QR code or barcode scanning (camera or handheld scanner) or manual search, end-to-end order processing, detailed activity logs for auditability, and a granular role/permission system with page- and function-level access controls. Built to reduce reconciliation time, prevent inventory loss, and improve operational visibility across distributed warehouses.`,
+    stackUsed: [
+      "Next.js",
+      "React.js",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "TypeScript",
+      "Tailwind CSS",
+      "QR/Barcode Integration",
+    ],
+    image: "/images/hector.png",
+    Link: "https://hector.retroventures.co/",
+    caseStudy: "/case-study/hector",
+  },
+  {
     id: 1,
+    title: "RetroFam — Customer Portal",
+    description: `A responsive Shopify customer portal that centralizes post-purchase operations: order management, shipment tracking, returns, PDF invoices, coupons & gift cards, and a trade-in program for selling gaming items. I led the frontend — implementing the full UI, interactions, and dynamic client-side behavior, while backend APIs were provided by a Node.js service.`,
+    stackUsed: [
+      "Next.js",
+      "Tailwind CSS",
+      "TanStack Query",
+      "React.js",
+      "JavaScript",
+      "Node.js (backend)",
+    ],
+    contribution:
+      "Frontend Engineer — UI/UX design, client-side logic, responsive layouts, TanStack data fetching and state, PDF invoice UI, trade-in & return flows",
+    image: "/images/customer portal.png",
+    Link: "http://cp.retrofam.com/",
+    caseStudy: "/case-study/retrofam-customer-portal",
+  },
+  {
+    id: 3,
     title: "KAF – Premium Dried Fruits, Nuts, Spices & Much More",
-    description: `The KAF site delivers a premium e‑commerce experience for dried fruits, nuts, and spices with fast navigation and dynamic content updates. It features product filtering, a secure checkout flow, and fully responsive layouts. Built for health‑conscious shoppers seeking quality and convenience.`,
+    description: `The KAF site delivers a premium e-commerce experience for dried fruits, nuts, and spices with fast navigation and dynamic content updates. It features product filtering, a secure checkout flow, and fully responsive layouts. Built for health-conscious shoppers seeking quality and convenience.`,
     stackUsed: [
       "Node.js",
       "Next.js",
@@ -303,7 +341,7 @@ export const projectsData = [
     caseStudy: "/case-study/kaf",
   },
   {
-    id: 2,
+    id: 3,
     title: "CodesInc – IT Solutions & Services",
     description: `A corporate website showcasing IT services with a modern, responsive design. It includes smooth page transitions, custom animations, and an intuitive layout. Optimized for performance and built to reflect professional branding.`,
     stackUsed: ["Next.js", "Tailwind CSS", "JavaScript"],
@@ -312,7 +350,7 @@ export const projectsData = [
     caseStudy: "/case-study/codesinc",
   },
   {
-    id: 3,
+    id: 4,
     title: "GL Group UAE",
     description: `The GL Group UAE site presents a diversified business portfolio—from real estate to hospitality—in a clean, corporate design. It highlights projects, investor relations, and brand identity through intuitive navigation and responsive layouts.`,
     stackUsed: ["Next.js", "React.js", "Tailwind CSS", "JavaScript"],
@@ -321,18 +359,18 @@ export const projectsData = [
     caseStudy: "/case-study/gl-group-uae",
   },
   {
-    id: 4,
+    id: 5,
     title: "GL Dream Home",
-    description: `A premium furniture and interior design platform that blends curated collections with inspirational galleries. It offers detailed showcases, a user‑friendly interface, and a fully responsive design for seamless shopping across devices.`,
+    description: `A premium furniture and interior design platform that blends curated collections with inspirational galleries. It offers detailed showcases, a user-friendly interface, and a fully responsive design for seamless shopping across devices.`,
     stackUsed: ["Next.js", "React.js", "Tailwind CSS", "JavaScript"],
     image: "/images/gldreamhome.png",
     Link: "https://gldreamhome.com",
     caseStudy: "/case-study/gl-dream-home",
   },
   {
-    id: 5,
+    id: 6,
     title: "Canrover Admin Panel",
-    description: `Developed a fully dynamic Next.js/Node.js admin dashboard for a US scooter‑rental client, featuring live map tracking, remote lock/unlock, QR‑code ride activation, form validation, and secure access. Added Google Maps‑based zone management to visualize parking zones, maintenance areas, danger zones, and more—all in a responsive, server‑rendered interface for robust type safety and performance.`,
+    description: `Developed a fully dynamic Next.js/Node.js admin dashboard for a US scooter-rental client, featuring live map tracking, remote lock/unlock, QR-code ride activation, form validation, and secure access. Added Google Maps-based zone management to visualize parking zones, maintenance areas, danger zones, and more—all in a responsive, server-rendered interface for robust type safety and performance.`,
     stackUsed: [
       "Next.js",
       "Node.js",
@@ -348,9 +386,9 @@ export const projectsData = [
     caseStudy: "/case-study/canrover-admin",
   },
   {
-    id: 6,
+    id: 7,
     title: "Ryde Admin Dashboard",
-    description: `Ryde Admin Dashboard is a web-based task management tool built around a dynamic Kanban board. Users can create projects, add and organize tasks across Backlog, To‑Do, In‑Progress, and Done columns, and easily move cards via drag‑and‑drop. Real‑time status updates keep teams in sync, while a clean, responsive UI—powered by Tailwind CSS—ensures a seamless experience across devices.`,
+    description: `Ryde Admin Dashboard is a web-based task management tool built around a dynamic Kanban board. Users can create projects, add and organize tasks across Backlog, To-Do, In-Progress, and Done columns, and easily move cards via drag-and-drop. Real-time status updates keep teams in sync, while a clean, responsive UI—powered by Tailwind CSS—ensures a seamless experience across devices.`,
     stackUsed: [
       "Next.js",
       "React.js",
@@ -365,9 +403,9 @@ export const projectsData = [
     caseStudy: "/case-study/kanban-board",
   },
   {
-    id: 7,
+    id: 8,
     title: "Kanban Board Project",
-    description: `A task‑management Kanban board with Backlog, To‑Do, In‑Progress, and Done columns. Features include project creation, drag‑and‑drop cards, and real‑time status updates in a clean, responsive interface.`,
+    description: `A task-management Kanban board with Backlog, To-Do, In-Progress, and Done columns. Features include project creation, drag-and-drop cards, and real-time status updates in a clean, responsive interface.`,
     stackUsed: [
       "Next.js",
       "React.js",
@@ -380,7 +418,7 @@ export const projectsData = [
     caseStudy: "/case-study/kanban-board",
   },
   {
-    id: 8,
+    id: 9,
     title: "the ENTERTAINER – Ultimate BOGO Deals & Lifestyle Savings",
     description: `A savings platform offering Buy One Get One Free deals across dining, wellness, and more in the Middle East. It features intuitive navigation, responsive design, and a dedicated mobile experience to unlock premium offers seamlessly.`,
     stackUsed: ["Next.js", "React.js", "Tailwind CSS", "JavaScript"],
@@ -389,16 +427,16 @@ export const projectsData = [
     caseStudy: "/case-study/the-entertainer",
   },
   {
-    id: 9,
-    title: "Breaking Balls Sports – Multi‑Sport Analytics",
-    description: `A comprehensive fantasy and betting analytics hub covering NFL, NBA, MLB, and more. Offers in‑depth research, community features, and a user‑friendly interface for informed decision‑making in fantasy leagues and betting.`,
+    id: 10,
+    title: "Breaking Balls Sports – Multi-Sport Analytics",
+    description: `A comprehensive fantasy and betting analytics hub covering NFL, NBA, MLB, and more. Offers in-depth research, community features, and a user-friendly interface for informed decision-making in fantasy leagues and betting.`,
     stackUsed: ["Next.js", "React.js", "Tailwind CSS", "JavaScript"],
     image: "/images/breaking balls.jpeg",
     Link: "https://breaking-balls-sport.vercel.app",
     caseStudy: "/case-study/breaking-balls-sports",
   },
   // {
-  //   id: 9,
+  //   id: 11,
   //   title: "Medical Athletic",
   //   description: `A modern health and fitness template designed for medical athletic centers. Features clean layouts, easy navigation, and responsive design to showcase services, trainers, and success stories.`,
   //   stackUsed: ["Next.js", "Tailwind CSS", "React.js", "JavaScript"],
@@ -407,25 +445,25 @@ export const projectsData = [
   //   caseStudy: "/case-study/medical-athletic",
   // },
   {
-    id: 10,
-    title: "E‑Commerce Minimog Template",
-    description: `A sleek, minimal e‑commerce storefront template with product grids, filters, and checkout flows. Optimized for performance and responsive across all devices, it delivers a smooth shopping experience.`,
+    id: 11,
+    title: "E-Commerce Minimog Template",
+    description: `A sleek, minimal e-commerce storefront template with product grids, filters, and checkout flows. Optimized for performance and responsive across all devices, it delivers a smooth shopping experience.`,
     stackUsed: ["Next.js", "Tailwind CSS", "JavaScript"],
     image: "/images/nextjsweb.png",
     Link: "https://next-js-template1-nbt.vercel.app",
     caseStudy: "/case-study/minimog-template",
   },
   {
-    id: 11,
+    id: 12,
     title: "Github Profile Viewer",
-    description: `A real‑time GitHub user lookup tool that fetches and displays profile data, repositories, and stats. It features live search, responsive design, and error handling for seamless browsing.`,
+    description: `A real-time GitHub user lookup tool that fetches and displays profile data, repositories, and stats. It features live search, responsive design, and error handling for seamless browsing.`,
     stackUsed: ["Next.js", "React.js", "JavaScript", "Tailwind CSS"],
     image: "/images/github.png",
     Link: "https://github-profile-viewer-alpha.vercel.app",
     caseStudy: "/case-study/github-profile-viewer",
   },
   {
-    id: 12,
+    id: 13,
     title: "ClickUp Template",
     description: `A customizable ClickUp dashboard clone with task lists, statuses, and filters. Built for teams to visualize workflows, assign tasks, and track progress in a clean, responsive interface.`,
     stackUsed: ["Next.js", "React.js", "Tailwind CSS", "JavaScript"],
@@ -434,7 +472,7 @@ export const projectsData = [
     caseStudy: "/case-study/clickup-template",
   },
   {
-    id: 13,
+    id: 14,
     title: "Dental Health Frontend",
     description: `A dental clinic frontend template with service showcases, appointment booking UI, and doctor profiles. Features a crisp, responsive design optimized for patient engagement.`,
     stackUsed: ["Next.js", "Tailwind CSS", "React.js", "JavaScript"],
@@ -443,9 +481,9 @@ export const projectsData = [
     caseStudy: "/case-study/dental-health",
   },
   {
-    id: 14,
-    title: "DashStack‑Dashboard",
-    description: `An analytics dashboard template with charts, tables, and KPI widgets. It provides real‑time data visualization, filtering, and a modular layout for enterprise applications.`,
+    id: 15,
+    title: "DashStack-Dashboard",
+    description: `An analytics dashboard template with charts, tables, and KPI widgets. It provides real-time data visualization, filtering, and a modular layout for enterprise applications.`,
     stackUsed: [
       "Next.js",
       "Tailwind CSS",

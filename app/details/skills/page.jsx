@@ -1,5 +1,6 @@
 import PageHeader from "@/app/components/PageHeader";
 import React from "react";
+import Link from "next/link";
 import {
   IoCodeSlash,
   IoCheckmarkCircle,
@@ -372,11 +373,11 @@ const SkillsDetailPage = () => {
                                 {skill.name}
                               </h3>
                               <div className="flex items-center gap-2">
-                                <span
+                                {/* <span
                                   className={`rounded-full bg-gradient-to-r px-2 py-1 text-xs font-semibold ${getSkillLevelColor(skill.level)} text-white`}
                                 >
                                   {getSkillLevelText(skill.level)}
-                                </span>
+                                </span> */}
                                 <span className="text-xs text-lightSecondarytext dark:text-darkPrimaryGray">
                                   {skill.experience}
                                 </span>
@@ -386,7 +387,7 @@ const SkillsDetailPage = () => {
                         </div>
 
                         {/* Skill Level Bar */}
-                        <div className="mb-4">
+                        {/* <div className="mb-4">
                           <div className="mb-2 flex items-center justify-between">
                             <span className="text-sm font-medium text-lightPrimarytext dark:text-white">
                               Proficiency
@@ -401,7 +402,7 @@ const SkillsDetailPage = () => {
                               style={{ width: `${skill.level}%` }}
                             ></div>
                           </div>
-                        </div>
+                        </div> */}
 
                         {/* Description */}
                         <p className="mb-4 text-sm text-lightSecondarytext dark:text-darkPrimaryGray">
@@ -427,7 +428,7 @@ const SkillsDetailPage = () => {
                         </div>
 
                         {/* Stats */}
-                        <div className="flex items-center justify-between border-t border-lightBorder pt-4 dark:border-darkPrimaryGray/30">
+                        {/* <div className="flex items-center justify-between border-t border-lightBorder pt-4 dark:border-darkPrimaryGray/30">
                           <div className="text-center">
                             <div className="text-lg font-bold text-SkyBlue">
                               {skill.projects}
@@ -452,7 +453,7 @@ const SkillsDetailPage = () => {
                               Mastery
                             </div>
                           </div>
-                        </div>
+                        </div> */}
                       </div>
                     ))}
                   </div>
@@ -473,14 +474,20 @@ const SkillsDetailPage = () => {
                 to bring your ideas to life with modern, scalable solutions.
               </p>
               <div className="flex flex-col justify-center gap-4 sm:flex-row">
-                <button className="group inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-SkyBlue to-lightHover px-6 py-3 font-semibold text-white transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-SkyBlue/30 dark:to-darkHover">
+                <Link
+                  href="#contact"
+                  className="group inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-SkyBlue to-lightHover px-6 py-3 font-semibold text-white transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-SkyBlue/30 dark:to-darkHover"
+                >
                   <span>Start a Project</span>
                   <IoRocketOutline className="transition-transform duration-300 group-hover:translate-x-1" />
-                </button>
-                <button className="group inline-flex items-center justify-center gap-2 rounded-xl border-2 border-SkyBlue px-6 py-3 font-semibold text-SkyBlue transition-all duration-300 hover:bg-SkyBlue hover:text-white">
+                </Link>
+                <Link
+                  href="#contact"
+                  className="group inline-flex items-center justify-center gap-2 rounded-xl border-2 border-SkyBlue px-6 py-3 font-semibold text-SkyBlue transition-all duration-300 hover:bg-SkyBlue hover:text-white"
+                >
                   <FaCertificate />
-                  <span>View Certificates</span>
-                </button>
+                  <span>Contact Me</span>
+                </Link>
               </div>
             </div>
           </div>

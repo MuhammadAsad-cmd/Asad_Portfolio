@@ -12,22 +12,22 @@ const RightSidebar = ({ id }) => {
 
   return (
     <div className="mt-5 flex w-full flex-col gap-y-4 p-7">
-      <NavLink onClick={handleLinkClick} href="#about">
-        About
+      <NavLink onClick={handleLinkClick} href="/">
+        Home
       </NavLink>
-      <NavLink onClick={handleLinkClick} href="#services">
+      <NavLink onClick={handleLinkClick} href="/details/services">
         Services
       </NavLink>
-      <NavLink onClick={handleLinkClick} href="#experience">
+      <NavLink onClick={handleLinkClick} href="/details/experience">
         Experience
       </NavLink>
-      <NavLink onClick={handleLinkClick} href="#education">
+      <NavLink onClick={handleLinkClick} href="/details/education">
         Education
       </NavLink>
-      <NavLink onClick={handleLinkClick} href="#projects">
+      <NavLink onClick={handleLinkClick} href="/details/projects">
         Projects
       </NavLink>
-      <NavLink onClick={handleLinkClick} href="#skills">
+      <NavLink onClick={handleLinkClick} href="/details/skills">
         Skills
       </NavLink>
       <NavLink onClick={handleLinkClick} href="#contact">

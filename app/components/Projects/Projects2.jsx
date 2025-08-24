@@ -1,118 +1,10 @@
-// import { projectsData } from "@/app/Data/ProjectsData";
-// import Image from "next/image";
-// import Link from "next/link";
-// import React from "react";
-// import { FiExternalLink } from "react-icons/fi";
-// import { IoMdArrowRoundForward } from "react-icons/io";
-
-// const Projects2 = () => {
-//   return (
-//     <>
-//       <div id="projects" className="animated-border my-6 md:rounded-xl">
-//         <section className="bg-white p-4 dark:bg-discordDark">
-//           <div className="mb-6 flex items-center justify-between">
-//             <div className="flex items-center gap-3">
-//               <div className="h-8 w-1 rounded-full bg-gradient-to-b from-SkyBlue to-lightHover dark:to-darkHover"></div>
-//               <h1 className="text-2xl font-bold text-lightPrimarytext dark:text-white">
-//                 Projects
-//               </h1>
-//             </div>
-//             <Link href="/projects">
-//               <p className="text-lg font-semibold text-gray-700 dark:text-gray-300">
-//                 Total Projects ( {projectsData.length} )
-//               </p>
-//             </Link>
-//           </div>
-//           <div className="mb-6 space-y-10">
-//             {projectsData.slice(0, 3).map((project, index) => {
-//               const isEven = index % 2 === 1;
-//               return (
-//                 <div
-//                   key={index}
-//                   className={`mb-6 flex flex-col items-center gap-8 lg:flex-row ${
-//                     isEven ? "lg:flex-row-reverse" : ""
-//                   }`}
-//                 >
-//                   <div className="relative h-64 w-full overflow-hidden rounded-xl shadow-lg sm:h-80 lg:w-1/2">
-//                     <Image
-//                       src={project.image}
-//                       alt={project.title}
-//                       width={800}
-//                       height={450}
-//                       className="h-full w-full transform object-cover transition-transform duration-300 hover:scale-105"
-//                       sizes="(max-width: 768px) 100vw, 50vw"
-//                       quality={80}
-//                     />
-//                   </div>
-
-//                   <div className="w-full lg:w-1/2">
-//                     <h3 className="mb-4 text-2xl font-semibold text-gray-800 dark:text-gray-100 lg:text-3xl">
-//                       {project.title}
-//                     </h3>
-//                     <div className="my-2 flex items-center gap-4">
-//                       <Link
-//                         href={project.Link}
-//                         target="_blank"
-//                         className="flex items-center gap-3 text-SkyBlue"
-//                       >
-//                         <p className="inline-block rounded-lg font-medium text-SkyBlue hover:underline">
-//                           {project.Link}
-//                         </p>
-//                         <FiExternalLink />
-//                       </Link>
-//                       {project.codeUrl && (
-//                         <Link href={project.codeUrl}>
-//                           <p className="text-sm text-gray-500 transition hover:text-gray-900 dark:hover:text-gray-100">
-//                             View Code →
-//                           </p>
-//                         </Link>
-//                       )}
-//                     </div>
-//                     <p className="mb-4 leading-relaxed text-gray-600 dark:text-gray-300">
-//                       {project.description}
-//                     </p>
-//                     <div className="mb-6 flex flex-wrap gap-2">
-//                       {project.stackUsed.map((tag) => (
-//                         <span
-//                           key={tag}
-//                           className="rounded-full bg-gray-200 px-3 py-1 text-sm text-gray-700 dark:bg-gray-800 dark:text-gray-200"
-//                         >
-//                           {tag}
-//                         </span>
-//                       ))}
-//                     </div>
-//                   </div>
-//                 </div>
-//               );
-//             })}
-//           </div>
-//         </section>
-//         <Link href="/details/projects">
-//           <div className="group flex h-[50px] w-full cursor-pointer items-center justify-center gap-3 border-t border-lightBorder bg-lightbg text-lightPrimarytext transition-all duration-300 hover:border-SkyBlue hover:bg-SkyBlue/5 hover:text-SkyBlue dark:border-darkPrimaryGray/30 dark:bg-darkSecondaryGray dark:text-darkPrimaryGray dark:hover:border-darkHover dark:hover:bg-SkyBlue/10 dark:hover:text-darkHover">
-//             <div className="flex items-center gap-2 transition-all duration-300 group-hover:gap-3">
-//               <p className="text-base font-semibold">
-//                 {" "}
-//                 Show all ( {projectsData.length} ) projects
-//               </p>
-//               <div className="flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-r from-SkyBlue to-lightHover transition-transform duration-300 group-hover:scale-110 dark:from-SkyBlue dark:to-darkHover">
-//                 <IoMdArrowRoundForward className="text-lg text-white transition-transform duration-300 group-hover:translate-x-0.5" />
-//               </div>
-//             </div>
-//           </div>
-//         </Link>
-//       </div>
-//     </>
-//   );
-// };
-
-// export default Projects2;
-
 import { projectsData } from "@/app/Data/ProjectsData";
 import Image from "next/image";
 import Link from "next/link";
 import { FiExternalLink, FiGithub } from "react-icons/fi";
 import { IoMdArrowRoundForward } from "react-icons/io";
 import { IoRocketOutline, IoCodeSlash, IoGlobeOutline } from "react-icons/io5";
+import CollapsibleDescription from "./CollapsibleDescription";
 
 const Projects2 = () => {
   return (
@@ -151,7 +43,7 @@ const Projects2 = () => {
 
             {/* Projects Grid */}
             <div className="space-y-12">
-              {projectsData.slice(0, 6).map((project, index) => {
+              {projectsData.slice(0, 8).map((project, index) => {
                 const isEven = index % 2 === 1;
                 return (
                   <div
@@ -201,8 +93,11 @@ const Projects2 = () => {
                         </div>
 
                         {/* Title */}
-                        <h3 className="text-2xl font-bold leading-tight text-lightPrimarytext transition-colors duration-300 group-hover:text-SkyBlue dark:text-white dark:group-hover:text-darkHover">
-                          {project.title}
+                        <h3
+                          title={project?.title}
+                          className="text-2xl font-bold leading-tight text-lightPrimarytext transition-colors duration-300 group-hover:text-SkyBlue dark:text-white dark:group-hover:text-darkHover"
+                        >
+                          {project?.title}
                         </h3>
 
                         {/* Links */}
@@ -231,7 +126,7 @@ const Projects2 = () => {
                             </Link>
                           )}
 
-                          {project.caseStudy && (
+                          {/* {project.caseStudy && (
                             <Link
                               href="#"
                               className="group/case flex items-center gap-2 text-SkyBlue transition-colors duration-300 hover:text-lightHover dark:hover:text-darkHover"
@@ -242,13 +137,13 @@ const Projects2 = () => {
                               </span>
                               <IoMdArrowRoundForward className="text-sm transition-transform duration-300 group-hover/case:translate-x-0.5" />
                             </Link>
-                          )}
+                          )} */}
                         </div>
 
                         {/* Description */}
-                        <p className="leading-relaxed text-lightSecondarytext dark:text-darkPrimaryGray">
-                          {project.description}
-                        </p>
+                        <CollapsibleDescription
+                          description={project.description}
+                        />
 
                         {/* Tech Stack */}
                         <div className="space-y-2">

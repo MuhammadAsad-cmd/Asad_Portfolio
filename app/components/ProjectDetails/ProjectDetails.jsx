@@ -8,6 +8,7 @@ import { FiExternalLink, FiGithub } from "react-icons/fi";
 import { IoMdArrowRoundForward } from "react-icons/io";
 import { IoRocketOutline, IoCodeSlash, IoGlobeOutline } from "react-icons/io5";
 import PageHeader from "../PageHeader";
+import CollapsibleDescription from "../Projects/CollapsibleDescription";
 
 const ProjectDetails = () => {
   // const [expandedProjectIndex, setExpandedProjectIndex] = useState(null);
@@ -38,7 +39,7 @@ const ProjectDetails = () => {
               title="Muhammad Asad's Projects"
               subtitle="Featured work and development portfolio"
               icon={<IoRocketOutline />}
-              experienceYears="25+ Projects"
+              experienceYears={`${projectsData.length}+ Projects`}
               backUrl="/"
             />
             {/* Projects Grid */}
@@ -123,7 +124,7 @@ const ProjectDetails = () => {
                             </Link>
                           )}
 
-                          {project.caseStudy && (
+                          {/* {project.caseStudy && (
                             <Link
                               href="#"
                               className="group/case flex items-center gap-2 text-SkyBlue transition-colors duration-300 hover:text-lightHover dark:hover:text-darkHover"
@@ -134,13 +135,13 @@ const ProjectDetails = () => {
                               </span>
                               <IoMdArrowRoundForward className="text-sm transition-transform duration-300 group-hover/case:translate-x-0.5" />
                             </Link>
-                          )}
+                          )} */}
                         </div>
 
                         {/* Description */}
-                        <p className="leading-relaxed text-lightSecondarytext dark:text-darkPrimaryGray">
-                          {project.description}
-                        </p>
+                        <CollapsibleDescription
+                          description={project.description}
+                        />
 
                         {/* Tech Stack */}
                         <div className="space-y-2">

@@ -66,16 +66,16 @@ const Footer = () => {
       </div>
 
       <div className="flex w-full flex-wrap items-center justify-center gap-x-4 gap-y-2 px-4 md:gap-6">
-        <NavLink href="#services" title="Jump to Services section">
+        <NavLink href="/details/services" title="Go to Services page">
           Services
         </NavLink>
-        <NavLink href="#experience" title="Jump to Experience section">
+        <NavLink href="/details/experience" title="Go to Experience page">
           Experience
         </NavLink>
-        <NavLink href="#projects" title="Jump to Projects section">
+        <NavLink href="/details/projects" title="Go to Projects page">
           Projects
         </NavLink>
-        <NavLink href="#skills" title="Jump to Skills section">
+        <NavLink href="/details/skills" title="Go to Skills page">
           Skills
         </NavLink>
         <NavLink href="#contact" title="Jump to Contact section">
