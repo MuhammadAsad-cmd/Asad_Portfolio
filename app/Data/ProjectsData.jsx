@@ -320,7 +320,7 @@ Core features include guided warehouse workflows (select warehouse → zone → 
     contribution:
       "Frontend Engineer — UI/UX design, client-side logic, responsive layouts, TanStack data fetching and state, PDF invoice UI, trade-in & return flows",
     image: "/images/customer portal.png",
-    Link: "http://cp.retrofam.com/",
+    Link: "https://app.retrofam.com",
     caseStudy: "/case-study/retrofam-customer-portal",
   },
   {
@@ -368,7 +368,29 @@ Core features include guided warehouse workflows (select warehouse → zone → 
     caseStudy: "/case-study/gl-dream-home",
   },
   {
-    id: 6,
+  id: 6,
+  title: "HairOil — Premium E-commerce Platform",
+  description: `A full-stack e-commerce platform for premium hair oil products featuring a modern customer-facing website and comprehensive admin dashboard. The platform includes dynamic product catalog with 10+ premium hair oils, advanced shopping cart with Redux state management, secure checkout process with address validation, order management system, and real-time admin analytics. Built with Next.js 15 and React 19, featuring responsive design, smooth animations, and seamless user experience across all devices.`,
+  stackUsed: [
+    "Next.js 15",
+    "React 19", 
+    "Redux Toolkit",
+    "TanStack Query",
+    "Tailwind CSS 4",
+    "Framer Motion",
+    "Axios",
+    "React Hook Form",
+    "Zod",
+    "SweetAlert2",
+    "Swiper.js"
+  ],
+  contribution: "Full-Stack Developer — Complete frontend development including responsive UI/UX design, Redux state management for cart/wishlist, admin dashboard with CRUD operations, order management system, API integration, form validation, and real-time data fetching with TanStack Query",
+  image: "/images/hairoil.jpg",
+  Link: "https://hair-oil-ecommerce.vercel.app",
+  caseStudy: "/case-study/hair-oil-ecommerce",
+},
+  {
+    id: 7,
     title: "Canrover Admin Panel",
     description: `Developed a fully dynamic Next.js/Node.js admin dashboard for a US scooter-rental client, featuring live map tracking, remote lock/unlock, QR-code ride activation, form validation, and secure access. Added Google Maps-based zone management to visualize parking zones, maintenance areas, danger zones, and more—all in a responsive, server-rendered interface for robust type safety and performance.`,
     stackUsed: [
@@ -386,7 +408,7 @@ Core features include guided warehouse workflows (select warehouse → zone → 
     caseStudy: "/case-study/canrover-admin",
   },
   {
-    id: 7,
+    id: 8,
     title: "Ryde Admin Dashboard",
     description: `Ryde Admin Dashboard is a web-based task management tool built around a dynamic Kanban board. Users can create projects, add and organize tasks across Backlog, To-Do, In-Progress, and Done columns, and easily move cards via drag-and-drop. Real-time status updates keep teams in sync, while a clean, responsive UI—powered by Tailwind CSS—ensures a seamless experience across devices.`,
     stackUsed: [
@@ -403,7 +425,7 @@ Core features include guided warehouse workflows (select warehouse → zone → 
     caseStudy: "/case-study/kanban-board",
   },
   {
-    id: 8,
+    id: 9,
     title: "Kanban Board Project",
     description: `A task-management Kanban board with Backlog, To-Do, In-Progress, and Done columns. Features include project creation, drag-and-drop cards, and real-time status updates in a clean, responsive interface.`,
     stackUsed: [
@@ -418,7 +440,7 @@ Core features include guided warehouse workflows (select warehouse → zone → 
     caseStudy: "/case-study/kanban-board",
   },
   {
-    id: 9,
+    id: 10,
     title: "the ENTERTAINER – Ultimate BOGO Deals & Lifestyle Savings",
     description: `A savings platform offering Buy One Get One Free deals across dining, wellness, and more in the Middle East. It features intuitive navigation, responsive design, and a dedicated mobile experience to unlock premium offers seamlessly.`,
     stackUsed: ["Next.js", "React.js", "Tailwind CSS", "JavaScript"],
@@ -427,7 +449,7 @@ Core features include guided warehouse workflows (select warehouse → zone → 
     caseStudy: "/case-study/the-entertainer",
   },
   {
-    id: 10,
+    id: 11,
     title: "Breaking Balls Sports – Multi-Sport Analytics",
     description: `A comprehensive fantasy and betting analytics hub covering NFL, NBA, MLB, and more. Offers in-depth research, community features, and a user-friendly interface for informed decision-making in fantasy leagues and betting.`,
     stackUsed: ["Next.js", "React.js", "Tailwind CSS", "JavaScript"],
@@ -445,7 +467,7 @@ Core features include guided warehouse workflows (select warehouse → zone → 
   //   caseStudy: "/case-study/medical-athletic",
   // },
   {
-    id: 11,
+    id: 12,
     title: "E-Commerce Minimog Template",
     description: `A sleek, minimal e-commerce storefront template with product grids, filters, and checkout flows. Optimized for performance and responsive across all devices, it delivers a smooth shopping experience.`,
     stackUsed: ["Next.js", "Tailwind CSS", "JavaScript"],
@@ -454,7 +476,7 @@ Core features include guided warehouse workflows (select warehouse → zone → 
     caseStudy: "/case-study/minimog-template",
   },
   {
-    id: 12,
+    id: 13,
     title: "Github Profile Viewer",
     description: `A real-time GitHub user lookup tool that fetches and displays profile data, repositories, and stats. It features live search, responsive design, and error handling for seamless browsing.`,
     stackUsed: ["Next.js", "React.js", "JavaScript", "Tailwind CSS"],
@@ -463,7 +485,7 @@ Core features include guided warehouse workflows (select warehouse → zone → 
     caseStudy: "/case-study/github-profile-viewer",
   },
   {
-    id: 13,
+    id: 14,
     title: "ClickUp Template",
     description: `A customizable ClickUp dashboard clone with task lists, statuses, and filters. Built for teams to visualize workflows, assign tasks, and track progress in a clean, responsive interface.`,
     stackUsed: ["Next.js", "React.js", "Tailwind CSS", "JavaScript"],
@@ -472,7 +494,7 @@ Core features include guided warehouse workflows (select warehouse → zone → 
     caseStudy: "/case-study/clickup-template",
   },
   {
-    id: 14,
+    id: 15,
     title: "Dental Health Frontend",
     description: `A dental clinic frontend template with service showcases, appointment booking UI, and doctor profiles. Features a crisp, responsive design optimized for patient engagement.`,
     stackUsed: ["Next.js", "Tailwind CSS", "React.js", "JavaScript"],
@@ -481,7 +503,7 @@ Core features include guided warehouse workflows (select warehouse → zone → 
     caseStudy: "/case-study/dental-health",
   },
   {
-    id: 15,
+    id: 16,
     title: "DashStack-Dashboard",
     description: `An analytics dashboard template with charts, tables, and KPI widgets. It provides real-time data visualization, filtering, and a modular layout for enterprise applications.`,
     stackUsed: [

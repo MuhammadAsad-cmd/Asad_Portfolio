@@ -43,7 +43,7 @@ const Projects2 = () => {
 
             {/* Projects Grid */}
             <div className="space-y-12">
-              {projectsData.slice(0, 8).map((project, index) => {
+              {projectsData.slice(0, 9).map((project, index) => {
                 const isEven = index % 2 === 1;
                 return (
                   <div
