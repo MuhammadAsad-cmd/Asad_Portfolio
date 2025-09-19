@@ -386,7 +386,7 @@ Core features include guided warehouse workflows (select warehouse → zone → 
   ],
   contribution: "Full-Stack Developer — Complete frontend development including responsive UI/UX design, Redux state management for cart/wishlist, admin dashboard with CRUD operations, order management system, API integration, form validation, and real-time data fetching with TanStack Query",
   image: "/images/hairoil.jpg",
-  Link: "https://hair-oil-ecommerce.vercel.app",
+  Link: "https://www.azizstore.online/",
   caseStudy: "/case-study/hair-oil-ecommerce",
 },
   {
