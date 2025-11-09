@@ -19,7 +19,7 @@ const Sidebar = ({ id, position = "left", children }) => {
 
       {/* Sidebar */}
       <div
-        className={`fixed top-0 z-[9999] h-full w-[340px] bg-white shadow-lg transition-transform duration-300 ease-in-out dark:bg-discordDark
+        className={`fixed top-0 z-[9999] h-screen overflow-y-auto w-[340px] bg-white shadow-lg transition-transform duration-300 ease-in-out dark:bg-discordDark
         ${position === "left" ? "left-0" : "right-0"}
         ${
           isOpen

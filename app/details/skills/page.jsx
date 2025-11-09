@@ -169,7 +169,7 @@ const skillsData = {
           description:
             "Fast, unopinionated web framework for Node.js applications and APIs.",
           projects: 8,
-          logo: "/images/express.svg",
+          logo: "/images/express.png",
           certifications: [],
           keyFeatures: ["REST APIs", "Middleware", "Routing", "Error Handling"],
         },

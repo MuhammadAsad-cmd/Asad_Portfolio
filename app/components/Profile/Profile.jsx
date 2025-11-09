@@ -65,9 +65,9 @@ const Profile = () => {
                         <Image
                           width={380}
                           height={380}
-                          src="/images/profile.jpg"
+                          src="/images/asadimg.png"
                           alt="Muhammad Asad - Front End Developer"
-                          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                          className="h-full w-full object-cover transition-transform duration-500"
                           priority
                         />
                         {/* Hover Overlay */}
@@ -182,7 +182,7 @@ const Profile = () => {
                 </button>
 
                 <a
-                  href="/images/Asad Front-End.pdf"
+                  href="/images/Asad Front End resume.pdf"
                   download
                   title="Download Muhammad Asad's Front-End Developer Resume (PDF)"
                   aria-label="Download Resume PDF"

@@ -117,7 +117,7 @@ const PageHeader = ({
             </button>
 
             <Link
-              href="/images/Asad Front-End.pdf"
+              href="/images/Asad Front End resume.pdf"
               target="_blank"
               className="group flex h-8 w-8 items-center justify-center rounded-md border border-lightBorder bg-lightbg transition-all duration-300 hover:scale-105 hover:border-SkyBlue hover:bg-SkyBlue/5 dark:border-darkPrimaryGray/30 dark:bg-darkSecondaryGray dark:hover:border-darkHover dark:hover:bg-SkyBlue/10 sm:h-9 sm:w-9 sm:rounded-lg"
               title="Download Resume"

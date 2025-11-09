@@ -1,3 +1,4 @@
+'use client';
 import Link from "next/link";
 import { IoMdArrowRoundForward } from "react-icons/io";
 import {
@@ -25,354 +26,14 @@ import {
   IoStarOutline,
 } from "react-icons/io5";
 import PageHeader from "../PageHeader";
+import { useState } from "react";
+import { enhancedServicesData } from "@/app/Data/ProjectsData";
 
-// Enhanced services data with descriptions, pricing, and features
-const enhancedServicesData = [
-  {
-    name: "Website Development",
-    description:
-      "Complete custom website development from concept to deployment. I create modern, fast, and scalable websites tailored to your business needs.",
-    features: [
-      "Custom Design",
-      "Mobile Responsive",
-      "SEO Optimized",
-      "Fast Loading",
-      "CMS Integration",
-    ],
-    technologies: ["Next.js", "React.js", "TypeScript", "Tailwind CSS"],
-    deliveryTime: "2-4 weeks",
-    complexity: "Medium to High",
-    category: "Full Stack",
-  },
-  {
-    name: "Front End Development",
-    description:
-      "Expert frontend development using modern frameworks and libraries. I build interactive, user-friendly interfaces that engage your audience.",
-    features: [
-      "React Components",
-      "State Management",
-      "API Integration",
-      "Performance Optimization",
-      "Cross-Browser Support",
-    ],
-    technologies: [
-      "React.js",
-      "Next.js",
-      "Redux Toolkit",
-      "JavaScript",
-      "TypeScript",
-    ],
-    deliveryTime: "1-3 weeks",
-    complexity: "Medium",
-    category: "Frontend",
-  },
-  {
-    name: "UI/UX Design Implementation",
-    description:
-      "Transform your designs into pixel-perfect, interactive web interfaces. I ensure your vision comes to life with attention to detail.",
-    features: [
-      "Pixel Perfect",
-      "Interactive Elements",
-      "Smooth Animations",
-      "Design System",
-      "Accessibility",
-    ],
-    technologies: ["HTML5", "CSS3", "Tailwind CSS", "Framer Motion", "SCSS"],
-    deliveryTime: "1-2 weeks",
-    complexity: "Medium",
-    category: "Frontend",
-  },
-  {
-    name: "E-commerce Solutions",
-    description:
-      "Complete e-commerce platforms with shopping carts, payment integration, and inventory management. Drive your online sales effectively.",
-    features: [
-      "Shopping Cart",
-      "Payment Gateway",
-      "Inventory Management",
-      "Order Tracking",
-      "Admin Dashboard",
-    ],
-    technologies: ["Next.js", "Stripe API", "MongoDB", "Node.js", "Express.js"],
-    deliveryTime: "4-8 weeks",
-    complexity: "High",
-    category: "Full Stack",
-  },
-  {
-    name: "API Integration",
-    description:
-      "Seamless integration of third-party APIs and services. Connect your application with external platforms and services efficiently.",
-    features: [
-      "RESTful APIs",
-      "GraphQL",
-      "Authentication",
-      "Data Synchronization",
-      "Error Handling",
-    ],
-    technologies: ["Axios", "Fetch API", "Node.js", "Express.js", "JWT"],
-    deliveryTime: "3-7 days",
-    complexity: "Low to Medium",
-    category: "Backend",
-  },
-  {
-    name: "Web Application Development",
-    description:
-      "Full-featured web applications with complex functionality. From simple tools to enterprise-level solutions.",
-    features: [
-      "User Authentication",
-      "Database Integration",
-      "Real-time Features",
-      "Admin Panels",
-      "Scalable Architecture",
-    ],
-    technologies: ["Next.js", "React.js", "Node.js", "MongoDB", "PostgreSQL"],
-    deliveryTime: "4-12 weeks",
-    complexity: "High",
-    category: "Full Stack",
-  },
-  {
-    name: "Performance Optimization",
-    description:
-      "Optimize your website's speed and performance. Improve loading times, SEO rankings, and user experience significantly.",
-    features: [
-      "Speed Optimization",
-      "Image Compression",
-      "Code Splitting",
-      "Caching Strategies",
-      "Core Web Vitals",
-    ],
-    technologies: [
-      "Webpack",
-      "Next.js",
-      "Lighthouse",
-      "GTMetrix",
-      "PageSpeed Insights",
-    ],
-    deliveryTime: "1-2 weeks",
-    complexity: "Medium",
-    category: "Optimization",
-  },
-  {
-    name: "State Management Solutions",
-    description:
-      "Implement robust state management for complex applications. Ensure data consistency and optimal performance.",
-    features: [
-      "Redux Toolkit",
-      "Context API",
-      "Global State",
-      "Middleware",
-      "DevTools Integration",
-    ],
-    technologies: [
-      "Redux Toolkit",
-      "Zustand",
-      "Context API",
-      "React Query",
-      "SWR",
-    ],
-    deliveryTime: "1-2 weeks",
-    complexity: "Medium",
-    category: "Frontend",
-  },
-  {
-    name: "Responsive Design",
-    description:
-      "Create websites that work perfectly on all devices. From mobile phones to large desktop screens, ensure optimal user experience.",
-    features: [
-      "Mobile First",
-      "Flexible Layouts",
-      "Touch Friendly",
-      "Cross Device",
-      "Progressive Enhancement",
-    ],
-    technologies: [
-      "CSS Grid",
-      "Flexbox",
-      "Tailwind CSS",
-      "Media Queries",
-      "Viewport Meta",
-    ],
-    deliveryTime: "1-2 weeks",
-    complexity: "Medium",
-    category: "Frontend",
-  },
-  {
-    name: "Cross-Browser Compatibility",
-    description:
-      "Ensure your website works consistently across all major browsers. Test and fix compatibility issues for maximum reach.",
-    features: [
-      "Browser Testing",
-      "Polyfills",
-      "Fallback Solutions",
-      "Progressive Enhancement",
-      "Vendor Prefixes",
-    ],
-    technologies: [
-      "Babel",
-      "Autoprefixer",
-      "BrowserStack",
-      "Can I Use",
-      "PostCSS",
-    ],
-    deliveryTime: "3-5 days",
-    complexity: "Low to Medium",
-    category: "Testing",
-  },
-  {
-    name: "Version Control (Git)",
-    description:
-      "Professional Git workflow setup and management. Implement best practices for code collaboration and deployment.",
-    features: [
-      "Git Workflow",
-      "Branch Management",
-      "Code Reviews",
-      "Deployment Pipeline",
-      "Collaboration",
-    ],
-    technologies: ["Git", "GitHub", "GitLab", "Bitbucket", "GitHub Actions"],
-    deliveryTime: "1-3 days",
-    complexity: "Low",
-    category: "DevOps",
-  },
-  {
-    name: "Component-Based Architecture",
-    description:
-      "Build scalable and maintainable applications using component-based architecture. Create reusable and modular code.",
-    features: [
-      "Reusable Components",
-      "Props System",
-      "Component Library",
-      "Documentation",
-      "Testing",
-    ],
-    technologies: [
-      "React.js",
-      "Storybook",
-      "TypeScript",
-      "Jest",
-      "React Testing Library",
-    ],
-    deliveryTime: "2-4 weeks",
-    complexity: "Medium to High",
-    category: "Architecture",
-  },
-  {
-    name: "SEO Optimization",
-    description:
-      "Improve your website's search engine rankings with technical SEO implementation and best practices.",
-    features: [
-      "Meta Tags",
-      "Schema Markup",
-      "Sitemap",
-      "Page Speed",
-      "Mobile Optimization",
-    ],
-    technologies: [
-      "Next.js SEO",
-      "Google Analytics",
-      "Search Console",
-      "Structured Data",
-      "Open Graph",
-    ],
-    deliveryTime: "1-2 weeks",
-    complexity: "Medium",
-    category: "SEO",
-  },
-  {
-    name: "Testing and Debugging",
-    description:
-      "Comprehensive testing strategies and debugging solutions. Ensure your application is reliable and bug-free.",
-    features: [
-      "Unit Testing",
-      "Integration Testing",
-      "E2E Testing",
-      "Bug Fixing",
-      "Performance Testing",
-    ],
-    technologies: [
-      "Jest",
-      "React Testing Library",
-      "Cypress",
-      "Playwright",
-      "Chrome DevTools",
-    ],
-    deliveryTime: "1-3 weeks",
-    complexity: "Medium",
-    category: "Testing",
-  },
-  {
-    name: "Backend Development",
-    description:
-      "Robust server-side development with APIs, databases, and authentication. Build scalable backend solutions.",
-    features: [
-      "REST APIs",
-      "Database Design",
-      "Authentication",
-      "Server Setup",
-      "Cloud Deployment",
-    ],
-    technologies: ["Node.js", "Express.js", "MongoDB", "PostgreSQL", "JWT"],
-    deliveryTime: "3-6 weeks",
-    complexity: "High",
-    category: "Backend",
-  },
-  {
-    name: "Database Integration",
-    description:
-      "Design and implement efficient database solutions. From SQL to NoSQL, choose the right database for your needs.",
-    features: [
-      "Database Design",
-      "Query Optimization",
-      "Data Migration",
-      "Backup Solutions",
-      "Security",
-    ],
-    technologies: ["MongoDB", "PostgreSQL", "MySQL", "Prisma", "Mongoose"],
-    deliveryTime: "2-4 weeks",
-    complexity: "Medium to High",
-    category: "Database",
-  },
-  {
-    name: "Cloud Deployment",
-    description:
-      "Deploy your applications to the cloud with proper CI/CD pipelines. Ensure scalability and reliability.",
-    features: [
-      "Cloud Hosting",
-      "CI/CD Pipeline",
-      "Domain Setup",
-      "SSL Certificates",
-      "Monitoring",
-    ],
-    technologies: ["Vercel", "Netlify", "AWS", "Docker", "GitHub Actions"],
-    deliveryTime: "3-7 days",
-    complexity: "Medium",
-    category: "DevOps",
-  },
-  {
-    name: "Maintenance & Support",
-    description:
-      "Ongoing maintenance and support for your web applications. Keep your website updated and secure.",
-    features: [
-      "Regular Updates",
-      "Security Patches",
-      "Performance Monitoring",
-      "Bug Fixes",
-      "Feature Updates",
-    ],
-    technologies: [
-      "Monitoring Tools",
-      "Analytics",
-      "Error Tracking",
-      "Backup Systems",
-      "Security Tools",
-    ],
-    deliveryTime: "Ongoing",
-    complexity: "Low to Medium",
-    category: "Support",
-  },
-];
 
 const SerDetails = () => {
+  const [expandedFeatures, setExpandedFeatures] = useState({});
+  const [expandedTech, setExpandedTech] = useState({});
+
   const getServiceIcon = (serviceName) => {
     const name = serviceName.toLowerCase();
     if (name.includes("website") || name.includes("web")) return FaLaptopCode;
@@ -446,6 +107,20 @@ const SerDetails = () => {
     }
   };
 
+  const toggleFeatures = (index) => {
+    setExpandedFeatures((prev) => ({
+      ...prev,
+      [index]: !prev[index],
+    }));
+  };
+
+  const toggleTech = (index) => {
+    setExpandedTech((prev) => ({
+      ...prev,
+      [index]: !prev[index],
+    }));
+  };
+
   return (
     <>
       <div
@@ -506,20 +181,26 @@ const SerDetails = () => {
                         Key Features
                       </h4>
                       <div className="flex flex-wrap gap-1">
-                        {service.features
-                          .slice(0, 3)
-                          .map((feature, featureIndex) => (
-                            <span
-                              key={featureIndex}
-                              className="rounded-md border border-lightBorder bg-white px-2 py-1 text-xs font-medium text-lightPrimarytext dark:border-darkPrimaryGray/30 dark:bg-discordDark dark:text-white"
-                            >
-                              {feature}
-                            </span>
-                          ))}
-                        {service.features.length > 3 && (
-                          <span className="rounded-md bg-SkyBlue/10 px-2 py-1 text-xs font-medium text-SkyBlue dark:bg-SkyBlue/20">
-                            +{service.features.length - 3} more
+                        {(expandedFeatures[index]
+                          ? service.features
+                          : service.features.slice(0, 3)
+                        ).map((feature, featureIndex) => (
+                          <span
+                            key={featureIndex}
+                            className="rounded-md border border-lightBorder bg-white px-2 py-1 text-xs font-medium text-lightPrimarytext dark:border-darkPrimaryGray/30 dark:bg-discordDark dark:text-white"
+                          >
+                            {feature}
                           </span>
+                        ))}
+                        {service.features.length > 3 && (
+                          <button
+                            onClick={() => toggleFeatures(index)}
+                            className="rounded-md bg-gray-100 px-2 py-1 text-xs font-medium text-white transition-all hover:bg-gray-200 dark:bg-gray-800 hover:dark:bg-gray-700 cursor-pointer relative z-10"
+                          >
+                            {expandedFeatures[index]
+                              ? "Show Less"
+                              : `+${service.features.length - 3} more`}
+                          </button>
                         )}
                       </div>
                     </div>
@@ -531,20 +212,26 @@ const SerDetails = () => {
                         Technologies
                       </h4>
                       <div className="flex flex-wrap gap-1">
-                        {service.technologies
-                          .slice(0, 3)
-                          .map((tech, techIndex) => (
-                            <span
-                              key={techIndex}
-                              className="rounded-md border border-SkyBlue/20 bg-gradient-to-r from-SkyBlue/10 to-lightHover/10 px-2 py-1 text-xs font-medium text-SkyBlue dark:border-darkHover/20 dark:from-SkyBlue/20 dark:to-darkHover/20"
-                            >
-                              {tech}
-                            </span>
-                          ))}
-                        {service.technologies.length > 3 && (
-                          <span className="rounded-md bg-SkyBlue/20 px-2 py-1 text-xs font-medium text-SkyBlue dark:bg-SkyBlue/30">
-                            +{service.technologies.length - 3}
+                        {(expandedTech[index]
+                          ? service.technologies
+                          : service.technologies.slice(0, 3)
+                        ).map((tech, techIndex) => (
+                          <span
+                            key={techIndex}
+                            className="rounded-md border border-SkyBlue/20 bg-gradient-to-r from-SkyBlue/10 to-lightHover/10 px-2 py-1 text-xs font-medium text-SkyBlue dark:border-darkHover/20 dark:from-SkyBlue/20 dark:to-darkHover/20"
+                          >
+                            {tech}
                           </span>
+                        ))}
+                        {service.technologies.length > 3 && (
+                          <button
+                            onClick={() => toggleTech(index)}
+                            className="rounded-md bg-gray-100 px-2 py-1 text-xs font-medium text-white transition-all hover:bg-gray-200 dark:bg-gray-800 hover:dark:bg-gray-700 cursor-pointer relative z-10"
+                          >
+                            {expandedTech[index]
+                              ? "Show Less"
+                              : `+${service.technologies.length - 3}`}
+                          </button>
                         )}
                       </div>
                     </div>
@@ -563,7 +250,7 @@ const SerDetails = () => {
                     </div>
 
                     {/* Hover effect overlay */}
-                    <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-SkyBlue/5 to-lightHover/5 opacity-0 transition-opacity duration-300 group-hover:opacity-100 dark:from-SkyBlue/10 dark:to-darkHover/10"></div>
+                    <div className="pointer-events-none absolute inset-0 rounded-xl bg-gradient-to-br from-SkyBlue/5 to-lightHover/5 opacity-0 transition-opacity duration-300 group-hover:opacity-100 dark:from-SkyBlue/10 dark:to-darkHover/10"></div>
                   </div>
                 );
               })}

@@ -261,25 +261,23 @@ const ExpCard = () => {
                             {experience.roles[0].title}
                           </h3>
                         </Link>
-                        <div className="mt-1 flex flex-wrap items-center gap-2">
-                          <Link
-                            href={experience.link || "#"}
-                            className="group/company"
-                          >
-                            <span className="font-medium text-lightSecondarytext transition-colors duration-300 group-hover/company:text-SkyBlue dark:text-darkPrimaryGray dark:group-hover/company:text-darkHover">
-                              {experience.company}
-                            </span>
-                          </Link>
+                        <Link
+                          href={experience.link || "#"}
+                          className="group/company mt-1 flex flex-wrap items-center gap-2"
+                        >
+                          <span className="font-medium text-lightSecondarytext transition-colors duration-300 group-hover/company:text-SkyBlue dark:text-darkPrimaryGray dark:group-hover/company:text-darkHover">
+                            {experience.company}
+                          </span>
                           <span className="text-lightSecondarytext dark:text-darkPrimaryGray">
                             •
                           </span>
                           <span className="rounded-full bg-SkyBlue/10 px-2 py-1 text-xs font-medium text-SkyBlue dark:bg-SkyBlue/20">
                             {experience.roles[0].type}
                           </span>
-                          {experience.link && (
+                          {/* {experience.link && (
                             <FaExternalLinkAlt className="text-xs text-lightSecondarytext dark:text-darkPrimaryGray" />
-                          )}
-                        </div>
+                          )} */}
+                        </Link>
                       </div>
                       <div className="text-right">
                         <div className="flex items-center gap-1 text-xs text-lightSecondarytext dark:text-darkPrimaryGray">

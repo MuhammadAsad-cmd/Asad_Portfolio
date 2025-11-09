@@ -79,7 +79,7 @@ const Right = () => {
                 href="https://www.linkedin.com/in/masadali"
                 title="Visit LinkedIn Profile"
               >
-                <p className="overflow-hidden text-ellipsis tracking-wide text-SkyBlue underline hover:text-lightHover dark:hover:text-darkHover max-md:w-[60%]">
+                <p className="tracking-wide text-SkyBlue underline hover:text-lightHover dark:hover:text-darkHover max-md:w-[60%]">
                   https://www.linkedin.com/in/masadali
                 </p>
               </Link>

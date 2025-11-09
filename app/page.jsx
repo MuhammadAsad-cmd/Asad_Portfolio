@@ -93,7 +93,6 @@ export default function Home() {
         <Skills />
         <Recommendations />
         <Certifications />
-
       </div>
   );
 }
