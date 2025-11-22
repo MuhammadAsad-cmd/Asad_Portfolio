@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import { FaCalendarAlt, FaUniversity } from "react-icons/fa";
-import { educationData } from "@/app/Data/ProjectsData";
+import { educationData } from "@/app/Data/education";
 import PageHeader from "../PageHeader";
 import { IoSchoolOutline } from "react-icons/io5";
 
@@ -42,11 +42,10 @@ const EducationDetails = () => {
                       </div>
                       {/* Status Badge */}
                       <div
-                        className={`absolute -right-1 -top-1 h-4 w-4 rounded-full border-2 border-white dark:border-discordDark ${
-                          edu.status === "In Progress"
+                        className={`absolute -right-1 -top-1 h-4 w-4 rounded-full border-2 border-white dark:border-discordDark ${edu.status === "In Progress"
                             ? "animate-pulse bg-SkyBlue"
                             : "bg-green-500"
-                        }`}
+                          }`}
                       ></div>
                     </div>
 
@@ -76,11 +75,10 @@ const EducationDetails = () => {
                           </span>
                         </div>
                         <div
-                          className={`rounded-full px-2 py-1 text-xs font-semibold ${
-                            edu.status === "In Progress"
+                          className={`rounded-full px-2 py-1 text-xs font-semibold ${edu.status === "In Progress"
                               ? "bg-SkyBlue/20 text-SkyBlue"
                               : "bg-green-100 text-green-600 dark:bg-green-900/30 dark:text-green-400"
-                          }`}
+                            }`}
                         >
                           {edu.status}
                         </div>

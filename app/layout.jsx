@@ -4,14 +4,16 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/next";
 
 export const metadata = {
-  title: "Portfolio | M. Asad - Web Developer | Front-End Developer",
+  title: "Portfolio | M. Asad - MERN Stack Developer | Full Stack Developer",
   description:
-    "Welcome to the portfolio of Muhammad Asad, a creative and detail-oriented web developer specializing in front-end development. Explore innovative solutions, modern designs, and seamless user experiences crafted to bring ideas to life.",
+    "Welcome to the portfolio of Muhammad Asad, a creative and detail-oriented MERN Stack developer specializing in building scalable full-stack web applications. Explore innovative solutions, modern designs, and seamless user experiences crafted with MongoDB, Express, React, and Node.js.",
   authors: [{ name: "M. Asad" }],
   creator: "Muhammad Asad",
   publisher: "Muhammad Asad",
   applicationName: "Portfolio | Muhammad Asad",
   keywords: [
+    "MERN Stack",
+    "Full Stack Developer",
     "Next.js",
     "React.js",
     "Node.js",
@@ -21,28 +23,24 @@ export const metadata = {
     "TypeScript",
     "Tailwind CSS",
     "Web Development",
-    "Front-End Developer",
-    "UI/UX Design",
     "Muhammad Asad",
     "Asad",
     "Portfolio",
-    "Web Developer",
-    "UI/UX Developer",
   ],
   icons: ["/images/name.avif"],
   metadataBase: new URL("https://masadali.vercel.app/"),
 
   // Open Graph metadata
   openGraph: {
-    title: "Muhammad Asad - Front End Developer",
+    title: "Muhammad Asad - MERN Stack Developer",
     description:
-      "Showcasing the work of Muhammad Asad, a web developer passionate about creating cutting-edge digital solutions and intuitive user interfaces.",
+      "Showcasing the work of Muhammad Asad, a MERN Stack developer passionate about creating robust full-stack solutions and intuitive user interfaces.",
     images: [
       {
         url: "/images/seoimg.png",
         width: 1200,
         height: 630,
-        alt: "Portfolio of Muhammad Asad, Web Developer",
+        alt: "Portfolio of Muhammad Asad, MERN Stack Developer",
       },
     ],
     type: "website",
@@ -54,9 +52,9 @@ export const metadata = {
   // Twitter metadata
   twitter: {
     card: "summary_large_image",
-    title: "Portfolio | M. Asad - Web Developer",
+    title: "Portfolio | M. Asad - MERN Stack Developer",
     description:
-      "Explore Muhammad Asad's portfolio, featuring expertise in front-end development, modern web technologies, and exceptional digital experiences.",
+      "Explore Muhammad Asad's portfolio, featuring expertise in MERN Stack development, modern web technologies, and exceptional digital experiences.",
     site: "@yourTwitterHandle",
     creator: "@yourTwitterHandle",
     images: ["/images/seoimg.png"],
@@ -67,7 +65,7 @@ export const metadata = {
     "@context": "https://schema.org",
     "@type": "Person",
     name: "Muhammad Asad",
-    jobTitle: "Web Developer",
+    jobTitle: "MERN Stack Developer",
     url: "https://masadali.vercel.app/",
     sameAs: [
       "https://www.linkedin.com/in/masadali",

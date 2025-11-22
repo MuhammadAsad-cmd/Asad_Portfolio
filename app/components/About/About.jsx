@@ -158,12 +158,14 @@ import {
   IoBulbOutline,
   IoTrendingUpOutline,
 } from "react-icons/io5";
-import { FaReact, FaJs } from "react-icons/fa";
+import { FaReact, FaJs, FaNodeJs } from "react-icons/fa";
 import {
   SiNextdotjs,
   SiTypescript,
   SiRedux,
   SiTailwindcss,
+  SiMongodb,
+  SiExpress,
 } from "react-icons/si";
 
 const About = () => {
@@ -174,29 +176,29 @@ const About = () => {
   };
 
   const topSkills = [
-    { name: "Next.js", icon: SiNextdotjs, color: "text-black dark:text-white" },
+    { name: "MongoDB", icon: SiMongodb, color: "text-green-500" },
+    { name: "Express.js", icon: SiExpress, color: "text-gray-500 dark:text-white" },
     { name: "React.js", icon: FaReact, color: "text-blue-500" },
+    { name: "Node.js", icon: FaNodeJs, color: "text-green-600" },
+    { name: "Next.js", icon: SiNextdotjs, color: "text-black dark:text-white" },
     { name: "TypeScript", icon: SiTypescript, color: "text-blue-600" },
-    { name: "JavaScript", icon: FaJs, color: "text-yellow-500" },
-    { name: "Redux Toolkit", icon: SiRedux, color: "text-purple-600" },
-    { name: "Tailwind CSS", icon: SiTailwindcss, color: "text-cyan-500" },
   ];
 
   const keyStrengths = [
     {
       icon: IoBulbOutline,
-      title: "Problem-Solving Expertise",
-      description: "Tackling real-world challenges with tailored solutions",
+      title: "Full-Stack Solutions",
+      description: "Building end-to-end applications with MERN Stack",
     },
     {
       icon: IoRocketOutline,
       title: "Modern Technologies",
-      description: "Expert in React.js, Next.js, and cutting-edge frameworks",
+      description: "Expert in React.js, Next.js, and Node.js ecosystems",
     },
     {
       icon: IoTrendingUpOutline,
       title: "Performance Focused",
-      description: "Fast, responsive, and user-centered applications",
+      description: "Scalable backend and responsive frontend architectures",
     },
   ];
 
@@ -233,14 +235,16 @@ const About = () => {
                 </div>
                 <div>
                   <h2 className="mb-2 text-lg font-semibold text-lightPrimarytext dark:text-white">
-                    Full-Stack Developer & Frontend Specialist
+                    MERN Stack Developer & Full-Stack Specialist
                   </h2>
                   <p className="leading-relaxed text-lightSecondarytext dark:text-darkPrimaryGray">
                     I&apos;m{" "}
                     <strong className="text-SkyBlue">Muhammad Asad</strong>,
-                    specializing in solving complex front-end challenges with
-                    creative, efficient, and scalable solutions using modern
-                    technologies like React.js, Next.js, and TypeScript.
+                    specializing in building robust, scalable web applications using the{" "}
+                    <strong className="text-lightPrimarytext dark:text-white">
+                      MERN Stack (MongoDB, Express.js, React.js, Node.js)
+                    </strong>{" "}
+                    and Next.js.
                   </p>
                 </div>
               </div>
@@ -281,7 +285,7 @@ const About = () => {
               <p>
                 The web development world is full of evolving challenges.
                 Clients want websites that are not only visually stunning but
-                also highly functional, responsive, and optimized for
+                also highly functional, secure, and optimized for
                 performance. That&apos;s where{" "}
                 <strong className="text-SkyBlue"> Muhammad Asad</strong> comes
                 in.
@@ -289,19 +293,19 @@ const About = () => {
 
               <p>
                 Early in my career, I recognized a gap in the market: many
-                businesses struggled to connect their vision with technology.
-                They wanted solutions tailored to their brand but often received
-                generic, uninspired results. I believed there was a better way.
+                businesses struggled to connect their vision with comprehensive technology solutions.
+                They wanted full-stack applications tailored to their brand but often received
+                fragmented results. I believed there was a better way.
               </p>
 
               <p>
                 By leveraging modern technologies like{" "}
                 <strong className="text-SkyBlue">
-                  React.js, Next.js, Redux Toolkit, and Tailwind CSS
+                  MongoDB, Express.js, React.js, Node.js, and Next.js
                 </strong>
                 , I turned this belief into action. My projects deliver results
                 that aren&apos;t just about aesthetics; they are about crafting
-                experiences that drive engagement, conversions, and loyalty.
+                complete digital experiences that drive engagement, conversions, and loyalty.
               </p>
 
               <div className="flex items-center justify-end">
@@ -326,9 +330,10 @@ const About = () => {
                     </h3>
                     <ul className="space-y-2 text-sm">
                       {[
+                        "MERN Stack Development: Full-cycle web application development",
                         "Custom Websites for Businesses: Tailored to your brand's identity and goals",
-                        "Responsive & Scalable Applications: Seamless performance across all devices",
-                        "Cutting-Edge Frontend Solutions: Using React.js, Next.js, and TypeScript",
+                        "API Development & Integration: Robust backend solutions with Node.js and Express",
+                        "Database Design: Efficient data modeling with MongoDB",
                         "High-Performance Websites: Fast, responsive, and user-focused",
                         "E-commerce Solutions: Complete online store development",
                       ].map((service, index) => (
@@ -344,7 +349,7 @@ const About = () => {
 
                   <p>
                     Whether you need a business website to establish your online
-                    presence or a robust frontend solution for your project,{" "}
+                    presence or a robust full-stack solution for your project,{" "}
                     <strong className="text-SkyBlue">Muhammad Asad</strong> is
                     here to make it happen.
                   </p>

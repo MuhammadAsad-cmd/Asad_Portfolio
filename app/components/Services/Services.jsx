@@ -40,7 +40,7 @@
 
 // export default Services;
 
-import { servicesData } from "@/app/Data/ProjectsData";
+import { servicesData } from "@/app/Data/services";
 import Link from "next/link";
 import { IoMdArrowRoundForward } from "react-icons/io";
 import {

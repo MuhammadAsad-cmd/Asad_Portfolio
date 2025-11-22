@@ -176,7 +176,7 @@
 
 // export default ExpCard;
 
-import { experiences } from "@/app/Data/ProjectsData";
+import { experiences } from "@/app/Data/experiences";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -201,9 +201,8 @@ const calculateDuration = (startDate, endDate = null) => {
   const years = Math.floor(totalMonths / 12);
   const months = totalMonths % 12;
 
-  return `${years > 0 ? `${years} yr${years > 1 ? "s" : ""} ` : ""}${
-    months > 0 ? `${months} mo${months > 1 ? "s" : ""}` : ""
-  }`.trim();
+  return `${years > 0 ? `${years} yr${years > 1 ? "s" : ""} ` : ""}${months > 0 ? `${months} mo${months > 1 ? "s" : ""}` : ""
+    }`.trim();
 };
 
 const calculateTotalDuration = (roles) => {
@@ -218,9 +217,8 @@ const calculateTotalDuration = (roles) => {
   const years = Math.floor(totalMonths / 12);
   const months = totalMonths % 12;
 
-  return `${years > 0 ? `${years} yr${years > 1 ? "s" : ""} ` : ""}${
-    months > 0 ? `${months} mo${months > 1 ? "s" : ""}` : ""
-  }`.trim();
+  return `${years > 0 ? `${years} yr${years > 1 ? "s" : ""} ` : ""}${months > 0 ? `${months} mo${months > 1 ? "s" : ""}` : ""
+    }`.trim();
 };
 
 const ExpCard = () => {

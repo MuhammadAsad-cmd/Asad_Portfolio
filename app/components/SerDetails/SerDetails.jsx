@@ -27,7 +27,7 @@ import {
 } from "react-icons/io5";
 import PageHeader from "../PageHeader";
 import { useState } from "react";
-import { enhancedServicesData } from "@/app/Data/ProjectsData";
+import { enhancedServicesData } from "@/app/Data/enhancedServices";
 
 
 const SerDetails = () => {

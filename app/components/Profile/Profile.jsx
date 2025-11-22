@@ -15,10 +15,10 @@ const Profile = () => {
   const [currentRole, setCurrentRole] = useState(0);
 
   const roles = [
-    "Front End Web Developer",
+    "MERN Stack Developer",
+    "Full Stack Developer",
     "React.js Specialist",
     "Next.js Expert",
-    "UI/UX Enthusiast",
   ];
 
   useEffect(() => {
@@ -66,7 +66,7 @@ const Profile = () => {
                           width={380}
                           height={380}
                           src="/images/asadimg.png"
-                          alt="Muhammad Asad - Front End Developer"
+                          alt="Muhammad Asad - MERN Stack Developer"
                           className="h-full w-full object-cover transition-transform duration-500"
                           priority
                         />
@@ -138,11 +138,11 @@ const Profile = () => {
                     With <strong className="text-SkyBlue">3+ years</strong> of
                     expertise in{" "}
                     <strong className="text-lightPrimarytext dark:text-white">
-                      React.js, Next.js, Redux Toolkit,
+                      MERN Stack (MongoDB, Express, React, Node.js)
                     </strong>{" "}
                     and{" "}
                     <strong className="text-lightPrimarytext dark:text-white">
-                      Tailwind CSS
+                      Next.js
                     </strong>
                     , I craft fast, scalable, and modern web applications that
                     drive results.
