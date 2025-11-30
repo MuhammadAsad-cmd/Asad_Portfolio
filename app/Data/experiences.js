@@ -8,15 +8,20 @@ export const experiences = [
     time: "Apr 2025 - Present",
     roles: [
       {
+        title: "MERN Stack Developer",
+        type: "Full Time",
+        startDate: "2025-10",
+        endDate: null, // Present
+        skills: "MongoDB, Express.js, React, Node.js, Next.js, Redux Toolkit",
+      },
+      {
         title: "Front End Next.js Developer",
         type: "Full Time",
         startDate: "2025-04",
-        endDate: null,
-        duration: "Apr 2025 - Present",
+        endDate: "2025-09",
         skills: "React, Next.js, Tailwind Css, Redux Toolkit, Rest Api",
       },
     ],
-    skills: "React, Next.js, Tailwind Css, Redux Toolkit, Rest Api",
   },
 
   {
@@ -51,11 +56,10 @@ export const experiences = [
       {
         title: "Web Developer",
         type: "Internship",
-        duration: "May 2023 - Jul 2023",
         startDate: "2023-05",
         endDate: "2023-08",
+        skills: "Html, Css, JavaScript",
       },
     ],
-    skills: "Html, Css, JavaScript",
   },
 ];

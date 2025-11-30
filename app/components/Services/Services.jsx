@@ -40,113 +40,199 @@
 
 // export default Services;
 
-import { servicesData } from "@/app/Data/services";
+"use client";
 import Link from "next/link";
+import { useEffect, useRef, useState } from "react";
 import { IoMdArrowRoundForward } from "react-icons/io";
 import {
-  FaCode,
-  FaPaintBrush,
-  FaShoppingCart,
-  FaPlug,
-  FaLaptopCode,
-  FaMobile,
-  FaDatabase,
-  FaCloud,
-} from "react-icons/fa";
-
-// Icon mapping for different services
-const getServiceIcon = (serviceName) => {
-  const name = serviceName.toLowerCase();
-  if (name.includes("website") || name.includes("web")) return FaLaptopCode;
-  if (name.includes("front") || name.includes("frontend")) return FaCode;
-  if (name.includes("ui") || name.includes("ux") || name.includes("design"))
-    return FaPaintBrush;
-  if (name.includes("ecommerce") || name.includes("e-commerce"))
-    return FaShoppingCart;
-  if (name.includes("api") || name.includes("integration")) return FaPlug;
-  if (name.includes("mobile")) return FaMobile;
-  if (name.includes("database")) return FaDatabase;
-  if (name.includes("cloud")) return FaCloud;
-  return FaCode; // default icon
-};
+  IoCodeSlashOutline,
+  IoServerOutline,
+  IoLayersOutline,
+  IoRocketOutline,
+  IoColorPaletteOutline,
+  IoCloudUploadOutline,
+} from "react-icons/io5";
 
 const Services = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const currentSection = sectionRef.current;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (currentSection) {
+      observer.observe(currentSection);
+    }
+
+    return () => {
+      if (currentSection) {
+        observer.unobserve(currentSection);
+      }
+    };
+  }, []);
+
+  // Main highlighted service
+  const primaryService = {
+    title: "MERN Stack Development",
+    description: "Complete web applications from concept to deployment.",
+    features: [
+      "Custom Architecture",
+      "High Performance",
+      "Scalable Backend",
+    ],
+  };
+
+  // Secondary services list
+  const otherServices = [
+    {
+      icon: IoCodeSlashOutline,
+      title: "Frontend Development",
+      description: "Responsive, pixel-perfect UIs with React & Next.js",
+    },
+    {
+      icon: IoServerOutline,
+      title: "Backend API Development",
+      description: "Secure RESTful APIs using Node.js & Express",
+    },
+    {
+      icon: IoLayersOutline,
+      title: "Database Design",
+      description: "Efficient data schemas with MongoDB & Mongoose",
+    },
+    {
+      icon: IoColorPaletteOutline,
+      title: "UI/UX Implementation",
+      description: "Turning designs into interactive functional interfaces",
+    },
+    {
+      icon: IoRocketOutline,
+      title: "Performance Optimization",
+      description: "Speed enhancement, SEO, and core web vitals",
+    },
+    {
+      icon: IoCloudUploadOutline,
+      title: "Deployment & DevOps",
+      description: "CI/CD pipelines, Vercel/AWS hosting setup",
+    },
+  ];
+
   return (
-    <>
-      <div
-        id="services"
-        className="animated-border my-6 overflow-hidden rounded-t-lg sm:rounded-xl"
-      >
-        <div className="bg-white dark:bg-discordDark">
-          <div className="p-4 md:p-6">
-            <div className="mb-6 flex items-center justify-between">
-              <div className="flex items-center gap-3">
-                <div className="h-8 w-1 rounded-full bg-gradient-to-b from-SkyBlue to-lightHover dark:to-darkHover"></div>
-                <h1 className="text-2xl font-bold text-lightPrimarytext dark:text-white">
-                  Services
-                </h1>
-              </div>
-              <div className="flex gap-1">
-                <div className="h-2 w-2 animate-pulse rounded-full bg-SkyBlue"></div>
-                <div className="h-2 w-2 animate-pulse rounded-full bg-lightHover delay-100 dark:bg-darkHover"></div>
-                <div className="h-2 w-2 animate-pulse rounded-full bg-SkyBlue/70 delay-200"></div>
-              </div>
+    <div
+      id="services"
+      ref={sectionRef}
+      className="animated-border my-6 overflow-hidden md:rounded-xl"
+    >
+      <div className="bg-white p-6 dark:bg-discordDark md:p-10">
+        {/* Header */}
+        <div
+          className={`mb-10 transition-all duration-700 ${
+            isVisible
+              ? "translate-y-0 opacity-100"
+              : "translate-y-4 opacity-0"
+          }`}
+        >
+          <div className="flex items-center gap-4">
+            <div className="h-10 w-1.5 rounded-full bg-SkyBlue"></div>
+            <div>
+              <h1 className="text-3xl font-bold text-lightPrimarytext dark:text-white">
+                Services
+              </h1>
+              <p className="mt-1 text-base text-lightSecondarytext dark:text-darkPrimaryGray">
+                Comprehensive technical solutions for your business
+              </p>
             </div>
+          </div>
+        </div>
 
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {servicesData.slice(0, 5).map((service, index) => {
-                const IconComponent = getServiceIcon(service.name);
-                return (
-                  <div
-                    key={index}
-                    className="group relative rounded-xl border border-lightBorder bg-lightbg p-4 transition-all duration-300 hover:-translate-y-1 hover:border-SkyBlue hover:shadow-lg hover:shadow-SkyBlue/10 dark:border-darkPrimaryGray/30 dark:bg-darkSecondaryGray dark:hover:border-darkHover"
-                  >
-                    <div className="flex items-start gap-3">
-                      <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-SkyBlue to-lightHover transition-transform duration-300 group-hover:scale-110 dark:from-SkyBlue dark:to-darkHover">
-                        <IconComponent className="text-lg text-white" />
-                      </div>
-                      <div className="min-w-0 flex-1">
-                        <h3 className="text-sm font-semibold leading-tight text-lightPrimarytext transition-colors duration-300 group-hover:text-SkyBlue dark:text-white dark:group-hover:text-darkHover">
-                          {service.name}
-                        </h3>
-                      </div>
-                    </div>
-
-                    {/* Hover effect overlay */}
-                    <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-SkyBlue/5 to-lightHover/5 opacity-0 transition-opacity duration-300 group-hover:opacity-100 dark:from-SkyBlue/10 dark:to-darkHover/10"></div>
+        <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1fr_1.5fr]">
+          {/* Left: Primary Service Highlight */}
+          <div
+            className={`transition-all duration-700 delay-100 ${
+              isVisible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
+            }`}
+          >
+            <div className="relative h-full rounded-2xl bg-gradient-to-b from-SkyBlue/10 to-transparent p-8 dark:from-SkyBlue/5">
+              <div className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-SkyBlue text-white shadow-lg shadow-SkyBlue/20">
+                <IoLayersOutline className="text-3xl" />
+              </div>
+              <h3 className="mb-3 text-2xl font-bold text-lightPrimarytext dark:text-white">
+                {primaryService.title}
+              </h3>
+              <p className="mb-6 text-lightSecondarytext dark:text-darkPrimaryGray">
+                {primaryService.description}
+              </p>
+              
+              <div className="space-y-3">
+                {primaryService.features.map((feature, idx) => (
+                  <div key={idx} className="flex items-center gap-3">
+                    <div className="h-1.5 w-1.5 rounded-full bg-SkyBlue"></div>
+                    <span className="text-sm font-medium text-lightPrimarytext dark:text-white">
+                      {feature}
+                    </span>
                   </div>
-                );
-              })}
+                ))}
+              </div>
 
-              {/* Show remaining count if there are more services */}
-              {servicesData.length > 5 && (
-                <div className="group relative flex items-center justify-center rounded-xl border-2 border-dashed border-SkyBlue/50 bg-SkyBlue/5 p-4 transition-all duration-300 hover:border-SkyBlue dark:border-darkHover/50 dark:bg-SkyBlue/10 dark:hover:border-darkHover">
-                  <div className="text-center">
-                    <div className="mx-auto mb-2 flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-SkyBlue to-lightHover transition-transform duration-300 group-hover:scale-110 dark:from-SkyBlue dark:to-darkHover">
-                      <span className="text-sm font-bold text-white">+15</span>
-                    </div>
-                    <p className="text-xs font-medium text-lightSecondarytext dark:text-darkPrimaryGray">
-                      More Services
-                    </p>
-                  </div>
-                </div>
-              )}
+              <div className="mt-8 pt-8 border-t border-SkyBlue/20 dark:border-white/10">
+                 <p className="text-sm font-medium text-SkyBlue">
+                    Most Popular Choice
+                 </p>
+              </div>
             </div>
           </div>
 
-          <Link href="/details/services">
-            <div className="group flex h-[50px] w-full cursor-pointer items-center justify-center gap-3 border-t border-lightBorder bg-lightbg text-lightPrimarytext transition-all duration-300 hover:border-SkyBlue hover:bg-SkyBlue/5 hover:text-SkyBlue dark:border-darkPrimaryGray/30 dark:bg-darkSecondaryGray dark:text-darkPrimaryGray dark:hover:border-darkHover dark:hover:bg-SkyBlue/10 dark:hover:text-darkHover">
-              <div className="flex items-center gap-2 transition-all duration-300 group-hover:gap-3">
-                <p className="text-base font-semibold">Show all services</p>
-                <div className="flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-r from-SkyBlue to-lightHover transition-transform duration-300 group-hover:scale-110 dark:from-SkyBlue dark:to-darkHover">
-                  <IoMdArrowRoundForward className="text-lg text-white transition-transform duration-300 group-hover:translate-x-0.5" />
+          {/* Right: Service List */}
+          <div className="flex flex-col justify-center">
+            <div className="space-y-6">
+              {otherServices.map((service, index) => (
+                <div
+                  key={index}
+                  className={`group flex items-start gap-4 transition-all duration-700 ${
+                    isVisible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
+                  }`}
+                  style={{ transitionDelay: `${200 + index * 100}ms` }}
+                >
+                  <div className="mt-1 flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-lightbg text-SkyBlue transition-colors group-hover:bg-SkyBlue group-hover:text-white dark:bg-darkSecondaryGray">
+                    <service.icon className="text-lg" />
+                  </div>
+                  <div className="flex-1 border-b border-lightBorder pb-6 dark:border-darkSecondaryGray">
+                    <h4 className="mb-1 text-base font-bold text-lightPrimarytext transition-colors group-hover:text-SkyBlue dark:text-white">
+                      {service.title}
+                    </h4>
+                    <p className="text-sm text-lightSecondarytext dark:text-darkPrimaryGray">
+                      {service.description}
+                    </p>
+                  </div>
                 </div>
-              </div>
+              ))}
             </div>
-          </Link>
+
+            {/* View All Link */}
+            <div
+              className={`mt-6 flex justify-end transition-all duration-700 delay-700 ${
+                isVisible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
+              }`}
+            >
+               <Link
+                href="/details/services"
+                className="group inline-flex items-center gap-2 text-sm font-semibold text-SkyBlue transition-colors hover:text-lightHover dark:hover:text-darkHover"
+              >
+                View all 15+ services
+                <IoMdArrowRoundForward className="transition-transform group-hover:translate-x-1" />
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

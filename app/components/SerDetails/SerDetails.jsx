@@ -24,15 +24,40 @@ import {
   IoCheckmarkCircle,
   IoTimeOutline,
   IoStarOutline,
+  IoArrowBack,
 } from "react-icons/io5";
 import PageHeader from "../PageHeader";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { enhancedServicesData } from "@/app/Data/enhancedServices";
 
 
 const SerDetails = () => {
   const [expandedFeatures, setExpandedFeatures] = useState({});
   const [expandedTech, setExpandedTech] = useState({});
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const currentSection = sectionRef.current;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (currentSection) {
+      observer.observe(currentSection);
+    }
+
+    return () => {
+      if (currentSection) {
+        observer.unobserve(currentSection);
+      }
+    };
+  }, []);
 
   const getServiceIcon = (serviceName) => {
     const name = serviceName.toLowerCase();
@@ -125,17 +150,36 @@ const SerDetails = () => {
     <>
       <div
         id="services"
+        ref={sectionRef}
         className="animated-border my-6 overflow-hidden rounded-t-lg sm:rounded-xl"
       >
         <div className="bg-white dark:bg-discordDark">
-          <div className="p-4 md:p-6">
-            <PageHeader
-              title="Muhammad Asad's Services"
-              subtitle="Comprehensive web development solutions and expertise"
-              icon={<IoCodeSlash />}
-              experienceYears={`${enhancedServicesData.length} Services`}
-              backUrl="/"
-            />
+          <div className="p-6 md:p-10">
+            {/* Header with Back Button */}
+            <div
+              className={`mb-10 transition-all duration-700 ${
+                isVisible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
+              }`}
+            >
+              <Link
+                href="/"
+                className="mb-6 inline-flex items-center gap-2 text-sm font-semibold text-SkyBlue transition-colors hover:text-lightHover dark:hover:text-darkHover"
+              >
+                <IoArrowBack />
+                Back to Home
+              </Link>
+              <div className="flex items-center gap-3">
+                <div className="h-10 w-1.5 rounded-full bg-SkyBlue"></div>
+                <div>
+                  <h1 className="text-3xl font-bold text-lightPrimarytext dark:text-white">
+                    Services
+                  </h1>
+                  <p className="mt-1 text-base text-lightSecondarytext dark:text-darkPrimaryGray">
+                    Comprehensive web development solutions - {enhancedServicesData.length} services
+                  </p>
+                </div>
+              </div>
+            </div>
 
             {/* Services Grid */}
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">

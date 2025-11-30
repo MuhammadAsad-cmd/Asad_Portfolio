@@ -57,10 +57,10 @@ const Header = () => {
             </Link>
             <nav className="hidden h-full w-full items-center justify-center gap-4 px-4 lg:flex">
               <NavLink href="/details/services">Services</NavLink>
-              <NavLink href="/details/experience">Experience</NavLink>
-              <NavLink href="/details/education">Education</NavLink>
+              <NavLink href="#experience">Experience</NavLink>
+              <NavLink href="#education">Education</NavLink>
               <NavLink href="/details/projects">Projects</NavLink>
-              <NavLink href="/details/skills">Skills</NavLink>
+              <NavLink href="#skills">Skills</NavLink>
               <NavLink href="#contact">Contact</NavLink>
             </nav>
             <div className="hidden items-center gap-4 text-xl max-lg:justify-center md:flex">

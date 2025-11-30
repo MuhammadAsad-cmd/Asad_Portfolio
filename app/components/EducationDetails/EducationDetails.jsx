@@ -1,107 +1,138 @@
+"use client";
 import Image from "next/image";
-import React from "react";
-import { FaCalendarAlt, FaUniversity } from "react-icons/fa";
+import Link from "next/link";
+import React, { useEffect, useRef, useState } from "react";
+import { IoSchoolOutline, IoArrowBack } from "react-icons/io5";
 import { educationData } from "@/app/Data/education";
-import PageHeader from "../PageHeader";
-import { IoSchoolOutline } from "react-icons/io5";
 
 const EducationDetails = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const currentSection = sectionRef.current;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (currentSection) {
+      observer.observe(currentSection);
+    }
+
+    return () => {
+      if (currentSection) {
+        observer.unobserve(currentSection);
+      }
+    };
+  }, []);
+
   return (
-    <>
-      <div
-        id="education"
-        className="animated-border mx-0 my-6 overflow-hidden p-0 md:rounded-xl"
-      >
-        <div className="m-0 bg-white p-0 dark:bg-discordDark">
-          <div className="p-4 md:p-6">
-            <PageHeader
-              title="Muhammad Asad's Education"
-              subtitle="Academic background and learning journey"
-              icon={<IoSchoolOutline />}
-              experienceYears="CS Degree"
-              backUrl="/"
-            />
-
-            <div className="space-y-4">
-              {educationData.map((edu, index) => (
-                <div
-                  key={edu.id}
-                  className="group relative rounded-xl rounded-b-[5px] border border-lightBorder bg-lightbg p-5 transition-all duration-300 hover:-translate-y-1 hover:border-SkyBlue hover:shadow-lg hover:shadow-SkyBlue/10 dark:border-darkPrimaryGray/30 dark:bg-darkSecondaryGray dark:hover:border-darkHover"
-                >
-                  <div className="flex items-start gap-4">
-                    {/* Institution Logo */}
-                    <div className="relative flex-shrink-0">
-                      <div className="h-14 w-14 overflow-hidden rounded-xl border-2 border-lightBorder transition-colors duration-300 group-hover:border-SkyBlue dark:border-darkPrimaryGray/30 dark:group-hover:border-darkHover">
-                        <Image
-                          width={56}
-                          height={56}
-                          src={edu.logo || "/placeholder.svg"}
-                          alt={`${edu.institution} Logo`}
-                          className="h-full w-full object-cover"
-                        />
-                      </div>
-                      {/* Status Badge */}
-                      <div
-                        className={`absolute -right-1 -top-1 h-4 w-4 rounded-full border-2 border-white dark:border-discordDark ${edu.status === "In Progress"
-                            ? "animate-pulse bg-SkyBlue"
-                            : "bg-green-500"
-                          }`}
-                      ></div>
-                    </div>
-
-                    {/* Education Details */}
-                    <div className="min-w-0 flex-1">
-                      <div className="mb-2 flex items-start justify-between gap-3">
-                        <h2 className="cursor-pointer text-lg font-semibold text-lightPrimarytext transition-colors duration-300 hover:underline group-hover:text-SkyBlue dark:text-white dark:group-hover:text-darkHover">
-                          {edu.institution}
-                        </h2>
-                        <div className="flex items-center gap-1 rounded-full bg-SkyBlue/10 px-2 py-1 dark:bg-SkyBlue/20">
-                          <FaUniversity className="text-xs text-SkyBlue" />
-                          <span className="text-xs font-medium text-SkyBlue">
-                            {edu.type}
-                          </span>
-                        </div>
-                      </div>
-
-                      <p className="mb-3 font-medium text-lightSecondarytext dark:text-darkPrimaryGray">
-                        {edu.degree}
-                      </p>
-
-                      <div className="flex items-center gap-2">
-                        <div className="flex items-center gap-1 rounded-full bg-gradient-to-r from-SkyBlue/10 to-lightHover/10 px-3 py-1 dark:from-SkyBlue/20 dark:to-darkHover/20">
-                          <FaCalendarAlt className="text-xs text-SkyBlue" />
-                          <span className="text-sm font-medium text-lightSecondarytext dark:text-darkPrimaryGray">
-                            {edu.duration}
-                          </span>
-                        </div>
-                        <div
-                          className={`rounded-full px-2 py-1 text-xs font-semibold ${edu.status === "In Progress"
-                              ? "bg-SkyBlue/20 text-SkyBlue"
-                              : "bg-green-100 text-green-600 dark:bg-green-900/30 dark:text-green-400"
-                            }`}
-                        >
-                          {edu.status}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Hover effect overlay */}
-                  <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-SkyBlue/5 to-lightHover/5 opacity-0 transition-opacity duration-300 group-hover:opacity-100 dark:from-SkyBlue/10 dark:to-darkHover/10"></div>
-
-                  {/* Progress indicator for current education */}
-                  {edu.status === "In Progress" && (
-                    <div className="absolute bottom-0 left-0 right-0 h-1 overflow-hidden rounded-b-xl bg-lightBorder dark:bg-darkPrimaryGray/30">
-                      <div className="h-full animate-pulse bg-gradient-to-r from-SkyBlue to-lightHover dark:to-darkHover"></div>
-                    </div>
-                  )}
-                </div>
-              ))}
+    <div
+      id="education"
+      ref={sectionRef}
+      className="animated-border my-6 overflow-hidden md:rounded-xl"
+    >
+      <div className="bg-white p-6 dark:bg-discordDark md:p-8">
+        {/* Header with Back Button */}
+        <div
+          className={`mb-8 transition-all duration-700 ${
+            isVisible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
+          }`}
+        >
+          <Link
+            href="/"
+            className="mb-6 inline-flex items-center gap-2 text-sm font-semibold text-SkyBlue transition-colors hover:text-lightHover dark:hover:text-darkHover"
+          >
+            <IoArrowBack />
+            Back to Home
+          </Link>
+          <div className="flex items-center gap-4">
+            <div className="h-10 w-1.5 rounded-full bg-SkyBlue"></div>
+            <div>
+              <h1 className="text-2xl font-bold text-lightPrimarytext dark:text-white">
+                Education
+              </h1>
+              <p className="mt-1 text-sm text-lightSecondarytext dark:text-darkPrimaryGray">
+                Complete Academic Journey
+              </p>
             </div>
           </div>
         </div>
+
+        {/* Clean List Container */}
+        <div className="space-y-8">
+          {educationData.map((edu, index) => (
+            <div
+              key={edu.id}
+              className={`group flex flex-col gap-4 transition-all duration-700 md:flex-row md:items-center md:justify-between md:gap-6 ${
+                isVisible
+                  ? "translate-y-0 opacity-100"
+                  : "translate-y-8 opacity-0"
+              }`}
+              style={{ transitionDelay: `${index * 150}ms` }}
+            >
+              {/* Left Side: Logo & Info */}
+              <div className="flex items-start gap-4 md:items-center">
+                {/* Logo Box */}
+                <div className="flex h-16 w-16 flex-shrink-0 items-center justify-center overflow-hidden rounded-xl border border-lightBorder bg-white transition-colors group-hover:border-SkyBlue dark:border-darkSecondaryGray dark:bg-darkbg dark:group-hover:border-darkHover">
+                  <Image
+                    src={edu.logo || "/placeholder.svg"}
+                    alt={`${edu.institution} Logo`}
+                    width={64}
+                    height={64}
+                    className="h-full w-full object-contain"
+                  />
+                </div>
+
+                {/* Text Info */}
+                <div>
+                  <h3 className="text-lg font-bold text-lightPrimarytext transition-colors group-hover:text-SkyBlue dark:text-white">
+                    {edu.institution}
+                  </h3>
+                  <p className="text-base font-medium text-lightSecondarytext dark:text-darkPrimaryGray">
+                    {edu.degree}
+                  </p>
+                  <p className="text-sm text-lightSecondarytext dark:text-darkPrimaryGray md:hidden">
+                    {edu.duration}
+                  </p>
+                </div>
+              </div>
+
+              {/* Right Side: Meta & Status (Desktop) */}
+              <div className="flex flex-row items-center justify-between gap-4 md:flex-col md:items-end md:gap-1">
+                <span className="hidden text-sm font-semibold text-lightPrimarytext dark:text-white md:block">
+                  {edu.duration}
+                </span>
+                <div className="flex items-center gap-2">
+                   {/* Status Badge */}
+                  <span
+                    className={`rounded-full px-3 py-1 text-xs font-semibold ${
+                      edu.status === "In Progress"
+                        ? "bg-SkyBlue/10 text-SkyBlue dark:bg-SkyBlue/20"
+                        : "bg-green-100 text-green-600 dark:bg-green-900/30 dark:text-green-400"
+                    }`}
+                  >
+                    {edu.status}
+                  </span>
+                  <span className="text-xs font-medium text-lightSecondarytext dark:text-darkPrimaryGray md:hidden">
+                    {edu.type}
+                  </span>
+                </div>
+                 {/* Desktop Type Badge */}
+                 <span className="hidden text-xs text-lightSecondarytext dark:text-darkPrimaryGray md:block">
+                   {edu.type}
+                 </span>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
-    </>
+    </div>
   );
 };
 

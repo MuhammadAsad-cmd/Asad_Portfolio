@@ -69,13 +69,13 @@ const Footer = () => {
         <NavLink href="/details/services" title="Go to Services page">
           Services
         </NavLink>
-        <NavLink href="/details/experience" title="Go to Experience page">
+        <NavLink href="#experience" title="Go to Experience page">
           Experience
         </NavLink>
         <NavLink href="/details/projects" title="Go to Projects page">
           Projects
         </NavLink>
-        <NavLink href="/details/skills" title="Go to Skills page">
+        <NavLink href="#skills" title="Go to Skills page">
           Skills
         </NavLink>
         <NavLink href="#contact" title="Jump to Contact section">

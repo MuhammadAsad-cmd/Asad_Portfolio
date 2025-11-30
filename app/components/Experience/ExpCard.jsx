@@ -305,24 +305,26 @@ const ExpCard = () => {
                     )}
 
                     {/* Skills */}
-                    <div className="flex flex-wrap items-center gap-2">
-                      <div className="flex items-center gap-1 text-SkyBlue">
-                        <IoDiamondOutline className="text-sm" />
-                        <span className="text-xs font-medium">Skills:</span>
+                    {experience.skills && (
+                      <div className="flex flex-wrap items-center gap-2">
+                        <div className="flex items-center gap-1 text-SkyBlue">
+                          <IoDiamondOutline className="text-sm" />
+                          <span className="text-xs font-medium">Skills:</span>
+                        </div>
+                        <div className="flex flex-wrap gap-1">
+                          {experience.skills
+                            .split(", ")
+                            .map((skill, skillIndex) => (
+                              <span
+                                key={skillIndex}
+                                className="rounded-md border border-SkyBlue/20 bg-gradient-to-r from-SkyBlue/10 to-lightHover/10 px-2 py-1 text-xs font-medium text-lightPrimarytext dark:border-darkHover/20 dark:from-SkyBlue/20 dark:to-darkHover/20 dark:text-white"
+                              >
+                                {skill}
+                              </span>
+                            ))}
+                        </div>
                       </div>
-                      <div className="flex flex-wrap gap-1">
-                        {experience.skills
-                          .split(", ")
-                          .map((skill, skillIndex) => (
-                            <span
-                              key={skillIndex}
-                              className="rounded-md border border-SkyBlue/20 bg-gradient-to-r from-SkyBlue/10 to-lightHover/10 px-2 py-1 text-xs font-medium text-lightPrimarytext dark:border-darkHover/20 dark:from-SkyBlue/20 dark:to-darkHover/20 dark:text-white"
-                            >
-                              {skill}
-                            </span>
-                          ))}
-                      </div>
-                    </div>
+                    )}
                   </div>
                 </div>
               </div>
