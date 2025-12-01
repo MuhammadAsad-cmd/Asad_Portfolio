@@ -79,7 +79,7 @@ const Projects2 = () => {
             />
 
             {/* Projects Grid */}
-            <motion.div layout className="space-y-16 md:space-y-24">
+            <div layout className="space-y-16 md:space-y-24">
               <AnimatePresence mode="popLayout">
                 {filteredProjects.slice(0, 5).map((project, index) => {
                   const isEven = index % 2 === 1;
@@ -183,7 +183,7 @@ const Projects2 = () => {
                   );
                 })}
               </AnimatePresence>
-            </motion.div>
+            </div>
 
              {/* Footer Action */}
             <div className="mt-20 flex justify-center border-t border-lightBorder pt-8 dark:border-darkSecondaryGray">
