@@ -104,7 +104,7 @@ export const projectsData = [
       "JavaScript",
     ],
     image: "/images/bitknit.png",
-    Link: "https://bitknitlimited.vercel.app/",
+    Link: "https://bitknitlimited.com/",
     caseStudy: "/case-study/bitknit",
   },
 
