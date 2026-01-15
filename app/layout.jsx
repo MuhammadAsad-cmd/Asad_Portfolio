@@ -27,8 +27,8 @@ export const metadata = {
     "Asad",
     "Portfolio",
   ],
-  icons: ["/images/name.avif"],
-  metadataBase: new URL("https://masadali.vercel.app/"),
+  icons: [`${process.env.NEXT_PUBLIC_SITE_URL}/images/name.avif`],
+  metadataBase: new URL(`${process.env.NEXT_PUBLIC_SITE_URL}`),
 
   // Open Graph metadata
   openGraph: {
@@ -37,14 +37,14 @@ export const metadata = {
       "Showcasing the work of Muhammad Asad, a MERN Stack developer passionate about creating robust full-stack solutions and intuitive user interfaces.",
     images: [
       {
-        url: "/images/seoimg.png",
+        url: `${process.env.NEXT_PUBLIC_SITE_URL}/images/seoimg.png`,
         width: 1200,
         height: 630,
         alt: "Portfolio of Muhammad Asad, MERN Stack Developer",
       },
     ],
     type: "website",
-    url: "https://masadali.vercel.app/",
+    url: `${process.env.NEXT_PUBLIC_SITE_URL}`,
     siteName: "Muhammad Asad Portfolio",
     locale: "en_US",
   },
@@ -57,7 +57,12 @@ export const metadata = {
       "Explore Muhammad Asad's portfolio, featuring expertise in MERN Stack development, modern web technologies, and exceptional digital experiences.",
     site: "@yourTwitterHandle",
     creator: "@yourTwitterHandle",
-    images: ["/images/seoimg.png"],
+    images: [`${process.env.NEXT_PUBLIC_SITE_URL}/images/seoimg.png`],
+  },
+
+  // Search engine verification
+  verification: {
+    google: "googleb6adf1a902f0ceed",
   },
 
   // Additional metadata for structured data (JSON-LD)
@@ -66,12 +71,16 @@ export const metadata = {
     "@type": "Person",
     name: "Muhammad Asad",
     jobTitle: "MERN Stack Developer",
-    url: "https://masadali.vercel.app/",
+    url: `${process.env.NEXT_PUBLIC_SITE_URL}`,
     sameAs: [
       "https://www.linkedin.com/in/masadali",
       "https://github.com/MuhammadAsad-cmd",
     ],
   },
+};
+
+export const viewport = {
+  themeColor: "white",
 };
 
 export default function RootLayout({ children }) {

@@ -182,7 +182,7 @@ const Profile = () => {
                 </button>
 
                 <a
-                  href="/images/Asad Front End resume.pdf"
+                  href="/Asad Front End resume.pdf"
                   download
                   title="Download Muhammad Asad's Front-End Developer Resume (PDF)"
                   aria-label="Download Resume PDF"

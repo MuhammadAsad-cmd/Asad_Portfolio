@@ -25,10 +25,10 @@ export const metadata = {
     title: "Muhammad Asad - Web Development Services",
     description:
       "Explore professional web development services by Muhammad Asad, offering custom front-end solutions, UI/UX design, and full-stack development expertise.",
-    url: "https://masadali.vercel.app/details/services", // Update with the correct URL
+    url: `${process.env.NEXT_PUBLIC_SITE_URL}/details/services`, // Update with the correct URL
     images: [
       {
-        url: "/images/servicsmeta.png", // Update with a relevant image
+        url: `${process.env.NEXT_PUBLIC_SITE_URL}/images/servicsmeta.png`, // Update with a relevant image
         width: 1200,
         height: 630,
         alt: "Web development services by Muhammad Asad",
@@ -41,7 +41,7 @@ export const metadata = {
     title: "Services | M. Asad - Web Development & Front-End Expertise",
     description:
       "Check out the range of web development services offered by Muhammad Asad, specializing in modern, user-focused solutions.",
-    images: ["/images/servicsmeta"], // Update with a relevant image
+    images: [`${process.env.NEXT_PUBLIC_SITE_URL}/images/servicsmeta.png`], // Update with a relevant image
   },
 };
 

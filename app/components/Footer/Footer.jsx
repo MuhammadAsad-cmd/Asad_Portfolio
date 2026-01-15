@@ -54,7 +54,7 @@ const Footer = () => {
         >
           <FaInstagram />
         </Link>
-        <Link
+        {/* <Link
           href="https://www.upwork.com/freelancers/~01a30bffb100551bb2?mp_source=share"
           target="_blank"
           aria-label="Upwork profile"
@@ -62,7 +62,7 @@ const Footer = () => {
           className="text-lightSecondarytext duration-300 ease-in-out hover:text-lightHover dark:text-darkPrimaryGray dark:hover:text-SkyBlue"
         >
           <SiUpwork />
-        </Link>
+        </Link> */}
       </div>
 
       <div className="flex w-full flex-wrap items-center justify-center gap-x-4 gap-y-2 px-4 md:gap-6">

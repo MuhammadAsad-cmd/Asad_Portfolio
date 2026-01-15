@@ -24,10 +24,10 @@ export const metadata = {
     title: "Muhammad Asad - Experience Details",
     description:
       "Learn about Muhammad Asad’s professional journey, skills, and expertise in developing high-quality web applications using modern web technologies.",
-    url: "https://masadali.vercel.app/details/experience", // Update with the correct URL
+    url: `${process.env.NEXT_PUBLIC_SITE_URL}/details/experience`, // Update with the correct URL
     images: [
       {
-        url: "/images/exp.png", // Update with a relevant image
+        url: `${process.env.NEXT_PUBLIC_SITE_URL}/images/exp.png`, // Update with a relevant image
         width: 1200,
         height: 630,
         alt: "Professional experience of Muhammad Asad, Web Developer",
@@ -40,7 +40,7 @@ export const metadata = {
     title: "Experience Details | M. Asad - Web Developer",
     description:
       "Discover Muhammad Asad's professional experience in front-end web development, specializing in modern technologies and user-friendly applications.",
-    images: ["/images/exp.png"], // Update with a relevant image
+    images: [`${process.env.NEXT_PUBLIC_SITE_URL}/images/exp.png`], // Update with a relevant image
   },
 };
 

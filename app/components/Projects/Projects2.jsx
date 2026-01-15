@@ -81,7 +81,7 @@ const Projects2 = () => {
 
             {/* Projects Grid */}
             <div layout className="space-y-16 md:space-y-24">
-              {filteredProjects.slice(0, 5).map((project, index) => {
+              {filteredProjects.slice(0, 9).map((project, index) => {
                 const isEven = index % 2 === 1;
                 return (
                   <div key={project.id} className="group relative">

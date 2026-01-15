@@ -87,15 +87,15 @@ const LeftSidebar = () => {
               >
                 <FaGithub />
               </Link>
-              <Link
+              {/* <Link
                 target="_blank"
                 href="https://www.upwork.com/freelancers/~01a30bffb100551bb2?mp_source=share"
                 aria-label="Upwork profile"
                 title="Upwork Freelancer Profile"
                 className="duration-300 ease-in-out hover:text-SkyBlue"
               >
-                <SiUpwork />
-              </Link>
+                <SiUpwork /> */}
+              {/* </Link> */}
               <Link
                 href="https://www.instagram.com/muhammadasad9017"
                 target="_blank"

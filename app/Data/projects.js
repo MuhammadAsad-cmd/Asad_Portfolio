@@ -107,10 +107,39 @@ export const projectsData = [
     Link: "https://bitknitlimited.com/",
     caseStudy: "/case-study/bitknit",
   },
+  // 6. Bourter - Landing Page
+  {
+    id: 6,
+    title: "Bourter",
+    category: "UI/UX",
+    description: `Bourter is a comprehensive ride-sharing platform landing page that connects riders with verified drivers for fast, safe, and reliable transportation. The platform features an all-in-one solution for booking rides, tracking in real-time, and seamless payments.
+
+    The landing page showcases Bourter's core features including how the platform works with a 4-step process (Request, Match, Ride, Arrive), real-time GPS tracking and navigation, multiple ride type options (Economy, Comfort, Luxury), and secure payment integrations. The site includes detailed sections explaining why users should choose Bourter, highlighting verified drivers, safety features, and innovative technology.
+
+    Key functionality includes two registration pathways: "Join as Driver" and "Join as Company". The driver registration features a multi-step form where users can upload required documents (license, vehicle registration, insurance), select subscription plans, and complete their profile. Similarly, the company registration allows fleet owners to register their business, upload company logo, cover image, and letterhead, and manage multiple drivers and vehicles through a comprehensive dashboard.
+
+    The landing page is fully responsive, includes app store links for iOS and Android, features an FAQ section, and provides seamless user experience with smooth animations and modern UI/UX design principles.`,
+    stackUsed: [
+      "Next.js",
+      "React.js",
+      "Tailwind CSS",
+      "Framer Motion",
+      "React Hook Form",
+      "Form Validation",
+      "File Upload",
+      "Multi-step Forms",
+      "JavaScript",
+    ],
+    contribution:
+      "Frontend Developer — Complete landing page development including hero sections, how it works flow, multi-step registration forms for drivers and companies, document upload functionality, plan selection system, responsive design, animations, and seamless user experience",
+    image: "/images/bourter-landing.jpeg",
+    Link: "https://bourter-landing-page.vercel.app/",
+    caseStudy: "/case-study/bourter-landing-page",
+  },
 
   // 7. Canrover - Admin Dashboard
   {
-    id: 6,
+    id: 7,
     title: "Canrover Admin Panel",
     category: "Admin Dashboards",
     description: `Developed a fully dynamic Next.js/Node.js admin dashboard for a US scooter-rental client, featuring live map tracking, remote lock/unlock, QR-code ride activation, form validation, and secure access. Added Google Maps-based zone management to visualize parking zones, maintenance areas, danger zones, and more—all in a responsive, server-rendered interface for robust type safety and performance.`,
@@ -131,7 +160,7 @@ export const projectsData = [
 
   // 8. Ryde - Admin Dashboard
   {
-    id: 7,
+    id: 8,
     title: "Ryde Admin Dashboard",
     category: "Admin Dashboards",
     description: `Ryde Admin Dashboard is a web-based task management tool built around a dynamic Kanban board. Users can create projects, add and organize tasks across Backlog, To-Do, In-Progress, and Done columns, and easily move cards via drag-and-drop. Real-time status updates keep teams in sync, while a clean, responsive UI—powered by Tailwind CSS—ensures a seamless experience across devices.`,
@@ -170,7 +199,7 @@ export const projectsData = [
 
   // 10. CodesInc - UI/UX
   {
-    id: 9,
+    id: 10,
     title: "CodesInc – IT Solutions & Services",
     category: "UI/UX",
     description: `A corporate website showcasing IT services with a modern, responsive design. It includes smooth page transitions, custom animations, and an intuitive layout. Optimized for performance and built to reflect professional branding.`,
@@ -194,7 +223,7 @@ export const projectsData = [
 
   // 12. RizqApp - UI/UX
   {
-    id: 11,
+    id: 12,
     title: "RizqApp — Digital Loyalty Program for Restaurants",
     category: "UI/UX",
     description: `RizqApp is a modern digital loyalty platform that helps restaurants boost customer retention and increase repeat visits. The platform replaces traditional paper loyalty cards with a 100% digital solution featuring QR code scanning, points tracking, and automated rewards. Customers can manage all their loyalty cards in one app, while restaurants get a comprehensive dashboard to manage their loyalty programs, track customer engagement, and attract new clients. Built with a clean, user-friendly interface optimized for both customers and restaurant owners.`,
@@ -206,7 +235,7 @@ export const projectsData = [
 
   // 13. Aziz Store/HairOil - E-commerce
   {
-    id: 12,
+    id: 13,
     title: "HairOil — Premium E-commerce Platform",
     category: "E-commerce",
     description: `A full-stack e-commerce platform for premium hair oil products featuring a modern customer-facing website and comprehensive admin dashboard. The platform includes dynamic product catalog with 10+ premium hair oils, advanced shopping cart with Redux state management, secure checkout process with address validation, order management system, and real-time admin analytics. Built with Next.js 15 and React 19, featuring responsive design, smooth animations, and seamless user experience across all devices.`,
@@ -250,7 +279,7 @@ export const projectsData = [
 
   // Rest of the projects...
   {
-    id: 14,
+    id: 15,
     title: "the ENTERTAINER – Ultimate BOGO Deals & Lifestyle Savings",
     category: "UI/UX",
     description: `A savings platform offering Buy One Get One Free deals across dining, wellness, and more in the Middle East. It features intuitive navigation, responsive design, and a dedicated mobile experience to unlock premium offers seamlessly.`,
@@ -270,7 +299,7 @@ export const projectsData = [
     caseStudy: "/case-study/breaking-balls-sports",
   },
   {
-    id: 16,
+    id: 17,
     title: "E-Commerce Minimog Template",
     category: "E-commerce",
     description: `A sleek, minimal e-commerce storefront template with product grids, filters, and checkout flows. Optimized for performance and responsive across all devices, it delivers a smooth shopping experience.`,
@@ -290,7 +319,7 @@ export const projectsData = [
     caseStudy: "/case-study/github-profile-viewer",
   },
   {
-    id: 18,
+    id: 19,
     title: "ClickUp Template",
     category: "UI/UX",
     description: `A customizable ClickUp dashboard clone with task lists, statuses, and filters. Built for teams to visualize workflows, assign tasks, and track progress in a clean, responsive interface.`,
@@ -310,7 +339,7 @@ export const projectsData = [
     caseStudy: "/case-study/dental-health",
   },
   {
-    id: 20,
+    id: 21,
     title: "DashStack-Dashboard",
     category: "Admin Dashboards",
     description: `An analytics dashboard template with charts, tables, and KPI widgets. It provides real-time data visualization, filtering, and a modular layout for enterprise applications.`,
