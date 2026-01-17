@@ -85,7 +85,7 @@ const EducationDetails = () => {
                     alt={`${edu.institution} Logo`}
                     width={64}
                     height={64}
-                    className="h-full w-full object-contain"
+                    className="h-full w-full object-cover"
                   />
                 </div>
 

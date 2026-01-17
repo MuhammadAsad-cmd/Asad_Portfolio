@@ -67,18 +67,6 @@ export const metadata = {
     google: "googleb6adf1a902f0ceed",
   },
 
-  // Additional metadata for structured data (JSON-LD)
-  structuredData: {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    name: "Muhammad Asad",
-    jobTitle: "MERN Stack Developer",
-    url: `${process.env.NEXT_PUBLIC_SITE_URL}`,
-    sameAs: [
-      "https://www.linkedin.com/in/masadali",
-      "https://github.com/MuhammadAsad-cmd",
-    ],
-  },
 };
 
 export const viewport = {
@@ -86,9 +74,69 @@ export const viewport = {
 };
 
 export default function RootLayout({ children }) {
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "";
+
+  // Person Schema for root layout
+  const personSchema = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Muhammad Asad",
+    alternateName: "M. Asad",
+    jobTitle: "MERN Stack Developer",
+    description:
+      "MERN Stack Developer with 3+ years of experience building scalable full-stack web applications using MongoDB, Express, React, and Node.js.",
+    url: baseUrl,
+    image: `${baseUrl}/images/asadimg.png`,
+    email: "189asadali@gmail.com",
+    telephone: "+92-319-3148320",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Lahore",
+      addressRegion: "Punjab",
+      addressCountry: "PK",
+    },
+    sameAs: [
+      "https://www.linkedin.com/in/masadali",
+      "https://github.com/MuhammadAsad-cmd",
+      "https://www.instagram.com/masadali_189",
+    ],
+    knowsAbout: [
+      "MERN Stack",
+      "Full Stack Development",
+      "React.js",
+      "Next.js",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "JavaScript",
+      "TypeScript",
+      "Web Development",
+    ],
+    alumniOf: {
+      "@type": "EducationalOrganization",
+      name: "Virtual University of Pakistan",
+    },
+    hasOccupation: {
+      "@type": "Occupation",
+      name: "MERN Stack Developer",
+      occupationLocation: {
+        "@type": "City",
+        name: "Lahore",
+      },
+    },
+  };
+
   return (
     <html lang="en">
       <body className="custom-scrollbar m-0 scroll-smooth bg-lightbg p-0 text-lightPrimarytext transition-all duration-300 ease-in-out dark:bg-[#1f1f24] dark:text-white">
+        {/* JSON-LD Structured Data for Root Layout */}
+        <script
+          id="root-person-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(personSchema),
+          }}
+        />
         <MainLayout>{children}</MainLayout>
         <SpeedInsights />
         <Analytics />
