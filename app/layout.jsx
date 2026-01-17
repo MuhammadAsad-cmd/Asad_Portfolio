@@ -29,7 +29,9 @@ export const metadata = {
   ],
   icons: [`${process.env.NEXT_PUBLIC_SITE_URL}/images/name.avif`],
   metadataBase: new URL(`${process.env.NEXT_PUBLIC_SITE_URL}`),
-
+  alternates: {
+    canonical: `${process.env.NEXT_PUBLIC_SITE_URL}`,
+  },
   // Open Graph metadata
   openGraph: {
     title: "Muhammad Asad - MERN Stack Developer",
