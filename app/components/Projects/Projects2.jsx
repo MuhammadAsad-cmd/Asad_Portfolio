@@ -40,11 +40,12 @@ const Projects2 = () => {
 
   return (
     <>
-      <div
+      <section
         id="projects"
         className="animated-border my-6 overflow-hidden md:rounded-xl"
+        aria-labelledby="projects-heading"
       >
-        <section className="bg-white dark:bg-discordDark">
+        <div className="bg-white dark:bg-discordDark">
           <div className="p-6 md:p-10">
             {/* Header */}
             <div className="mb-10 flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
@@ -52,9 +53,9 @@ const Projects2 = () => {
                 <div className="flex items-center gap-3">
                   <div className="h-10 w-1.5 rounded-full bg-SkyBlue"></div>
                   <div>
-                    <h1 className="text-3xl font-bold text-lightPrimarytext dark:text-white">
+                    <h2 id="projects-heading" className="text-3xl font-bold text-lightPrimarytext dark:text-white">
                       Featured Projects
-                    </h1>
+                    </h2>
                     <p className="mt-1 text-base text-lightSecondarytext dark:text-darkPrimaryGray">
                       Showcasing my technical expertise and problem-solving
                       skills
@@ -101,7 +102,7 @@ const Projects2 = () => {
                           <div className="relative aspect-video cursor-pointer overflow-hidden">
                             <Image
                               src={project.image || "/placeholder.svg"}
-                              alt={project.title}
+                              alt={`${project.title} - ${project.stackUsed?.join(', ') || 'Web Development Project'} by Muhammad Asad, MERN Stack Developer`}
                               fill
                               className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
                               sizes="(max-width: 768px) 100vw, 60vw"
@@ -192,8 +193,8 @@ const Projects2 = () => {
               </Link>
             </div>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
     </>
   );
 };

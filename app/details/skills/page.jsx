@@ -1,6 +1,78 @@
 import PageHeader from "@/app/components/PageHeader";
 import React from "react";
 import Link from "next/link";
+
+export const metadata = {
+  title: "Skills & Expertise | M. Asad - MERN Stack Developer | Technical Skills",
+  description:
+    "Comprehensive technical skills and expertise of Muhammad Asad - MERN Stack Developer. Proficient in React.js, Next.js, Node.js, MongoDB, TypeScript, Tailwind CSS, Redux Toolkit, and 15+ modern web technologies. 3+ years of professional experience. Based in Lahore, Pakistan.",
+  authors: [{ name: "M. Asad" }],
+  creator: "Muhammad Asad",
+  publisher: "Muhammad Asad",
+  applicationName: "Portfolio | Muhammad Asad",
+  keywords: [
+    "Technical Skills",
+    "MERN Stack Skills",
+    "React.js Skills",
+    "Next.js Skills",
+    "Node.js Skills",
+    "MongoDB Skills",
+    "TypeScript Skills",
+    "Frontend Development Skills",
+    "Backend Development Skills",
+    "Full Stack Skills",
+    "Web Development Skills",
+    "JavaScript Skills",
+    "Tailwind CSS Skills",
+    "Redux Toolkit Skills",
+    "Express.js Skills",
+    "Git Skills",
+    "VS Code Skills",
+    "Muhammad Asad Skills",
+    "Lahore Web Developer Skills",
+    "Pakistan Developer Skills",
+  ],
+  metadataBase: new URL(`${process.env.NEXT_PUBLIC_SITE_URL}`),
+  alternates: {
+    canonical: `${process.env.NEXT_PUBLIC_SITE_URL}/details/skills`,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  openGraph: {
+    title: "Skills & Expertise | Muhammad Asad - MERN Stack Developer",
+    description:
+      "Explore the comprehensive technical skills of Muhammad Asad. Expert in React.js, Next.js, Node.js, MongoDB, TypeScript, and 15+ modern web technologies with 3+ years of professional experience.",
+    url: `${process.env.NEXT_PUBLIC_SITE_URL}/details/skills`,
+    images: [
+      {
+        url: `${process.env.NEXT_PUBLIC_SITE_URL}/images/seoimg.png`,
+        width: 1200,
+        height: 630,
+        alt: "Technical skills and expertise of Muhammad Asad - MERN Stack Developer",
+        type: "image/png",
+      },
+    ],
+    type: "profile",
+    siteName: "Muhammad Asad Portfolio",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Skills & Expertise | M. Asad - MERN Stack Developer",
+    description:
+      "Comprehensive technical skills including React.js, Next.js, Node.js, MongoDB, TypeScript, and 15+ modern web technologies. 3+ years of professional experience.",
+    images: [`${process.env.NEXT_PUBLIC_SITE_URL}/images/seoimg.png`],
+  },
+};
 import {
   IoCodeSlash,
   IoCheckmarkCircle,
@@ -8,7 +80,15 @@ import {
   IoStarOutline,
   IoRocketOutline,
 } from "react-icons/io5";
-import { FaReact, FaNodeJs, FaTools, FaCertificate } from "react-icons/fa";
+import { FaReact, FaNodeJs, FaTools, FaCertificate, FaGithub } from "react-icons/fa";
+import { 
+  SiMongodb, 
+  SiExpress, 
+  SiNodedotjs, 
+  SiGit,
+  SiNpm
+} from "react-icons/si";
+import { VscVscode } from "react-icons/vsc";
 import Image from "next/image";
 
 // Enhanced skills data with detailed information
@@ -138,6 +218,8 @@ const skillsData = {
             "Server-side JavaScript runtime for building scalable network applications.",
           projects: 8,
           logo: "/images/skills/node.svg",
+          icon: SiNodedotjs,
+          iconColor: "text-[#339933]",
           certifications: [],
           keyFeatures: [
             "Express.js",
@@ -154,6 +236,8 @@ const skillsData = {
             "NoSQL database for flexible, document-based data storage and retrieval.",
           projects: 6,
           logo: "/images/skills/mongoDB.webp",
+          icon: SiMongodb,
+          iconColor: "text-[#47A248]",
           certifications: [],
           keyFeatures: [
             "Document Database",
@@ -170,6 +254,8 @@ const skillsData = {
             "Fast, unopinionated web framework for Node.js applications and APIs.",
           projects: 8,
           logo: "/images/express.png",
+          icon: SiExpress,
+          iconColor: "text-gray-900 dark:text-white",
           certifications: [],
           keyFeatures: ["REST APIs", "Middleware", "Routing", "Error Handling"],
         },
@@ -192,6 +278,10 @@ const skillsData = {
             "Version control, collaboration, and project management with Git workflows.",
           projects: 25,
           logo: "/images/skills/git.avif",
+          icon: SiGit,
+          iconColor: "text-[#F05032]",
+          // iconSecondary: FaGithub,
+          iconSecondaryColor: "text-gray-900 dark:text-white",
           certifications: [],
           keyFeatures: [
             "Version Control",
@@ -208,6 +298,8 @@ const skillsData = {
             "Primary code editor with extensions and customizations for productivity.",
           projects: 25,
           logo: "/images/skills/vs_code.webp",
+          icon: VscVscode,
+          iconColor: "text-[#007ACC]",
           certifications: [],
           keyFeatures: [
             "Extensions",
@@ -265,6 +357,8 @@ const skillsData = {
 };
 
 const SkillsDetailPage = () => {
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "";
+
   const getSkillLevelColor = (level) => {
     if (level >= 90) return "from-green-500 to-emerald-500";
     if (level >= 80) return "from-blue-500 to-cyan-500";
@@ -279,11 +373,99 @@ const SkillsDetailPage = () => {
     return "Beginner";
   };
 
+  // Skills ItemList Schema
+  const allSkills = skillsData.categories.flatMap((category) =>
+    category.skills.map((skill) => ({
+      name: skill.name,
+      category: category.title,
+      description: skill.description,
+      experience: skill.experience,
+      level: skill.level,
+    }))
+  );
+
+  const skillsListSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Technical Skills of Muhammad Asad",
+    description:
+      "Comprehensive list of technical skills and expertise including frontend development, backend development, and development tools.",
+    itemListElement: allSkills.map((skill, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      item: {
+        "@type": "Thing",
+        name: skill.name,
+        description: skill.description,
+        category: skill.category,
+      },
+    })),
+  };
+
+  // Person Schema with Skills
+  const personSkillsSchema = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Muhammad Asad",
+    jobTitle: "MERN Stack Developer",
+    url: baseUrl,
+    knowsAbout: allSkills.map((skill) => skill.name),
+    sameAs: [
+      "https://www.linkedin.com/in/masadali",
+      "https://github.com/MuhammadAsad-cmd",
+    ],
+  };
+
+  // Breadcrumb Schema
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: baseUrl,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Skills",
+        item: `${baseUrl}/details/skills`,
+      },
+    ],
+  };
+
   return (
     <>
-      <div
+      {/* JSON-LD Structured Data */}
+      <script
+        id="skills-list-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(skillsListSchema),
+        }}
+      />
+      <script
+        id="person-skills-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(personSkillsSchema),
+        }}
+      />
+      <script
+        id="skills-breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema),
+        }}
+      />
+
+      <main
         id="skills"
         className="animated-border my-6 overflow-hidden md:rounded-xl"
+        role="main"
+        aria-labelledby="skills-main-heading"
       >
         <section className="bg-white dark:bg-discordDark">
           <div className="p-4 md:p-6">
@@ -297,15 +479,20 @@ const SkillsDetailPage = () => {
             />
 
             {/* Achievements Overview */}
-            <div className="mb-8 grid grid-cols-2 gap-4 lg:grid-cols-4">
-              {skillsData.achievements.map((achievement, index) => (
-                <div
-                  key={index}
-                  className="group rounded-xl border border-lightBorder bg-lightbg p-4 text-center transition-all duration-300 hover:border-SkyBlue hover:shadow-lg hover:shadow-SkyBlue/10 dark:border-darkPrimaryGray/30 dark:bg-darkSecondaryGray dark:hover:border-darkHover"
-                >
+            <section aria-labelledby="achievements-heading" className="mb-8">
+              <h2 id="achievements-heading" className="sr-only">
+                Skills Achievements and Statistics
+              </h2>
+              <div className="grid grid-cols-2 gap-4 lg:grid-cols-4" role="list">
+                {skillsData.achievements.map((achievement, index) => (
+                  <div
+                    key={index}
+                    className="group rounded-xl border border-lightBorder bg-lightbg p-4 text-center transition-all duration-300 hover:border-SkyBlue hover:shadow-lg hover:shadow-SkyBlue/10 dark:border-darkPrimaryGray/30 dark:bg-darkSecondaryGray dark:hover:border-darkHover"
+                    role="listitem"
+                  >
                   <div className="mb-2 flex justify-center">
                     <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-r from-SkyBlue to-lightHover dark:to-darkHover">
-                      <achievement.icon className="text-lg text-white" />
+                      <achievement.icon className="text-lg text-white" aria-hidden="true" />
                     </div>
                   </div>
                   <div className="text-2xl font-bold text-SkyBlue">
@@ -319,68 +506,85 @@ const SkillsDetailPage = () => {
                   </div>
                 </div>
               ))}
-            </div>
+              </div>
+            </section>
 
             {/* Skills Categories */}
-            <div className="space-y-12">
+            <section aria-labelledby="skills-categories-heading" className="space-y-12">
+              <h2 id="skills-categories-heading" className="sr-only">
+                Technical Skills by Category
+              </h2>
               {skillsData.categories.map((category, categoryIndex) => (
-                <div key={category.id} className="space-y-6">
+                <section key={category.id} className="space-y-6" aria-labelledby={`category-${category.id}-heading`}>
                   {/* Category Header */}
-                  <div className="flex items-center gap-4">
+                  <header className="flex items-center gap-4">
                     <div
                       className={`flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br ${category.color}`}
+                      aria-hidden="true"
                     >
                       <category.icon className="text-xl text-white" />
                     </div>
                     <div>
-                      <h2 className="text-2xl font-bold text-lightPrimarytext dark:text-white">
+                      <h3 id={`category-${category.id}-heading`} className="text-2xl font-bold text-lightPrimarytext dark:text-white">
                         {category.title}
-                      </h2>
+                      </h3>
                       <p className="text-sm text-lightSecondarytext dark:text-darkPrimaryGray">
                         {category.description}
                       </p>
-                      <div className="mt-1 flex items-center gap-2">
-                        <span
-                          className={`rounded-full bg-gradient-to-r px-3 py-1 text-xs font-semibold ${category.color} text-white`}
-                        >
-                          {category.experience}
-                        </span>
-                      </div>
                     </div>
-                  </div>
+                  </header>
 
                   {/* Skills Grid */}
-                  <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+                  <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3" role="list">
                     {category.skills.map((skill, skillIndex) => (
-                      <div
+                      <article
                         key={skillIndex}
                         className="group rounded-xl border border-lightBorder bg-lightbg p-6 transition-all duration-300 hover:-translate-y-1 hover:border-SkyBlue hover:shadow-xl hover:shadow-SkyBlue/20 dark:border-darkPrimaryGray/30 dark:bg-darkSecondaryGray dark:hover:border-darkHover"
+                        role="listitem"
+                        itemScope
+                        itemType="https://schema.org/Thing"
                       >
                         {/* Skill Header */}
                         <div className="mb-4 flex items-start justify-between">
                           <div className="flex items-center gap-3">
-                            <div className="h-10 w-10 rounded-lg border-2 border-lightBorder p-1 dark:border-darkPrimaryGray/30">
-                              <Image
-                                src={skill.logo || "/placeholder.svg"}
-                                alt={skill.name}
-                                width={32}
-                                height={32}
-                                className="h-full w-full object-contain"
-                              />
+                            <div className="flex h-10 w-10 items-center justify-center rounded-lg border-2 border-lightBorder dark:border-darkPrimaryGray/30">
+                              {skill.icon ? (
+                                <>
+                                  {skill.iconSecondary ? (
+                                    <div className="flex items-center gap-0.5">
+                                      <skill.icon className={`text-xl ${skill.iconColor || 'text-gray-900 dark:text-white'}`} />
+                                      <skill.iconSecondary className={`text-xl ${skill.iconSecondaryColor || 'text-gray-900 dark:text-white'}`} />
+                                    </div>
+                                  ) : (
+                                    <skill.icon className={`text-xl ${skill.iconColor || 'text-gray-900 dark:text-white'}`} />
+                                  )}
+                                </>
+                              ) : (
+                                <Image
+                                  src={skill.logo || "/placeholder.svg"}
+                                  alt={skill.name}
+                                  width={32}
+                                  height={32}
+                                  className="h-full w-full object-contain p-1"
+                                />
+                              )}
                             </div>
                             <div>
-                              <h3 className="font-bold text-lightPrimarytext dark:text-white">
+                              <h4 
+                                className="font-bold text-lightPrimarytext dark:text-white"
+                                itemProp="name"
+                              >
                                 {skill.name}
-                              </h3>
+                              </h4>
                               <div className="flex items-center gap-2">
                                 {/* <span
                                   className={`rounded-full bg-gradient-to-r px-2 py-1 text-xs font-semibold ${getSkillLevelColor(skill.level)} text-white`}
                                 >
                                   {getSkillLevelText(skill.level)}
                                 </span> */}
-                                <span className="text-xs text-lightSecondarytext dark:text-darkPrimaryGray">
+                                {/* <span className="text-xs text-lightSecondarytext dark:text-darkPrimaryGray">
                                   {skill.experience}
-                                </span>
+                                </span> */}
                               </div>
                             </div>
                           </div>
@@ -411,10 +615,10 @@ const SkillsDetailPage = () => {
 
                         {/* Key Features */}
                         <div className="mb-4">
-                          <h4 className="mb-2 flex items-center gap-1 text-sm font-semibold text-lightPrimarytext dark:text-white">
-                            <IoCheckmarkCircle className="text-SkyBlue" />
+                          <h5 className="mb-2 flex items-center gap-1 text-sm font-semibold text-lightPrimarytext dark:text-white">
+                            <IoCheckmarkCircle className="text-SkyBlue" aria-hidden="true" />
                             Key Features
-                          </h4>
+                          </h5>
                           <div className="flex flex-wrap gap-1">
                             {skill.keyFeatures.map((feature, featureIndex) => (
                               <span
@@ -454,45 +658,50 @@ const SkillsDetailPage = () => {
                             </div>
                           </div>
                         </div> */}
-                      </div>
+                      </article>
                     ))}
                   </div>
-                </div>
+                </section>
               ))}
-            </div>
+            </section>
 
             {/* Call to Action */}
-            <div className="mt-12 rounded-xl border border-SkyBlue/20 bg-gradient-to-br from-SkyBlue/5 to-lightHover/5 p-8 text-center dark:border-darkHover/20 dark:from-SkyBlue/10 dark:to-darkHover/10">
+            <aside 
+              className="mt-12 rounded-xl border border-SkyBlue/20 bg-gradient-to-br from-SkyBlue/5 to-lightHover/5 p-8 text-center dark:border-darkHover/20 dark:from-SkyBlue/10 dark:to-darkHover/10"
+              aria-label="Contact and project links"
+            >
               <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-r from-SkyBlue to-lightHover dark:to-darkHover">
-                <IoCodeSlash className="text-2xl text-white" />
+                <IoCodeSlash className="text-2xl text-white" aria-hidden="true" />
               </div>
-              <h3 className="mb-2 text-2xl font-bold text-lightPrimarytext dark:text-white">
+              <h2 className="mb-2 text-2xl font-bold text-lightPrimarytext dark:text-white">
                 Let&apos;s Build Something Amazing Together!
-              </h3>
+              </h2>
               <p className="mb-6 text-lightSecondarytext dark:text-darkPrimaryGray">
                 With expertise across the full development stack, I&apos;m ready
                 to bring your ideas to life with modern, scalable solutions.
               </p>
               <div className="flex flex-col justify-center gap-4 sm:flex-row">
                 <Link
-                  href="#contact"
+                  href="/#contact"
                   className="group inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-SkyBlue to-lightHover px-6 py-3 font-semibold text-white transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-SkyBlue/30 dark:to-darkHover"
+                  aria-label="Start a project with Muhammad Asad"
                 >
                   <span>Start a Project</span>
-                  <IoRocketOutline className="transition-transform duration-300 group-hover:translate-x-1" />
+                  <IoRocketOutline className="transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true" />
                 </Link>
                 <Link
-                  href="#contact"
+                  href="/#contact"
                   className="group inline-flex items-center justify-center gap-2 rounded-xl border-2 border-SkyBlue px-6 py-3 font-semibold text-SkyBlue transition-all duration-300 hover:bg-SkyBlue hover:text-white"
+                  aria-label="Contact Muhammad Asad"
                 >
-                  <FaCertificate />
+                  <FaCertificate aria-hidden="true" />
                   <span>Contact Me</span>
                 </Link>
               </div>
-            </div>
+            </aside>
           </div>
         </section>
-      </div>
+      </main>
     </>
   );
 };

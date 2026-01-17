@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import { BsSendFill, BsDownload } from "react-icons/bs";
 import { IoLocationOutline, IoCheckmarkCircle } from "react-icons/io5";
-import { FaWhatsapp, FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaWhatsapp, FaLinkedin, FaGithub, FaEnvelope, FaInstagram } from "react-icons/fa";
 import ContactModal from "../ContactModal/ContactModal";
 import Code from "../Icons/Code";
 import EnhancedMarquee from "../Marquee/Marquee";
@@ -43,22 +43,19 @@ const Profile = () => {
 
   return (
     <>
-      <div className="animated-border overflow-hidden md:rounded-xl">
+      <header className="animated-border overflow-hidden md:rounded-xl" role="banner">
         <div className="relative bg-white dark:bg-discordDark">
-          {/* Background Pattern */}
           <div className="absolute inset-0 opacity-5 dark:opacity-10">
             <div className="absolute inset-0 bg-gradient-to-br from-SkyBlue/20 to-lightHover/20 dark:to-darkHover/20"></div>
             <div className='bg-[url(&apos;data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fillRule="evenodd"%3E%3Cg fill="%2371b7fb" fillOpacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E&apos;)] absolute left-0 top-0 h-full w-full'></div>
           </div>
 
           <div className="relative flex flex-col gap-x-6 p-6 max-md:gap-y-8 md:flex-row md:px-8 md:py-10">
-            {/* Profile Image Section */}
             <div className="flex w-full items-center justify-center md:w-1/2">
               <div
                 className={`relative transition-all duration-1000 ${isVisible ? "scale-100 opacity-100" : "scale-95 opacity-0"}`}
               >
                 <div className="relative size-[280px] md:size-[320px] lg:size-[380px]">
-                  {/* Animated Ring */}
                   <div className="animate-spin-slow absolute inset-0 rounded-full bg-gradient-to-r from-SkyBlue via-lightHover to-SkyBlue p-1 dark:to-darkHover">
                     <div className="h-full w-full rounded-full bg-white p-2 dark:bg-discordDark">
                       <div className="group relative h-full w-full overflow-hidden rounded-full border-4 border-lightbg dark:border-darkSecondaryGray">
@@ -66,7 +63,7 @@ const Profile = () => {
                           width={380}
                           height={380}
                           src="/images/asadimg.png"
-                          alt="Muhammad Asad - MERN Stack Developer"
+                          alt="Muhammad Asad - Professional MERN Stack Developer and Full Stack Developer based in Lahore, Pakistan. Expert in React.js, Next.js, Node.js, and MongoDB."
                           className="h-full w-full object-cover transition-transform duration-500"
                           priority
                         />
@@ -76,29 +73,21 @@ const Profile = () => {
                     </div>
                   </div>
 
-                  {/* Status Badge */}
                   <div className="absolute right-4 top-4 flex items-center gap-2 rounded-full bg-gradient-to-r from-green-500 to-emerald-500 px-3 py-1 text-xs font-semibold text-white shadow-lg">
                     <div className="h-2 w-2 animate-pulse rounded-full bg-white"></div>
                     Available for Work
                   </div>
 
-                  {/* Code Icon */}
                   <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 transform transition-transform duration-300 hover:scale-110">
                     <Code />
                   </div>
-
-                  {/* Floating Elements */}
-                  <div className="absolute -left-4 -top-4 h-8 w-8 animate-bounce rounded-full bg-gradient-to-r from-SkyBlue to-lightHover delay-100 dark:to-darkHover"></div>
-                  <div className="absolute -bottom-4 -right-4 h-6 w-6 animate-bounce rounded-full bg-gradient-to-r from-lightHover to-SkyBlue delay-300 dark:from-darkHover"></div>
                 </div>
               </div>
             </div>
 
-            {/* Content Section */}
             <div
               className={`w-full space-y-6 transition-all delay-300 duration-1000 md:w-1/2 md:max-w-[600px] ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}
             >
-              {/* Greeting */}
               <div className="space-y-2">
                 <p className="font-mono text-lg">
                   <span className="animate-pulse text-SkyBlue">
@@ -117,7 +106,6 @@ const Profile = () => {
                 </p>
               </div>
 
-              {/* Main Title with Animation */}
               <div className="space-y-1.5">
                 <div className="flex min-h-[5rem] items-center md:min-h-[6rem] lg:min-h-[7rem]">
                   <h1 className="text-3xl font-bold leading-tight md:text-4xl lg:text-5xl xl:text-6xl">
@@ -130,8 +118,7 @@ const Profile = () => {
                 </div>
               </div>
 
-              {/* Description */}
-              <div className="space-y-3">
+              <div className="mt-3">
                 <p className="font-mono text-lg leading-relaxed">
                   <span className="text-SkyBlue">&lt;p&gt;</span>
                   <span className="ml-2 text-lightSecondarytext dark:text-darkPrimaryGray">
@@ -151,10 +138,8 @@ const Profile = () => {
                 </p>
               </div>
 
-              {/* Enhanced Marquee */}
               <EnhancedMarquee />
 
-              {/* Location & Availability */}
               <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
                 <div className="flex items-center gap-2 text-lightSecondarytext dark:text-darkPrimaryGray">
                   <IoLocationOutline className="text-SkyBlue" />
@@ -168,32 +153,35 @@ const Profile = () => {
                 </div>
               </div>
 
-              {/* Action Buttons */}
-              <div className="flex flex-col gap-4 sm:flex-row">
+              <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
                 <button
                   onClick={openWhatsApp}
-                  title="Start WhatsApp Chat with Muhammad Asad"
-                  aria-label="Start WhatsApp Chat"
-                  className="group flex items-center justify-center gap-3 rounded-xl bg-gradient-to-r from-SkyBlue to-lightHover px-6 py-3 font-semibold text-white transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-SkyBlue/30 dark:to-darkHover"
+                  title="Start WhatsApp Chat"
+                  className="group flex min-w-[160px] items-center justify-center gap-2 rounded-xl bg-SkyBlue px-6 py-3 font-semibold text-white transition-all duration-300 hover:bg-opacity-90 hover:shadow-lg hover:shadow-SkyBlue/30 active:scale-95"
                 >
-                  <FaWhatsapp className="text-lg group-hover:animate-bounce" />
-                  <span>Let&apos;s Talk</span>
-                  <BsSendFill className="text-sm transition-transform duration-300 group-hover:translate-x-1" />
+                  <FaWhatsapp className="text-xl group-hover:rotate-12 transition-transform" />
+                  <span>Let's Talk</span>
                 </button>
+
+                <Link
+                  href="mailto:189asadali@gmail.com"
+                  className="group flex min-w-[160px] items-center justify-center gap-2 rounded-xl bg-SkyBlue/10 px-6 py-3 font-semibold text-SkyBlue transition-all duration-300 hover:bg-SkyBlue/20 dark:bg-white/5 dark:text-white dark:hover:bg-white/10"
+                >
+                  <FaEnvelope className="text-lg" />
+                  <span>Email Me</span>
+                  <BsSendFill className="text-xs transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1" />
+                </Link>
 
                 <a
                   href="/Asad Front End resume.pdf"
                   download
-                  title="Download Muhammad Asad's Front-End Developer Resume (PDF)"
-                  aria-label="Download Resume PDF"
-                  className="group flex items-center justify-center gap-3 rounded-xl border-2 border-lightBorder px-6 py-3 text-lightPrimarytext transition-all duration-300 hover:border-SkyBlue hover:text-SkyBlue dark:border-darkPrimaryGray/30 dark:text-white dark:hover:border-darkHover dark:hover:text-darkHover"
+                  className="group flex min-w-[160px] items-center justify-center gap-2 rounded-xl border-2 border-slate-200 px-6 py-3 font-semibold text-slate-600 transition-all duration-300 hover:border-SkyBlue hover:text-SkyBlue dark:border-white/10 dark:text-white/70 dark:hover:border-SkyBlue dark:hover:text-SkyBlue"
                 >
                   <BsDownload className="text-lg group-hover:animate-bounce" />
-                  <span className="font-semibold">Download CV</span>
+                  <span>Download CV</span>
                 </a>
               </div>
 
-              {/* Social Links */}
               <div className="flex items-center gap-4 pt-4">
                 <span className="text-sm font-medium text-lightSecondarytext dark:text-darkPrimaryGray">
                   Connect:
@@ -217,12 +205,26 @@ const Profile = () => {
                       <FaGithub className="text-sm" />
                     </button>
                   </Link>
+                  <Link
+                    href="mailto:189asadali@gmail.com"
+                    title="Send Email to Muhammad Asad"
+                    aria-label="Send Email"
+                    className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-600 text-white transition-transform duration-300 hover:scale-110 hover:shadow-lg dark:bg-gray-500"
+                  >
+                    <FaEnvelope className="text-sm" />
+                  </Link>
+                  {/* add instagram link */}
+                  <Link href="https://www.instagram.com/masadali_189" title="Instagram Profile - Muhammad Asad"
+                    aria-label="Open Instagram profile"
+                    className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-r from-pink-500 to-purple-500 text-white transition-transform duration-300 hover:scale-110 hover:shadow-lg dark:bg-gray-500">
+                    <FaInstagram className="text-sm" />
+                  </Link>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </header>
       {isOpenModal && <ContactModal onClose={handleCloseModal} />}
     </>
   );

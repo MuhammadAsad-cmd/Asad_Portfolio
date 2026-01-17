@@ -26,7 +26,6 @@ import {
   IoStarOutline,
   IoArrowBack,
 } from "react-icons/io5";
-import PageHeader from "../PageHeader";
 import { useState, useEffect, useRef } from "react";
 import { enhancedServicesData } from "@/app/Data/enhancedServices";
 
@@ -148,48 +147,61 @@ const SerDetails = () => {
 
   return (
     <>
-      <div
+      <main
         id="services"
         ref={sectionRef}
         className="animated-border my-6 overflow-hidden rounded-t-lg sm:rounded-xl"
+        role="main"
+        aria-labelledby="services-main-heading"
       >
         <div className="bg-white dark:bg-discordDark">
           <div className="p-6 md:p-10">
             {/* Header with Back Button */}
-            <div
+            <nav
               className={`mb-10 transition-all duration-700 ${
                 isVisible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
               }`}
+              aria-label="Breadcrumb navigation"
             >
               <Link
                 href="/"
                 className="mb-6 inline-flex items-center gap-2 text-sm font-semibold text-SkyBlue transition-colors hover:text-lightHover dark:hover:text-darkHover"
+                aria-label="Navigate back to home page"
               >
-                <IoArrowBack />
+                <IoArrowBack aria-hidden="true" />
                 Back to Home
               </Link>
-              <div className="flex items-center gap-3">
-                <div className="h-10 w-1.5 rounded-full bg-SkyBlue"></div>
-                <div>
-                  <h1 className="text-3xl font-bold text-lightPrimarytext dark:text-white">
-                    Services
-                  </h1>
-                  <p className="mt-1 text-base text-lightSecondarytext dark:text-darkPrimaryGray">
-                    Comprehensive web development solutions - {enhancedServicesData.length} services
-                  </p>
+              <header>
+                <div className="flex items-center gap-3">
+                  <div className="h-10 w-1.5 rounded-full bg-SkyBlue" aria-hidden="true"></div>
+                  <div>
+                    <h1 id="services-main-heading" className="text-3xl font-bold text-lightPrimarytext dark:text-white">
+                      Services
+                    </h1>
+                    <p className="mt-1 text-base text-lightSecondarytext dark:text-darkPrimaryGray">
+                      Comprehensive web development solutions - {enhancedServicesData.length} professional services
+                    </p>
+                  </div>
                 </div>
-              </div>
-            </div>
+              </header>
+            </nav>
 
             {/* Services Grid */}
-            <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {enhancedServicesData.map((service, index) => {
-                const IconComponent = getServiceIcon(service.name);
-                return (
-                  <div
-                    key={index}
-                    className="group relative rounded-xl border border-lightBorder bg-lightbg p-6 transition-all duration-300 hover:-translate-y-2 hover:border-SkyBlue hover:shadow-xl hover:shadow-SkyBlue/20 dark:border-darkPrimaryGray/30 dark:bg-darkSecondaryGray dark:hover:border-darkHover"
-                  >
+            <section aria-labelledby="services-list-heading" className="mb-12">
+              <h2 id="services-list-heading" className="sr-only">
+                Available Web Development Services
+              </h2>
+              <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3" role="list">
+                {enhancedServicesData.map((service, index) => {
+                  const IconComponent = getServiceIcon(service.name);
+                  return (
+                    <article
+                      key={index}
+                      className="group relative rounded-xl border border-lightBorder bg-lightbg p-6 transition-all duration-300 hover:-translate-y-2 hover:border-SkyBlue hover:shadow-xl hover:shadow-SkyBlue/20 dark:border-darkPrimaryGray/30 dark:bg-darkSecondaryGray dark:hover:border-darkHover"
+                      role="listitem"
+                      itemScope
+                      itemType="https://schema.org/Service"
+                    >
                     {/* Header */}
                     <div className="mb-4 flex items-start justify-between">
                       <div className="flex items-start gap-3">
@@ -199,12 +211,16 @@ const SerDetails = () => {
                           <IconComponent className="text-lg text-white" />
                         </div>
                         <div className="min-w-0 flex-1">
-                          <h3 className="text-lg font-bold leading-tight text-lightPrimarytext transition-colors duration-300 group-hover:text-SkyBlue dark:text-white dark:group-hover:text-darkHover">
+                          <h3 
+                            className="text-lg font-bold leading-tight text-lightPrimarytext transition-colors duration-300 group-hover:text-SkyBlue dark:text-white dark:group-hover:text-darkHover"
+                            itemProp="name"
+                          >
                             {service.name}
                           </h3>
                           <div className="mt-1 flex items-center gap-2">
                             <span
                               className={`rounded-full px-2 py-1 text-xs font-semibold ${getCategoryColor(service.category)} bg-gradient-to-r text-white`}
+                              itemProp="serviceType"
                             >
                               {service.category}
                             </span>
@@ -214,14 +230,17 @@ const SerDetails = () => {
                     </div>
 
                     {/* Description */}
-                    <p className="mb-4 text-sm leading-relaxed text-lightSecondarytext dark:text-darkPrimaryGray">
+                    <p 
+                      className="mb-4 text-sm leading-relaxed text-lightSecondarytext dark:text-darkPrimaryGray"
+                      itemProp="description"
+                    >
                       {service.description}
                     </p>
 
                     {/* Features */}
                     <div className="mb-4">
                       <h4 className="mb-2 flex items-center gap-1 text-sm font-semibold text-lightPrimarytext dark:text-white">
-                        <IoCheckmarkCircle className="text-SkyBlue" />
+                        <IoCheckmarkCircle className="text-SkyBlue" aria-hidden="true" />
                         Key Features
                       </h4>
                       <div className="flex flex-wrap gap-1">
@@ -252,7 +271,7 @@ const SerDetails = () => {
                     {/* Technologies */}
                     <div className="mb-4">
                       <h4 className="mb-2 flex items-center gap-1 text-sm font-semibold text-lightPrimarytext dark:text-white">
-                        <IoCodeSlash className="text-SkyBlue" />
+                        <IoCodeSlash className="text-SkyBlue" aria-hidden="true" />
                         Technologies
                       </h4>
                       <div className="flex flex-wrap gap-1">
@@ -281,7 +300,7 @@ const SerDetails = () => {
                     </div>
 
                     {/* Meta Information */}
-                    <div className="flex items-center justify-between border-t border-lightBorder pt-4 dark:border-darkPrimaryGray/30">
+                    {/* <div className="flex items-center justify-between border-t border-lightBorder pt-4 dark:border-darkPrimaryGray/30">
                       <div className="flex items-center gap-1 text-xs text-lightSecondarytext dark:text-darkPrimaryGray">
                         <IoTimeOutline className="text-SkyBlue" />
                         <span>{service.deliveryTime}</span>
@@ -291,23 +310,27 @@ const SerDetails = () => {
                       >
                         {service.complexity}
                       </div>
-                    </div>
+                    </div> */}
 
                     {/* Hover effect overlay */}
-                    <div className="pointer-events-none absolute inset-0 rounded-xl bg-gradient-to-br from-SkyBlue/5 to-lightHover/5 opacity-0 transition-opacity duration-300 group-hover:opacity-100 dark:from-SkyBlue/10 dark:to-darkHover/10"></div>
-                  </div>
-                );
-              })}
-            </div>
+                    <div className="pointer-events-none absolute inset-0 rounded-xl bg-gradient-to-br from-SkyBlue/5 to-lightHover/5 opacity-0 transition-opacity duration-300 group-hover:opacity-100 dark:from-SkyBlue/10 dark:to-darkHover/10" aria-hidden="true"></div>
+                    </article>
+                  );
+                })}
+              </div>
+            </section>
 
             {/* Call to Action */}
-            <div className="mt-12 rounded-xl border border-SkyBlue/20 bg-gradient-to-br from-SkyBlue/5 to-lightHover/5 p-8 text-center dark:border-darkHover/20 dark:from-SkyBlue/10 dark:to-darkHover/10">
+            <aside 
+              className="mt-12 rounded-xl border border-SkyBlue/20 bg-gradient-to-br from-SkyBlue/5 to-lightHover/5 p-8 text-center dark:border-darkHover/20 dark:from-SkyBlue/10 dark:to-darkHover/10"
+              aria-label="Contact and portfolio links"
+            >
               <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-r from-SkyBlue to-lightHover dark:to-darkHover">
-                <FaRocket className="text-2xl text-white" />
+                <FaRocket className="text-2xl text-white" aria-hidden="true" />
               </div>
-              <h3 className="mb-2 text-2xl font-bold text-lightPrimarytext dark:text-white">
+              <h2 className="mb-2 text-2xl font-bold text-lightPrimarytext dark:text-white">
                 Ready to Start Your Project?
-              </h3>
+              </h2>
               <p className="mb-6 text-lightSecondarytext dark:text-darkPrimaryGray">
                 Let&apos;s discuss your requirements and create something
                 amazing together. I&apos;m here to help bring your vision to
@@ -315,24 +338,26 @@ const SerDetails = () => {
               </p>
               <div className="flex flex-col justify-center gap-4 sm:flex-row">
                 <Link
-                  href="#contact"
+                  href="/#contact"
                   className="group inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-SkyBlue to-lightHover px-6 py-3 font-semibold text-white transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-SkyBlue/30 dark:to-darkHover"
+                  aria-label="Get started with your project - Contact Muhammad Asad"
                 >
                   <span>Get Started</span>
-                  <IoMdArrowRoundForward className="transition-transform duration-300 group-hover:translate-x-1" />
+                  <IoMdArrowRoundForward className="transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true" />
                 </Link>
                 <Link
                   href="/details/projects"
                   className="group inline-flex items-center justify-center gap-2 rounded-xl border-2 border-SkyBlue px-6 py-3 font-semibold text-SkyBlue transition-all duration-300 hover:bg-SkyBlue hover:text-white"
+                  aria-label="View portfolio projects by Muhammad Asad"
                 >
-                  <IoStarOutline />
+                  <IoStarOutline aria-hidden="true" />
                   <span>View Portfolio</span>
                 </Link>
               </div>
-            </div>
+            </aside>
           </div>
         </div>
-      </div>
+      </main>
     </>
   );
 };

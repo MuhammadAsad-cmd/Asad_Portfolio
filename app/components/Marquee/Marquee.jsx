@@ -1,50 +1,76 @@
-import Image from "next/image";
+import {
+  SiReact,
+  SiNextdotjs,
+  SiJavascript,
+  SiTypescript,
+  SiTailwindcss,
+  SiRedux,
+  SiHtml5,
+  SiCss3,
+  SiGit,
+  SiMongodb,
+  SiNodedotjs,
+  SiNpm,
+} from "react-icons/si";
 
 export const techLogos = [
-  { src: "/images/react.svg", alt: "React.js", category: "Frontend" },
-  { src: "/images/next.svg", alt: "Next.js", category: "Framework" },
-  { src: "/images/Js.svg", alt: "JavaScript", category: "Language" },
-  { src: "/images/ts.svg", alt: "TypeScript", category: "Language" },
-  { src: "/images/tailwind.svg", alt: "Tailwind CSS", category: "Styling" },
-  { src: "/images/redux.svg", alt: "Redux", category: "State Management" },
-  { src: "/images/html.svg", alt: "HTML", category: "Markup" },
-  { src: "/images/css.svg", alt: "CSS", category: "Styling" },
-  { src: "/images/skills/git.avif", alt: "Git", category: "Version Control" },
-  { src: "/images/skills/mongoDB.webp", alt: "MongoDB", category: "Database" },
-  { src: "/images/skills/node.svg", alt: "Node.js", category: "Backend" },
-  { src: "/images/skills/npm.webp", alt: "NPM", category: "Package Manager" },
+  { icon: SiReact, alt: "React.js", category: "Frontend", color: "text-[#61DAFB]" },
+  { icon: SiNextdotjs, alt: "Next.js", category: "Framework", color: "text-gray-900 dark:text-white" },
+  { icon: SiJavascript, alt: "JavaScript", category: "Language", color: "text-[#F7DF1E]" },
+  { icon: SiTypescript, alt: "TypeScript", category: "Language", color: "text-[#3178C6]" },
+  { icon: SiTailwindcss, alt: "Tailwind CSS", category: "Styling", color: "text-[#06B6D4]" },
+  { icon: SiRedux, alt: "Redux", category: "State Management", color: "text-[#764ABC]" },
+  { icon: SiHtml5, alt: "HTML", category: "Markup", color: "text-[#E34F26]" },
+  { icon: SiCss3, alt: "CSS", category: "Styling", color: "text-[#1572B6]" },
+  { icon: SiGit, alt: "Git", category: "Version Control", color: "text-[#F05032]" },
+  { icon: SiMongodb, alt: "MongoDB", category: "Database", color: "text-[#47A248]" },
+  { icon: SiNodedotjs, alt: "Node.js", category: "Backend", color: "text-[#339933]" },
+  { icon: SiNpm, alt: "NPM", category: "Package Manager", color: "text-[#CB3837]" },
 ];
 
 export default function EnhancedMarquee() {
+  const triplicatedLogos = [...techLogos, ...techLogos, ...techLogos].map(
+    (logo, index) => ({
+      ...logo,
+      uniqueKey: `${logo.alt}-${Math.floor(index / techLogos.length)}-${index % techLogos.length}`,
+    })
+  );
+
   return (
-    <div className="relative overflow-hidden rounded-xl border border-lightBorder bg-gradient-to-r from-lightbg/50 to-transparent py-4 dark:border-darkPrimaryGray/30 dark:from-darkSecondaryGray/50">
-      {/* Gradient Overlays */}
-      <div className="absolute bottom-0 left-0 top-0 z-10 w-20 bg-gradient-to-r from-white to-transparent dark:from-discordDark"></div>
-      <div className="absolute bottom-0 right-0 top-0 z-10 w-20 bg-gradient-to-l from-white to-transparent dark:from-discordDark"></div>
+    <div
+      className="relative rounded-lg py-3 opacity-80 overflow-hidden"
+      role="region"
+      aria-label="Technology stack marquee"
+    >
+      <span className="sr-only">
+        Technology stack: {techLogos.map((logo) => logo.alt).join(", ")}
+      </span>
 
-      <div className="animate-marquee flex space-x-4">
-        {[...techLogos, ...techLogos, ...techLogos].map((logo, index) => (
-          <div
-            key={index}
-            title={`${logo.alt} (${logo.category})`}
-            className="group relative flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-xl border border-lightBorder bg-white p-2 transition-all duration-300 hover:-translate-y-1 hover:border-SkyBlue hover:shadow-lg hover:shadow-SkyBlue/20 dark:border-darkPrimaryGray/30 dark:bg-darkSecondaryGray dark:hover:border-darkHover"
-          >
-            <Image
-              src={logo.src || "/placeholder.svg"}
-              alt={logo.alt}
-              width={32}
-              height={32}
-              className="h-full w-full object-contain transition-transform duration-300 group-hover:scale-110"
-              loading="eager"
-            />
+      <div className="relative pb-2">
+        {/* <div className="absolute bottom-0 left-0 top-0 z-10 w-16 bg-gradient-to-r from-white to-transparent dark:from-discordDark pointer-events-none"></div>
+        <div className="absolute bottom-0 right-0 top-0 z-10 w-16 bg-gradient-to-l from-white to-transparent dark:from-discordDark pointer-events-none"></div> */}
 
-            {/* Tooltip */}
-            <div className="pointer-events-none absolute -top-12 left-1/2 z-[999] -translate-x-1/2 transform whitespace-nowrap rounded-md bg-lightPrimarytext px-2 py-1 text-xs text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100 dark:bg-white dark:text-lightPrimarytext">
-              {logo.alt}
-              <div className="absolute left-1/2 top-full z-[999] h-0 w-0 -translate-x-1/2 transform border-l-4 border-r-4 border-t-4 border-transparent border-t-lightPrimarytext dark:border-t-white"></div>
-            </div>
-          </div>
-        ))}
+        <div className="animate-marquee flex space-x-4 relative z-20">
+          {triplicatedLogos.map((logo) => {
+            const IconComponent = logo.icon;
+            return (
+              <div
+                key={logo.uniqueKey}
+                className="group relative flex w-10 h-10 flex-shrink-0 items-center justify-center rounded-lg"
+              >
+                <IconComponent
+                  className={`h-8 w-8 ${logo.color} transition-all duration-300 group-hover:scale-125`}
+                  aria-hidden="true"
+                />
+                {/* Tooltip */}
+                <div className="pointer-events-none absolute -top-10 left-1/2 z-50 -translate-x-1/2 whitespace-nowrap rounded-md bg-gray-900 px-2 py-1 text-xs font-medium text-white opacity-0 transition-all duration-300 group-hover:-top-12 group-hover:opacity-100 dark:bg-white dark:text-gray-900 shadow-xl">
+                  {logo.alt}
+                  <div className="absolute left-1/2 top-full h-0 w-0 -translate-x-1/2 border-4 border-transparent border-t-gray-900 dark:border-t-white"></div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </div>
   );

@@ -62,18 +62,18 @@ export default function Skills() {
   ];
 
   return (
-    <div
+    <section
       id="skills"
       className="animated-border my-6 overflow-hidden md:rounded-xl"
+      aria-labelledby="skills-heading"
     >
       <div className="bg-white p-6 dark:bg-discordDark md:p-10">
-        {/* Header */}
         <div className="mb-10 flex items-center gap-4">
            <div className="h-10 w-1.5 rounded-full bg-SkyBlue"></div>
            <div>
-              <h1 className="text-3xl font-bold text-lightPrimarytext dark:text-white">
+              <h2 id="skills-heading" className="text-3xl font-bold text-lightPrimarytext dark:text-white">
                 Expertise
-              </h1>
+              </h2>
               <p className="mt-1 text-base text-lightSecondarytext dark:text-darkPrimaryGray">
                  My technical skills and professional proficiency
               </p>
@@ -81,11 +81,9 @@ export default function Skills() {
         </div>
 
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1.2fr_1fr] lg:gap-16">
-          {/* Left Content - Skills Description */}
           <div className="space-y-10">
             {skillCategories.map((category, index) => (
               <div key={index} className="relative pl-4">
-                {/* Decorative Left Border */}
                 <div className={`absolute left-0 top-0 h-full w-1 rounded-full ${category.bg.replace('/10', '')}`}></div>
                 
                 <div className="flex items-start gap-4">
@@ -124,7 +122,6 @@ export default function Skills() {
               </div>
             ))}
 
-            {/* Quality Statement - Clean */}
             <div className="mt-6 flex items-start gap-4 rounded-xl bg-lightbg p-5 dark:bg-darkSecondaryGray">
                 <div className="mt-1 text-SkyBlue">
                    <IoTrendingUpOutline className="text-xl" />
@@ -165,10 +162,8 @@ export default function Skills() {
                     </div>
                   </div>
                   
-                  {/* Tooltip - Outside the box */}
                   <div className="pointer-events-none absolute -top-10 left-1/2 z-20 -translate-x-1/2 whitespace-nowrap rounded-md bg-gray-900 px-2 py-1 text-xs font-medium text-white opacity-0 transition-all duration-300 group-hover:-top-12 group-hover:opacity-100 dark:bg-white dark:text-gray-900">
                     {tech.name}
-                    {/* Arrow */}
                     <div className="absolute left-1/2 top-full h-0 w-0 -translate-x-1/2 border-4 border-transparent border-t-gray-900 dark:border-t-white"></div>
                   </div>
                 </div>
@@ -177,6 +172,6 @@ export default function Skills() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

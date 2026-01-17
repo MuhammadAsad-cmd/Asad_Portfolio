@@ -125,10 +125,11 @@ const Services = () => {
   ];
 
   return (
-    <div
+    <section
       id="services"
       ref={sectionRef}
       className="animated-border my-6 overflow-hidden md:rounded-xl"
+      aria-labelledby="services-heading"
     >
       <div className="bg-white p-6 dark:bg-discordDark md:p-10">
         {/* Header */}
@@ -142,9 +143,9 @@ const Services = () => {
           <div className="flex items-center gap-4">
             <div className="h-10 w-1.5 rounded-full bg-SkyBlue"></div>
             <div>
-              <h1 className="text-3xl font-bold text-lightPrimarytext dark:text-white">
+              <h2 id="services-heading" className="text-3xl font-bold text-lightPrimarytext dark:text-white">
                 Services
-              </h1>
+              </h2>
               <p className="mt-1 text-base text-lightSecondarytext dark:text-darkPrimaryGray">
                 Comprehensive technical solutions for your business
               </p>
@@ -232,7 +233,7 @@ const Services = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -239,10 +239,11 @@ const About = () => {
   ];
 
   return (
-    <div
+    <section
       id="about"
       ref={sectionRef}
       className="animated-border my-6 overflow-hidden md:rounded-xl"
+      aria-labelledby="about-heading"
     >
       <div className="bg-white p-6 dark:bg-discordDark md:p-10">
         {/* Header */}
@@ -256,9 +257,9 @@ const About = () => {
           <div className="flex items-center gap-4">
             <div className="h-10 w-1.5 rounded-full bg-SkyBlue"></div>
             <div>
-              <h1 className="text-3xl font-bold text-lightPrimarytext dark:text-white">
+              <h2 id="about-heading" className="text-3xl font-bold text-lightPrimarytext dark:text-white">
                 About Muhammad Asad
-              </h1>
+              </h2>
               <p className="mt-1 text-base text-lightSecondarytext dark:text-darkPrimaryGray">
                 MERN Stack Developer & Full-Stack Specialist
               </p>
@@ -409,7 +410,7 @@ const About = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

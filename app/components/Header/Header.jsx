@@ -31,10 +31,9 @@ const Header = () => {
     <>
       <header
         className={`sticky top-0 z-[999] h-16 w-full transition-all duration-300
-          ${
-            isScrolled
-              ? "bg-white/50 shadow-lg backdrop-blur-md dark:bg-discordDark/70"
-              : "bg-white dark:bg-discordDark"
+          ${isScrolled
+            ? "bg-white/50 shadow-lg backdrop-blur-md dark:bg-discordDark/70"
+            : "bg-white dark:bg-discordDark"
           }
           md:top-6 md:rounded-lg md:border md:border-lightBorder md:dark:border-discordDark`}
       >
@@ -55,13 +54,17 @@ const Header = () => {
                 </span>
               </h1>
             </Link>
-            <nav className="hidden h-full w-full items-center justify-center gap-4 px-4 lg:flex">
-              <NavLink href="/details/services">Services</NavLink>
-              <NavLink href="#experience">Experience</NavLink>
-              <NavLink href="#education">Education</NavLink>
-              <NavLink href="/details/projects">Projects</NavLink>
-              <NavLink href="#skills">Skills</NavLink>
-              <NavLink href="#contact">Contact</NavLink>
+            <nav className="hidden h-full w-full items-center justify-center gap-12 px-4 lg:flex">
+              <Link href="/details/services" title="Go to Services page"
+               className="text-lg font-medium duration-300 ease-in-out text-lightPrimarytext dark:text-white hover:text-lightHover dark:hover:text-SkyBlue">
+                Services</Link>
+
+              <Link href="/details/experience" title="Go to Experience page" className="text-lg font-medium duration-300 ease-in-out text-lightPrimarytext dark:text-white hover:text-lightHover dark:hover:text-SkyBlue">Experience</Link>
+              <Link href="/details/education" title="Go to Education page" className="text-lg font-medium duration-300 ease-in-out text-lightPrimarytext dark:text-white hover:text-lightHover dark:hover:text-SkyBlue">Education</Link>
+              <Link href="/details/projects" title="Go to Projects page" className="text-lg font-medium duration-300 ease-in-out text-lightPrimarytext dark:text-white hover:text-lightHover dark:hover:text-SkyBlue">Projects</Link>
+              <Link href="/details/skills" title="Go to Skills page" className="text-lg font-medium duration-300 ease-in-out text-lightPrimarytext dark:text-white hover:text-lightHover dark:hover:text-SkyBlue">Skills</Link>
+
+              <Link href="#contact" title="Go to Contact page" className="text-lg font-medium duration-300 ease-in-out text-lightPrimarytext dark:text-white hover:text-lightHover dark:hover:text-SkyBlue">Contact</Link>
             </nav>
             <div className="hidden items-center gap-4 text-xl max-lg:justify-center md:flex">
               <Link

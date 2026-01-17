@@ -106,10 +106,11 @@ const Education = () => {
   }, []);
 
   return (
-    <div
+    <section
       id="education"
       ref={sectionRef}
       className="animated-border my-6 overflow-hidden md:rounded-xl"
+      aria-labelledby="education-heading"
     >
       <div className="bg-white p-6 dark:bg-discordDark md:p-8">
         {/* Header */}
@@ -121,9 +122,9 @@ const Education = () => {
           <div className="flex items-center gap-4">
             <div className="h-10 w-1.5 rounded-full bg-SkyBlue"></div>
             <div>
-              <h1 className="text-2xl font-bold text-lightPrimarytext dark:text-white">
+              <h2 id="education-heading" className="text-2xl font-bold text-lightPrimarytext dark:text-white">
                 Education
-              </h1>
+              </h2>
               <p className="mt-1 text-sm text-lightSecondarytext dark:text-darkPrimaryGray">
                 Academic Journey
               </p>
@@ -149,7 +150,7 @@ const Education = () => {
                 <div className="flex h-16 w-16 flex-shrink-0 items-center justify-center overflow-hidden rounded-xl border border-lightBorder bg-white transition-colors group-hover:border-SkyBlue dark:border-darkSecondaryGray dark:bg-darkbg dark:group-hover:border-darkHover">
                   <Image
                     src={edu.logo || "/placeholder.svg"}
-                    alt={`${edu.institution} Logo`}
+                    alt={`${edu.institution} - ${edu.degree} - Educational Institution Logo`}
                     width={64}
                     height={64}
                     className="h-full w-full object-contain"
@@ -215,7 +216,7 @@ const Education = () => {
         </div>
 
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -39,10 +39,11 @@ const Experience = () => {
   }, []);
 
   return (
-    <div
+    <section
       id="experience"
       ref={sectionRef}
       className="animated-border my-6 overflow-hidden md:rounded-xl"
+      aria-labelledby="experience-heading"
     >
       <div className="bg-white p-6 dark:bg-discordDark md:p-10">
         {/* Header */}
@@ -54,9 +55,9 @@ const Experience = () => {
           <div className="flex items-center gap-4">
             <div className="h-10 w-1.5 rounded-full bg-SkyBlue"></div>
             <div>
-              <h1 className="text-3xl font-bold text-lightPrimarytext dark:text-white">
+              <h2 id="experience-heading" className="text-3xl font-bold text-lightPrimarytext dark:text-white">
                 Experience
-              </h1>
+              </h2>
               <p className="mt-1 text-base text-lightSecondarytext dark:text-darkPrimaryGray">
                 My professional journey and career milestones
               </p>
@@ -87,7 +88,7 @@ const Experience = () => {
                     <div className="h-12 w-12 overflow-hidden rounded-lg border border-lightBorder dark:border-darkSecondaryGray">
                       <Image
                         src={exp.image || "/placeholder.svg"}
-                        alt={exp.company}
+                        alt={`${exp.company} company logo - ${exp.roles[0]?.title || 'Company'}`}
                         width={48}
                         height={48}
                         className="h-full w-full object-cover"
@@ -101,7 +102,7 @@ const Experience = () => {
                   <div className="hidden h-16 w-16 overflow-hidden rounded-xl border border-lightBorder dark:border-darkSecondaryGray md:block">
                      <Image
                         src={exp.image || "/placeholder.svg"}
-                        alt={exp.company}
+                        alt={`${exp.company} company logo - ${exp.roles[0]?.title || 'Company'}`}
                         width={64}
                         height={64}
                         className="h-full w-full object-cover"
@@ -182,7 +183,7 @@ const Experience = () => {
           </Link>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
