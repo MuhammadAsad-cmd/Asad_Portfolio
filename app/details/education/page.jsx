@@ -19,6 +19,11 @@ export const metadata = {
     "Computer Science",
     "Software Engineering",
   ],
+  icons: {
+    icon: "/images/logo a.png",
+    shortcut: "/images/logo a.png",
+    apple: "/images/logo a.png",
+  },
   openGraph: {
     title: "Muhammad Asad - Education Details",
     description:

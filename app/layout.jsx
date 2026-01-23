@@ -27,7 +27,11 @@ export const metadata = {
     "Asad",
     "Portfolio",
   ],
-  icons: [`${process.env.NEXT_PUBLIC_SITE_URL}/images/name.avif`],
+ icons: {
+    icon: "/images/logo a.png",
+    shortcut: "/images/logo a.png",
+    apple: "/images/logo a.png",
+  },
   metadataBase: new URL(`${process.env.NEXT_PUBLIC_SITE_URL}`),
   alternates: {
     canonical: `${process.env.NEXT_PUBLIC_SITE_URL}`,

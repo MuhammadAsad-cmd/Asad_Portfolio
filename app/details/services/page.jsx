@@ -32,6 +32,11 @@ export const metadata = {
     "Pakistan Web Development",
     "Freelance Web Developer",
   ],
+  icons: {
+    icon: "/images/logo a.png",
+    shortcut: "/images/logo a.png",
+    apple: "/images/logo a.png",
+  },
   metadataBase: new URL(`${process.env.NEXT_PUBLIC_SITE_URL}`),
   alternates: {
     canonical: `${process.env.NEXT_PUBLIC_SITE_URL}/details/services`,
