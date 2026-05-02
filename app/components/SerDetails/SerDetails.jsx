@@ -60,6 +60,14 @@ const SerDetails = () => {
 
   const getServiceIcon = (serviceName) => {
     const name = serviceName.toLowerCase();
+    if (name.includes("erp") || name.includes("automation") || name.includes("workflow"))
+      return FaCogs;
+    if (name.includes("inventory") || name.includes("order") || name.includes("operations"))
+      return FaCubes;
+    if (name.includes("procurement") || name.includes("logistics"))
+      return FaShoppingCart;
+    if (name.includes("reporting") || name.includes("dashboard"))
+      return FaTachometerAlt;
     if (name.includes("website") || name.includes("web")) return FaLaptopCode;
     if (name.includes("front") || name.includes("frontend")) return FaCode;
     if (name.includes("ui") || name.includes("ux") || name.includes("design"))
@@ -95,6 +103,18 @@ const SerDetails = () => {
         return "from-green-500 to-emerald-500";
       case "Full Stack":
         return "from-purple-500 to-pink-500";
+      case "Operations":
+        return "from-blue-500 to-cyan-500";
+      case "Automation":
+        return "from-emerald-500 to-teal-500";
+      case "Integration":
+        return "from-violet-500 to-purple-500";
+      case "E-commerce":
+        return "from-orange-500 to-red-500";
+      case "Analytics":
+        return "from-indigo-500 to-blue-500";
+      case "Security":
+        return "from-red-500 to-rose-500";
       case "Database":
         return "from-orange-500 to-red-500";
       case "DevOps":
@@ -175,11 +195,11 @@ const SerDetails = () => {
                 <div className="flex items-center gap-3">
                   <div className="h-10 w-1.5 rounded-full bg-SkyBlue" aria-hidden="true"></div>
                   <div>
-                    <h1 id="services-main-heading" className="text-3xl font-bold text-lightPrimarytext dark:text-white">
-                      Services
+                    <h1 id="services-main-heading" className="text-2xl font-bold tracking-tight text-lightPrimarytext dark:text-white md:text-3xl">
+                      Business Solutions
                     </h1>
-                    <p className="mt-1 text-base text-lightSecondarytext dark:text-darkPrimaryGray">
-                      Comprehensive web development solutions - {enhancedServicesData.length} professional services
+                    <p className="mt-1 text-sm leading-relaxed text-lightSecondarytext dark:text-darkPrimaryGray md:text-base">
+                      ERP, automation, integrations, and internal systems - {enhancedServicesData.length} focused services
                     </p>
                   </div>
                 </div>
@@ -189,7 +209,7 @@ const SerDetails = () => {
             {/* Services Grid */}
             <section aria-labelledby="services-list-heading" className="mb-12">
               <h2 id="services-list-heading" className="sr-only">
-                Available Web Development Services
+                Available Business System Services
               </h2>
               <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3" role="list">
                 {enhancedServicesData.map((service, index) => {

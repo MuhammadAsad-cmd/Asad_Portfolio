@@ -24,6 +24,9 @@ const RightSidebar = ({ id }) => {
       <NavLink onClick={handleLinkClick} href="/details/education">
         Education
       </NavLink>
+      <NavLink onClick={handleLinkClick} href="/details/certifications">
+        Certifications
+      </NavLink>
       <NavLink onClick={handleLinkClick} href="/details/projects">
         Projects
       </NavLink>

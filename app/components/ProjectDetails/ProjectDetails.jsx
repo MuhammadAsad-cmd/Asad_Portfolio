@@ -60,12 +60,14 @@ const ProjectDetails = () => {
               backUrl="/"
             />
 
-            {/* Project Tabs */}
-            <ProjectTabs
-              activeCategory={activeCategory}
-              onCategoryChange={setActiveCategory}
-              projectCounts={projectCounts}
-            />
+            {/* Project Tabs — flush with section edges on small screens */}
+            <div className="-mx-4 md:-mx-6">
+              <ProjectTabs
+                activeCategory={activeCategory}
+                onCategoryChange={setActiveCategory}
+                projectCounts={projectCounts}
+              />
+            </div>
 
               {/* Projects Grid */}
               <section aria-labelledby="projects-list-heading" className="mb-8">

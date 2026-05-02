@@ -87,9 +87,9 @@ const Header = () => {
               </Link>
               <Link
                 target="_blank"
-                href="https://www.instagram.com/muhammadasad9017"
+                href="https://www.instagram.com/masadali_189"
                 aria-label="Instagram profile"
-                title="Instagram - @muhammadasad9017"
+                title="Instagram - @masadali_189"
                 className="text-lightSecondarytext duration-300 ease-in-out hover:text-lightHover dark:text-darkPrimaryGray dark:hover:text-SkyBlue"
               >
                 <FaInstagram />

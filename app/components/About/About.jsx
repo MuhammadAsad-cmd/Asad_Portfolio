@@ -151,13 +151,9 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { IoMdArrowRoundForward } from "react-icons/io";
 import {
-  IoDiamondOutline,
-  IoCodeSlash,
+  IoFlashOutline,
   IoRocketOutline,
-  IoCheckmarkCircle,
   IoBulbOutline,
-  IoTrendingUpOutline,
-  IoServerOutline,
   IoLayersOutline,
 } from "react-icons/io5";
 import { FaReact, FaNodeJs } from "react-icons/fa";
@@ -168,6 +164,7 @@ import {
   SiExpress,
   SiTailwindcss,
   SiRedux,
+  SiReactquery,
 } from "react-icons/si";
 
 const About = () => {
@@ -202,6 +199,7 @@ const About = () => {
       { name: "Next.js", icon: SiNextdotjs, color: "text-black dark:text-white" },
       { name: "TypeScript", icon: SiTypescript, color: "text-[#3178C6]" },
       { name: "Redux", icon: SiRedux, color: "text-[#764ABC]" },
+      { name: "TanStack Query", icon: SiReactquery, color: "text-[#FF4154]" },
       { name: "Tailwind CSS", icon: SiTailwindcss, color: "text-[#06B6D4]" },
     ],
     backend: [
@@ -213,22 +211,32 @@ const About = () => {
 
   const highlights = [
     {
-      icon: IoLayersOutline,
-      title: "Full-Stack Development",
-      description: "End-to-end MERN stack applications with seamless integration",
+      icon: IoFlashOutline,
+      title: "ERP & Operational Automation",
+      description:
+        "Transforming manual workflows into ERP-style systems for orders, inventory, procurement, and internal operations.",
       gradient: "from-blue-500 to-cyan-500",
     },
     {
-      icon: IoRocketOutline,
-      title: "Performance & Scalability",
-      description: "Optimized architectures for fast, responsive user experiences",
+      icon: IoLayersOutline,
+      title: "Integrated Business Systems",
+      description:
+        "Connecting marketplaces, shipping carriers, databases, and dashboards into one scalable source of truth.",
       gradient: "from-purple-500 to-pink-500",
     },
     {
-      icon: IoServerOutline,
-      title: "API Design & Integration",
-      description: "RESTful APIs and third-party service integrations",
+      icon: IoRocketOutline,
+      title: "High-Performance Architecture",
+      description:
+        "Building reliable full-stack tools that handle complex data, real-time workflows, and secure user experiences.",
       gradient: "from-orange-500 to-red-500",
+    },
+    {
+      icon: IoBulbOutline,
+      title: "Strategic Problem Solving",
+      description:
+        "Understanding the business logic first, then designing software that supports the next stage of growth.",
+      gradient: "from-emerald-500 to-teal-500",
     },
   ];
 
@@ -257,11 +265,11 @@ const About = () => {
           <div className="flex items-center gap-4">
             <div className="h-10 w-1.5 rounded-full bg-SkyBlue"></div>
             <div>
-              <h2 id="about-heading" className="text-3xl font-bold text-lightPrimarytext dark:text-white">
+              <h2 id="about-heading" className="text-2xl font-bold tracking-tight text-lightPrimarytext dark:text-white md:text-3xl">
                 About Muhammad Asad
               </h2>
-              <p className="mt-1 text-base text-lightSecondarytext dark:text-darkPrimaryGray">
-                MERN Stack Developer & Full-Stack Specialist
+              <p className="mt-1 text-sm leading-relaxed text-lightSecondarytext dark:text-darkPrimaryGray md:text-base">
+                Outcomes and track record—the Services section is the menu of what I build
               </p>
             </div>
           </div>
@@ -273,21 +281,46 @@ const About = () => {
           <div>
             {/* Intro Text */}
             <div
-              className={`mb-10 space-y-6 text-base leading-relaxed text-lightSecondarytext dark:text-darkPrimaryGray transition-all duration-700 delay-100 ${
+              className={`mb-10 space-y-5 text-base leading-relaxed text-lightSecondarytext dark:text-darkPrimaryGray transition-all duration-700 delay-100 ${
                 isVisible
                   ? "translate-y-0 opacity-100"
                   : "translate-y-4 opacity-0"
               }`}
             >
               <p>
-                I build fast, scalable web applications using the{" "}
+                I deliver production systems teams run day to day:{" "}
                 <span className="font-semibold text-lightPrimarytext dark:text-white">
-                  MERN Stack
-                </span>{" "}
-                and Next.js. My goal is simple: turn complex ideas into reliable, high-performance digital products.
+                  fewer manual steps
+                </span>
+                ,{" "}
+                <span className="font-semibold text-lightPrimarytext dark:text-white">
+                  clearer operational data
+                </span>
+                , and integrations that don&apos;t break when volume grows. Typical
+                work spans orders, inventory, admin dashboards, and wiring
+                marketplaces or carriers into one workflow.
               </p>
               <p>
-                Early in my career, I noticed many businesses getting fragmented solutions. I focus on the full picture—from database architecture to the final pixel on the screen—ensuring everything works seamlessly together.
+                <span className="font-semibold text-lightPrimarytext dark:text-white">
+                  3+ years
+                </span>{" "}
+                shipping{" "}
+                <span className="font-semibold text-lightPrimarytext dark:text-white">
+                  MERN &amp; Next.js
+                </span>{" "}
+                in production,{" "}
+                <span className="font-semibold text-lightPrimarytext dark:text-white">
+                  20+ projects
+                </span>{" "}
+                delivered, emphasis on maintainable architecture and honest
+                scoping. To see{" "}
+                <span className="font-semibold text-lightPrimarytext dark:text-white">
+                  what I can build for you
+                </span>
+                , start with{" "}
+                <span className="font-semibold text-SkyBlue">Services</span>
+                ; for proof, see{" "}
+                <span className="font-semibold text-SkyBlue">Projects</span>.
               </p>
             </div>
 
@@ -299,8 +332,8 @@ const About = () => {
                   : "translate-y-4 opacity-0"
               }`}
             >
-              <h3 className="mb-6 text-lg font-bold text-lightPrimarytext dark:text-white">
-                What I Bring to the Table
+              <h3 className="mb-6 text-base font-bold text-lightPrimarytext dark:text-white md:text-lg">
+                Where I add the most value
               </h3>
               <div className="space-y-6">
                 {highlights.map((highlight, index) => (
@@ -334,7 +367,7 @@ const About = () => {
             >
               {experience.map((stat, index) => (
                 <div key={index}>
-                  <div className="text-3xl font-bold text-SkyBlue">
+                  <div className="text-2xl font-bold text-SkyBlue md:text-3xl">
                     {stat.value}
                   </div>
                   <div className="text-sm font-medium text-lightSecondarytext dark:text-darkPrimaryGray">

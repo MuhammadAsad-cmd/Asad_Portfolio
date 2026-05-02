@@ -106,10 +106,10 @@ const ContactForm = () => {
           <div className="flex items-center gap-4">
             <div className="h-10 w-1.5 rounded-full bg-SkyBlue"></div>
             <div>
-              <h1 className="text-3xl font-bold text-lightPrimarytext dark:text-white">
+              <h1 className="text-2xl font-bold tracking-tight text-lightPrimarytext dark:text-white md:text-3xl">
                 Let&apos;s Connect
               </h1>
-              <p className="mt-1 text-base text-lightSecondarytext dark:text-darkPrimaryGray">
+              <p className="mt-1 text-sm leading-relaxed text-lightSecondarytext dark:text-darkPrimaryGray md:text-base">
                 Have a project in mind? Let&apos;s discuss how I can help
               </p>
             </div>

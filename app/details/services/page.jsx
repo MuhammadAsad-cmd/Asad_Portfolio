@@ -3,21 +3,28 @@ import SerDetails from "@/app/components/SerDetails/SerDetails";
 import { enhancedServicesData } from "@/app/Data/enhancedServices";
 
 export const metadata = {
-  title: "Services | M. Asad - Professional Web Development Services | MERN Stack Developer",
+  title: "Business Solutions | M. Asad - ERP, Automation & MERN Development",
   description:
-    "Comprehensive web development services by Muhammad Asad - MERN Stack Developer. Offering 20+ professional services including front-end development, backend APIs, full-stack solutions, UI/UX implementation, e-commerce development, performance optimization, and more. Based in Lahore, Pakistan.",
+    "ERP, automation, and business system services by Muhammad Asad. Custom internal tooling, workflow automation, e-commerce operations, integrations, dashboards, and scalable MERN applications.",
   authors: [{ name: "M. Asad" }],
   creator: "Muhammad Asad",
   publisher: "Muhammad Asad",
   applicationName: "Portfolio | Muhammad Asad",
   keywords: [
-    "Web Development Services",
+    "Business Solutions",
+    "ERP Development",
+    "Internal Tooling",
+    "Workflow Automation",
+    "Business Automation",
+    "E-commerce Operations",
+    "Inventory Management System",
+    "Order Management System",
+    "Marketplace Integrations",
+    "Shipping Integrations",
+    "Admin Dashboard Development",
     "MERN Stack Services",
-    "Front-End Development Services",
     "Full-Stack Development",
     "Backend Development Services",
-    "UI/UX Design Implementation",
-    "E-commerce Development",
     "API Integration Services",
     "React.js Development",
     "Next.js Development",
@@ -53,9 +60,9 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: "Professional Web Development Services | Muhammad Asad - MERN Stack Developer",
+    title: "ERP, Automation & Business Solutions | Muhammad Asad",
     description:
-      "Explore 20+ professional web development services by Muhammad Asad. Specializing in MERN Stack development, React.js, Next.js, Node.js, and modern web technologies. Custom solutions for businesses and startups.",
+      "Explore business-focused services by Muhammad Asad: ERP-style tooling, workflow automation, integrations, dashboards, e-commerce operations systems, and scalable MERN applications.",
     url: `${process.env.NEXT_PUBLIC_SITE_URL}/details/services`,
     images: [
       {
@@ -72,9 +79,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Services | M. Asad - Professional Web Development Services",
+    title: "Business Solutions | M. Asad - ERP & Automation",
     description:
-      "Check out 20+ professional web development services offered by Muhammad Asad, specializing in MERN Stack, React.js, Next.js, and modern web technologies.",
+      "ERP, automation, integrations, dashboards, and scalable MERN business systems for growing operations.",
     images: [`${process.env.NEXT_PUBLIC_SITE_URL}/images/servicsmeta.png`],
   },
 };
@@ -86,9 +93,9 @@ const page = () => {
   const serviceListSchema = {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    name: "Web Development Services by Muhammad Asad",
+    name: "Business System Services by Muhammad Asad",
     description:
-      "Comprehensive list of professional web development services including MERN Stack development, frontend, backend, full-stack solutions, and more.",
+      "Business-focused services including ERP-style internal tooling, workflow automation, e-commerce operations systems, integrations, dashboards, and scalable MERN applications.",
     itemListElement: enhancedServicesData.map((service, index) => ({
       "@type": "ListItem",
       position: index + 1,
@@ -137,9 +144,9 @@ const page = () => {
   const professionalServiceSchema = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    name: "Web Development Services by Muhammad Asad",
+    name: "ERP, Automation and Business System Services by Muhammad Asad",
     description:
-      "Professional web development services including MERN Stack development, frontend and backend solutions, e-commerce development, API integration, and more.",
+      "Professional services for ERP-style tooling, workflow automation, business dashboards, e-commerce operations, API integrations, and scalable MERN stack applications.",
     provider: {
       "@type": "Person",
       name: "Muhammad Asad",
@@ -156,16 +163,20 @@ const page = () => {
       name: "Pakistan",
     },
     serviceType: [
-      "Web Development",
-      "Frontend Development",
+      "ERP Development",
+      "Internal Tooling",
+      "Business Workflow Automation",
+      "E-commerce Operations",
+      "Inventory Management",
+      "Order Management",
+      "Marketplace Integration",
+      "Shipping Integration",
+      "Admin Dashboards",
+      "Database Architecture",
       "Backend Development",
       "Full Stack Development",
       "MERN Stack Development",
-      "E-commerce Development",
-      "API Integration",
-      "UI/UX Implementation",
       "Performance Optimization",
-      "SEO Services",
     ],
     url: `${baseUrl}/details/services`,
   };

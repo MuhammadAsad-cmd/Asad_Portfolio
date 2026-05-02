@@ -2,6 +2,7 @@ import Link from "next/link";
 import { FaFacebook, FaGithub, FaInstagram } from "react-icons/fa";
 import { SiUpwork } from "react-icons/si";
 import { TfiLinkedin } from "react-icons/tfi";
+import XLogo from "../Icons/XLogo";
 
 const LeftSidebar = () => {
   return (
@@ -97,10 +98,21 @@ const LeftSidebar = () => {
                 <SiUpwork /> */}
               {/* </Link> */}
               <Link
-                href="https://www.instagram.com/muhammadasad9017"
+                href="https://x.com/MAsad96668934"
+                target="_blank"
+                aria-label="X (Twitter) profile"
+                title="X (Twitter) - @MAsad96668934"
+                className="duration-300 ease-in-out hover:text-SkyBlue"
+              >
+                <span className="inline-flex h-5 w-5 items-center justify-center">
+                  <XLogo className="h-[1.1rem] w-[1.1rem]" />
+                </span>
+              </Link>
+              <Link
+                href="https://www.instagram.com/masadali_189"
                 target="_blank"
                 aria-label="Instagram profile"
-                title="Instagram - @muhammadasad9017"
+                title="Instagram - @masadali_189"
                 className="duration-300 ease-in-out hover:text-SkyBlue"
               >
                 <FaInstagram />

@@ -6,28 +6,17 @@ import { IoLocationOutline, IoCheckmarkCircle } from "react-icons/io5";
 import { FaWhatsapp, FaLinkedin, FaGithub, FaEnvelope, FaInstagram } from "react-icons/fa";
 import ContactModal from "../ContactModal/ContactModal";
 import Code from "../Icons/Code";
+import XLogo from "../Icons/XLogo";
 import EnhancedMarquee from "../Marquee/Marquee";
 import Link from "next/link";
 
 const Profile = () => {
   const [isOpenModal, setIsOpenModal] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
-  const [currentRole, setCurrentRole] = useState(0);
-
-  const roles = [
-    "MERN Stack Developer",
-    "Full Stack Developer",
-    "React.js Specialist",
-    "Next.js Expert",
-  ];
 
   useEffect(() => {
     setIsVisible(true);
-    const interval = setInterval(() => {
-      setCurrentRole((prev) => (prev + 1) % roles.length);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, [roles.length]);
+  }, []);
 
   const handleCloseModal = () => {
     setIsOpenModal(false);
@@ -62,8 +51,8 @@ const Profile = () => {
                         <Image
                           width={380}
                           height={380}
-                          src="/images/asadimg.png"
-                          alt="Muhammad Asad - Professional MERN Stack Developer and Full Stack Developer based in Lahore, Pakistan. Expert in React.js, Next.js, Node.js, and MongoDB."
+                          src="/images/asadimg.avif"
+                          alt="Muhammad Asad — Full-stack developer building ERP-style tools, automation, and business systems with React, Next.js, and Node.js."
                           className="h-full w-full object-cover transition-transform duration-500"
                           priority
                         />
@@ -88,53 +77,30 @@ const Profile = () => {
             <div
               className={`w-full space-y-6 transition-all delay-300 duration-1000 md:w-1/2 md:max-w-[600px] ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}
             >
-              <div className="space-y-2">
-                <p className="font-mono text-lg">
-                  <span className="animate-pulse text-SkyBlue">
-                    &lt;span&gt;
-                  </span>
-                  <span className="ml-2 text-lightSecondarytext dark:text-darkPrimaryGray">
-                    Hey, I&apos;m
-                  </span>
-                  <span className="ml-3 font-semibold text-lightPrimarytext dark:text-white">
+              <div className="space-y-1">
+                <p className="text-base text-lightSecondarytext dark:text-darkPrimaryGray sm:text-lg">
+                  Hey, I&apos;m{" "}
+                  <span className="font-semibold text-lightPrimarytext dark:text-white">
                     Muhammad Asad
-                  </span>
-                  <span className="animate-pulse text-SkyBlue">
-                    {" "}
-                    &lt;/span&gt;
                   </span>
                 </p>
               </div>
 
-              <div className="space-y-1.5">
-                <div className="flex min-h-[5rem] items-center md:min-h-[6rem] lg:min-h-[7rem]">
-                  <h1 className="text-3xl font-bold leading-tight md:text-4xl lg:text-5xl xl:text-6xl">
-                    <span className="font-mono text-SkyBlue">&#123;</span>
-                    <span className="mx-2 bg-gradient-to-r from-lightPrimarytext to-lightSecondarytext bg-clip-text text-transparent transition-all duration-500 dark:from-white dark:to-darkPrimaryGray">
-                      {roles[currentRole]}
-                    </span>
-                    <span className="font-mono text-SkyBlue">&#125;</span>
-                  </h1>
-                </div>
-              </div>
-
-              <div className="mt-3">
-                <p className="font-mono text-lg leading-relaxed">
-                  <span className="text-SkyBlue">&lt;p&gt;</span>
-                  <span className="ml-2 text-lightSecondarytext dark:text-darkPrimaryGray">
-                    With <strong className="text-SkyBlue">3+ years</strong> of
-                    expertise in{" "}
-                    <strong className="text-lightPrimarytext dark:text-white">
-                      MERN Stack (MongoDB, Express, React, Node.js)
-                    </strong>{" "}
-                    and{" "}
-                    <strong className="text-lightPrimarytext dark:text-white">
-                      Next.js
-                    </strong>
-                    , I craft fast, scalable, and modern web applications that
-                    drive results.
+              <div className="space-y-2">
+                <h1 className="text-balance text-2xl font-bold leading-tight tracking-tight text-lightPrimarytext dark:text-white sm:text-3xl md:text-[2.35rem] lg:text-5xl">
+                  Full-Stack Engineer ·{" "}
+                  <span className="bg-gradient-to-r from-SkyBlue to-lightHover bg-clip-text text-transparent dark:to-darkHover">
+                    ERP &amp; business systems
                   </span>
-                  <span className="text-SkyBlue"> &lt;/p&gt;</span>
+                </h1>
+                <p className="max-w-xl text-sm font-medium text-lightSecondarytext dark:text-darkPrimaryGray sm:text-base">
+                  I help teams replace spreadsheets and manual work with{" "}
+                  <span className="text-lightPrimarytext dark:text-white">
+                    reliable internal tools
+                  </span>
+                  —automated workflows, integrations, and admin dashboards on
+                  the MERN stack and Next.js, built to scale with your
+                  operations.
                 </p>
               </div>
 
@@ -206,6 +172,15 @@ const Profile = () => {
                     </button>
                   </Link>
                   <Link
+                    href="https://x.com/MAsad96668934"
+                    target="_blank"
+                    title="X (Twitter) — Muhammad Asad"
+                    aria-label="Open X (Twitter) profile"
+                    className="flex h-10 w-10 items-center justify-center rounded-full bg-neutral-900 text-white transition-transform duration-300 hover:scale-110 hover:shadow-lg dark:bg-white dark:text-neutral-900"
+                  >
+                    <XLogo className="h-4 w-4" />
+                  </Link>
+                  <Link
                     href="mailto:189asadali@gmail.com"
                     title="Send Email to Muhammad Asad"
                     aria-label="Send Email"
@@ -214,7 +189,7 @@ const Profile = () => {
                     <FaEnvelope className="text-sm" />
                   </Link>
                   {/* add instagram link */}
-                  <Link href="https://www.instagram.com/masadali_189" title="Instagram Profile - Muhammad Asad"
+                  <Link target="_blank" href="https://www.instagram.com/masadali_189" title="Instagram Profile - Muhammad Asad"
                     aria-label="Open Instagram profile"
                     className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-r from-pink-500 to-purple-500 text-white transition-transform duration-300 hover:scale-110 hover:shadow-lg dark:bg-gray-500">
                     <FaInstagram className="text-sm" />

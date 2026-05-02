@@ -4,9 +4,10 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/next";
 
 export const metadata = {
-  title: "Portfolio | M. Asad - MERN Stack Developer | Full Stack Developer",
+  title:
+    "Portfolio | M. Asad — Full-Stack Developer | ERP, Automation & MERN",
   description:
-    "Welcome to the portfolio of Muhammad Asad, a creative and detail-oriented MERN Stack developer specializing in building scalable full-stack web applications. Explore innovative solutions, modern designs, and seamless user experiences crafted with MongoDB, Express, React, and Node.js.",
+    "Muhammad Asad builds production internal tools, ERP-style systems, and workflow automation with the MERN stack and Next.js—integrations, admin dashboards, and scalable backends for operations teams. Lahore, Pakistan.",
   authors: [{ name: "M. Asad" }],
   creator: "Muhammad Asad",
   publisher: "Muhammad Asad",
@@ -15,19 +16,17 @@ export const metadata = {
     "MERN Stack",
     "Full Stack Developer",
     "Next.js",
+    "ERP Development",
+    "Business Automation",
+    "Internal Tools",
     "React.js",
     "Node.js",
-    "Express.js",
     "MongoDB",
-    "JavaScript",
-    "TypeScript",
-    "Tailwind CSS",
-    "Web Development",
     "Muhammad Asad",
-    "Asad",
     "Portfolio",
+    "Lahore Pakistan",
   ],
- icons: {
+  icons: {
     icon: "/images/logo a.png",
     shortcut: "/images/logo a.png",
     apple: "/images/logo a.png",
@@ -38,15 +37,16 @@ export const metadata = {
   },
   // Open Graph metadata
   openGraph: {
-    title: "Muhammad Asad - MERN Stack Developer",
+    title:
+      "Muhammad Asad — Full-Stack Developer | ERP, Automation & MERN",
     description:
-      "Showcasing the work of Muhammad Asad, a MERN Stack developer passionate about creating robust full-stack solutions and intuitive user interfaces.",
+      "Internal tools, workflow automation, and MERN/Next.js systems for growing operations—with integrations, admin dashboards, and reliable architecture.",
     images: [
       {
-        url: `${process.env.NEXT_PUBLIC_SITE_URL}/images/seoimg.png`,
+        url: `${process.env.NEXT_PUBLIC_SITE_URL}/images/asadimg.avif`,
         width: 1200,
         height: 630,
-        alt: "Portfolio of Muhammad Asad, MERN Stack Developer",
+        alt: "Muhammad Asad — Full-stack developer, ERP & business systems",
       },
     ],
     type: "website",
@@ -58,12 +58,13 @@ export const metadata = {
   // Twitter metadata
   twitter: {
     card: "summary_large_image",
-    title: "Portfolio | M. Asad - MERN Stack Developer",
+    title:
+      "Portfolio | M. Asad — Full-Stack & ERP / business systems",
     description:
-      "Explore Muhammad Asad's portfolio, featuring expertise in MERN Stack development, modern web technologies, and exceptional digital experiences.",
-    site: "@yourTwitterHandle",
-    creator: "@yourTwitterHandle",
-    images: [`${process.env.NEXT_PUBLIC_SITE_URL}/images/seoimg.png`],
+      "MERN, Next.js, internal tools, automation, and integrations for operations teams.",
+    site: "@MAsad96668934",
+    creator: "@MAsad96668934",
+    images: [`${process.env.NEXT_PUBLIC_SITE_URL}/images/asadimg.avif`],
   },
 
   // Search engine verification
@@ -86,9 +87,9 @@ export default function RootLayout({ children }) {
     "@type": "Person",
     name: "Muhammad Asad",
     alternateName: "M. Asad",
-    jobTitle: "MERN Stack Developer",
+    jobTitle: "Full-Stack Developer",
     description:
-      "MERN Stack Developer with 3+ years of experience building scalable full-stack web applications using MongoDB, Express, React, and Node.js.",
+      "Full-stack developer with 3+ years building ERP-style internal tools, workflow automation, and scalable MERN/Next.js applications for operations, e-commerce, and logistics.",
     url: baseUrl,
     image: `${baseUrl}/images/asadimg.png`,
     email: "189asadali@gmail.com",
@@ -102,11 +103,14 @@ export default function RootLayout({ children }) {
     sameAs: [
       "https://www.linkedin.com/in/masadali",
       "https://github.com/MuhammadAsad-cmd",
+      "https://x.com/MAsad96668934",
       "https://www.instagram.com/masadali_189",
     ],
     knowsAbout: [
       "MERN Stack",
       "Full Stack Development",
+      "ERP and internal tooling",
+      "Business process automation",
       "React.js",
       "Next.js",
       "Node.js",
@@ -114,6 +118,7 @@ export default function RootLayout({ children }) {
       "MongoDB",
       "JavaScript",
       "TypeScript",
+      "System integration",
       "Web Development",
     ],
     alumniOf: {
@@ -122,7 +127,7 @@ export default function RootLayout({ children }) {
     },
     hasOccupation: {
       "@type": "Occupation",
-      name: "MERN Stack Developer",
+      name: "Full-Stack Developer",
       occupationLocation: {
         "@type": "City",
         name: "Lahore",

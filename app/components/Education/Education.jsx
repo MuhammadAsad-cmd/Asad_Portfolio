@@ -122,10 +122,10 @@ const Education = () => {
           <div className="flex items-center gap-4">
             <div className="h-10 w-1.5 rounded-full bg-SkyBlue"></div>
             <div>
-              <h2 id="education-heading" className="text-2xl font-bold text-lightPrimarytext dark:text-white">
+              <h2 id="education-heading" className="text-2xl font-bold tracking-tight text-lightPrimarytext dark:text-white md:text-3xl">
                 Education
               </h2>
-              <p className="mt-1 text-sm text-lightSecondarytext dark:text-darkPrimaryGray">
+              <p className="mt-1 text-sm leading-relaxed text-lightSecondarytext dark:text-darkPrimaryGray md:text-base">
                 Academic Journey
               </p>
             </div>

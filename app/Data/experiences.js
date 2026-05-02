@@ -28,7 +28,7 @@ export const experiences = [
     company: "Motive Coder",
     time: "1 Year - 5 months",
     location: "Lahore, Punjab, Pakistan · On-site",
-    image: "/images/motivecoder_logo.jfif",
+    image: "/images/motivecoder_logo.png",
     link: "https://www.linkedin.com/company/motivecoder/",
     roles: [
       {
@@ -49,7 +49,7 @@ export const experiences = [
   },
   {
     company: "EVS Professional Training Institute",
-    image: "/images/evs.jfif",
+    image: "/images/evs2.png",
     location: "Lahore, Punjab, Pakistan · On-site",
     link: "https://www.linkedin.com/company/evsinstitute/",
     roles: [

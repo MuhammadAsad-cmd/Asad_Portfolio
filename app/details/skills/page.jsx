@@ -5,7 +5,7 @@ import Link from "next/link";
 export const metadata = {
   title: "Skills & Expertise | M. Asad - MERN Stack Developer | Technical Skills",
   description:
-    "Comprehensive technical skills and expertise of Muhammad Asad - MERN Stack Developer. Proficient in React.js, Next.js, Node.js, MongoDB, TypeScript, Tailwind CSS, Redux Toolkit, and 15+ modern web technologies. 3+ years of professional experience. Based in Lahore, Pakistan.",
+    "Comprehensive technical skills and expertise of Muhammad Asad - MERN Stack Developer. Proficient in React.js, Next.js, TanStack Query, Node.js, MongoDB, TypeScript, Tailwind CSS, Redux Toolkit, and 15+ modern web technologies.",
   authors: [{ name: "M. Asad" }],
   creator: "Muhammad Asad",
   publisher: "Muhammad Asad",
@@ -25,6 +25,7 @@ export const metadata = {
     "JavaScript Skills",
     "Tailwind CSS Skills",
     "Redux Toolkit Skills",
+    "TanStack Query Skills",
     "Express.js Skills",
     "Git Skills",
     "VS Code Skills",
@@ -59,11 +60,11 @@ export const metadata = {
     url: `${process.env.NEXT_PUBLIC_SITE_URL}/details/skills`,
     images: [
       {
-        url: `${process.env.NEXT_PUBLIC_SITE_URL}/images/seoimg.png`,
+        url: `${process.env.NEXT_PUBLIC_SITE_URL}/images/asadimg.avif`,
         width: 1200,
         height: 630,
         alt: "Technical skills and expertise of Muhammad Asad - MERN Stack Developer",
-        type: "image/png",
+        type: "image/avif",
       },
     ],
     type: "profile",
@@ -75,7 +76,7 @@ export const metadata = {
     title: "Skills & Expertise | M. Asad - MERN Stack Developer",
     description:
       "Comprehensive technical skills including React.js, Next.js, Node.js, MongoDB, TypeScript, and 15+ modern web technologies. 3+ years of professional experience.",
-    images: [`${process.env.NEXT_PUBLIC_SITE_URL}/images/seoimg.png`],
+    images: [`${process.env.NEXT_PUBLIC_SITE_URL}/images/asadimg.avif`],
   },
 };
 import {
@@ -91,7 +92,8 @@ import {
   SiExpress, 
   SiNodedotjs, 
   SiGit,
-  SiNpm
+  SiNpm,
+  SiReactquery
 } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
 import Image from "next/image";
@@ -202,6 +204,23 @@ const skillsData = {
             "RTK Query",
             "Middleware",
             "DevTools Integration",
+          ],
+        },
+        {
+          name: "TanStack Query",
+          level: 85,
+          experience: "1+ Years",
+          description:
+            "Server-state management for fast, reliable data fetching, caching, synchronization, and mutation workflows.",
+          projects: 6,
+          icon: SiReactquery,
+          iconColor: "text-[#FF4154]",
+          certifications: [],
+          keyFeatures: [
+            "Data Fetching",
+            "Caching",
+            "Mutations",
+            "Background Sync",
           ],
         },
       ],

@@ -7,6 +7,7 @@ export const SkillsData = [
   { name: "Next.js", link: "https://nextjs.org/" },
   { name: "TypeScript", link: "https://www.typescriptlang.org/" },
   { name: "Redux", link: "https://redux.js.org/" },
+  { name: "TanStack Query", link: "https://tanstack.com/query" },
   { name: "Tailwind CSS", link: "https://tailwindcss.com/" },
   {
     name: "JavaScript",

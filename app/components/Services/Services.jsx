@@ -81,12 +81,13 @@ const Services = () => {
 
   // Main highlighted service
   const primaryService = {
-    title: "MERN Stack Development",
-    description: "Complete web applications from concept to deployment.",
+    title: "ERP & Business Automation",
+    description:
+      "Custom internal systems that replace spreadsheets, manual work, and disconnected operations with one reliable workflow.",
     features: [
-      "Custom Architecture",
-      "High Performance",
-      "Scalable Backend",
+      "ERP-style Dashboards",
+      "Workflow Automation",
+      "Scalable MERN Architecture",
     ],
   };
 
@@ -94,33 +95,33 @@ const Services = () => {
   const otherServices = [
     {
       icon: IoCodeSlashOutline,
-      title: "Frontend Development",
-      description: "Responsive, pixel-perfect UIs with React & Next.js",
+      title: "Internal Tooling",
+      description: "Admin panels, role-based portals, and operational dashboards",
     },
     {
       icon: IoServerOutline,
-      title: "Backend API Development",
-      description: "Secure RESTful APIs using Node.js & Express",
+      title: "Backend APIs & Business Logic",
+      description: "Secure APIs for orders, inventory, users, and reporting flows",
     },
     {
       icon: IoLayersOutline,
-      title: "Database Design",
-      description: "Efficient data schemas with MongoDB & Mongoose",
+      title: "System Integration",
+      description: "Connecting marketplaces, shipping carriers, databases, and tools",
     },
     {
       icon: IoColorPaletteOutline,
-      title: "UI/UX Implementation",
-      description: "Turning designs into interactive functional interfaces",
+      title: "E-commerce Operations",
+      description: "Order lifecycles, fulfillment workflows, and inventory visibility",
     },
     {
       icon: IoRocketOutline,
-      title: "Performance Optimization",
-      description: "Speed enhancement, SEO, and core web vitals",
+      title: "Performance & Reliability",
+      description: "Fast, secure systems built for complex data and real-time usage",
     },
     {
       icon: IoCloudUploadOutline,
-      title: "Deployment & DevOps",
-      description: "CI/CD pipelines, Vercel/AWS hosting setup",
+      title: "Deployment & Support",
+      description: "Production deployment, monitoring, maintenance, and iteration",
     },
   ];
 
@@ -143,11 +144,11 @@ const Services = () => {
           <div className="flex items-center gap-4">
             <div className="h-10 w-1.5 rounded-full bg-SkyBlue"></div>
             <div>
-              <h2 id="services-heading" className="text-3xl font-bold text-lightPrimarytext dark:text-white">
+              <h2 id="services-heading" className="text-2xl font-bold tracking-tight text-lightPrimarytext dark:text-white md:text-3xl">
                 Services
               </h2>
-              <p className="mt-1 text-base text-lightSecondarytext dark:text-darkPrimaryGray">
-                Comprehensive technical solutions for your business
+              <p className="mt-1 text-sm leading-relaxed text-lightSecondarytext dark:text-darkPrimaryGray md:text-base">
+                ERP, automation, and scalable business systems
               </p>
             </div>
           </div>
@@ -164,7 +165,7 @@ const Services = () => {
               <div className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-SkyBlue text-white shadow-lg shadow-SkyBlue/20">
                 <IoLayersOutline className="text-3xl" />
               </div>
-              <h3 className="mb-3 text-2xl font-bold text-lightPrimarytext dark:text-white">
+              <h3 className="mb-3 text-xl font-bold tracking-tight text-lightPrimarytext dark:text-white md:text-2xl">
                 {primaryService.title}
               </h3>
               <p className="mb-6 text-lightSecondarytext dark:text-darkPrimaryGray">
@@ -184,7 +185,7 @@ const Services = () => {
 
               <div className="mt-8 pt-8 border-t border-SkyBlue/20 dark:border-white/10">
                  <p className="text-sm font-medium text-SkyBlue">
-                    Most Popular Choice
+                    Best Fit for Growing Operations
                  </p>
               </div>
             </div>
@@ -226,7 +227,7 @@ const Services = () => {
                 href="/details/services"
                 className="group inline-flex items-center gap-2 text-sm font-semibold text-SkyBlue transition-colors hover:text-lightHover dark:hover:text-darkHover"
               >
-                View all 15+ services
+                View all business solutions
                 <IoMdArrowRoundForward className="transition-transform group-hover:translate-x-1" />
               </Link>
             </div>

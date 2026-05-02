@@ -1,8 +1,7 @@
 "use client";
-import { projectsData } from "@/app/Data/projects";
+import { homepageFeaturedProjectIds, projectsData } from "@/app/Data/projects";
 import { projectCategories } from "@/app/Data/projectCategories";
 import { useState, useMemo } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { FiExternalLink, FiGithub } from "react-icons/fi";
@@ -10,6 +9,9 @@ import { IoMdArrowRoundForward } from "react-icons/io";
 import { IoRocketOutline } from "react-icons/io5";
 import CollapsibleDescription from "./CollapsibleDescription";
 import ProjectTabs from "./ProjectTabs";
+
+/** Max featured rows on the homepage — full catalog lives on /details/projects */
+const HOME_FEATURED_LIMIT = 5;
 
 const Projects2 = () => {
   const [activeCategory, setActiveCategory] = useState("all");
@@ -24,6 +26,16 @@ const Projects2 = () => {
       (project) => project.category === category?.filterValue,
     );
   }, [activeCategory]);
+
+  const displayedProjects = useMemo(() => {
+    if (activeCategory === "all") {
+      return homepageFeaturedProjectIds
+        .map((id) => projectsData.find((p) => p.id === id))
+        .filter(Boolean)
+        .slice(0, HOME_FEATURED_LIMIT);
+    }
+    return filteredProjects.slice(0, HOME_FEATURED_LIMIT);
+  }, [activeCategory, filteredProjects]);
 
   // Calculate project counts for each category
   const projectCounts = useMemo(() => {
@@ -42,23 +54,22 @@ const Projects2 = () => {
     <>
       <section
         id="projects"
-        className="animated-border my-6 overflow-hidden md:rounded-xl"
+        className="animated-border my-4 overflow-hidden md:my-6 md:rounded-xl"
         aria-labelledby="projects-heading"
       >
         <div className="bg-white dark:bg-discordDark">
-          <div className="p-6 md:p-10">
+          <div className="p-5 md:p-8">
             {/* Header */}
-            <div className="mb-10 flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+            <div className="mb-6 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between md:mb-8">
               <div className="flex flex-col gap-4">
                 <div className="flex items-center gap-3">
                   <div className="h-10 w-1.5 rounded-full bg-SkyBlue"></div>
                   <div>
-                    <h2 id="projects-heading" className="text-3xl font-bold text-lightPrimarytext dark:text-white">
+                    <h2 id="projects-heading" className="text-2xl font-bold tracking-tight text-lightPrimarytext dark:text-white md:text-3xl">
                       Featured Projects
                     </h2>
-                    <p className="mt-1 text-base text-lightSecondarytext dark:text-darkPrimaryGray">
-                      Showcasing my technical expertise and problem-solving
-                      skills
+                    <p className="mt-1 text-sm leading-relaxed text-lightSecondarytext dark:text-darkPrimaryGray md:text-base">
+                      Hector, RetroFam, RetrovGames, Canrover, Telegram—then the full catalog
                     </p>
                   </div>
                 </div>
@@ -66,28 +77,84 @@ const Projects2 = () => {
 
               <Link
                 href="/details/projects"
-                className="group flex items-center gap-2 text-sm font-semibold text-SkyBlue transition-colors hover:text-lightHover dark:hover:text-darkHover"
+                className="group inline-flex shrink-0 items-center gap-2 rounded-full border border-SkyBlue/30 bg-SkyBlue/5 px-4 py-2 text-sm font-semibold text-SkyBlue transition-colors hover:border-SkyBlue hover:bg-SkyBlue/10 dark:border-darkHover/40 dark:hover:border-darkHover"
               >
-                View All Projects ({projectsData.length})
+                Full portfolio
+                <span className="text-lightSecondarytext dark:text-darkPrimaryGray group-hover:text-SkyBlue">
+                  ({projectsData.length})
+                </span>
                 <IoMdArrowRoundForward className="transition-transform group-hover:translate-x-1" />
               </Link>
             </div>
 
-            {/* Project Tabs */}
-            <ProjectTabs
-              activeCategory={activeCategory}
-              onCategoryChange={setActiveCategory}
-              projectCounts={projectCounts}
-            />
+            {/* Project Tabs — edge-to-edge row (arrows overlap; cancels horizontal padding) */}
+            <div className="-mx-5 md:-mx-8">
+              <ProjectTabs
+                activeCategory={activeCategory}
+                onCategoryChange={setActiveCategory}
+                projectCounts={projectCounts}
+              />
+            </div>
+
+            {(() => {
+              const filteredCount = filteredProjects.length;
+              const hasMoreOnHome = filteredCount > HOME_FEATURED_LIMIT;
+              const categoryLabel =
+                activeCategory === "all"
+                  ? null
+                  : projectCategories.find((c) => c.id === activeCategory)
+                      ?.name;
+              if (
+                !hasMoreOnHome &&
+                !(activeCategory === "all" && projectsData.length > HOME_FEATURED_LIMIT)
+              ) {
+                return null;
+              }
+              return (
+                <p className="mb-5 mt-1 text-center text-sm leading-relaxed text-lightSecondarytext dark:text-darkPrimaryGray md:mb-6">
+                  {activeCategory === "all" ? (
+                    <>
+                      <span className="font-semibold text-lightPrimarytext dark:text-white">
+                        {Math.min(HOME_FEATURED_LIMIT, displayedProjects.length)} flagship
+                      </span>{" "}
+                      projects in this order on the home page.
+                      {projectsData.length > HOME_FEATURED_LIMIT && (
+                        <>
+                          {" "}
+                          Full portfolio lists all{" "}
+                          <span className="font-semibold text-lightPrimarytext dark:text-white">
+                            {projectsData.length}
+                          </span>{" "}
+                          builds.
+                        </>
+                      )}
+                    </>
+                  ) : (
+                    <>
+                      Showing up to{" "}
+                      <span className="font-semibold text-lightPrimarytext dark:text-white">
+                        {HOME_FEATURED_LIMIT}
+                      </span>{" "}
+                      of{" "}
+                      <span className="font-semibold text-lightPrimarytext dark:text-white">
+                        {filteredCount}
+                      </span>{" "}
+                      in “{categoryLabel}”. Open the full portfolio for the
+                      complete list.
+                    </>
+                  )}
+                </p>
+              );
+            })()}
 
             {/* Projects Grid */}
-            <div layout className="space-y-16 md:space-y-24">
-              {filteredProjects.slice(0, 9).map((project, index) => {
+            <div className="space-y-10 md:space-y-16">
+              {displayedProjects.map((project, index) => {
                 const isEven = index % 2 === 1;
                 return (
                   <div key={project.id} className="group relative">
                     <div
-                      className={`flex flex-col gap-8 lg:gap-12 ${isEven ? "lg:flex-row-reverse" : "lg:flex-row"} items-start`}
+                      className={`flex flex-col gap-6 lg:gap-10 ${isEven ? "lg:flex-row-reverse" : "lg:flex-row"} items-start`}
                     >
                       {/* Project Image */}
                       <div className="w-full lg:w-7/12">
@@ -121,25 +188,26 @@ const Projects2 = () => {
                       {/* Project Details */}
                       <div className="flex w-full flex-col justify-center lg:w-5/12">
                         {/* Project Number & Decoration */}
-                        <div className="mb-4 flex items-center gap-3">
-                          <span className="text-5xl font-black text-lightBorder/50 dark:text-white/5">
+                        <div className="mb-3 flex items-center gap-3">
+                          <span className="text-4xl font-black text-lightBorder/50 dark:text-white/5 md:text-5xl">
                             {String(index + 1).padStart(2, "0")}
                           </span>
                           <div className="h-px flex-1 bg-lightBorder dark:bg-darkSecondaryGray"></div>
                         </div>
 
-                        <h3 className="mb-4 text-2xl font-bold text-lightPrimarytext dark:text-white md:text-3xl">
+                        <h3 className="mb-3 text-2xl font-bold text-lightPrimarytext dark:text-white md:text-3xl">
                           {project?.title}
                         </h3>
 
-                        <div className="mb-6">
+                        <div className="mb-4">
                           <CollapsibleDescription
                             description={project.description}
+                            maxLines={2}
                           />
                         </div>
 
                         {/* Tech Stack */}
-                        <div className="mb-8 flex flex-wrap gap-2">
+                        <div className="mb-5 flex flex-wrap gap-2 md:mb-6">
                           {project.stackUsed.map((tech, idx) => (
                             <span
                               key={idx}
@@ -182,14 +250,14 @@ const Projects2 = () => {
             </div>
 
             {/* Footer Action */}
-            <div className="mt-20 flex justify-center border-t border-lightBorder pt-8 dark:border-darkSecondaryGray">
+            <div className="mt-10 flex justify-center border-t border-lightBorder pt-6 dark:border-darkSecondaryGray md:mt-14 md:pt-7">
               <Link
                 href="/details/projects"
-                className="group inline-flex items-center gap-2 rounded-full bg-lightbg px-8 py-3 text-sm font-semibold text-lightPrimarytext transition-all hover:bg-SkyBlue hover:text-white dark:bg-darkSecondaryGray dark:text-white dark:hover:bg-SkyBlue"
+                className="group inline-flex items-center gap-2 rounded-full bg-SkyBlue px-8 py-3.5 text-sm font-semibold text-white shadow-lg shadow-SkyBlue/20 transition-all hover:-translate-y-0.5 hover:shadow-xl hover:shadow-SkyBlue/25 dark:text-white"
               >
-                <IoRocketOutline className="text-lg" />
-                Explore All {projectsData.length} Projects
-                <IoMdArrowRoundForward className="transition-transform group-hover:translate-x-1" />
+                <IoRocketOutline className="text-lg" aria-hidden />
+                Browse all {projectsData.length} projects
+                <IoMdArrowRoundForward className="transition-transform group-hover:translate-x-1" aria-hidden />
               </Link>
             </div>
           </div>

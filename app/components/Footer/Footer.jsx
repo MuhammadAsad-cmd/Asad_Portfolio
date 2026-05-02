@@ -5,6 +5,7 @@ import { FaCode, FaGithub, FaInstagram } from "react-icons/fa";
 import { TfiLinkedin } from "react-icons/tfi";
 import { SiUpwork } from "react-icons/si";
 import NavLink from "../Navlink/Navlink";
+import XLogo from "../Icons/XLogo";
 
 const Footer = () => {
   return (
@@ -46,10 +47,21 @@ const Footer = () => {
           <FaGithub />
         </Link>
         <Link
-          href="https://www.instagram.com/muhammadasad9017"
+          href="https://x.com/MAsad96668934"
+          target="_blank"
+          aria-label="X (Twitter) profile"
+          title="X (Twitter) – @MAsad96668934"
+          className="text-lightSecondarytext duration-300 ease-in-out hover:text-lightHover dark:text-darkPrimaryGray dark:hover:text-SkyBlue"
+        >
+          <span className="flex h-[1em] w-[1em] items-center justify-center [&>svg]:h-[1em] [&>svg]:w-[1em]">
+            <XLogo className="h-[1em] w-[1em]" />
+          </span>
+        </Link>
+        <Link
+          href="https://www.instagram.com/masadali_189"
           target="_blank"
           aria-label="Instagram profile"
-          title="Instagram – @muhammadasad9017"
+          title="Instagram – @masadali_189"
           className="text-lightSecondarytext duration-300 ease-in-out hover:text-lightHover dark:text-darkPrimaryGray dark:hover:text-SkyBlue"
         >
           <FaInstagram />

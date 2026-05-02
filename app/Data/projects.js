@@ -65,6 +65,25 @@ export const projectsData = [
     Link: "https://app.retrofam.com",
     caseStudy: "/case-study/retrofam-customer-portal",
   },
+   // Telegram Channels — Tgelevate directory
+   {
+    id: 22,
+    title: "Telegram Channels",
+    category: "Full Stack",
+    description: `Tgelevate — branded as Telegram Channels — is a directory for discovering and joining Telegram channels, groups, bots, and stickers across categories such as crypto, jobs, education, entertainment, and news. Users can explore trending and featured listings, browse Top 100 and rankings, search with category filters, and a Lucky discovery-style action alongside submit-channel flows for owners who want more visibility.
+
+    The product uses a dark, focused UI with straightforward navigation, hero calls to action (Explore Channels, Submit Your Channel), and messaging aimed at active communities. Listings are structured for SEO so channels can be found via search engines, not only inside Telegram.`,
+    stackUsed: [
+      "Next.js",
+      "React.js",
+      "Tailwind CSS",
+      "JavaScript",
+      "SEO",
+    ],
+    image: "/images/tgelevate.png",
+    Link: "https://tgelevate.com/",
+    caseStudy: "/case-study/tgelevate",
+  },
 
   // 4. GL Dream Home - E-commerce
   {
@@ -355,3 +374,6 @@ export const projectsData = [
     caseStudy: "/case-study/dashstack-dashboard",
   },
 ];
+
+/** Featured on homepage (`/`) in this order. Match `id` on each project. */
+export const homepageFeaturedProjectIds = [0, 2, 1, 7, 22];

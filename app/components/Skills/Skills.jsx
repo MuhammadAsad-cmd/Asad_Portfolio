@@ -18,6 +18,7 @@ import {
   SiJavascript, 
   SiTailwindcss, 
   SiRedux, 
+  SiReactquery,
   SiMongodb 
 } from "react-icons/si";
 
@@ -30,7 +31,7 @@ export default function Skills() {
       description:
         "Passionate about UI/UX. Expert in creating responsive, interactive web applications with modern frameworks and tools.",
       technologies:
-        "Next.js, React.js, React-Router-Dom, TailwindCSS, SCSS, CSS, Redux, Redux Toolkit, JavaScript, TypeScript",
+        "Next.js, React.js, React-Router-Dom, TanStack Query, TailwindCSS, SCSS, CSS, Redux, Redux Toolkit, JavaScript, TypeScript",
       color: "text-blue-500",
       bg: "bg-blue-500/10",
     },
@@ -53,6 +54,7 @@ export default function Skills() {
     { name: "TypeScript", icon: SiTypescript, color: "text-[#3178C6]" },
     { name: "Tailwind CSS", icon: SiTailwindcss, color: "text-[#06B6D4]" },
     { name: "Redux", icon: SiRedux, color: "text-[#764ABC]" },
+    { name: "TanStack Query", icon: SiReactquery, color: "text-[#FF4154]" },
     { name: "HTML5", icon: FaHtml5, color: "text-[#E34F26]" },
     { name: "CSS3", icon: FaCss3Alt, color: "text-[#1572B6]" },
     { name: "Git", icon: FaGitAlt, color: "text-[#F05032]" },
@@ -71,10 +73,10 @@ export default function Skills() {
         <div className="mb-10 flex items-center gap-4">
            <div className="h-10 w-1.5 rounded-full bg-SkyBlue"></div>
            <div>
-              <h2 id="skills-heading" className="text-3xl font-bold text-lightPrimarytext dark:text-white">
+              <h2 id="skills-heading" className="text-2xl font-bold tracking-tight text-lightPrimarytext dark:text-white md:text-3xl">
                 Expertise
               </h2>
-              <p className="mt-1 text-base text-lightSecondarytext dark:text-darkPrimaryGray">
+              <p className="mt-1 text-sm leading-relaxed text-lightSecondarytext dark:text-darkPrimaryGray md:text-base">
                  My technical skills and professional proficiency
               </p>
            </div>
@@ -94,7 +96,7 @@ export default function Skills() {
                   </div>
                   <div className="flex-1">
                     <div className="mb-2 flex items-center gap-3">
-                      <h2 className="text-xl font-bold text-lightPrimarytext dark:text-white">
+                      <h2 className="text-lg font-bold text-lightPrimarytext dark:text-white md:text-xl">
                         {category.title}
                       </h2>
                       <span className={`rounded-full px-2.5 py-0.5 text-xs font-semibold ${category.bg} ${category.color}`}>
@@ -142,7 +144,7 @@ export default function Skills() {
           {/* Right Content - Technology Grid */}
           <div>
             <div className="mb-6">
-              <h3 className="mb-1 text-xl font-bold text-lightPrimarytext dark:text-white">
+              <h3 className="mb-1 text-lg font-bold text-lightPrimarytext dark:text-white md:text-xl">
                 Technology Stack
               </h3>
               <p className="text-sm text-lightSecondarytext dark:text-darkPrimaryGray">
