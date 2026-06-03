@@ -3,9 +3,9 @@ import ExpDetails from "@/app/components/ExpDetails/ExpDetails";
 import { experiences } from "@/app/Data/experiences";
 
 export const metadata = {
-  title: "Professional Experience | M. Asad - MERN Stack Developer | Career Journey",
+  title: "Professional Experience | M. Asad - Full Stack Engineer | Career Journey",
   description:
-    "Explore the professional experience of Muhammad Asad, a MERN Stack Developer with 3+ years of experience. Work history at Retrovgames, Motive Coder, and EVS Institute. Specializing in React.js, Next.js, Node.js, MongoDB, and full-stack web development. Based in Lahore, Pakistan.",
+    "Explore the professional experience of Muhammad Asad, a Full Stack Engineer with 3+ years of experience. Work history at Retrovgames, Motive Coder, and EVS Institute. Specializing in React.js, Next.js, Node.js, MongoDB, and full-stack web development. Based in Lahore, Pakistan.",
   authors: [{ name: "M. Asad" }],
   creator: "Muhammad Asad",
   publisher: "Muhammad Asad",
@@ -15,6 +15,7 @@ export const metadata = {
     "Work Experience",
     "Career History",
     "MERN Stack Developer Experience",
+    "Full Stack Engineer Experience",
     "Front-End Developer Experience",
     "Full Stack Developer",
     "React.js Developer",
@@ -50,16 +51,16 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: "Professional Experience | Muhammad Asad - MERN Stack Developer",
+    title: "Professional Experience | Muhammad Asad - Full Stack Engineer",
     description:
-      "Learn about Muhammad Asad's professional journey with 3+ years of experience. Work history at Retrovgames, Motive Coder, and EVS Institute. Specializing in MERN Stack development, React.js, Next.js, and modern web technologies.",
+      "Learn about Muhammad Asad's professional journey with 3+ years of experience. Work history at Retrovgames, Motive Coder, and EVS Institute. Specializing in Full Stack development, React.js, Next.js, and modern web technologies.",
     url: `${process.env.NEXT_PUBLIC_SITE_URL}/details/experience`,
     images: [
       {
         url: `${process.env.NEXT_PUBLIC_SITE_URL}/images/exp.png`,
         width: 1200,
         height: 630,
-        alt: "Professional experience and career journey of Muhammad Asad - MERN Stack Developer",
+        alt: "Professional experience and career journey of Muhammad Asad - Full Stack Engineer",
         type: "image/png",
       },
     ],
@@ -69,7 +70,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Professional Experience | M. Asad - MERN Stack Developer",
+    title: "Professional Experience | M. Asad - Full Stack Engineer",
     description:
       "Discover Muhammad Asad's professional experience with 3+ years in web development. Work history at Retrovgames, Motive Coder, and EVS Institute. Specializing in MERN Stack, React.js, and Next.js.",
     images: [`${process.env.NEXT_PUBLIC_SITE_URL}/images/exp.png`],
@@ -91,7 +92,7 @@ const page = () => {
     "@context": "https://schema.org",
     "@type": "Person",
     name: "Muhammad Asad",
-    jobTitle: "MERN Stack Developer",
+    jobTitle: "Full Stack Engineer",
     url: baseUrl,
     sameAs: [
       "https://www.linkedin.com/in/masadali",
@@ -120,7 +121,7 @@ const page = () => {
     "@type": "ItemList",
     name: "Professional Work Experience of Muhammad Asad",
     description:
-      "Complete work history and professional experience of Muhammad Asad, MERN Stack Developer",
+      "Complete work history and professional experience of Muhammad Asad, Full Stack Engineer",
     itemListElement: experiences.flatMap((exp, expIndex) =>
       exp.roles.map((role, roleIndex) => ({
         "@type": "ListItem",

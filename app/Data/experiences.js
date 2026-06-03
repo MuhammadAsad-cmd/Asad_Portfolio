@@ -8,7 +8,7 @@ export const experiences = [
     time: "Apr 2025 - Present",
     roles: [
       {
-        title: "MERN Stack Developer",
+        title: "Full Stack Engineer",
         type: "Full Time",
         startDate: "2025-10",
         endDate: null, // Present

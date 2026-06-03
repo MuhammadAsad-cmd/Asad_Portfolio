@@ -3,9 +3,9 @@ import React from "react";
 import { projectsData } from "@/app/Data/projects";
 
 export const metadata = {
-  title: "Projects Portfolio | M. Asad - MERN Stack Developer | Web Development Projects",
+  title: "Projects Portfolio | M. Asad - Full Stack Engineer | Web Development Projects",
   description:
-    "Explore 20+ web development projects by Muhammad Asad - MERN Stack Developer. Featured projects include enterprise ERP systems, e-commerce platforms, customer portals, admin dashboards, and modern web applications built with React.js, Next.js, Node.js, and MongoDB. Based in Lahore, Pakistan.",
+    "Explore 20+ web development projects by Muhammad Asad - Full Stack Engineer. Featured projects include enterprise ERP systems, e-commerce platforms, customer portals, admin dashboards, and modern web applications built with React.js, Next.js, Node.js, and MongoDB. Based in Lahore, Pakistan.",
   authors: [{ name: "M. Asad" }],
   creator: "Muhammad Asad",
   publisher: "Muhammad Asad",
@@ -51,7 +51,7 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: "Projects Portfolio | Muhammad Asad - MERN Stack Developer",
+    title: "Projects Portfolio | Muhammad Asad - Full Stack Engineer",
     description:
       "Discover 20+ professional web development projects by Muhammad Asad. Enterprise ERP systems, e-commerce platforms, customer portals, and modern web applications built with React.js, Next.js, Node.js, and MongoDB.",
     url: `${process.env.NEXT_PUBLIC_SITE_URL}/details/projects`,
@@ -60,7 +60,7 @@ export const metadata = {
         url: `${process.env.NEXT_PUBLIC_SITE_URL}/images/proj.png`,
         width: 1200,
         height: 630,
-        alt: "Web development projects portfolio by Muhammad Asad - MERN Stack Developer",
+        alt: "Web development projects portfolio by Muhammad Asad - Full Stack Engineer",
         type: "image/png",
       },
     ],
@@ -70,7 +70,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Projects Portfolio | M. Asad - MERN Stack Developer",
+    title: "Projects Portfolio | M. Asad - Full Stack Engineer",
     description:
       "Explore 20+ web development projects by Muhammad Asad, featuring enterprise applications, e-commerce platforms, and modern web solutions built with React.js, Next.js, and MERN Stack.",
     images: [`${process.env.NEXT_PUBLIC_SITE_URL}/images/proj.png`],
@@ -135,7 +135,7 @@ const page = () => {
     "@context": "https://schema.org",
     "@type": "Person",
     name: "Muhammad Asad",
-    jobTitle: "MERN Stack Developer",
+    jobTitle: "Full Stack Engineer",
     url: baseUrl,
     sameAs: [
       "https://www.linkedin.com/in/masadali",

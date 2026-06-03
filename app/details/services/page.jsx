@@ -69,7 +69,7 @@ export const metadata = {
         url: `${process.env.NEXT_PUBLIC_SITE_URL}/images/servicsmeta.png`,
         width: 1200,
         height: 630,
-        alt: "Web development services by Muhammad Asad - MERN Stack Developer offering professional web solutions",
+        alt: "Web development services by Muhammad Asad - Full Stack Engineer offering professional web solutions",
         type: "image/png",
       },
     ],
@@ -150,7 +150,7 @@ const page = () => {
     provider: {
       "@type": "Person",
       name: "Muhammad Asad",
-      jobTitle: "MERN Stack Developer",
+      jobTitle: "Full Stack Engineer",
       email: "189asadali@gmail.com",
       url: baseUrl,
       sameAs: [

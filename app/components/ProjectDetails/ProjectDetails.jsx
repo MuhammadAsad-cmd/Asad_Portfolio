@@ -102,7 +102,7 @@ const ProjectDetails = () => {
                             <div className="relative aspect-video cursor-pointer overflow-hidden">
                               <Image
                                 src={project.image || "/placeholder.svg"}
-                                alt={`${project.title} - ${project.stackUsed?.join(', ') || 'Web Development Project'} by Muhammad Asad, MERN Stack Developer`}
+                                alt={`${project.title} - ${project.stackUsed?.join(', ') || 'Web Development Project'} by Muhammad Asad, Full Stack Engineer`}
                                 fill
                                 className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
                                 sizes="(max-width: 768px) 100vw, 60vw"

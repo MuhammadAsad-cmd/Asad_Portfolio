@@ -3,9 +3,9 @@ import React from "react";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Skills & Expertise | M. Asad - MERN Stack Developer | Technical Skills",
+  title: "Skills & Expertise | M. Asad - Full Stack Engineer | Technical Skills",
   description:
-    "Comprehensive technical skills and expertise of Muhammad Asad - MERN Stack Developer. Proficient in React.js, Next.js, TanStack Query, Node.js, MongoDB, TypeScript, Tailwind CSS, Redux Toolkit, and 15+ modern web technologies.",
+    "Comprehensive technical skills and expertise of Muhammad Asad - Full Stack Engineer. Proficient in React.js, Next.js, TanStack Query, Node.js, MongoDB, TypeScript, Tailwind CSS, Redux Toolkit, and 15+ modern web technologies.",
   authors: [{ name: "M. Asad" }],
   creator: "Muhammad Asad",
   publisher: "Muhammad Asad",
@@ -54,7 +54,7 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: "Skills & Expertise | Muhammad Asad - MERN Stack Developer",
+    title: "Skills & Expertise | Muhammad Asad - Full Stack Engineer",
     description:
       "Explore the comprehensive technical skills of Muhammad Asad. Expert in React.js, Next.js, Node.js, MongoDB, TypeScript, and 15+ modern web technologies with 3+ years of professional experience.",
     url: `${process.env.NEXT_PUBLIC_SITE_URL}/details/skills`,
@@ -63,7 +63,7 @@ export const metadata = {
         url: `${process.env.NEXT_PUBLIC_SITE_URL}/images/asadimg.avif`,
         width: 1200,
         height: 630,
-        alt: "Technical skills and expertise of Muhammad Asad - MERN Stack Developer",
+        alt: "Technical skills and expertise of Muhammad Asad - Full Stack Engineer",
         type: "image/avif",
       },
     ],
@@ -73,7 +73,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Skills & Expertise | M. Asad - MERN Stack Developer",
+    title: "Skills & Expertise | M. Asad - Full Stack Engineer",
     description:
       "Comprehensive technical skills including React.js, Next.js, Node.js, MongoDB, TypeScript, and 15+ modern web technologies. 3+ years of professional experience.",
     images: [`${process.env.NEXT_PUBLIC_SITE_URL}/images/asadimg.avif`],
@@ -431,7 +431,7 @@ const SkillsDetailPage = () => {
     "@context": "https://schema.org",
     "@type": "Person",
     name: "Muhammad Asad",
-    jobTitle: "MERN Stack Developer",
+    jobTitle: "Full Stack Engineer",
     url: baseUrl,
     knowsAbout: allSkills.map((skill) => skill.name),
     sameAs: [
