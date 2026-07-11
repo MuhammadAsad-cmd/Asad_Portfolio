@@ -68,7 +68,7 @@ const ProjectTabs = ({ activeCategory, onCategoryChange, projectCounts }) => {
                 {/* Horizontal scrollable tabs — full width; arrows sit on top */}
                 <div
                     ref={scrollRef}
-                    className="hide-scrollbar flex w-full touch-pan-x scroll-smooth gap-3 overflow-x-auto pb-2 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+                    className="hide-scrollbar mx-auto flex w-fit max-w-full touch-pan-x scroll-smooth justify-center gap-3 overflow-x-auto pb-2 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
                 >
                     {projectCategories.map((category) => {
                         const isActive =

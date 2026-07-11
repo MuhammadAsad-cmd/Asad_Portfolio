@@ -11,7 +11,7 @@ import CollapsibleDescription from "./CollapsibleDescription";
 import ProjectTabs from "./ProjectTabs";
 
 /** Max featured rows on the homepage — full catalog lives on /details/projects */
-const HOME_FEATURED_LIMIT = 5;
+const HOME_FEATURED_LIMIT = 6;
 
 const Projects2 = () => {
   const [activeCategory, setActiveCategory] = useState("all");
@@ -69,7 +69,7 @@ const Projects2 = () => {
                       Featured Projects
                     </h2>
                     <p className="mt-1 text-sm leading-relaxed text-lightSecondarytext dark:text-darkPrimaryGray md:text-base">
-                      Hector, RetroFam, RetrovGames, Canrover, Telegram—then the full catalog
+                      Hector, Sportly, Telegram, BitKnit, RetrovGames, RetroFam—then the full catalog
                     </p>
                   </div>
                 </div>
@@ -152,7 +152,7 @@ const Projects2 = () => {
               {displayedProjects.map((project, index) => {
                 const isEven = index % 2 === 1;
                 return (
-                  <div key={project.id} className="group relative">
+                  <div key={project.slug ?? project.id} className="group relative">
                     <div
                       className={`flex flex-col gap-6 lg:gap-10 ${isEven ? "lg:flex-row-reverse" : "lg:flex-row"} items-start`}
                     >

@@ -106,45 +106,45 @@ const Profile = () => {
 
               <EnhancedMarquee />
 
-              <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+              <div className="flex flex-wrap items-center gap-x-4 gap-y-1.5">
                 <div className="flex items-center gap-2 text-lightSecondarytext dark:text-darkPrimaryGray">
-                  <IoLocationOutline className="text-SkyBlue" />
+                  <IoLocationOutline className="shrink-0 text-SkyBlue" />
                   <span className="text-sm">Lahore, Punjab, Pakistan</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <IoCheckmarkCircle className="text-sm text-green-500" />
+                  <IoCheckmarkCircle className="shrink-0 text-sm text-green-500" />
                   <span className="text-sm font-medium text-green-600 dark:text-green-400">
                     Available for Freelance
                   </span>
                 </div>
               </div>
 
-              <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
+              <div className="grid grid-cols-2 gap-2 sm:flex sm:flex-row sm:items-center sm:gap-4">
                 <button
                   onClick={openWhatsApp}
                   title="Start WhatsApp Chat"
-                  className="group flex min-w-[160px] items-center justify-center gap-2 rounded-xl bg-SkyBlue px-6 py-3 font-semibold text-white transition-all duration-300 hover:bg-opacity-90 hover:shadow-lg hover:shadow-SkyBlue/30 active:scale-95"
+                  className="group col-span-2 flex items-center justify-center gap-2 rounded-xl bg-SkyBlue px-4 py-2.5 text-sm font-semibold text-white transition-all duration-300 hover:bg-opacity-90 hover:shadow-lg hover:shadow-SkyBlue/30 active:scale-95 sm:col-span-1 sm:min-w-[160px] sm:px-6 sm:py-3"
                 >
-                  <FaWhatsapp className="text-xl group-hover:rotate-12 transition-transform" />
-                  <span>Let's Talk</span>
+                  <FaWhatsapp className="text-lg transition-transform group-hover:rotate-12 sm:text-xl" />
+                  <span>Let&apos;s Talk</span>
                 </button>
 
                 <Link
                   href="mailto:189asadali@gmail.com"
-                  className="group flex min-w-[160px] items-center justify-center gap-2 rounded-xl bg-SkyBlue/10 px-6 py-3 font-semibold text-SkyBlue transition-all duration-300 hover:bg-SkyBlue/20 dark:bg-white/5 dark:text-white dark:hover:bg-white/10"
+                  className="group flex items-center justify-center gap-1.5 rounded-xl bg-SkyBlue/10 px-3 py-2.5 text-sm font-semibold text-SkyBlue transition-all duration-300 hover:bg-SkyBlue/20 dark:bg-white/5 dark:text-white dark:hover:bg-white/10 sm:min-w-[160px] sm:gap-2 sm:px-6 sm:py-3"
                 >
-                  <FaEnvelope className="text-lg" />
+                  <FaEnvelope className="text-base sm:text-lg" />
                   <span>Email Me</span>
-                  <BsSendFill className="text-xs transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1" />
+                  <BsSendFill className="hidden text-xs transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 sm:inline" />
                 </Link>
 
                 <a
                   href="/Asad Front End resume.pdf"
                   download
-                  className="group flex min-w-[160px] items-center justify-center gap-2 rounded-xl border-2 border-slate-200 px-6 py-3 font-semibold text-slate-600 transition-all duration-300 hover:border-SkyBlue hover:text-SkyBlue dark:border-white/10 dark:text-white/70 dark:hover:border-SkyBlue dark:hover:text-SkyBlue"
+                  className="group flex items-center justify-center gap-1.5 rounded-xl border-2 border-slate-200 px-3 py-2.5 text-sm font-semibold text-slate-600 transition-all duration-300 hover:border-SkyBlue hover:text-SkyBlue dark:border-white/10 dark:text-white/70 dark:hover:border-SkyBlue dark:hover:text-SkyBlue sm:min-w-[160px] sm:gap-2 sm:px-6 sm:py-3"
                 >
-                  <BsDownload className="text-lg group-hover:animate-bounce" />
-                  <span>Download CV</span>
+                  <BsDownload className="text-base group-hover:animate-bounce sm:text-lg" />
+                  <span className="whitespace-nowrap">Download CV</span>
                 </a>
               </div>
 

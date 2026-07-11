@@ -80,7 +80,7 @@ const ProjectDetails = () => {
                      const isEven = index % 2 === 1;
                      return (
                        <article
-                         key={project.id}
+                         key={project.slug ?? project.id}
                          className="group relative"
                          role="listitem"
                          itemScope

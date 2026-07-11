@@ -3,6 +3,7 @@ export const projectsData = [
   // 1. Hector - Full Stack
   {
     id: 0,
+    slug: "hector",
     title: "Hector — Multi-Module Enterprise ERP System",
     category: "Full Stack",
     description: `Hector is a comprehensive, multi-module Enterprise Resource Planning (ERP) system designed to streamline complex business operations. As a Full Stack Developer, I architected and implemented core modules including Order Processing, Inventory Management, User & Role Management, Product Management, Employee Management, and an Attendance System.
@@ -24,9 +25,80 @@ export const projectsData = [
     caseStudy: "/case-study/hector",
   },
 
-  // 2. RetrovGames CP - Customer Portal
+  // 2. Sportly - Training Camp Marketplace
   {
     id: 1,
+    slug: "sportly",
+    title: "Sportly — Training Camp Marketplace",
+    category: "Full Stack",
+    description: `Sportly is a marketplace connecting sports teams and coaches with training camp facilities worldwide — think Booking.com, but purpose-built for football/sports clubs looking to book training camps abroad. The platform serves three distinct user types (travelers, camp hosts, and platform admins), each with their own dashboard and permissions.
+
+    As a frontend developer on the project, I worked on building and redesigning core UI components using Next.js 16 (App Router) and Tailwind CSS, including the site-wide footer with custom brand theming; implementing Google One Tap authentication alongside email/password, Facebook, and Apple sign-in flows; building the client-side Stripe payment flow with secure checkout redirects for camp bookings; working with Redux, React Query, and Context for state management across search, filtering, wishlist, and booking flows; and collaborating on backend handoff documentation for the Camp Operator (CP) and Admin dashboards, bridging frontend and backend teams.
+
+    The platform includes real-time features (Socket.IO-based group chat and notifications), advanced camp search/filtering, a full booking + review system, and social features like team groups with camp comparison and voting.`,
+    stackUsed: [
+      "Next.js 16",
+      "TypeScript",
+      "Tailwind CSS",
+      "Redux Toolkit",
+      "React Query",
+      "Socket.IO",
+      "Stripe",
+      "Google Maps API",
+      "AWS S3",
+      "NextAuth",
+    ],
+    contribution:
+      "Frontend Developer — core UI components & brand theming, multi-provider auth (Google One Tap, email, Facebook, Apple), Stripe checkout flow, state management for search/filter/wishlist/booking, CP & Admin dashboard handoff documentation",
+    image: "/images/sportly.png",
+    Link: "https://sportly.se/",
+    caseStudy: "/case-study/sportly",
+  },
+
+  // 3. Telegram Channels — Tgelevate directory
+  {
+    id: 2,
+    slug: "telegram-channels",
+    title: "Telegram Channels",
+    category: "Full Stack",
+    description: `Tgelevate — branded as Telegram Channels — is a directory for discovering and joining Telegram channels, groups, bots, and stickers across categories such as crypto, jobs, education, entertainment, and news. Users can explore trending and featured listings, browse Top 100 and rankings, search with category filters, and a Lucky discovery-style action alongside submit-channel flows for owners who want more visibility.
+
+    The product uses a dark, focused UI with straightforward navigation, hero calls to action (Explore Channels, Submit Your Channel), and messaging aimed at active communities. Listings are structured for SEO so channels can be found via search engines, not only inside Telegram.`,
+    stackUsed: [
+      "Next.js",
+      "React.js",
+      "Tailwind CSS",
+      "JavaScript",
+      "SEO",
+    ],
+    image: "/images/tgelevate.png",
+    Link: "https://tgelevate.com/",
+    caseStudy: "/case-study/tgelevate",
+  },
+
+  // 4. BitKnit - UI/UX
+  {
+    id: 3,
+    slug: "bitknit",
+    title: "BitKnit Limited — Digital Agency Portfolio",
+    category: "UI/UX",
+    description: `BitKnit Limited is a premium digital agency website showcasing services in paid advertising, business automation, and custom web development. The site features stunning Framer Motion animations, smooth page transitions, and interactive UI elements that create an engaging user experience. Highlights include an animated hero section, dynamic service showcases, client testimonials carousel, and a comprehensive portfolio of redesigned websites for various industries including e-commerce, SaaS, healthcare, and more. Built to demonstrate cutting-edge web design and development capabilities.`,
+    stackUsed: [
+      "Next.js",
+      "React.js",
+      "Tailwind CSS",
+      "Framer Motion",
+      "JavaScript",
+    ],
+    image: "/images/bitknit.png",
+    Link: "https://bitknitlimited.com/",
+    caseStudy: "/case-study/bitknit",
+  },
+
+  // 5. RetrovGames CP - Customer Portal
+  {
+    id: 4,
+    slug: "retrovgames-customer-portal",
     title: "RetrovGames — Customer Portal",
     category: "Customer Portals",
     description: `A responsive Shopify customer portal that centralizes post-purchase operations: order management, shipment tracking, returns, PDF invoices, coupons & gift cards, and a trade-in program for selling gaming items. I led the frontend — implementing the full UI, interactions, and dynamic client-side behavior, while backend APIs were provided by a Node.js service.`,
@@ -47,10 +119,11 @@ export const projectsData = [
 
   // 3. RetroFam CP - Customer Portal
   {
-    id: 2,
+    id: 5,
+    slug: "retrofam-customer-portal",
     title: "RetroFam — Customer Portal",
     category: "Customer Portals",
-    description: `A responsive Shopify customer portal that centralizes post-purchase operations: order management, shipment tracking, returns, PDF invoices, coupons & gift cards, and a trade-in program for selling gaming items. I led the frontend — implementing the full UI, interactions, and dynamic client-side behavior, while backend APIs were provided by a Node.js service.`,
+    description: `RetroFam's Shopify customer portal — built for a sibling gaming retail brand — centralizes post-purchase operations: order management, shipment tracking, returns, PDF invoices, coupons & gift cards, and a trade-in program for selling gaming items. I led the frontend for RetroFam specifically, implementing the full UI, interactions, and dynamic client-side behavior, while backend APIs were provided by a Node.js service.`,
     stackUsed: [
       "Next.js",
       "Tailwind CSS",
@@ -65,70 +138,33 @@ export const projectsData = [
     Link: "https://app.retrofam.com",
     caseStudy: "/case-study/retrofam-customer-portal",
   },
-   // Telegram Channels — Tgelevate directory
-   {
-    id: 22,
-    title: "Telegram Channels",
-    category: "Full Stack",
-    description: `Tgelevate — branded as Telegram Channels — is a directory for discovering and joining Telegram channels, groups, bots, and stickers across categories such as crypto, jobs, education, entertainment, and news. Users can explore trending and featured listings, browse Top 100 and rankings, search with category filters, and a Lucky discovery-style action alongside submit-channel flows for owners who want more visibility.
 
-    The product uses a dark, focused UI with straightforward navigation, hero calls to action (Explore Channels, Submit Your Channel), and messaging aimed at active communities. Listings are structured for SEO so channels can be found via search engines, not only inside Telegram.`,
-    stackUsed: [
-      "Next.js",
-      "React.js",
-      "Tailwind CSS",
-      "JavaScript",
-      "SEO",
-    ],
-    image: "/images/tgelevate.png",
-    Link: "https://tgelevate.com/",
-    caseStudy: "/case-study/tgelevate",
-  },
-
-  // 4. GL Dream Home - E-commerce
-  {
-    id: 3,
-    title: "GL Dream Home",
-    category: "E-commerce",
-    description: `A premium furniture and interior design platform that blends curated collections with inspirational galleries. It offers detailed showcases, a user-friendly interface, and a fully responsive design for seamless shopping across devices.`,
-    stackUsed: ["Next.js", "React.js", "Tailwind CSS", "JavaScript"],
-    image: "/images/gldreamhome.png",
-    Link: "https://gldreamhome.com",
-    caseStudy: "/case-study/gl-dream-home",
-  },
-
-  // 5. GL Group UAE - UI/UX
-  {
-    id: 4,
-    title: "GL Group UAE",
-    category: "UI/UX",
-    description: `The GL Group UAE site presents a diversified business portfolio—from real estate to hospitality—in a clean, corporate design. It highlights projects, investor relations, and brand identity through intuitive navigation and responsive layouts.`,
-    stackUsed: ["Next.js", "React.js", "Tailwind CSS", "JavaScript"],
-    image: "/images/groupuae.png",
-    Link: "https://www.glgroupuae.com",
-    caseStudy: "/case-study/gl-group-uae",
-  },
-
-  // 6. BitKnit - UI/UX
-  {
-    id: 5,
-    title: "BitKnit Limited — Digital Agency Portfolio",
-    category: "UI/UX",
-    description: `BitKnit Limited is a premium digital agency website showcasing services in paid advertising, business automation, and custom web development. The site features stunning Framer Motion animations, smooth page transitions, and interactive UI elements that create an engaging user experience. Highlights include an animated hero section, dynamic service showcases, client testimonials carousel, and a comprehensive portfolio of redesigned websites for various industries including e-commerce, SaaS, healthcare, and more. Built to demonstrate cutting-edge web design and development capabilities.`,
-    stackUsed: [
-      "Next.js",
-      "React.js",
-      "Tailwind CSS",
-      "Framer Motion",
-      "JavaScript",
-    ],
-    image: "/images/bitknit.png",
-    Link: "https://bitknitlimited.com/",
-    caseStudy: "/case-study/bitknit",
-  },
-  // 6. Bourter - Landing Page
+  // 7. Canrover - Admin Dashboard
   {
     id: 6,
+    slug: "canrover-admin",
+    title: "Canrover Admin Panel",
+    category: "Admin Dashboards",
+    description: `Developed a fully dynamic Next.js/Node.js admin dashboard for a US scooter-rental client, featuring live map tracking, remote lock/unlock, QR-code ride activation, form validation, and secure access. Added Google Maps-based zone management to visualize parking zones, maintenance areas, danger zones, and more—all in a responsive, server-rendered interface for robust type safety and performance.`,
+    stackUsed: [
+      "Next.js",
+      "Node.js",
+      "TypeScript",
+      "Redux Toolkit",
+      "React Hook Form",
+      "Zod",
+      "Google Maps API",
+      "Tailwind CSS",
+    ],
+    image: "/images/canrover.png",
+    Link: "https://canrover.vercel.app",
+    caseStudy: "/case-study/canrover-admin",
+  },
+
+  // 8. Bourter - Landing Page
+  {
+    id: 7,
+    slug: "bourter-landing",
     title: "Bourter",
     category: "UI/UX",
     description: `Bourter is a comprehensive ride-sharing platform landing page that connects riders with verified drivers for fast, safe, and reliable transportation. The platform features an all-in-one solution for booking rides, tracking in real-time, and seamless payments.
@@ -156,30 +192,36 @@ export const projectsData = [
     caseStudy: "/case-study/bourter-landing-page",
   },
 
-  // 7. Canrover - Admin Dashboard
-  {
-    id: 7,
-    title: "Canrover Admin Panel",
-    category: "Admin Dashboards",
-    description: `Developed a fully dynamic Next.js/Node.js admin dashboard for a US scooter-rental client, featuring live map tracking, remote lock/unlock, QR-code ride activation, form validation, and secure access. Added Google Maps-based zone management to visualize parking zones, maintenance areas, danger zones, and more—all in a responsive, server-rendered interface for robust type safety and performance.`,
-    stackUsed: [
-      "Next.js",
-      "Node.js",
-      "TypeScript",
-      "Redux Toolkit",
-      "React Hook Form",
-      "Zod",
-      "Google Maps API",
-      "Tailwind CSS",
-    ],
-    image: "/images/canrover.png",
-    Link: "https://canrover.vercel.app",
-    caseStudy: "/case-study/canrover-admin",
-  },
-
-  // 8. Ryde - Admin Dashboard
+  // 9. GL Dream Home - E-commerce
   {
     id: 8,
+    slug: "gl-dream-home",
+    title: "GL Dream Home",
+    category: "E-commerce",
+    description: `A premium furniture and interior design platform that blends curated collections with inspirational galleries. It offers detailed showcases, a user-friendly interface, and a fully responsive design for seamless shopping across devices.`,
+    stackUsed: ["Next.js", "React.js", "Tailwind CSS", "JavaScript"],
+    image: "/images/gldreamhome.png",
+    Link: "https://gldreamhome.com",
+    caseStudy: "/case-study/gl-dream-home",
+  },
+
+  // 5. GL Group UAE - UI/UX
+  {
+    id: 9,
+    slug: "gl-group-uae",
+    title: "GL Group UAE",
+    category: "UI/UX",
+    description: `The GL Group UAE site presents a diversified business portfolio—from real estate to hospitality—in a clean, corporate design. It highlights projects, investor relations, and brand identity through intuitive navigation and responsive layouts.`,
+    stackUsed: ["Next.js", "React.js", "Tailwind CSS", "JavaScript"],
+    image: "/images/groupuae.png",
+    Link: "https://www.glgroupuae.com",
+    caseStudy: "/case-study/gl-group-uae",
+  },
+
+  // 10. Ryde - Admin Dashboard
+  {
+    id: 10,
+    slug: "ryde-admin",
     title: "Ryde Admin Dashboard",
     category: "Admin Dashboards",
     description: `Ryde Admin Dashboard is a web-based task management tool built around a dynamic Kanban board. Users can create projects, add and organize tasks across Backlog, To-Do, In-Progress, and Done columns, and easily move cards via drag-and-drop. Real-time status updates keep teams in sync, while a clean, responsive UI—powered by Tailwind CSS—ensures a seamless experience across devices.`,
@@ -199,7 +241,8 @@ export const projectsData = [
 
   // 9. Bourter - Admin Dashboard
   {
-    id: 8,
+    id: 11,
+    slug: "bourter-admin",
     title: "Bourter — Admin Dashboard",
     category: "Admin Dashboards",
     description: `Bourter is a modern, feature-rich admin dashboard built with the latest web technologies. The dashboard provides comprehensive data visualization, user management, analytics tracking, and administrative controls. Features include interactive charts and graphs, real-time data updates with TanStack Query, smooth animations powered by Framer Motion, responsive design for all devices, and an intuitive interface for managing complex data. Built with performance and user experience in mind, utilizing server-side rendering and optimized data fetching strategies.`,
@@ -218,7 +261,8 @@ export const projectsData = [
 
   // 10. CodesInc - UI/UX
   {
-    id: 10,
+    id: 12,
+    slug: "codesinc",
     title: "CodesInc – IT Solutions & Services",
     category: "UI/UX",
     description: `A corporate website showcasing IT services with a modern, responsive design. It includes smooth page transitions, custom animations, and an intuitive layout. Optimized for performance and built to reflect professional branding.`,
@@ -230,7 +274,8 @@ export const projectsData = [
 
   // 11. GlobalZairGuide - UI/UX
   {
-    id: 10,
+    id: 13,
+    slug: "globalzairguide",
     title: "GlobalZairGuide — Spiritual Journey & Ziyarat Platform",
     category: "UI/UX",
     description: `GlobalZairGuide is a comprehensive spiritual journey and Ziyarat guidance platform designed for religious tourism. The platform helps pilgrims discover and visit sacred places in Makkah, Madinah, and Iraq's holy shrines. Features include interactive maps of sacred locations, tailored religious tourism packages from verified agents, integrated faith tools (Quranic verses, Hadiths, Qibla direction), and a seamless booking experience. Built with modern UI/UX principles to provide a serene and intuitive user experience for spiritual travelers.`,
@@ -242,7 +287,8 @@ export const projectsData = [
 
   // 12. RizqApp - UI/UX
   {
-    id: 12,
+    id: 14,
+    slug: "rizqapp",
     title: "RizqApp — Digital Loyalty Program for Restaurants",
     category: "UI/UX",
     description: `RizqApp is a modern digital loyalty platform that helps restaurants boost customer retention and increase repeat visits. The platform replaces traditional paper loyalty cards with a 100% digital solution featuring QR code scanning, points tracking, and automated rewards. Customers can manage all their loyalty cards in one app, while restaurants get a comprehensive dashboard to manage their loyalty programs, track customer engagement, and attract new clients. Built with a clean, user-friendly interface optimized for both customers and restaurant owners.`,
@@ -254,7 +300,8 @@ export const projectsData = [
 
   // 13. Aziz Store/HairOil - E-commerce
   {
-    id: 13,
+    id: 15,
+    slug: "hairoil-ecommerce",
     title: "HairOil — Premium E-commerce Platform",
     category: "E-commerce",
     description: `A full-stack e-commerce platform for premium hair oil products featuring a modern customer-facing website and comprehensive admin dashboard. The platform includes dynamic product catalog with 10+ premium hair oils, advanced shopping cart with Redux state management, secure checkout process with address validation, order management system, and real-time admin analytics. Built with Next.js 15 and React 19, featuring responsive design, smooth animations, and seamless user experience across all devices.`,
@@ -278,27 +325,10 @@ export const projectsData = [
     caseStudy: "/case-study/hair-oil-ecommerce",
   },
 
-  // 14. Kanban Board - Admin Dashboard
-  {
-    id: 13,
-    title: "Kanban Board Project",
-    category: "Admin Dashboards",
-    description: `A task-management Kanban board with Backlog, To-Do, In-Progress, and Done columns. Features include project creation, drag-and-drop cards, and real-time status updates in a clean, responsive interface.`,
-    stackUsed: [
-      "Next.js",
-      "React.js",
-      "Redux Toolkit",
-      "JavaScript",
-      "Tailwind CSS",
-    ],
-    image: "/images/kanban.png",
-    Link: "https://projectkanban.vercel.app",
-    caseStudy: "/case-study/kanban-board",
-  },
-
   // Rest of the projects...
   {
-    id: 15,
+    id: 16,
+    slug: "the-entertainer",
     title: "the ENTERTAINER – Ultimate BOGO Deals & Lifestyle Savings",
     category: "UI/UX",
     description: `A savings platform offering Buy One Get One Free deals across dining, wellness, and more in the Middle East. It features intuitive navigation, responsive design, and a dedicated mobile experience to unlock premium offers seamlessly.`,
@@ -308,7 +338,8 @@ export const projectsData = [
     caseStudy: "/case-study/the-entertainer",
   },
   {
-    id: 15,
+    id: 17,
+    slug: "breaking-balls-sports",
     title: "Breaking Balls Sports – Multi-Sport Analytics",
     category: "UI/UX",
     description: `A comprehensive fantasy and betting analytics hub covering NFL, NBA, MLB, and more. Offers in-depth research, community features, and a user-friendly interface for informed decision-making in fantasy leagues and betting.`,
@@ -318,7 +349,8 @@ export const projectsData = [
     caseStudy: "/case-study/breaking-balls-sports",
   },
   {
-    id: 17,
+    id: 18,
+    slug: "minimog-template",
     title: "E-Commerce Minimog Template",
     category: "E-commerce",
     description: `A sleek, minimal e-commerce storefront template with product grids, filters, and checkout flows. Optimized for performance and responsive across all devices, it delivers a smooth shopping experience.`,
@@ -328,7 +360,8 @@ export const projectsData = [
     caseStudy: "/case-study/minimog-template",
   },
   {
-    id: 17,
+    id: 19,
+    slug: "github-profile-viewer",
     title: "Github Profile Viewer",
     category: "UI/UX",
     description: `A real-time GitHub user lookup tool that fetches and displays profile data, repositories, and stats. It features live search, responsive design, and error handling for seamless browsing.`,
@@ -338,7 +371,8 @@ export const projectsData = [
     caseStudy: "/case-study/github-profile-viewer",
   },
   {
-    id: 19,
+    id: 20,
+    slug: "clickup-template",
     title: "ClickUp Template",
     category: "UI/UX",
     description: `A customizable ClickUp dashboard clone with task lists, statuses, and filters. Built for teams to visualize workflows, assign tasks, and track progress in a clean, responsive interface.`,
@@ -348,7 +382,8 @@ export const projectsData = [
     caseStudy: "/case-study/clickup-template",
   },
   {
-    id: 19,
+    id: 21,
+    slug: "dental-health",
     title: "Dental Health Frontend",
     category: "UI/UX",
     description: `A dental clinic frontend template with service showcases, appointment booking UI, and doctor profiles. Features a crisp, responsive design optimized for patient engagement.`,
@@ -358,7 +393,8 @@ export const projectsData = [
     caseStudy: "/case-study/dental-health",
   },
   {
-    id: 21,
+    id: 22,
+    slug: "dashstack-dashboard",
     title: "DashStack-Dashboard",
     category: "Admin Dashboards",
     description: `An analytics dashboard template with charts, tables, and KPI widgets. It provides real-time data visualization, filtering, and a modular layout for enterprise applications.`,
@@ -376,4 +412,4 @@ export const projectsData = [
 ];
 
 /** Featured on homepage (`/`) in this order. Match `id` on each project. */
-export const homepageFeaturedProjectIds = [0, 2, 1, 7, 22];
+export const homepageFeaturedProjectIds = [0, 1, 2, 3, 4, 5];
