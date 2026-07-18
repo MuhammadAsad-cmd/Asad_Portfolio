@@ -4,12 +4,14 @@ export const projectsData = [
   {
     id: 0,
     slug: "hector",
-    title: "Hector — Multi-Module Enterprise ERP System",
+    title: "Hector — Multi-Tenant Enterprise ERP System",
     category: "Full Stack",
-    description: `Hector is a comprehensive, multi-module Enterprise Resource Planning (ERP) system designed to streamline complex business operations. As a Full Stack Developer, I architected and implemented core modules including Order Processing, Inventory Management, User & Role Management, Product Management, Employee Management, and an Attendance System.
+    description: `A high-scale, multi-tenant ERP infrastructure designed to manage cross-business operations safely. Engineered with rigid data isolation, granular role-based access control (RBAC), and custom API pipelines to maximize database read/write speeds under heavy transactional load.
 
-    The system also features specialized modules for Sourcing, Procurement, Order Fulfillment, and Barcode Scanning. I led the full-stack development for key modules while collaborating on frontend components for others. The application integrates seamless barcode scanning for inventory tracking and utilizes a robust tech stack to ensure high performance and scalability across all business functions.`,
+    Core modules span Order Processing, Inventory Management, User & Role Management, Product Management, Employee Management, Attendance, Sourcing, Procurement, Order Fulfillment, and Barcode Scanning—unified under one platform built for teams that cannot afford downtime or data leakage between tenants.`,
     stackUsed: [
+      "Multi-Tenant Architecture",
+      "RBAC",
       "React.js",
       "Node.js",
       "Express.js",

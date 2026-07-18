@@ -163,7 +163,7 @@ export const enhancedServicesData = [
   {
     name: "Full-Stack Business Applications",
     description:
-      "End-to-end MERN and Next.js applications built around real business processes, not just screens and forms.",
+      "End-to-end Node.js and Next.js applications built around real business processes, not just screens and forms.",
     features: [
       "System Architecture",
       "Frontend UI",
@@ -171,7 +171,7 @@ export const enhancedServicesData = [
       "Database Design",
       "Production Deployment",
     ],
-    technologies: ["MERN Stack", "Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
+    technologies: ["Node.js", "Next.js", "React", "TypeScript", "Tailwind CSS", "Vercel"],
     deliveryTime: "4-12 weeks",
     complexity: "High",
     category: "Full Stack",

@@ -160,6 +160,23 @@ const Experience = () => {
                             ))}
                           </div>
                         )}
+
+                        {role.highlights?.length > 0 && (
+                          <ul className="mt-4 space-y-2">
+                            {role.highlights.map((highlight, hIdx) => (
+                              <li
+                                key={hIdx}
+                                className="flex gap-2 text-sm leading-relaxed text-lightSecondarytext dark:text-darkPrimaryGray"
+                              >
+                                <span
+                                  className="mt-2 size-1.5 shrink-0 rounded-full bg-SkyBlue"
+                                  aria-hidden
+                                />
+                                <span>{highlight}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        )}
                       </div>
                     ))}
                   </div>

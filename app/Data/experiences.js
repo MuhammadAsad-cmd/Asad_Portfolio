@@ -13,6 +13,10 @@ export const experiences = [
         startDate: "2025-10",
         endDate: null, // Present
         skills: "MongoDB, Express.js, React, Node.js, Next.js, Redux Toolkit",
+        highlights: [
+          "Designed and maintained the core backend infrastructure utilizing Node.js and Next.js, optimizing database query times for high-volume traffic.",
+          "Engineered custom API endpoints to securely automate core internal workflows and external system syncs.",
+        ],
       },
       {
         title: "Front End Next.js Developer",

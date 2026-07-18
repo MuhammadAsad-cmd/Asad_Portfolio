@@ -3,9 +3,9 @@ import ExpDetails from "@/app/components/ExpDetails/ExpDetails";
 import { experiences } from "@/app/Data/experiences";
 
 export const metadata = {
-  title: "Professional Experience | M. Asad - Full Stack Engineer | Career Journey",
+  title: "Professional Experience | M. Asad - Enterprise ERP Engineer | Career Journey",
   description:
-    "Explore the professional experience of Muhammad Asad, a Full Stack Engineer with 3+ years of experience. Work history at Retrovgames, Motive Coder, and EVS Institute. Specializing in React.js, Next.js, Node.js, MongoDB, and full-stack web development. Based in Lahore, Pakistan.",
+    "Explore the professional experience of Muhammad Asad, an Enterprise ERP & Infrastructure Engineer with 3+ years of experience. Work history at Retrovgames, Motive Coder, and EVS Institute. Specializing in React.js, Next.js, Node.js, MongoDB, and enterprise system architecture. Based in Lahore, Pakistan.",
   authors: [{ name: "M. Asad" }],
   creator: "Muhammad Asad",
   publisher: "Muhammad Asad",
@@ -14,7 +14,7 @@ export const metadata = {
     "Professional Experience",
     "Work Experience",
     "Career History",
-    "MERN Stack Developer Experience",
+    "Enterprise ERP Engineer Experience",
     "Full Stack Engineer Experience",
     "Front-End Developer Experience",
     "Full Stack Developer",
@@ -51,16 +51,16 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: "Professional Experience | Muhammad Asad - Full Stack Engineer",
+    title: "Professional Experience | Muhammad Asad - Enterprise ERP Engineer",
     description:
-      "Learn about Muhammad Asad's professional journey with 3+ years of experience. Work history at Retrovgames, Motive Coder, and EVS Institute. Specializing in Full Stack development, React.js, Next.js, and modern web technologies.",
+      "Learn about Muhammad Asad's professional journey with 3+ years of experience. Work history at Retrovgames, Motive Coder, and EVS Institute. Specializing in enterprise ERP systems, React.js, Next.js, and backend infrastructure.",
     url: `${process.env.NEXT_PUBLIC_SITE_URL}/details/experience`,
     images: [
       {
         url: `${process.env.NEXT_PUBLIC_SITE_URL}/images/exp.png`,
         width: 1200,
         height: 630,
-        alt: "Professional experience and career journey of Muhammad Asad - Full Stack Engineer",
+        alt: "Professional experience and career journey of Muhammad Asad - Enterprise ERP Engineer",
         type: "image/png",
       },
     ],
@@ -70,9 +70,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Professional Experience | M. Asad - Full Stack Engineer",
+    title: "Professional Experience | M. Asad - Enterprise ERP Engineer",
     description:
-      "Discover Muhammad Asad's professional experience with 3+ years in web development. Work history at Retrovgames, Motive Coder, and EVS Institute. Specializing in MERN Stack, React.js, and Next.js.",
+      "Discover Muhammad Asad's professional experience with 3+ years in enterprise engineering. Work history at Retrovgames, Motive Coder, and EVS Institute. Specializing in Node.js, React.js, and Next.js.",
     images: [`${process.env.NEXT_PUBLIC_SITE_URL}/images/exp.png`],
   },
 };
@@ -92,7 +92,7 @@ const page = () => {
     "@context": "https://schema.org",
     "@type": "Person",
     name: "Muhammad Asad",
-    jobTitle: "Full Stack Engineer",
+    jobTitle: "Enterprise ERP & Infrastructure Engineer",
     url: baseUrl,
     sameAs: [
       "https://www.linkedin.com/in/masadali",
@@ -121,7 +121,7 @@ const page = () => {
     "@type": "ItemList",
     name: "Professional Work Experience of Muhammad Asad",
     description:
-      "Complete work history and professional experience of Muhammad Asad, Full Stack Engineer",
+      "Complete work history and professional experience of Muhammad Asad, Enterprise ERP & Infrastructure Engineer",
     itemListElement: experiences.flatMap((exp, expIndex) =>
       exp.roles.map((role, roleIndex) => ({
         "@type": "ListItem",

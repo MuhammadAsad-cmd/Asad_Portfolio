@@ -3,16 +3,16 @@ import React from "react";
 import { projectsData } from "@/app/Data/projects";
 
 export const metadata = {
-  title: "Projects Portfolio | M. Asad - Full Stack Engineer | Web Development Projects",
+  title: "Projects Portfolio | M. Asad - Enterprise ERP Engineer | Web Development Projects",
   description:
-    "Explore 20+ web development projects by Muhammad Asad - Full Stack Engineer. Featured projects include enterprise ERP systems, e-commerce platforms, customer portals, admin dashboards, and modern web applications built with React.js, Next.js, Node.js, and MongoDB. Based in Lahore, Pakistan.",
+    "Explore 20+ projects by Muhammad Asad — Enterprise ERP & Infrastructure Engineer. Featured work includes multi-tenant ERP systems, e-commerce platforms, customer portals, admin dashboards, and high-performance business applications built with React.js, Next.js, Node.js, and MongoDB. Based in Lahore, Pakistan.",
   authors: [{ name: "M. Asad" }],
   creator: "Muhammad Asad",
   publisher: "Muhammad Asad",
   applicationName: "Portfolio | Muhammad Asad",
   keywords: [
     "Web Development Projects",
-    "MERN Stack Projects",
+    "Enterprise ERP Projects",
     "React.js Projects",
     "Next.js Projects",
     "Full Stack Projects",
@@ -51,7 +51,7 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: "Projects Portfolio | Muhammad Asad - Full Stack Engineer",
+    title: "Projects Portfolio | Muhammad Asad - Enterprise ERP Engineer",
     description:
       "Discover 20+ professional web development projects by Muhammad Asad. Enterprise ERP systems, e-commerce platforms, customer portals, and modern web applications built with React.js, Next.js, Node.js, and MongoDB.",
     url: `${process.env.NEXT_PUBLIC_SITE_URL}/details/projects`,
@@ -60,7 +60,7 @@ export const metadata = {
         url: `${process.env.NEXT_PUBLIC_SITE_URL}/images/proj.png`,
         width: 1200,
         height: 630,
-        alt: "Web development projects portfolio by Muhammad Asad - Full Stack Engineer",
+        alt: "Web development projects portfolio by Muhammad Asad - Enterprise ERP Engineer",
         type: "image/png",
       },
     ],
@@ -70,9 +70,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Projects Portfolio | M. Asad - Full Stack Engineer",
+    title: "Projects Portfolio | M. Asad - Enterprise ERP Engineer",
     description:
-      "Explore 20+ web development projects by Muhammad Asad, featuring enterprise applications, e-commerce platforms, and modern web solutions built with React.js, Next.js, and MERN Stack.",
+      "Explore 20+ projects by Muhammad Asad, featuring multi-tenant ERP systems, enterprise applications, e-commerce platforms, and modern web solutions built with React.js, Next.js, and Node.js.",
     images: [`${process.env.NEXT_PUBLIC_SITE_URL}/images/proj.png`],
   },
 };
@@ -135,7 +135,7 @@ const page = () => {
     "@context": "https://schema.org",
     "@type": "Person",
     name: "Muhammad Asad",
-    jobTitle: "Full Stack Engineer",
+    jobTitle: "Enterprise ERP & Infrastructure Engineer",
     url: baseUrl,
     sameAs: [
       "https://www.linkedin.com/in/masadali",
@@ -143,7 +143,7 @@ const page = () => {
     ],
     knowsAbout: [
       "Web Development",
-      "MERN Stack",
+      "Enterprise Stack",
       "React.js",
       "Next.js",
       "Node.js",

@@ -194,48 +194,56 @@ const About = () => {
   }, []);
 
   const techStack = {
-    frontend: [
-      { name: "React.js", icon: FaReact, color: "text-[#61DAFB]" },
+    coreArchitecture: [
+      { name: "Node.js", icon: FaNodeJs, color: "text-[#339933]" },
       { name: "Next.js", icon: SiNextdotjs, color: "text-black dark:text-white" },
+      { name: "Express.js", icon: SiExpress, color: "text-gray-600 dark:text-gray-300" },
+      { name: "React.js", icon: FaReact, color: "text-[#61DAFB]" },
       { name: "TypeScript", icon: SiTypescript, color: "text-[#3178C6]" },
-      { name: "Redux", icon: SiRedux, color: "text-[#764ABC]" },
+    ],
+    dataInfrastructure: [
+      { name: "MongoDB", icon: SiMongodb, color: "text-[#47A248]" },
+      { name: "SQL", icon: null, color: "text-lightPrimarytext dark:text-white" },
+      { name: "REST APIs", icon: null, color: "text-lightPrimarytext dark:text-white" },
+      { name: "GraphQL", icon: null, color: "text-lightPrimarytext dark:text-white" },
+      { name: "Data Pipelines", icon: null, color: "text-lightPrimarytext dark:text-white" },
+    ],
+    stateSystems: [
+      { name: "Redux Toolkit", icon: SiRedux, color: "text-[#764ABC]" },
+      { name: "Context API", icon: FaReact, color: "text-[#61DAFB]" },
+      { name: "Multi-Tenant Logic", icon: null, color: "text-lightPrimarytext dark:text-white" },
       { name: "TanStack Query", icon: SiReactquery, color: "text-[#FF4154]" },
       { name: "Tailwind CSS", icon: SiTailwindcss, color: "text-[#06B6D4]" },
-    ],
-    backend: [
-      { name: "Node.js", icon: FaNodeJs, color: "text-[#339933]" },
-      { name: "Express.js", icon: SiExpress, color: "text-gray-600 dark:text-gray-300" },
-      { name: "MongoDB", icon: SiMongodb, color: "text-[#47A248]" },
     ],
   };
 
   const highlights = [
     {
       icon: IoFlashOutline,
-      title: "ERP & Operational Automation",
+      title: "Custom ERP Engineering & System Integration",
       description:
-        "Transforming manual workflows into ERP-style systems for orders, inventory, procurement, and internal operations.",
+        "Designing and integrating ERP platforms that unify orders, inventory, procurement, and internal operations across teams and tenants.",
       gradient: "from-blue-500 to-cyan-500",
     },
     {
-      icon: IoLayersOutline,
-      title: "Integrated Business Systems",
+      icon: IoRocketOutline,
+      title: "High-Performance Frontend Systems (Next.js/React)",
       description:
-        "Connecting marketplaces, shipping carriers, databases, and dashboards into one scalable source of truth.",
-      gradient: "from-purple-500 to-pink-500",
+        "Building fast, role-aware interfaces that stay responsive under real operational load—not demo dashboards.",
+      gradient: "from-orange-500 to-red-500",
     },
     {
-      icon: IoRocketOutline,
-      title: "High-Performance Architecture",
+      icon: IoLayersOutline,
+      title: "Scalable API Pipelines & Data Synchronization",
       description:
-        "Building reliable full-stack tools that handle complex data, real-time workflows, and secure user experiences.",
-      gradient: "from-orange-500 to-red-500",
+        "Engineering REST and sync layers that keep marketplaces, carriers, databases, and admin tools aligned at scale.",
+      gradient: "from-purple-500 to-pink-500",
     },
     {
       icon: IoBulbOutline,
       title: "Strategic Problem Solving",
       description:
-        "Understanding the business logic first, then designing software that supports the next stage of growth.",
+        "Understanding business risk and workflow bottlenecks first, then designing infrastructure that supports the next stage of growth.",
       gradient: "from-emerald-500 to-teal-500",
     },
   ];
@@ -243,7 +251,7 @@ const About = () => {
   const experience = [
     { label: "Years Experience", value: "3+" },
     { label: "Projects Completed", value: "20+" },
-    { label: "Technologies", value: "10+" },
+    { label: "Clients Served", value: "15+" },
   ];
 
   return (
@@ -306,7 +314,7 @@ const About = () => {
                 </span>{" "}
                 shipping{" "}
                 <span className="font-semibold text-lightPrimarytext dark:text-white">
-                  MERN &amp; Next.js
+                  Next.js, Node.js &amp; React
                 </span>{" "}
                 in production,{" "}
                 <span className="font-semibold text-lightPrimarytext dark:text-white">
@@ -386,36 +394,60 @@ const About = () => {
               }`}
             >
               <div className="space-y-6">
-                {/* Frontend */}
+                {/* Core Architecture */}
                 <div>
                   <h4 className="mb-3 text-sm font-semibold uppercase tracking-wider text-lightSecondarytext dark:text-darkPrimaryGray">
-                    Frontend
+                    Core Architecture
                   </h4>
                   <div className="flex flex-wrap gap-2">
-                    {techStack.frontend.map((tech, index) => (
+                    {techStack.coreArchitecture.map((tech, index) => (
                       <span
                         key={index}
                         className="inline-flex items-center gap-1.5 rounded-md bg-lightbg px-3 py-1.5 text-sm font-medium text-lightPrimarytext dark:bg-darkSecondaryGray dark:text-white"
                       >
-                        <tech.icon className={`text-sm ${tech.color}`} />
+                        {tech.icon && (
+                          <tech.icon className={`text-sm ${tech.color}`} />
+                        )}
                         {tech.name}
                       </span>
                     ))}
                   </div>
                 </div>
 
-                {/* Backend */}
+                {/* Data & Infrastructure */}
                 <div>
                   <h4 className="mb-3 text-sm font-semibold uppercase tracking-wider text-lightSecondarytext dark:text-darkPrimaryGray">
-                    Backend & Database
+                    Data &amp; Infrastructure
                   </h4>
                   <div className="flex flex-wrap gap-2">
-                    {techStack.backend.map((tech, index) => (
+                    {techStack.dataInfrastructure.map((tech, index) => (
                       <span
                         key={index}
                         className="inline-flex items-center gap-1.5 rounded-md bg-lightbg px-3 py-1.5 text-sm font-medium text-lightPrimarytext dark:bg-darkSecondaryGray dark:text-white"
                       >
-                        <tech.icon className={`text-sm ${tech.color}`} />
+                        {tech.icon && (
+                          <tech.icon className={`text-sm ${tech.color}`} />
+                        )}
+                        {tech.name}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* State & Systems */}
+                <div>
+                  <h4 className="mb-3 text-sm font-semibold uppercase tracking-wider text-lightSecondarytext dark:text-darkPrimaryGray">
+                    State &amp; Systems
+                  </h4>
+                  <div className="flex flex-wrap gap-2">
+                    {techStack.stateSystems.map((tech, index) => (
+                      <span
+                        key={index}
+                        className="inline-flex items-center gap-1.5 rounded-md bg-lightbg px-3 py-1.5 text-sm font-medium text-lightPrimarytext dark:bg-darkSecondaryGray dark:text-white"
+                      >
+                        {tech.icon && (
+                          <tech.icon className={`text-sm ${tech.color}`} />
+                        )}
                         {tech.name}
                       </span>
                     ))}

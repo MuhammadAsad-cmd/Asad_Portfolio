@@ -3,9 +3,9 @@ import SerDetails from "@/app/components/SerDetails/SerDetails";
 import { enhancedServicesData } from "@/app/Data/enhancedServices";
 
 export const metadata = {
-  title: "Business Solutions | M. Asad - ERP, Automation & MERN Development",
+  title: "Business Solutions | M. Asad - ERP, Automation & Enterprise Infrastructure",
   description:
-    "ERP, automation, and business system services by Muhammad Asad. Custom internal tooling, workflow automation, e-commerce operations, integrations, dashboards, and scalable MERN applications.",
+    "ERP, automation, and business system services by Muhammad Asad. Custom internal tooling, workflow automation, e-commerce operations, integrations, dashboards, and scalable Node.js/Next.js applications.",
   authors: [{ name: "M. Asad" }],
   creator: "Muhammad Asad",
   publisher: "Muhammad Asad",
@@ -22,7 +22,7 @@ export const metadata = {
     "Marketplace Integrations",
     "Shipping Integrations",
     "Admin Dashboard Development",
-    "MERN Stack Services",
+    "Enterprise Stack Services",
     "Full-Stack Development",
     "Backend Development Services",
     "API Integration Services",
@@ -62,7 +62,7 @@ export const metadata = {
   openGraph: {
     title: "ERP, Automation & Business Solutions | Muhammad Asad",
     description:
-      "Explore business-focused services by Muhammad Asad: ERP-style tooling, workflow automation, integrations, dashboards, e-commerce operations systems, and scalable MERN applications.",
+      "Explore business-focused services by Muhammad Asad: ERP-style tooling, workflow automation, integrations, dashboards, e-commerce operations systems, and scalable Node.js/Next.js applications.",
     url: `${process.env.NEXT_PUBLIC_SITE_URL}/details/services`,
     images: [
       {
@@ -81,7 +81,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Business Solutions | M. Asad - ERP & Automation",
     description:
-      "ERP, automation, integrations, dashboards, and scalable MERN business systems for growing operations.",
+      "ERP, automation, integrations, dashboards, and scalable enterprise business systems for growing operations.",
     images: [`${process.env.NEXT_PUBLIC_SITE_URL}/images/servicsmeta.png`],
   },
 };
@@ -95,7 +95,7 @@ const page = () => {
     "@type": "ItemList",
     name: "Business System Services by Muhammad Asad",
     description:
-      "Business-focused services including ERP-style internal tooling, workflow automation, e-commerce operations systems, integrations, dashboards, and scalable MERN applications.",
+      "Business-focused services including ERP-style internal tooling, workflow automation, e-commerce operations systems, integrations, dashboards, and scalable Node.js/Next.js applications.",
     itemListElement: enhancedServicesData.map((service, index) => ({
       "@type": "ListItem",
       position: index + 1,
@@ -146,11 +146,11 @@ const page = () => {
     "@type": "ProfessionalService",
     name: "ERP, Automation and Business System Services by Muhammad Asad",
     description:
-      "Professional services for ERP-style tooling, workflow automation, business dashboards, e-commerce operations, API integrations, and scalable MERN stack applications.",
+      "Professional services for ERP-style tooling, workflow automation, business dashboards, e-commerce operations, API integrations, and scalable Node.js/Next.js applications.",
     provider: {
       "@type": "Person",
       name: "Muhammad Asad",
-      jobTitle: "Full Stack Engineer",
+      jobTitle: "Enterprise ERP & Infrastructure Engineer",
       email: "189asadali@gmail.com",
       url: baseUrl,
       sameAs: [
@@ -175,7 +175,7 @@ const page = () => {
       "Database Architecture",
       "Backend Development",
       "Full Stack Development",
-      "MERN Stack Development",
+      "Enterprise Stack Development",
       "Performance Optimization",
     ],
     url: `${baseUrl}/details/services`,

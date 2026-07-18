@@ -69,7 +69,7 @@ const Projects2 = () => {
                       Featured Projects
                     </h2>
                     <p className="mt-1 text-sm leading-relaxed text-lightSecondarytext dark:text-darkPrimaryGray md:text-base">
-                      Hector, Sportly, Telegram, BitKnit, RetrovGames, RetroFam—then the full catalog
+                      Hector (Multi-Tenant ERP), Sportly, Telegram, BitKnit, RetrovGames, RetroFam—then the full catalog
                     </p>
                   </div>
                 </div>

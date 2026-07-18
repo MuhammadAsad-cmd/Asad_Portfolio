@@ -87,7 +87,7 @@ const Services = () => {
     features: [
       "ERP-style Dashboards",
       "Workflow Automation",
-      "Scalable MERN Architecture",
+      "Scalable Enterprise Architecture",
     ],
   };
 

@@ -429,6 +429,23 @@ const ExpCard = () => {
                           </p>
                         )}
 
+                        {role.highlights?.length > 0 && (
+                          <ul className="mb-3 space-y-2">
+                            {role.highlights.map((highlight, highlightIndex) => (
+                              <li
+                                key={highlightIndex}
+                                className="flex gap-2 text-sm text-lightPrimarytext dark:text-white"
+                              >
+                                <span
+                                  className="mt-2 size-1.5 shrink-0 rounded-full bg-SkyBlue"
+                                  aria-hidden
+                                />
+                                <span>{highlight}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        )}
+
                         {/* Role Skills */}
                         <div className="flex flex-wrap items-center gap-2">
                           <div className="flex items-center gap-1 text-SkyBlue">

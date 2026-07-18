@@ -9,15 +9,16 @@ import Skills from "./components/Skills/Skills";
 
 export const metadata = {
   title:
-    "Portfolio | M. Asad — Full-Stack Developer | ERP, Automation & MERN",
+    "Portfolio | M. Asad — Enterprise ERP & Infrastructure Engineer",
   description:
-    "Muhammad Asad builds production internal tools, ERP-style systems, and workflow automation with the MERN stack and Next.js—integrations, admin dashboards, and scalable backends for operations teams. Lahore, Pakistan.",
+    "Muhammad Asad engineers high-scale ERP systems, business infrastructure, and workflow automation with Node.js, Next.js, and React—multi-tenant platforms, API pipelines, admin dashboards, and scalable backends for enterprise operations. Lahore, Pakistan.",
   authors: [{ name: "M. Asad" }],
   creator: "Muhammad Asad",
   publisher: "Muhammad Asad",
   applicationName: "Portfolio | Muhammad Asad",
   keywords: [
-    "MERN Stack",
+    "Enterprise ERP Engineer",
+    "Infrastructure Engineer",
     "Full Stack Developer",
     "Next.js",
     "React.js",
@@ -49,7 +50,7 @@ export const metadata = {
       url: `${process.env.NEXT_PUBLIC_SITE_URL}/images/asadimg.avif`,
       width: 1200,
       height: 630,
-      alt: "Muhammad Asad — Full-stack developer, ERP & business systems",
+      alt: "Muhammad Asad — Enterprise ERP and infrastructure engineer",
     },
   ],
   alternates: {
@@ -78,15 +79,15 @@ export const metadata = {
   // Open Graph metadata
   openGraph: {
     title:
-      "Muhammad Asad — Full-Stack Developer | ERP, Automation & MERN",
+      "Muhammad Asad — Enterprise ERP & Infrastructure Engineer",
     description:
-      "Internal tools, workflow automation, and MERN/Next.js systems for growing operations—with integrations, admin dashboards, and reliable architecture.",
+      "High-scale ERP systems, workflow automation, and Node.js/Next.js infrastructure for growing operations—with multi-tenant architecture, integrations, admin dashboards, and reliable backends.",
     images: [
       {
         url: `${process.env.NEXT_PUBLIC_SITE_URL}/images/asadimg.avif`,
         width: 1200,
         height: 630,
-        alt: "Muhammad Asad — Full-stack developer, ERP & business systems",
+        alt: "Muhammad Asad — Enterprise ERP and infrastructure engineer",
         type: "image/avif",
       },
     ],
@@ -103,9 +104,9 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title:
-      "Portfolio | M. Asad — Full-Stack & ERP / business systems",
+      "Portfolio | M. Asad — Enterprise ERP & Infrastructure Engineer",
     description:
-      "MERN, Next.js, internal tools, automation, and integrations for operations teams.",
+      "Node.js, Next.js, React—ERP systems, automation, and enterprise infrastructure for operations teams.",
     site: "@MAsad96668934",
     creator: "@MAsad96668934",
     images: [`${process.env.NEXT_PUBLIC_SITE_URL}/images/asadimg.avif`],
@@ -121,9 +122,9 @@ export default function Home() {
     "@type": "Person",
     name: "Muhammad Asad",
     alternateName: "M. Asad",
-    jobTitle: "Full-Stack Developer",
+    jobTitle: "Enterprise ERP & Infrastructure Engineer",
     description:
-      "Full-stack developer with 3+ years building ERP-style internal tools, workflow automation, and scalable MERN/Next.js applications for operations, e-commerce, and logistics.",
+      "Enterprise engineer with 3+ years building multi-tenant ERP systems, workflow automation, and scalable Node.js/Next.js infrastructure for operations, e-commerce, and logistics.",
     url: baseUrl,
     image: `${baseUrl}/images/asadimg.png`,
     email: "189asadali@gmail.com",
@@ -141,8 +142,8 @@ export default function Home() {
       "https://www.instagram.com/masadali_189",
     ],
     knowsAbout: [
-      "MERN Stack",
-      "Full Stack Development",
+      "Enterprise ERP Systems",
+      "Distributed Systems Architecture",
       "ERP and internal tooling",
       "Business process automation",
       "React.js",
@@ -150,6 +151,7 @@ export default function Home() {
       "Node.js",
       "Express.js",
       "MongoDB",
+      "Multi-Tenant Architecture",
       "JavaScript",
       "TypeScript",
       "System integration",
@@ -165,7 +167,7 @@ export default function Home() {
     },
     hasOccupation: {
       "@type": "Occupation",
-      name: "Full-Stack Developer",
+      name: "Enterprise ERP & Infrastructure Engineer",
       occupationLocation: {
         "@type": "City",
         name: "Lahore",
@@ -176,13 +178,13 @@ export default function Home() {
   const professionalServiceSchema = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    name: "ERP, Automation and MERN Business System Services",
+    name: "ERP, Automation and Enterprise Infrastructure Services",
     provider: {
       "@type": "Person",
       name: "Muhammad Asad",
     },
     description:
-      "Business-focused full-stack development services including ERP-style internal tooling, workflow automation, e-commerce operations systems, API integrations, dashboards, database architecture, and scalable MERN applications.",
+      "Business-focused engineering services including multi-tenant ERP systems, workflow automation, e-commerce operations platforms, API integrations, dashboards, database architecture, and scalable Node.js/Next.js applications.",
     areaServed: {
       "@type": "Country",
       name: "Pakistan",
@@ -195,7 +197,7 @@ export default function Home() {
       "Marketplace and Shipping Integrations",
       "Admin Dashboards",
       "Backend API Development",
-      "MERN Stack Development",
+      "Enterprise Stack Development",
     ],
     url: `${baseUrl}/details/services`,
   };
@@ -206,7 +208,7 @@ export default function Home() {
     name: "Muhammad Asad Portfolio",
     url: baseUrl,
     description:
-      "Muhammad Asad — portfolio of ERP-style internal tools, automation, MERN/Next.js projects, skills, and experience.",
+      "Muhammad Asad — portfolio of enterprise ERP systems, automation, Node.js/Next.js projects, skills, and experience.",
     author: {
       "@type": "Person",
       name: "Muhammad Asad",

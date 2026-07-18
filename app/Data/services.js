@@ -10,7 +10,7 @@ export const servicesData = [
   { name: "Role-Based Access Systems" },
   { name: "Backend APIs & Business Logic" },
   { name: "Database Architecture (MongoDB)" },
-  { name: "MERN Stack Application Development" },
+  { name: "Enterprise Stack Application Development" },
   { name: "Next.js Business Portals" },
   { name: "Performance Optimization" },
   { name: "Authentication & Authorization" },

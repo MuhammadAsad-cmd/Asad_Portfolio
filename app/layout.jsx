@@ -5,15 +5,16 @@ import { Analytics } from "@vercel/analytics/next";
 
 export const metadata = {
   title:
-    "Portfolio | M. Asad — Full-Stack Developer | ERP, Automation & MERN",
+    "Portfolio | M. Asad — Enterprise ERP & Infrastructure Engineer",
   description:
-    "Muhammad Asad builds production internal tools, ERP-style systems, and workflow automation with the MERN stack and Next.js—integrations, admin dashboards, and scalable backends for operations teams. Lahore, Pakistan.",
+    "Muhammad Asad engineers high-scale ERP systems, business infrastructure, and workflow automation with Node.js, Next.js, and React—multi-tenant platforms, API pipelines, admin dashboards, and scalable backends for enterprise operations. Lahore, Pakistan.",
   authors: [{ name: "M. Asad" }],
   creator: "Muhammad Asad",
   publisher: "Muhammad Asad",
   applicationName: "Portfolio | Muhammad Asad",
   keywords: [
-    "MERN Stack",
+    "Enterprise ERP Engineer",
+    "Infrastructure Engineer",
     "Full Stack Developer",
     "Next.js",
     "ERP Development",
@@ -38,15 +39,15 @@ export const metadata = {
   // Open Graph metadata
   openGraph: {
     title:
-      "Muhammad Asad — Full-Stack Developer | ERP, Automation & MERN",
+      "Muhammad Asad — Enterprise ERP & Infrastructure Engineer",
     description:
-      "Internal tools, workflow automation, and MERN/Next.js systems for growing operations—with integrations, admin dashboards, and reliable architecture.",
+      "High-scale ERP systems, workflow automation, and Node.js/Next.js infrastructure for growing operations—with multi-tenant architecture, integrations, admin dashboards, and reliable backends.",
     images: [
       {
         url: `${process.env.NEXT_PUBLIC_SITE_URL}/images/asadimg.avif`,
         width: 1200,
         height: 630,
-        alt: "Muhammad Asad — Full-stack developer, ERP & business systems",
+        alt: "Muhammad Asad — Enterprise ERP and infrastructure engineer",
       },
     ],
     type: "website",
@@ -59,9 +60,9 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title:
-      "Portfolio | M. Asad — Full-Stack & ERP / business systems",
+      "Portfolio | M. Asad — Enterprise ERP & Infrastructure Engineer",
     description:
-      "MERN, Next.js, internal tools, automation, and integrations for operations teams.",
+      "Node.js, Next.js, React—ERP systems, automation, and enterprise infrastructure for operations teams.",
     site: "@MAsad96668934",
     creator: "@MAsad96668934",
     images: [`${process.env.NEXT_PUBLIC_SITE_URL}/images/asadimg.avif`],
@@ -87,9 +88,9 @@ export default function RootLayout({ children }) {
     "@type": "Person",
     name: "Muhammad Asad",
     alternateName: "M. Asad",
-    jobTitle: "Full-Stack Developer",
+    jobTitle: "Enterprise ERP & Infrastructure Engineer",
     description:
-      "Full-stack developer with 3+ years building ERP-style internal tools, workflow automation, and scalable MERN/Next.js applications for operations, e-commerce, and logistics.",
+      "Enterprise engineer with 3+ years building multi-tenant ERP systems, workflow automation, and scalable Node.js/Next.js infrastructure for operations, e-commerce, and logistics.",
     url: baseUrl,
     image: `${baseUrl}/images/asadimg.png`,
     email: "189asadali@gmail.com",
@@ -107,8 +108,8 @@ export default function RootLayout({ children }) {
       "https://www.instagram.com/masadali_189",
     ],
     knowsAbout: [
-      "MERN Stack",
-      "Full Stack Development",
+      "Enterprise ERP Systems",
+      "Distributed Systems Architecture",
       "ERP and internal tooling",
       "Business process automation",
       "React.js",
@@ -116,6 +117,7 @@ export default function RootLayout({ children }) {
       "Node.js",
       "Express.js",
       "MongoDB",
+      "Multi-Tenant Architecture",
       "JavaScript",
       "TypeScript",
       "System integration",
@@ -127,7 +129,7 @@ export default function RootLayout({ children }) {
     },
     hasOccupation: {
       "@type": "Occupation",
-      name: "Full-Stack Developer",
+      name: "Enterprise ERP & Infrastructure Engineer",
       occupationLocation: {
         "@type": "City",
         name: "Lahore",

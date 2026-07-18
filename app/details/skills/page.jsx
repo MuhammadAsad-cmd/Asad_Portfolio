@@ -12,7 +12,7 @@ export const metadata = {
   applicationName: "Portfolio | Muhammad Asad",
   keywords: [
     "Technical Skills",
-    "MERN Stack Skills",
+    "Enterprise Stack Skills",
     "React.js Skills",
     "Next.js Skills",
     "Node.js Skills",

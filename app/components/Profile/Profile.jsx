@@ -52,7 +52,7 @@ const Profile = () => {
                           width={380}
                           height={380}
                           src="/images/asadimg.avif"
-                          alt="Muhammad Asad — Full-stack developer building ERP-style tools, automation, and business systems with React, Next.js, and Node.js."
+                          alt="Muhammad Asad — Enterprise ERP and infrastructure engineer building high-scale business systems with Next.js, Node.js, and React."
                           className="h-full w-full object-cover transition-transform duration-500"
                           priority
                         />
@@ -88,19 +88,18 @@ const Profile = () => {
 
               <div className="space-y-2">
                 <h1 className="text-balance text-2xl font-bold leading-tight tracking-tight text-lightPrimarytext dark:text-white sm:text-3xl md:text-[2.35rem] lg:text-5xl">
-                  Full-Stack Engineer ·{" "}
+                  Building High-Scale{" "}
                   <span className="bg-gradient-to-r from-SkyBlue to-lightHover bg-clip-text text-transparent dark:to-darkHover">
-                    ERP &amp; business systems
+                    ERP &amp; Business Infrastructure
                   </span>
                 </h1>
                 <p className="max-w-xl text-sm font-medium text-lightSecondarytext dark:text-darkPrimaryGray sm:text-base">
-                  I help teams replace spreadsheets and manual work with{" "}
+                  Full-Stack Developer{" "}
                   <span className="text-lightPrimarytext dark:text-white">
-                    reliable internal tools
-                  </span>
-                  —automated workflows, integrations, and admin dashboards on
-                  the MERN stack and Next.js, built to scale with your
-                  operations.
+                    (Node.js, Next.js, React)
+                  </span>{" "}
+                  specializing in optimizing enterprise workflows, custom data
+                  pipelines, and high-performance business applications.
                 </p>
               </div>
 

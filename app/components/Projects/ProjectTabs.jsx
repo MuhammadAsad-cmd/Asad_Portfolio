@@ -157,7 +157,7 @@ const ProjectTabs = ({ activeCategory, onCategoryChange, projectCounts }) => {
             {/* <div className="mt-4">
                 <p className="text-sm text-lightPrimarytext/70 dark:text-white/70">
                     {activeCategory === "all" && "Showing all projects across all categories"}
-                    {activeCategory === "fullstack" && "MERN stack projects with full-stack development"}
+                    {activeCategory === "fullstack" && "Enterprise full-stack systems with Node.js, Next.js, and React"}
                     {activeCategory === "ecommerce" && "E-commerce platforms and online stores"}
                     {activeCategory === "dashboards" && "Admin dashboards and management panels"}
                     {activeCategory === "uiux" && "UI/UX focused frontend projects"}

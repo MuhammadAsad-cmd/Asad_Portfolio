@@ -1,7 +1,5 @@
 "use client";
 import {
-  IoCodeSlash,
-  IoCheckmarkCircle,
   IoTrendingUpOutline,
 } from "react-icons/io5";
 import { 
@@ -19,49 +17,63 @@ import {
   SiTailwindcss, 
   SiRedux, 
   SiReactquery,
-  SiMongodb 
+  SiMongodb,
+  SiExpress,
 } from "react-icons/si";
 
 export default function Skills() {
   const skillCategories = [
     {
-      icon: FaReact,
-      title: "Front-end Development",
-      experience: "2+ years",
-      description:
-        "Passionate about UI/UX. Expert in creating responsive, interactive web applications with modern frameworks and tools.",
-      technologies:
-        "Next.js, React.js, React-Router-Dom, TanStack Query, TailwindCSS, SCSS, CSS, Redux, Redux Toolkit, JavaScript, TypeScript",
-      color: "text-blue-500",
-      bg: "bg-blue-500/10",
-    },
-    {
       icon: FaNodeJs,
-      title: "Back-end Development",
-      experience: "1+ years",
+      title: "Core Architecture",
+      experience: "3+ years",
       description:
-        "Building robust server-side applications and APIs with modern backend technologies.",
-      technologies: "Node.js, MongoDB, Express.js, REST APIs",
+        "Enterprise-grade application layers built on Node.js, Next.js, Express, React, and TypeScript—designed for maintainability under real operational load.",
+      technologies:
+        "Node.js, Next.js, Express.js, React, TypeScript, JavaScript",
       color: "text-green-500",
       bg: "bg-green-500/10",
+    },
+    {
+      icon: SiMongodb,
+      title: "Data & Infrastructure",
+      experience: "3+ years",
+      description:
+        "Database design, REST/GraphQL APIs, and data pipelines that keep business systems synchronized and performant at scale.",
+      technologies: "MongoDB, SQL, REST APIs, GraphQL, Data Pipelines, Express.js",
+      color: "text-emerald-500",
+      bg: "bg-emerald-500/10",
+    },
+    {
+      icon: SiRedux,
+      title: "State & Systems",
+      experience: "3+ years",
+      description:
+        "State management, multi-tenant logic, and system-level patterns that keep complex ERP and portal applications predictable and secure.",
+      technologies: "Redux Toolkit, Context API, Multi-Tenant Logic, TanStack Query",
+      color: "text-purple-500",
+      bg: "bg-purple-500/10",
     },
   ];
 
   const techStack = [
-    { name: "React.js", icon: FaReact, color: "text-[#61DAFB]" },
-    { name: "Next.js", icon: SiNextdotjs, color: "text-black dark:text-white" },
-    { name: "JavaScript", icon: SiJavascript, color: "text-[#F7DF1E]" },
-    { name: "TypeScript", icon: SiTypescript, color: "text-[#3178C6]" },
-    { name: "Tailwind CSS", icon: SiTailwindcss, color: "text-[#06B6D4]" },
-    { name: "Redux", icon: SiRedux, color: "text-[#764ABC]" },
-    { name: "TanStack Query", icon: SiReactquery, color: "text-[#FF4154]" },
-    { name: "HTML5", icon: FaHtml5, color: "text-[#E34F26]" },
-    { name: "CSS3", icon: FaCss3Alt, color: "text-[#1572B6]" },
-    { name: "Git", icon: FaGitAlt, color: "text-[#F05032]" },
-    { name: "MongoDB", icon: SiMongodb, color: "text-[#47A248]" },
-    { name: "Node.js", icon: FaNodeJs, color: "text-[#339933]" },
-    { name: "NPM", icon: FaNpm, color: "text-[#CB3837]" },
+    { name: "Node.js", icon: FaNodeJs, color: "text-[#339933]", tier: "Core Architecture" },
+    { name: "Next.js", icon: SiNextdotjs, color: "text-black dark:text-white", tier: "Core Architecture" },
+    { name: "React.js", icon: FaReact, color: "text-[#61DAFB]", tier: "Core Architecture" },
+    { name: "TypeScript", icon: SiTypescript, color: "text-[#3178C6]", tier: "Core Architecture" },
+    { name: "Express.js", icon: SiExpress, color: "text-gray-600 dark:text-gray-300", tier: "Core Architecture" },
+    { name: "MongoDB", icon: SiMongodb, color: "text-[#47A248]", tier: "Data & Infrastructure" },
+    { name: "JavaScript", icon: SiJavascript, color: "text-[#F7DF1E]", tier: "Core Architecture" },
+    { name: "Redux", icon: SiRedux, color: "text-[#764ABC]", tier: "State & Systems" },
+    { name: "TanStack Query", icon: SiReactquery, color: "text-[#FF4154]", tier: "State & Systems" },
+    { name: "Tailwind CSS", icon: SiTailwindcss, color: "text-[#06B6D4]", tier: "State & Systems" },
+    { name: "HTML5", icon: FaHtml5, color: "text-[#E34F26]", tier: "Core Architecture" },
+    { name: "CSS3", icon: FaCss3Alt, color: "text-[#1572B6]", tier: "Core Architecture" },
+    { name: "Git", icon: FaGitAlt, color: "text-[#F05032]", tier: "Data & Infrastructure" },
+    { name: "NPM", icon: FaNpm, color: "text-[#CB3837]", tier: "Data & Infrastructure" },
   ];
+
+  const tierOrder = ["Core Architecture", "Data & Infrastructure", "State & Systems"];
 
   return (
     <section
@@ -77,7 +89,7 @@ export default function Skills() {
                 Expertise
               </h2>
               <p className="mt-1 text-sm leading-relaxed text-lightSecondarytext dark:text-darkPrimaryGray md:text-base">
-                 My technical skills and professional proficiency
+                 Architectural tiers and technologies behind enterprise systems
               </p>
            </div>
         </div>
@@ -133,40 +145,51 @@ export default function Skills() {
                     Quality Commitment
                   </h3>
                   <p className="text-sm leading-relaxed text-lightSecondarytext dark:text-darkPrimaryGray">
-                    All my websites and web applications are lovingly
-                    hand-coded, fully responsive, and cross-browser
-                    compatible.
+                    Every system is engineered for production reliability—secure
+                    data handling, predictable performance, and architecture
+                    that scales with business volume.
                   </p>
                 </div>
             </div>
           </div>
 
-          {/* Right Content - Technology Grid */}
+          {/* Right Content - Technology Grid by Tier */}
           <div>
             <div className="mb-6">
               <h3 className="mb-1 text-lg font-bold text-lightPrimarytext dark:text-white md:text-xl">
                 Technology Stack
               </h3>
               <p className="text-sm text-lightSecondarytext dark:text-darkPrimaryGray">
-                Tools I use to build digital products
+                Organized by architectural layer
               </p>
             </div>
 
-            <div className="grid grid-cols-4 gap-6 sm:grid-cols-5 md:grid-cols-4 lg:grid-cols-5">
-              {techStack.map((tech, index) => (
-                <div
-                  key={index}
-                  className="group relative flex flex-col items-center justify-center"
-                >
-                  <div className="flex h-16 w-full cursor-pointer items-center justify-center rounded-2xl bg-lightbg transition-all duration-300 hover:bg-white hover:shadow-lg hover:shadow-SkyBlue/10 dark:bg-darkSecondaryGray dark:hover:bg-discordDark">
-                    <div className="transition-transform duration-300 group-hover:scale-110">
-                      <tech.icon className={`text-3xl ${tech.color}`} />
-                    </div>
-                  </div>
-                  
-                  <div className="pointer-events-none absolute -top-10 left-1/2 z-20 -translate-x-1/2 whitespace-nowrap rounded-md bg-gray-900 px-2 py-1 text-xs font-medium text-white opacity-0 transition-all duration-300 group-hover:-top-12 group-hover:opacity-100 dark:bg-white dark:text-gray-900">
-                    {tech.name}
-                    <div className="absolute left-1/2 top-full h-0 w-0 -translate-x-1/2 border-4 border-transparent border-t-gray-900 dark:border-t-white"></div>
+            <div className="space-y-8">
+              {tierOrder.map((tier) => (
+                <div key={tier}>
+                  <h4 className="mb-3 text-xs font-semibold uppercase tracking-wider text-lightSecondarytext dark:text-darkPrimaryGray">
+                    {tier}
+                  </h4>
+                  <div className="grid grid-cols-4 gap-4 sm:grid-cols-5 md:grid-cols-4 lg:grid-cols-5">
+                    {techStack
+                      .filter((tech) => tech.tier === tier)
+                      .map((tech, index) => (
+                        <div
+                          key={index}
+                          className="group relative flex flex-col items-center justify-center"
+                        >
+                          <div className="flex h-16 w-full cursor-pointer items-center justify-center rounded-2xl bg-lightbg transition-all duration-300 hover:bg-white hover:shadow-lg hover:shadow-SkyBlue/10 dark:bg-darkSecondaryGray dark:hover:bg-discordDark">
+                            <div className="transition-transform duration-300 group-hover:scale-110">
+                              <tech.icon className={`text-3xl ${tech.color}`} />
+                            </div>
+                          </div>
+                          
+                          <div className="pointer-events-none absolute -top-10 left-1/2 z-20 -translate-x-1/2 whitespace-nowrap rounded-md bg-gray-900 px-2 py-1 text-xs font-medium text-white opacity-0 transition-all duration-300 group-hover:-top-12 group-hover:opacity-100 dark:bg-white dark:text-gray-900">
+                            {tech.name}
+                            <div className="absolute left-1/2 top-full h-0 w-0 -translate-x-1/2 border-4 border-transparent border-t-gray-900 dark:border-t-white"></div>
+                          </div>
+                        </div>
+                      ))}
                   </div>
                 </div>
               ))}
