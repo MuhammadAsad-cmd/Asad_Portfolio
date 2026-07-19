@@ -99,7 +99,7 @@ const ProjectDetails = () => {
                                 <div className="h-2.5 w-2.5 rounded-full bg-[#28c840]"></div>
                              </div>
                             
-                            <div className="relative aspect-video cursor-pointer overflow-hidden">
+                            <div className={`relative aspect-video overflow-hidden ${project.Link ? "cursor-pointer" : ""}`}>
                               <Image
                                 src={project.image || "/placeholder.svg"}
                                 alt={`${project.title} - ${project.stackUsed?.join(', ') || 'Web Development Project'} by Muhammad Asad, Full Stack Engineer`}
@@ -109,13 +109,15 @@ const ProjectDetails = () => {
                                 quality={90}
                                 itemProp="image"
                               />
-                               {/* Overlay on hover */}
-                               <Link 
-                                 href={project.Link || "#"} 
-                                 target="_blank" 
-                                 className="absolute inset-0 z-10 bg-black/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-                                 aria-label={`View live demo of ${project.title}`}
-                               />
+                              {project.Link && (
+                                <Link
+                                  href={project.Link}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="absolute inset-0 z-10 bg-black/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                                  aria-label={`View live demo of ${project.title}`}
+                                />
+                              )}
                             </div>
                           </div>
                         </div>
@@ -160,19 +162,33 @@ const ProjectDetails = () => {
                           </div>
 
                           {/* Actions */}
-                          <div className="flex items-center gap-4">
-                            <Link
-                              href={project.Link || "#"}
-                              target="_blank"
-                              className="group/btn relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-SkyBlue px-6 py-2.5 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5 hover:shadow-lg hover:shadow-SkyBlue/30 active:translate-y-0"
-                              aria-label={`View live demo of ${project.title}`}
-                              itemProp="url"
-                            >
-                              <span className="relative z-10 flex items-center gap-2">
-                                Live Demo
-                                <FiExternalLink aria-hidden="true" />
-                              </span>
-                            </Link>
+                          <div className="flex flex-wrap items-center gap-3">
+                            {project.Link && (
+                              <Link
+                                href={project.Link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="group/btn relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-SkyBlue px-6 py-2.5 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5 hover:shadow-lg hover:shadow-SkyBlue/30 active:translate-y-0"
+                                aria-label={`View live demo of ${project.title}`}
+                                itemProp="url"
+                              >
+                                <span className="relative z-10 flex items-center gap-2">
+                                  Live Demo
+                                  <FiExternalLink aria-hidden="true" />
+                                </span>
+                              </Link>
+                            )}
+
+                            {project.caseStudy && (
+                              <Link
+                                href={project.caseStudy}
+                                className="inline-flex items-center gap-2 rounded-full border-2 border-SkyBlue/40 bg-SkyBlue/5 px-6 py-2.5 text-sm font-semibold text-SkyBlue transition-colors hover:border-SkyBlue hover:bg-SkyBlue/10 dark:border-darkHover/40 dark:hover:border-darkHover"
+                                aria-label={`Read case study for ${project.title}`}
+                              >
+                                Case Study
+                                <IoMdArrowRoundForward aria-hidden="true" />
+                              </Link>
+                            )}
 
                             {project.codeUrl && (
                               <Link

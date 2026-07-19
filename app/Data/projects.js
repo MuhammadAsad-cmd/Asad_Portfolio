@@ -23,7 +23,6 @@ export const projectsData = [
       "Barcode Scanning Integration",
     ],
     image: "/images/hector.png",
-    Link: "https://app.retroventures.co/",
     caseStudy: "/case-study/hector",
   },
 
@@ -54,7 +53,6 @@ export const projectsData = [
       "Frontend Developer — core UI components & brand theming, multi-provider auth (Google One Tap, email, Facebook, Apple), Stripe checkout flow, state management for search/filter/wishlist/booking, CP & Admin dashboard handoff documentation",
     image: "/images/sportly.png",
     Link: "https://sportly.se/",
-    caseStudy: "/case-study/sportly",
   },
 
   // 3. Telegram Channels — Tgelevate directory
@@ -75,7 +73,6 @@ export const projectsData = [
     ],
     image: "/images/tgelevate.png",
     Link: "https://tgelevate.com/",
-    caseStudy: "/case-study/tgelevate",
   },
 
   // 4. BitKnit - UI/UX
@@ -94,7 +91,6 @@ export const projectsData = [
     ],
     image: "/images/bitknit.png",
     Link: "https://bitknitlimited.com/",
-    caseStudy: "/case-study/bitknit",
   },
 
   // 5. RetrovGames CP - Customer Portal
@@ -116,7 +112,6 @@ export const projectsData = [
       "Frontend Engineer — UI/UX design, client-side logic, responsive layouts, TanStack data fetching and state, PDF invoice UI, trade-in & return flows",
     image: "/images/retrovgamecp.png",
     Link: "https://app.retrovgames.com/",
-    caseStudy: "/case-study/retrovgamecp.png",
   },
 
   // 3. RetroFam CP - Customer Portal
@@ -138,7 +133,6 @@ export const projectsData = [
       "Frontend Engineer — UI/UX design, client-side logic, responsive layouts, TanStack data fetching and state, PDF invoice UI, trade-in & return flows",
     image: "/images/customer portal.png",
     Link: "https://app.retrofam.com",
-    caseStudy: "/case-study/retrofam-customer-portal",
   },
 
   // 7. Canrover - Admin Dashboard
@@ -160,7 +154,6 @@ export const projectsData = [
     ],
     image: "/images/canrover.png",
     Link: "https://canrover.vercel.app",
-    caseStudy: "/case-study/canrover-admin",
   },
 
   // 8. Bourter - Landing Page
@@ -191,7 +184,6 @@ export const projectsData = [
       "Frontend Developer — Complete landing page development including hero sections, how it works flow, multi-step registration forms for drivers and companies, document upload functionality, plan selection system, responsive design, animations, and seamless user experience",
     image: "/images/bourter-landing.jpeg",
     Link: "https://bourter-landing-page.vercel.app/",
-    caseStudy: "/case-study/bourter-landing-page",
   },
 
   // 9. GL Dream Home - E-commerce
@@ -204,7 +196,6 @@ export const projectsData = [
     stackUsed: ["Next.js", "React.js", "Tailwind CSS", "JavaScript"],
     image: "/images/gldreamhome.png",
     Link: "https://gldreamhome.com",
-    caseStudy: "/case-study/gl-dream-home",
   },
 
   // 5. GL Group UAE - UI/UX
@@ -217,7 +208,6 @@ export const projectsData = [
     stackUsed: ["Next.js", "React.js", "Tailwind CSS", "JavaScript"],
     image: "/images/groupuae.png",
     Link: "https://www.glgroupuae.com",
-    caseStudy: "/case-study/gl-group-uae",
   },
 
   // 10. Ryde - Admin Dashboard
@@ -238,7 +228,6 @@ export const projectsData = [
     ],
     image: "/images/ryde.png",
     Link: "https://ryde24.vercel.app",
-    caseStudy: "/case-study/kanban-board",
   },
 
   // 9. Bourter - Admin Dashboard
@@ -258,7 +247,6 @@ export const projectsData = [
     ],
     image: "/images/bourter.png",
     Link: "https://bourter.vercel.app/",
-    caseStudy: "/case-study/bourter",
   },
 
   // 10. CodesInc - UI/UX
@@ -271,7 +259,6 @@ export const projectsData = [
     stackUsed: ["Next.js", "Tailwind CSS", "JavaScript"],
     image: "/images/codesinc.png",
     Link: "https://codes-inc.com",
-    caseStudy: "/case-study/codesinc",
   },
 
   // 11. GlobalZairGuide - UI/UX
@@ -284,7 +271,6 @@ export const projectsData = [
     stackUsed: ["Next.js", "React.js", "Tailwind CSS", "JavaScript"],
     image: "/images/globalzair.png",
     Link: "https://globalzairguide.com/",
-    caseStudy: "/case-study/globalzairguide",
   },
 
   // 12. RizqApp - UI/UX
@@ -297,7 +283,6 @@ export const projectsData = [
     stackUsed: ["Next.js", "React.js", "Tailwind CSS", "JavaScript"],
     image: "/images/rizqapp.png",
     Link: "https://rizqapp.com/",
-    caseStudy: "/case-study/rizqapp",
   },
 
   // 13. Aziz Store/HairOil - E-commerce
@@ -324,7 +309,6 @@ export const projectsData = [
       "Full-Stack Developer — Complete frontend development including responsive UI/UX design, Redux state management for cart/wishlist, admin dashboard with CRUD operations, order management system, API integration, form validation, and real-time data fetching with TanStack Query",
     image: "/images/hairoil.jpg",
     Link: "https://www.azizstore.online/",
-    caseStudy: "/case-study/hair-oil-ecommerce",
   },
 
   // Rest of the projects...
@@ -337,7 +321,6 @@ export const projectsData = [
     stackUsed: ["Next.js", "React.js", "Tailwind CSS", "JavaScript"],
     image: "/images/entertainer.png",
     Link: "https://main.d3n4dxq4vxj5a8.amplifyapp.com",
-    caseStudy: "/case-study/the-entertainer",
   },
   {
     id: 17,
@@ -348,7 +331,6 @@ export const projectsData = [
     stackUsed: ["Next.js", "React.js", "Tailwind CSS", "JavaScript"],
     image: "/images/breaking balls.jpeg",
     Link: "https://breaking-balls-sport.vercel.app",
-    caseStudy: "/case-study/breaking-balls-sports",
   },
   {
     id: 18,
@@ -359,7 +341,6 @@ export const projectsData = [
     stackUsed: ["Next.js", "Tailwind CSS", "JavaScript"],
     image: "/images/nextjsweb.png",
     Link: "https://next-js-template1-nbt.vercel.app",
-    caseStudy: "/case-study/minimog-template",
   },
   {
     id: 19,
@@ -370,7 +351,6 @@ export const projectsData = [
     stackUsed: ["Next.js", "React.js", "JavaScript", "Tailwind CSS"],
     image: "/images/github.png",
     Link: "https://github-profile-viewer-alpha.vercel.app",
-    caseStudy: "/case-study/github-profile-viewer",
   },
   {
     id: 20,
@@ -381,7 +361,6 @@ export const projectsData = [
     stackUsed: ["Next.js", "React.js", "Tailwind CSS", "JavaScript"],
     image: "/images/clickuptemp.png",
     Link: "https://clickup-template-xi.vercel.app",
-    caseStudy: "/case-study/clickup-template",
   },
   {
     id: 21,
@@ -392,7 +371,6 @@ export const projectsData = [
     stackUsed: ["Next.js", "Tailwind CSS", "React.js", "JavaScript"],
     image: "/images/medical.png",
     Link: "https://ui-fry-green.vercel.app",
-    caseStudy: "/case-study/dental-health",
   },
   {
     id: 22,
@@ -409,7 +387,6 @@ export const projectsData = [
     ],
     image: "/images/dashstack.png",
     Link: "https://dash-stack-dashboard.vercel.app",
-    caseStudy: "/case-study/dashstack-dashboard",
   },
 ];
 

@@ -10,6 +10,12 @@ export default function sitemap() {
       priority: 1,
     },
     {
+      url: `${baseUrl}/case-study/hector`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.95,
+    },
+    {
       url: `${baseUrl}/details/services`,
       lastModified: currentDate,
       changeFrequency: 'monthly',

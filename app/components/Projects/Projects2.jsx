@@ -166,7 +166,7 @@ const Projects2 = () => {
                             <div className="h-2.5 w-2.5 rounded-full bg-[#28c840]"></div>
                           </div>
 
-                          <div className="relative aspect-video cursor-pointer overflow-hidden">
+                          <div className={`relative aspect-video overflow-hidden ${project.Link ? "cursor-pointer" : ""}`}>
                             <Image
                               src={project.image || "/placeholder.svg"}
                               alt={`${project.title} - ${project.stackUsed?.join(', ') || 'Web Development Project'} by Muhammad Asad, Full Stack Engineer`}
@@ -175,12 +175,14 @@ const Projects2 = () => {
                               sizes="(max-width: 768px) 100vw, 60vw"
                               quality={90}
                             />
-                            {/* Overlay on hover */}
-                            <Link
-                              href={project.Link || "#"}
-                              target="_blank"
-                              className="absolute inset-0 z-10 bg-black/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-                            />
+                            {project.Link && (
+                              <Link
+                                href={project.Link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="absolute inset-0 z-10 bg-black/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                              />
+                            )}
                           </div>
                         </div>
                       </div>
@@ -219,17 +221,30 @@ const Projects2 = () => {
                         </div>
 
                         {/* Actions */}
-                        <div className="flex items-center gap-4">
-                          <Link
-                            href={project.Link || "#"}
-                            target="_blank"
-                            className="group/btn relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-SkyBlue px-6 py-2.5 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5 hover:shadow-lg hover:shadow-SkyBlue/30 active:translate-y-0"
-                          >
-                            <span className="relative z-10 flex items-center gap-2">
-                              Live Demo
-                              <FiExternalLink />
-                            </span>
-                          </Link>
+                        <div className="flex flex-wrap items-center gap-3">
+                          {project.Link && (
+                            <Link
+                              href={project.Link}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="group/btn relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-SkyBlue px-6 py-2.5 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5 hover:shadow-lg hover:shadow-SkyBlue/30 active:translate-y-0"
+                            >
+                              <span className="relative z-10 flex items-center gap-2">
+                                Live Demo
+                                <FiExternalLink />
+                              </span>
+                            </Link>
+                          )}
+
+                          {project.caseStudy && (
+                            <Link
+                              href={project.caseStudy}
+                              className="inline-flex items-center gap-2 rounded-full border-2 border-SkyBlue/40 bg-SkyBlue/5 px-6 py-2.5 text-sm font-semibold text-SkyBlue transition-colors hover:border-SkyBlue hover:bg-SkyBlue/10 dark:border-darkHover/40 dark:hover:border-darkHover"
+                            >
+                              Case Study
+                              <IoMdArrowRoundForward className="transition-transform group-hover:translate-x-0.5" />
+                            </Link>
+                          )}
 
                           {project.codeUrl && (
                             <Link

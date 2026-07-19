@@ -1,0 +1,372 @@
+Hector — Full System Review
+What Is Hector?
+Hector is a full-stack internal operations platform for a multi-brand e-commerce business (RetroFam, Retro vGames, and related brands). It manages the entire lifecycle from order intake to delivery, supply chain, warehouse operations, HR, and analytics — all in one system.
+
+How Many Modules? 28 Modules across 7 Business Domains
+DOMAIN 1 — Sales & Order Processing
+1. Order Processing
+The heart of the platform. Handles orders from 11 sales channels simultaneously:
+
+Channel	What it does
+Shopify (RetroFam)
+Pulls orders via API + webhook, syncs status, processes fulfillment
+Shopify (Retro vGames)
+Separate Shopify store, same pipeline but separate config
+Walmart US / CA / MX
+Marketplace API integration, multi-region (US, Canada, Mexico)
+WooCommerce (retrovgames.com)
+REST API integration, webhooks for real-time order events
+Newegg
+API-based order pulling, status sync
+Temu
+Temu Open API client (temuOpenApiClient.js), full order lifecycle
+Amazon
+SP-API integration (Amazon MWS), order fetch and status sync
+eBay (Scrapper)
+Dedicated eBay scrapper module — separate buyer account management
+Mercari
+CSV import-based order ingestion
+Manual Orders
+Internal manual order creation for offline/phone orders
+Amazon Orders (Separate Page)
+Dedicated Amazon order processing view
+Special sub-workflows inside Order Processing:
+
+WFO (Walmart Fulfillment Operations) — Walmart orders use a dedicated scale-integrated workflow. Physical USB scales connect via SerialPort, weight is captured live (wfoScaleEventModel.js), and rates are fetched from ShipStation per box. Has its own WFO Rates Panel with complex carrier logic.
+TOF (Temu Order Fulfillment) — Temu uses its own native label system. Temu issues labels directly; Hector handles PDF label rendering and label history tracking.
+Dashboard — Order processing analytics dashboard.
+2. Order Fulfillment (+ SSOT)
+Handles what happens after an order is picked:
+
+Packing — Warehouse staff pack orders, photos captured, weights recorded
+Dropship — Third-party dropship orders; tracks OOS (Out of Stock) items, scraper line sync
+Shipping — Generates ShipStation labels, manages multi-carrier rate shopping
+SSOT (Single Source of Truth) — A pre-computed master collection that aggregates packing + dropship + shipping into one queryable record per order. Updated asynchronously via BullMQ queue (not real-time writes). Lives in its own ssot/ pages.
+Performance & Activity Logs — Fulfillment team performance tracking
+3. eBay Scrapper
+Dedicated module for eBay-sourced orders — separate from regular eBay marketplace:
+
+Manages buyer accounts (multiple eBay buyer accounts)
+Generates labels via EasyPost (not ShipStation)
+Tracks shipments via EasyPost webhooks
+Has its own health check routes
+DOMAIN 2 — Supply Chain
+4. Sourcing
+Staff submit sourcing requests — "we need X units of SKU Y from source Z."
+
+Sourcers create requests; purchasers pick them up
+sourcerPurchaserMappingModel.js links the two roles
+Dashboard + timeline logs
+5. Purchasing
+Purchasers act on sourcing requests:
+
+Pending queue, active listings, returned listings
+Cross-references with SNP (Seller & Purchaser) data
+6. SNP — Seller & Purchaser Dashboard
+The most feature-rich supply chain module:
+
+Listings management — SKU-level listings across suppliers
+Auctions — Real-time auction system via Socket.IO (live bid updates pushed to browsers)
+Price Management — Feeds the Pricing Engine
+Supplier management
+Analytics & sourcing analytics
+Competitor scraping — Background cron enqueues competitor price scrapes via BullMQ
+7. Procurement Management
+The most complex module by sub-resource count. Manages purchase orders from suppliers:
+
+PO creation with multi-step form (ProcurementDataContext)
+Boxes — Physical box tracking per PO
+Documents — Attach PDFs, invoices to POs
+Shipping details — How the procurement shipment is coming in
+Costs — Landed cost allocation per SKU
+Kits — Kit-level procurement
+Targets — Purchasing targets
+Scan — Barcode scan to receive against a PO
+Dashboard — Procurement analytics
+CSV Import — Bulk PO upload via CSV
+Delivery destinations — Multi-warehouse "deliver to" routing
+8. Inbound
+Receives procurement shipments at the warehouse:
+
+Parcel Shipments — Individual parcel inbound tracking
+Bulk Shipments — Container / pallet-level inbound
+All Shipments — Combined view
+Flagged Orders — Items with issues (mismatch, damage, missing)
+Unidentified Parcels — Parcels with no matching PO
+Activity Logs
+Inbound Inventory Valuation — Period-scoped cost valuation of inbound stock
+9. Internal Warehouse Transfer
+Mirrors the Procurement pattern but for moving stock between your own warehouses:
+
+Boxes, documents, costs, shipping, serial numbers, activity logs, dashboard
+Multi-warehouse support baked in
+DOMAIN 3 — Inventory & Products
+10. Inventory Management (New)
+The future of inventory in Hector:
+
+Master Inventory — SKU-level quantity across all warehouses, warmed in memory at startup
+SKU Management — Create, merge, map SKUs
+Warehouse management — Multi-warehouse scoping
+Ledger — Every stock movement logged
+Cycle Counts — Periodic physical count workflows
+Exceptions — Stock discrepancy reporting
+Reports — Inventory movement, valuation reports
+WFS Overlay — Walmart Fulfillment Services stock overlaid on internal inventory
+11. Inventory Management (Legacy)
+The original inventory system — still live, coexists with the new module during migration. Do not delete.
+
+12. Virtual Inventory
+All-time in/out calculation per SKU — answers "what do we have right now?" across all sources (procurement, transfers, sales, returns).
+
+13. WFS Inventory
+Walmart Fulfillment Services (Walmart holds your stock in their warehouses):
+
+Tracks stock levels at Walmart's FCs
+Pipeline service for WFS replenishment
+14. Products
+Master product catalog:
+
+Products — Base product records
+Kits — Bundle/kit definitions used across orders and procurement
+Serial Numbers — Individual unit tracking with auto-generation counter
+Marketplace Products — Platform-specific product listings
+Mapped Products — Cross-platform SKU mapping
+15. Scan
+Warehouse floor barcode scanning tool:
+
+Uses GlobalScannerContext for shared scanner state
+Barcode + QR code lookup for products and serial numbers
+Supports @ericblade/quagga2 and @zxing/browser for camera scanning
+DOMAIN 4 — Post-Sale & Customer
+16. Brand Returns (RMA)
+Full return management system:
+
+Return requests — Customer-initiated returns
+Manual returns — Staff-created return records
+Defect Reports — QA defect case management with activity logs
+Brand Return Receiving — Physical receiving workflow when item arrives back
+Auto-syncs returns from Shopify, WooCommerce, Walmart via scheduled crons
+Freshdesk integration — Creates support tickets in Freshdesk for returns
+Tracks return shipments via ShipStation (label tracking cron)
+17. Reshipment
+Re-sends orders when original shipment fails/gets lost:
+
+Links back to dropship records (reshipDropshipLinkService.js)
+Links back to FFJ (fulfillment) records
+Export support
+18. Repair & QA (Refurbishment)
+Multi-stage quality assurance system:
+
+QA Stage 1 Scan — Initial scan-in of items for QA
+Workshop — Repair tracking per item
+Testing Guides — PDF-based testing procedures per product (stored in server/guides/)
+Troubleshooting Guides — Product-specific troubleshoot docs
+Multi-warehouse QA stages
+19. Trade-Ins
+Customer trade-in program management:
+
+Reads trade-in data from the Customer Portal MongoDB (Hector doesn't own these records)
+Staff add comments locally (tradeInCommentModel.js)
+Email notifications for offers, procurement, customer communications
+Two-way email reply system (plus-addressed inbound webhook)
+Webhook-driven sync from the customer portal
+DOMAIN 5 — Customer-Facing & Marketing
+20. Customer Portal Management
+Manages the storefront customer portal:
+
+Users — Portal user management + sync
+Coupons — Coupon management + sync
+Reviews — Product review moderation
+FAQs — FAQ management
+Retrocoins — Loyalty points system configuration
+Products — Portal product sync
+21. Email Configuration
+Controls all transactional emails sent by the system:
+
+Per-event email rules (order confirmed, shipped, fulfilled, etc.)
+Email templates — Customizable HTML email templates
+Activity log for all email events
+Omnisend integration — Marketing email events for WooCommerce dropship orders
+Custom SMTP configuration (Namecheap Private Email / mail.privateemail.com)
+22. Refunds
+Unified refund management:
+
+Approval workflow (refundApproverService.js)
+Execution against platforms (Shopify refund line resolver)
+Unified refund log across platforms
+Shopify-native refund posting
+DOMAIN 6 — Analytics & Tooling
+23. Sellerboard Analytics
+Platform-by-platform sales analytics:
+
+Shopify — Live and operational
+Amazon, eBay, Walmart, Newegg — Built out, currently marked "coming soon" in UI
+Per-platform P&L analysis
+24. Pricing Engine (CPS — Competitive Price System)
+Automated competitor price monitoring:
+
+Scrapes prices from: DKOldies, Lukie Games, GameStop, Amazon, eBay, Walmart, Best Buy, Newegg, JJGames, PriceCharting, and others
+BullMQ queue-based scraping (snpScraperEnqueueCron.js)
+Competitor link management per SKU
+Scrape health monitoring
+25. Export Center
+Download any data as Excel/CSV:
+
+Platform sales reports
+Inventory management reports
+Custom report configs in exports/configs/
+Uses ExcelJS and xlsx for generation
+26. Administration & Live Monitoring
+Real-time active user monitoring via Socket.IO presence tracking
+Tracks login/logout, page activity
+userPresenceModel.js + heartbeat + stalePresenceCron.js to mark users offline
+Admin-only view
+27. SLA & Tickets Management
+Full internal ticketing system:
+
+Ticket creation, assignment, escalation
+SLA departments — Different response time rules per department
+Ticket activity log — Full audit trail
+Handling time tracking
+Origin/response tracking
+Real-time SLA due-soon notifications via Socket.IO
+Export support
+Ticket routes: routes/ticketRoutes.js, routes/slaDepartmentRoutes.js
+DOMAIN 7 — People & HR
+28. User Management
+Create/edit users with granular role-based permissions
+Role Management UI reads modulesRegistry.js — every module permission is configurable per role
+Login history, session logs, failed login attempts tracked
+User activity logs
+Company manager (multi-company structure)
+29. Employee Management
+Employee records (separate from auth users)
+Payroll data per employee
+30. Attendance
+Clock-in / clock-out
+Kiosk Mode — Locked-down tablet UI for warehouse clock-in stations
+Attendance validation + rules
+Company attendance rules configuration
+31. Time Off Management
+Leave requests + approval workflow
+Time off types (vacation, sick, etc.)
+Allocation management per employee
+32. Payroll
+Payroll calculation engine (payrollCalculationService.js)
+Payslip generation (PDF)
+Tax configuration (taxConfigModel.js)
+Payroll recalculation support
+Accessed via Employees/Attendance navigation (no separate top-level nav)
+Third-Party API Integrations — Complete List
+Marketplace / Sales Channels (7)
+Integration	Purpose
+Shopify API (@shopify/shopify-api v12 + shopify-api-node)
+Order sync, webhooks, refunds, discounts — for both RetroFam and Retro vGames stores
+Walmart Marketplace API
+Order processing US/CA/MX, shipping labels (WFO), returns sync, tracking
+WooCommerce REST API
+Order sync, webhooks, returns, tracking updates, hold/cancel
+Newegg Marketplace API
+Order sync, label tracking
+Temu Open API (temuOpenApiClient.js)
+Order sync, native label generation (TOF), after-sales/returns, tracking
+Amazon SP-API
+Order processing
+eBay
+Via scrapper + EasyPost for labels
+Shipping & Fulfillment (3)
+Integration	Purpose
+ShipStation (REST API v1 + v2)
+Label purchasing for all platforms, rate shopping (multi-carrier), order/store management, cross-reference sync, tracking — the core shipping backbone
+ShipEngine (API key)
+Rate shopping alternative / supplement to ShipStation
+EasyPost
+eBay scrapper label generation, tracking webhooks, WOF label tracking
+Printing (1)
+Integration	Purpose
+QZ Tray (qz-tray npm + qzRoutes.js)
+Silent browser-to-printer printing — sends labels directly to physical thermal/label printers without print dialogs. Hector signs QZ certificates server-side (RSA private key in server/secrets/). Used throughout fulfillment and order processing for label printing
+Cloud & Storage (2)
+Integration	Purpose
+AWS S3 (@aws-sdk/client-s3 + multer-s3)
+File storage — packing photos, documents, uploads
+Hostinger SFTP (ssh2-sftp-client)
+Image hosting for product images (images.retroventures.co)
+Email & Marketing (3)
+Integration	Purpose
+Nodemailer + SMTP (Namecheap Private Email)
+All transactional emails — order confirmations, return labels, procurement emails, trade-in offers
+Omnisend
+Marketing automation events for WooCommerce dropship fulfillment
+Freshdesk
+Creates CRM support tickets from brand returns (brandReturnFreshdeskEmailService.js)
+Authentication & Identity (2)
+Integration	Purpose
+Google OAuth (google-auth-library)
+Google SSO login option
+Stripe (stripe npm)
+Payment processing (PayPal SDK also present)
+Vision & AI (1)
+Integration	Purpose
+Google Cloud Vision (@google-cloud/vision)
+OCR / image recognition — used for document scanning and product identification
+Hardware / Physical Devices (2)
+Integration	Purpose
+SerialPort (serialport npm)
+USB serial communication with DYMO scales for WFO workflow — reads live weight from physical scales connected to warehouse computers
+Camera / Barcode Scanners
+@ericblade/quagga2, @zxing/browser, jsqr, qr-scanner — camera-based barcode scanning in the browser
+Real-Time Infrastructure (1)
+Integration	Purpose
+Socket.IO (server + client)
+WebSocket layer for: live user presence, auction real-time bids, SLA due-soon alerts, WFO scale weight telemetry, reshipment notifications, SNP notifications
+Queue & Background Processing (2)
+Integration	Purpose
+BullMQ + Redis (ioredis)
+Job queue for: SSOT sync, ShipStation order sync, pricing engine scrapes, label tracking
+node-cron
+Scheduled cron jobs (returns sync, presence cleanup, cross-reference sync, brand return reminders)
+Database (2)
+Integration	Purpose
+MongoDB Atlas (Mongoose)
+Primary database — Hector's own data
+MongoDB Atlas (Customer Portal DB)
+Separate database for the customer-facing portal — Hector reads from it for trade-ins, cancel orders, reviews
+Summary at a Glance
+Category	Count
+Business domains
+7
+Modules / registry keys
+28+
+Sales channels integrated
+11
+Third-party API integrations
+20+
+Background cron jobs
+13
+BullMQ queue workers
+2
+WebSocket event types
+6
+Server route files
+80+
+Client page folders
+40+
+Mongoose models
+100+
+Key Architectural Notes (for whoever receives this)
+Monorepo structure: Hector-Main/server (Node.js/Express backend) + Hector-client (React 19 + Vite frontend). They live in the same repo.
+
+Authentication: JWT + express-session. Role-based permissions enforced by RequirePermission on the client and requirePermission() middleware on the server. Every module has a registry key.
+
+Silent printing via QZ Tray is a core warehouse feature — every label (ShipStation, WFO, TOF native labels) is printed without any browser dialog.
+
+SSOT is not a real-time DB write — it's an eventually-consistent pre-computed record updated by BullMQ workers after fulfillment events. Never write to it directly.
+
+Two inventory systems coexist — Legacy (inventory) and New (inventoryManagement). Migration is in progress; new features go only in the new system.
+
+Multi-warehouse from the ground up — Procurement, transfers, inventory, QA stages all scope by warehouse.
+
+Hardware integration is real — DYMO USB scales communicate via Node.js SerialPort directly from the server, with weight telemetry pushed to the browser via Socket.IO for the WFO workflow.
+
+The pricing engine runs competitor scrapes via Cheerio (server-side HTML scraping) against 10+ competitor sites, queued through BullMQ.
