@@ -6,6 +6,7 @@ import Projects2 from "./components/Projects/Projects2";
 import Recommendations from "./components/Recommendations/Recommendations";
 import Services from "./components/Services/Services";
 import Skills from "./components/Skills/Skills";
+import WhoIWorkWith from "./components/WhoIWorkWith/WhoIWorkWith";
 
 export const metadata = {
   title:
@@ -266,9 +267,10 @@ export default function Home() {
       <div className="w-full">
         <Profile />
         <About />
+        <Projects2 />
+        <WhoIWorkWith />
         <Services />
         <Experience />
-        <Projects2 />
         <Credentials />
         <Skills />
         <Recommendations />
