@@ -1,12 +1,16 @@
+import dynamic from "next/dynamic";
 import About from "./components/About/About";
 import Credentials from "./components/Credentials/Credentials";
 import Experience from "./components/Experience/Experience";
 import Profile from "./components/Profile/Profile";
-import Projects2 from "./components/Projects/Projects2";
-import Recommendations from "./components/Recommendations/Recommendations";
 import Services from "./components/Services/Services";
 import Skills from "./components/Skills/Skills";
 import WhoIWorkWith from "./components/WhoIWorkWith/WhoIWorkWith";
+
+const Projects2 = dynamic(() => import("./components/Projects/Projects2"));
+const Recommendations = dynamic(
+  () => import("./components/Recommendations/Recommendations"),
+);
 
 export const metadata = {
   title:
@@ -267,13 +271,27 @@ export default function Home() {
       <div className="w-full">
         <Profile />
         <About />
-        <Projects2 />
-        <WhoIWorkWith />
-        <Services />
-        <Experience />
-        <Credentials />
-        <Skills />
-        <Recommendations />
+        <div className="below-fold">
+          <Projects2 />
+        </div>
+        <div className="below-fold">
+          <WhoIWorkWith />
+        </div>
+        <div className="below-fold">
+          <Services />
+        </div>
+        <div className="below-fold">
+          <Experience />
+        </div>
+        <div className="below-fold">
+          <Credentials />
+        </div>
+        <div className="below-fold">
+          <Skills />
+        </div>
+        <div className="below-fold">
+          <Recommendations />
+        </div>
       </div>
     </>
   );

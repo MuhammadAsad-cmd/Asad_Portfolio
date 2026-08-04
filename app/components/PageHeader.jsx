@@ -126,11 +126,11 @@ const PageHeader = ({
             </Link>
           </div>
 
-          {/* Animated Dots - Hidden on very small screens */}
+          {/* Decorative Dots - Hidden on very small screens */}
           <div className="xs:flex hidden gap-1">
-            <div className="h-1.5 w-1.5 animate-pulse rounded-full bg-SkyBlue sm:h-2 sm:w-2"></div>
-            <div className="h-1.5 w-1.5 animate-pulse rounded-full bg-lightHover delay-100 dark:bg-darkHover sm:h-2 sm:w-2"></div>
-            <div className="h-1.5 w-1.5 animate-pulse rounded-full bg-SkyBlue/70 delay-200 sm:h-2 sm:w-2"></div>
+            <div className="h-1.5 w-1.5 rounded-full bg-SkyBlue sm:h-2 sm:w-2"></div>
+            <div className="h-1.5 w-1.5 rounded-full bg-lightHover dark:bg-darkHover sm:h-2 sm:w-2"></div>
+            <div className="h-1.5 w-1.5 rounded-full bg-SkyBlue/70 sm:h-2 sm:w-2"></div>
           </div>
 
           {/* Custom Right Content */}

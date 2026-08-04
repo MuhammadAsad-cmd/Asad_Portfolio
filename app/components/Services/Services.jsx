@@ -40,9 +40,7 @@
 
 // export default Services;
 
-"use client";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
 import { IoMdArrowRoundForward } from "react-icons/io";
 import {
   IoCodeSlashOutline,
@@ -54,31 +52,6 @@ import {
 } from "react-icons/io5";
 
 const Services = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const sectionRef = useRef(null);
-
-  useEffect(() => {
-    const currentSection = sectionRef.current;
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    if (currentSection) {
-      observer.observe(currentSection);
-    }
-
-    return () => {
-      if (currentSection) {
-        observer.unobserve(currentSection);
-      }
-    };
-  }, []);
-
   // Main highlighted service
   const primaryService = {
     title: "ERP & Business Automation",
@@ -128,19 +101,12 @@ const Services = () => {
   return (
     <section
       id="services"
-      ref={sectionRef}
       className="animated-border my-6 overflow-hidden md:rounded-xl"
       aria-labelledby="services-heading"
     >
       <div className="bg-white p-6 dark:bg-discordDark md:p-10">
         {/* Header */}
-        <div
-          className={`mb-10 transition-all duration-700 ${
-            isVisible
-              ? "translate-y-0 opacity-100"
-              : "translate-y-4 opacity-0"
-          }`}
-        >
+        <div className="mb-10">
           <div className="flex items-center gap-4">
             <div className="h-10 w-1.5 rounded-full bg-SkyBlue"></div>
             <div>
@@ -156,11 +122,7 @@ const Services = () => {
 
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1fr_1.5fr]">
           {/* Left: Primary Service Highlight */}
-          <div
-            className={`transition-all duration-700 delay-100 ${
-              isVisible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
-            }`}
-          >
+          <div>
             <div className="relative h-full rounded-2xl bg-gradient-to-b from-SkyBlue/10 to-transparent p-8 dark:from-SkyBlue/5">
               <div className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-SkyBlue text-white shadow-lg shadow-SkyBlue/20">
                 <IoLayersOutline className="text-3xl" />
@@ -197,10 +159,7 @@ const Services = () => {
               {otherServices.map((service, index) => (
                 <div
                   key={index}
-                  className={`group flex items-start gap-4 transition-all duration-700 ${
-                    isVisible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
-                  }`}
-                  style={{ transitionDelay: `${200 + index * 100}ms` }}
+                  className="group flex items-start gap-4"
                 >
                   <div className="mt-1 flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-lightbg text-SkyBlue transition-colors group-hover:bg-SkyBlue group-hover:text-white dark:bg-darkSecondaryGray">
                     <service.icon className="text-lg" />
@@ -218,11 +177,7 @@ const Services = () => {
             </div>
 
             {/* View All Link */}
-            <div
-              className={`mt-6 flex justify-end transition-all duration-700 delay-700 ${
-                isVisible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
-              }`}
-            >
+            <div className="mt-6 flex justify-end">
                <Link
                 href="/details/services"
                 className="group inline-flex items-center gap-2 text-sm font-semibold text-SkyBlue transition-colors hover:text-lightHover dark:hover:text-darkHover"

@@ -2,6 +2,8 @@ import ProjectDetails from "@/app/components/ProjectDetails/ProjectDetails";
 import React from "react";
 import { projectsData } from "@/app/Data/projects";
 
+export const dynamic = "force-static";
+
 export const metadata = {
   title: "Projects Portfolio | M. Asad - Enterprise ERP Engineer | Web Development Projects",
   description:

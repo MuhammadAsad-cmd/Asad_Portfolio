@@ -1,5 +1,7 @@
 import Certifications from "@/app/components/Certifications/Certifications";
 
+export const dynamic = "force-static";
+
 export const metadata = {
   title: "Certifications | M. Asad — Portfolio",
   description:

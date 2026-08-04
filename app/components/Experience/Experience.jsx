@@ -1,7 +1,6 @@
-"use client";
 import Link from "next/link";
 import Image from "next/image";
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
 import { IoLocationOutline, IoArrowForward } from "react-icons/io5";
 import { experiences } from "@/app/Data/experiences";
 
@@ -12,45 +11,15 @@ const formatDate = (date) => {
 };
 
 const Experience = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const sectionRef = useRef(null);
-
-  useEffect(() => {
-    const currentSection = sectionRef.current;
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    if (currentSection) {
-      observer.observe(currentSection);
-    }
-
-    return () => {
-      if (currentSection) {
-        observer.unobserve(currentSection);
-      }
-    };
-  }, []);
-
   return (
     <section
       id="experience"
-      ref={sectionRef}
       className="animated-border my-6 overflow-hidden md:rounded-xl"
       aria-labelledby="experience-heading"
     >
       <div className="bg-white p-6 dark:bg-discordDark md:p-10">
         {/* Header */}
-        <div
-          className={`mb-12 transition-all duration-700 ${
-            isVisible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
-          }`}
-        >
+        <div className="mb-12">
           <div className="flex items-center gap-4">
             <div className="h-10 w-1.5 rounded-full bg-SkyBlue"></div>
             <div>
@@ -71,12 +40,7 @@ const Experience = () => {
               key={index}
               className={`relative flex gap-3 sm:gap-5 ${
                 index < experiences.length - 1 ? "pb-10 sm:pb-12" : ""
-              } ${
-                isVisible
-                  ? "translate-y-0 opacity-100"
-                  : "translate-y-8 opacity-0"
-              } transition-all duration-700`}
-              style={{ transitionDelay: `${index * 150}ms` }}
+              }`}
             >
               {/* Rail: dot + vertical line to next item */}
               <div className="relative flex w-4 shrink-0 flex-col items-center sm:w-5">
@@ -187,11 +151,7 @@ const Experience = () => {
         </ol>
 
         {/* Footer Action */}
-        <div
-          className={`mt-12 flex justify-center transition-all duration-700 delay-500 ${
-            isVisible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
-          }`}
-        >
+        <div className="mt-12 flex justify-center">
           <Link
             href="/details/experience"
             className="group inline-flex items-center gap-2 rounded-full border border-lightBorder bg-lightbg px-6 py-2.5 text-sm font-semibold text-lightPrimarytext transition-all hover:border-SkyBlue hover:text-SkyBlue dark:border-darkSecondaryGray dark:bg-darkSecondaryGray dark:text-white dark:hover:border-darkHover"

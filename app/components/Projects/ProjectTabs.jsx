@@ -1,7 +1,6 @@
 "use client";
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import { projectCategories } from "@/app/Data/projectCategories";
-import { motion } from "framer-motion";
 import {
     Rocket,
     Zap,
@@ -87,11 +86,7 @@ const ProjectTabs = ({ activeCategory, onCategoryChange, projectCounts }) => {
                                     }`}
                             >
                                 {isActive && (
-                                    <motion.div
-                                        layoutId="activeTab"
-                                        className="absolute inset-0 rounded-lg bg-gradient-to-r from-SkyBlue to-lightHover shadow-lg shadow-SkyBlue/20 dark:to-darkHover"
-                                        transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                                    />
+                                    <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-SkyBlue to-lightHover shadow-lg shadow-SkyBlue/20 dark:to-darkHover" />
                                 )}
 
                                 <div className="relative flex items-center gap-2">

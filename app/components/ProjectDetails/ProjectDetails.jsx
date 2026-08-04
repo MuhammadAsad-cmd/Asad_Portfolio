@@ -2,13 +2,11 @@
 import { projectsData } from "@/app/Data/projects";
 import { projectCategories } from "@/app/Data/projectCategories";
 import React, { useState, useMemo } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import ProjectModal from "../ProjectModal/ProjectModal";
 import Image from "next/image";
 import Link from "next/link";
 import { FiExternalLink, FiGithub } from "react-icons/fi";
 import { IoMdArrowRoundForward } from "react-icons/io";
-import { IoRocketOutline, IoCodeSlash, IoGlobeOutline } from "react-icons/io5";
+import { IoRocketOutline } from "react-icons/io5";
 import PageHeader from "../PageHeader";
 import CollapsibleDescription from "../Projects/CollapsibleDescription";
 import ProjectTabs from "../Projects/ProjectTabs";
@@ -74,8 +72,7 @@ const ProjectDetails = () => {
                 <h2 id="projects-list-heading" className="sr-only">
                   Web Development Projects Portfolio
                 </h2>
-                <motion.div layout className="space-y-16 md:space-y-24" role="list">
-                 <AnimatePresence mode="popLayout">
+                <div className="space-y-16 md:space-y-24" role="list">
                    {filteredProjects.map((project, index) => {
                      const isEven = index % 2 === 1;
                      return (
@@ -207,8 +204,7 @@ const ProjectDetails = () => {
                     </article>
                   );
                 })}
-              </AnimatePresence>
-            </motion.div>
+            </div>
             </section>
           </div>
         </section>

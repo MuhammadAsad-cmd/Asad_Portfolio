@@ -1,49 +1,18 @@
-"use client";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useEffect, useRef, useState } from "react";
-import { IoSchoolOutline, IoArrowBack } from "react-icons/io5";
+import React from "react";
+import { IoArrowBack } from "react-icons/io5";
 import { educationData } from "@/app/Data/education";
 
 const EducationDetails = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const sectionRef = useRef(null);
-
-  useEffect(() => {
-    const currentSection = sectionRef.current;
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    if (currentSection) {
-      observer.observe(currentSection);
-    }
-
-    return () => {
-      if (currentSection) {
-        observer.unobserve(currentSection);
-      }
-    };
-  }, []);
-
   return (
     <div
       id="education"
-      ref={sectionRef}
       className="animated-border my-6 overflow-hidden md:rounded-xl"
     >
       <div className="bg-white p-6 dark:bg-discordDark md:p-8">
         {/* Header with Back Button */}
-        <div
-          className={`mb-8 transition-all duration-700 ${
-            isVisible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
-          }`}
-        >
+        <div className="mb-8">
           <Link
             href="/"
             className="mb-6 inline-flex items-center gap-2 text-sm font-semibold text-SkyBlue transition-colors hover:text-lightHover dark:hover:text-darkHover"
@@ -66,15 +35,10 @@ const EducationDetails = () => {
 
         {/* Clean List Container */}
         <div className="space-y-8">
-          {educationData.map((edu, index) => (
+          {educationData.map((edu) => (
             <div
               key={edu.id}
-              className={`group flex flex-col gap-4 transition-all duration-700 md:flex-row md:items-center md:justify-between md:gap-6 ${
-                isVisible
-                  ? "translate-y-0 opacity-100"
-                  : "translate-y-8 opacity-0"
-              }`}
-              style={{ transitionDelay: `${index * 150}ms` }}
+              className="group flex flex-col gap-4 md:flex-row md:items-center md:justify-between md:gap-6"
             >
               {/* Left Side: Logo & Info */}
               <div className="flex items-start gap-4 md:items-center">

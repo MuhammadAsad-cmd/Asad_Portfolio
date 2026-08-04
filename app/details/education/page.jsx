@@ -1,6 +1,8 @@
 import EducationDetails from "@/app/components/EducationDetails/EducationDetails";
 import React from "react";
 
+export const dynamic = "force-static";
+
 export const metadata = {
   title: "Education Details | M. Asad - Web Developer",
   description:

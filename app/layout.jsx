@@ -1,7 +1,16 @@
 import "./globals.css";
+import { Outfit } from "next/font/google";
 import MainLayout from "./components/Layouts/MainLayouts";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/next";
+
+const outfit = Outfit({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+  variable: "--font-outfit",
+  preload: true,
+});
 
 export const metadata = {
   title:
@@ -76,7 +85,7 @@ export const metadata = {
 };
 
 export const viewport = {
-  themeColor: "white",
+  themeColor: "#1f1f24",
 };
 
 export default function RootLayout({ children }) {
@@ -138,8 +147,22 @@ export default function RootLayout({ children }) {
   };
 
   return (
-    <html lang="en">
-      <body className="custom-scrollbar m-0 scroll-smooth bg-lightbg p-0 text-lightPrimarytext transition-all duration-300 ease-in-out dark:bg-[#1f1f24] dark:text-white">
+    <html lang="en" className={`dark ${outfit.variable}`} suppressHydrationWarning>
+      <head>
+        <link
+          rel="preload"
+          href="/images/asadimg.avif"
+          as="image"
+          type="image/avif"
+          fetchPriority="high"
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var s=localStorage.getItem('site-theme');if(s){if(JSON.parse(s).isDark===false)document.documentElement.classList.remove('dark');return;}var l=localStorage.getItem('persist:root');if(l){if(JSON.parse(JSON.parse(l).theme).isDark===false)document.documentElement.classList.remove('dark');}}catch(e){}})();`,
+          }}
+        />
+      </head>
+      <body className={`${outfit.className} custom-scrollbar m-0 scroll-smooth bg-lightbg p-0 text-lightPrimarytext dark:bg-[#1f1f24] dark:text-white`}>
         {/* JSON-LD Structured Data for Root Layout */}
         <script
           id="root-person-schema"

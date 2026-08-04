@@ -2,8 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { useState } from "react";
 import {
   IoArrowForward,
   IoChevronDown,
@@ -17,22 +16,9 @@ import {
 import PageHeader from "../PageHeader";
 import { hectorCaseStudy as data } from "@/app/Data/caseStudies/hector";
 
-const fadeUp = {
-  hidden: { opacity: 0, y: 24 },
-  visible: (i = 0) => ({
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.5, delay: i * 0.08, ease: "easeOut" },
-  }),
-};
-
-function DomainAccordion({ domain, index, isOpen, onToggle }) {
+function DomainAccordion({ domain, isOpen, onToggle }) {
   return (
-    <motion.div
-      variants={fadeUp}
-      custom={index}
-      className="overflow-hidden rounded-2xl border border-lightBorder bg-lightbg/50 dark:border-darkSecondaryGray dark:bg-darkSecondaryGray/30"
-    >
+    <div className="overflow-hidden rounded-2xl border border-lightBorder bg-lightbg/50 dark:border-darkSecondaryGray dark:bg-darkSecondaryGray/30">
       <button
         type="button"
         onClick={onToggle}
@@ -57,73 +43,46 @@ function DomainAccordion({ domain, index, isOpen, onToggle }) {
         />
       </button>
 
-      <AnimatePresence initial={false}>
-        {isOpen && (
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="overflow-hidden"
-          >
-            <div className="space-y-4 border-t border-lightBorder px-5 pb-5 pt-4 dark:border-darkSecondaryGray md:px-6 md:pb-6">
-              {domain.modules.map((mod, modIdx) => (
-                <div
-                  key={modIdx}
-                  className="rounded-xl border border-lightBorder/80 bg-white p-4 dark:border-darkPrimaryGray/20 dark:bg-discordDark"
-                >
-                  <h4 className="font-semibold text-lightPrimarytext dark:text-white">
-                    {mod.name}
-                  </h4>
-                  <p className="mt-2 text-sm leading-relaxed text-lightSecondarytext dark:text-darkPrimaryGray">
-                    {mod.description}
-                  </p>
-                  {mod.highlights?.length > 0 && (
-                    <ul className="mt-3 space-y-1.5">
-                      {mod.highlights.map((h, hi) => (
-                        <li
-                          key={hi}
-                          className="flex gap-2 text-xs leading-relaxed text-lightSecondarytext dark:text-darkPrimaryGray md:text-sm"
-                        >
-                          <span className="mt-2 size-1.5 shrink-0 rounded-full bg-SkyBlue" />
-                          {h}
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </div>
-              ))}
+      {isOpen && (
+        <div className="space-y-4 border-t border-lightBorder px-5 pb-5 pt-4 dark:border-darkSecondaryGray md:px-6 md:pb-6">
+          {domain.modules.map((mod, modIdx) => (
+            <div
+              key={modIdx}
+              className="rounded-xl border border-lightBorder/80 bg-white p-4 dark:border-darkPrimaryGray/20 dark:bg-discordDark"
+            >
+              <h4 className="font-semibold text-lightPrimarytext dark:text-white">
+                {mod.name}
+              </h4>
+              <p className="mt-2 text-sm leading-relaxed text-lightSecondarytext dark:text-darkPrimaryGray">
+                {mod.description}
+              </p>
+              {mod.highlights?.length > 0 && (
+                <ul className="mt-3 space-y-1.5">
+                  {mod.highlights.map((h, hi) => (
+                    <li
+                      key={hi}
+                      className="flex gap-2 text-xs leading-relaxed text-lightSecondarytext dark:text-darkPrimaryGray md:text-sm"
+                    >
+                      <span className="mt-2 size-1.5 shrink-0 rounded-full bg-SkyBlue" />
+                      {h}
+                    </li>
+                  ))}
+                </ul>
+              )}
             </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </motion.div>
+          ))}
+        </div>
+      )}
+    </div>
   );
 }
 
 export default function HectorCaseStudy() {
-  const [isVisible, setIsVisible] = useState(false);
   const [openDomain, setOpenDomain] = useState(data.domains[0]?.id ?? null);
   const [activeIntegration, setActiveIntegration] = useState(0);
-  const sectionRef = useRef(null);
-
-  useEffect(() => {
-    const el = sectionRef.current;
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) setIsVisible(true);
-      },
-      { threshold: 0.05 },
-    );
-    if (el) observer.observe(el);
-    return () => {
-      if (el) observer.unobserve(el);
-    };
-  }, []);
 
   return (
     <article
-      ref={sectionRef}
       className="animated-border my-6 overflow-hidden md:rounded-xl"
       aria-labelledby="hector-case-study-heading"
     >
@@ -142,12 +101,7 @@ export default function HectorCaseStudy() {
         <section className="relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-SkyBlue/10 via-transparent to-lightHover/10 dark:from-SkyBlue/5 dark:to-darkHover/5" />
           <div className="relative grid gap-8 p-5 md:grid-cols-2 md:gap-12 md:p-8 lg:p-10">
-            <motion.div
-              initial="hidden"
-              animate={isVisible ? "visible" : "hidden"}
-              variants={fadeUp}
-              className="flex flex-col justify-center"
-            >
+            <div className="flex flex-col justify-center">
               <span className="mb-3 inline-flex w-fit items-center gap-2 rounded-full border border-SkyBlue/30 bg-SkyBlue/10 px-3 py-1 text-xs font-semibold text-SkyBlue dark:border-SkyBlue/40 dark:bg-SkyBlue/15">
                 <IoLayersOutline aria-hidden />
                 Enterprise ERP · Case Study
@@ -183,15 +137,9 @@ export default function HectorCaseStudy() {
                   <IoArrowForward aria-hidden />
                 </Link>
               </div>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial="hidden"
-              animate={isVisible ? "visible" : "hidden"}
-              variants={fadeUp}
-              custom={1}
-              className="relative"
-            >
+            <div className="relative">
               <div className="overflow-hidden rounded-2xl border border-lightBorder bg-lightbg shadow-2xl shadow-SkyBlue/10 dark:border-darkSecondaryGray dark:bg-darkSecondaryGray">
                 <div className="flex h-8 items-center gap-1.5 border-b border-lightBorder bg-white px-4 dark:border-white/5 dark:bg-[#1e2124]">
                   <div className="h-2.5 w-2.5 rounded-full bg-[#ff5f57]" />
@@ -212,19 +160,13 @@ export default function HectorCaseStudy() {
                   />
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
 
         {/* ── Stats ── */}
         <section className="border-t border-lightBorder px-5 py-8 dark:border-darkSecondaryGray md:px-8 lg:px-10">
-          <motion.div
-            initial="hidden"
-            animate={isVisible ? "visible" : "hidden"}
-            variants={fadeUp}
-            custom={2}
-            className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6"
-          >
+          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
             {data.stats.map((stat) => (
               <div
                 key={stat.label}
@@ -238,17 +180,12 @@ export default function HectorCaseStudy() {
                 </div>
               </div>
             ))}
-          </motion.div>
+          </div>
         </section>
 
         {/* ── Challenge / Solution / Impact ── */}
         <section className="border-t border-lightBorder px-5 py-10 dark:border-darkSecondaryGray md:px-8 lg:px-10">
-          <motion.div
-            initial="hidden"
-            animate={isVisible ? "visible" : "hidden"}
-            variants={fadeUp}
-            custom={3}
-          >
+          <div>
             <div className="mb-8 flex items-center gap-3">
               <div className="h-10 w-1.5 rounded-full bg-SkyBlue" />
               <div>
@@ -295,17 +232,12 @@ export default function HectorCaseStudy() {
                 </div>
               ))}
             </div>
-          </motion.div>
+          </div>
         </section>
 
         {/* ── Sales Channels ── */}
         <section className="border-t border-lightBorder bg-lightbg/40 px-5 py-10 dark:border-darkSecondaryGray dark:bg-darkSecondaryGray/20 md:px-8 lg:px-10">
-          <motion.div
-            initial="hidden"
-            animate={isVisible ? "visible" : "hidden"}
-            variants={fadeUp}
-            custom={4}
-          >
+          <div>
             <div className="mb-6 flex items-center gap-3">
               <div className="h-10 w-1.5 rounded-full bg-SkyBlue" />
               <div>
@@ -327,17 +259,12 @@ export default function HectorCaseStudy() {
                 </span>
               ))}
             </div>
-          </motion.div>
+          </div>
         </section>
 
         {/* ── Modules by Domain ── */}
         <section className="border-t border-lightBorder px-5 py-10 dark:border-darkSecondaryGray md:px-8 lg:px-10">
-          <motion.div
-            initial="hidden"
-            animate={isVisible ? "visible" : "hidden"}
-            variants={fadeUp}
-            custom={5}
-          >
+          <div>
             <div className="mb-8 flex items-center gap-3">
               <div className="h-10 w-1.5 rounded-full bg-SkyBlue" />
               <div>
@@ -350,11 +277,10 @@ export default function HectorCaseStudy() {
               </div>
             </div>
             <div className="space-y-3">
-              {data.domains.map((domain, index) => (
+              {data.domains.map((domain) => (
                 <DomainAccordion
                   key={domain.id}
                   domain={domain}
-                  index={index}
                   isOpen={openDomain === domain.id}
                   onToggle={() =>
                     setOpenDomain(openDomain === domain.id ? null : domain.id)
@@ -362,17 +288,12 @@ export default function HectorCaseStudy() {
                 />
               ))}
             </div>
-          </motion.div>
+          </div>
         </section>
 
         {/* ── Architecture ── */}
         <section className="border-t border-lightBorder bg-lightbg/40 px-5 py-10 dark:border-darkSecondaryGray dark:bg-darkSecondaryGray/20 md:px-8 lg:px-10">
-          <motion.div
-            initial="hidden"
-            animate={isVisible ? "visible" : "hidden"}
-            variants={fadeUp}
-            custom={6}
-          >
+          <div>
             <div className="mb-8 flex items-center gap-3">
               <div className="h-10 w-1.5 rounded-full bg-SkyBlue" />
               <div>
@@ -419,17 +340,12 @@ export default function HectorCaseStudy() {
                 </div>
               ))}
             </div>
-          </motion.div>
+          </div>
         </section>
 
         {/* ── Integrations ── */}
         <section className="border-t border-lightBorder px-5 py-10 dark:border-darkSecondaryGray md:px-8 lg:px-10">
-          <motion.div
-            initial="hidden"
-            animate={isVisible ? "visible" : "hidden"}
-            variants={fadeUp}
-            custom={7}
-          >
+          <div>
             <div className="mb-6 flex items-center gap-3">
               <div className="h-10 w-1.5 rounded-full bg-SkyBlue" />
               <div>
@@ -459,53 +375,38 @@ export default function HectorCaseStudy() {
               ))}
             </div>
 
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={activeIntegration}
-                initial={{ opacity: 0, y: 8 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -8 }}
-                transition={{ duration: 0.25 }}
-                className="rounded-2xl border border-lightBorder bg-lightbg/50 p-5 dark:border-darkSecondaryGray dark:bg-darkSecondaryGray/30 md:p-6"
-              >
-                <div className="mb-4 flex items-center gap-2">
-                  <IoHardwareChipOutline className="text-SkyBlue" aria-hidden />
-                  <h3 className="font-bold text-lightPrimarytext dark:text-white">
-                    {data.integrations[activeIntegration].category}
-                  </h3>
-                  <span className="rounded-full bg-SkyBlue/10 px-2 py-0.5 text-xs font-medium text-SkyBlue">
-                    {data.integrations[activeIntegration].count} integrations
-                  </span>
-                </div>
-                <div className="grid gap-3 sm:grid-cols-2">
-                  {data.integrations[activeIntegration].items.map((item) => (
-                    <div
-                      key={item.name}
-                      className="rounded-xl border border-lightBorder bg-white p-4 dark:border-darkPrimaryGray/20 dark:bg-discordDark"
-                    >
-                      <div className="font-semibold text-lightPrimarytext dark:text-white">
-                        {item.name}
-                      </div>
-                      <p className="mt-1 text-xs leading-relaxed text-lightSecondarytext dark:text-darkPrimaryGray md:text-sm">
-                        {item.detail}
-                      </p>
+            <div className="rounded-2xl border border-lightBorder bg-lightbg/50 p-5 dark:border-darkSecondaryGray dark:bg-darkSecondaryGray/30 md:p-6">
+              <div className="mb-4 flex items-center gap-2">
+                <IoHardwareChipOutline className="text-SkyBlue" aria-hidden />
+                <h3 className="font-bold text-lightPrimarytext dark:text-white">
+                  {data.integrations[activeIntegration].category}
+                </h3>
+                <span className="rounded-full bg-SkyBlue/10 px-2 py-0.5 text-xs font-medium text-SkyBlue">
+                  {data.integrations[activeIntegration].count} integrations
+                </span>
+              </div>
+              <div className="grid gap-3 sm:grid-cols-2">
+                {data.integrations[activeIntegration].items.map((item) => (
+                  <div
+                    key={item.name}
+                    className="rounded-xl border border-lightBorder bg-white p-4 dark:border-darkPrimaryGray/20 dark:bg-discordDark"
+                  >
+                    <div className="font-semibold text-lightPrimarytext dark:text-white">
+                      {item.name}
                     </div>
-                  ))}
-                </div>
-              </motion.div>
-            </AnimatePresence>
-          </motion.div>
+                    <p className="mt-1 text-xs leading-relaxed text-lightSecondarytext dark:text-darkPrimaryGray md:text-sm">
+                      {item.detail}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
         </section>
 
         {/* ── Tech Stack ── */}
         <section className="border-t border-lightBorder bg-lightbg/40 px-5 py-10 dark:border-darkSecondaryGray dark:bg-darkSecondaryGray/20 md:px-8 lg:px-10">
-          <motion.div
-            initial="hidden"
-            animate={isVisible ? "visible" : "hidden"}
-            variants={fadeUp}
-            custom={8}
-            className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between"
-          >
+          <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
             <div>
               <h2 className="text-xl font-bold text-lightPrimarytext dark:text-white md:text-2xl">
                 Core Technology Stack
@@ -524,7 +425,7 @@ export default function HectorCaseStudy() {
                 </span>
               ))}
             </div>
-          </motion.div>
+          </div>
         </section>
 
         {/* ── CTA ── */}

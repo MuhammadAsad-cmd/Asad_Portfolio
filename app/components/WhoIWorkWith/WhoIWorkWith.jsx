@@ -1,6 +1,3 @@
-"use client";
-
-import { useEffect, useRef, useState } from "react";
 import {
   IoCheckmarkCircle,
   IoCloseCircleOutline,
@@ -19,36 +16,14 @@ const notFit = [
 ];
 
 export default function WhoIWorkWith() {
-  const [isVisible, setIsVisible] = useState(false);
-  const sectionRef = useRef(null);
-
-  useEffect(() => {
-    const el = sectionRef.current;
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) setIsVisible(true);
-      },
-      { threshold: 0.1 },
-    );
-    if (el) observer.observe(el);
-    return () => {
-      if (el) observer.unobserve(el);
-    };
-  }, []);
-
   return (
     <section
       id="who-i-work-with"
-      ref={sectionRef}
       className="animated-border my-6 overflow-hidden md:rounded-xl"
       aria-labelledby="who-i-work-with-heading"
     >
       <div className="bg-white p-6 dark:bg-discordDark md:p-10">
-        <div
-          className={`mb-8 transition-all duration-700 ${
-            isVisible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
-          }`}
-        >
+        <div className="mb-8">
           <div className="flex items-center gap-4">
             <div className="h-10 w-1.5 rounded-full bg-SkyBlue" />
             <div>
@@ -66,11 +41,7 @@ export default function WhoIWorkWith() {
           </div>
         </div>
 
-        <div
-          className={`grid gap-8 lg:grid-cols-[1.4fr_1fr] lg:gap-12 transition-all duration-700 delay-100 ${
-            isVisible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
-          }`}
-        >
+        <div className="grid gap-8 lg:grid-cols-[1.4fr_1fr] lg:gap-12">
           <div>
             <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-SkyBlue">
               Strong fit

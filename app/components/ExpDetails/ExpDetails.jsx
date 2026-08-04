@@ -1,5 +1,4 @@
-"use client";
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { IoLocationOutline, IoArrowBack } from "react-icons/io5";
@@ -12,34 +11,8 @@ const formatDate = (date) => {
 };
 
 const ExpDetails = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const sectionRef = useRef(null);
-
-  useEffect(() => {
-    const currentSection = sectionRef.current;
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    if (currentSection) {
-      observer.observe(currentSection);
-    }
-
-    return () => {
-      if (currentSection) {
-        observer.unobserve(currentSection);
-      }
-    };
-  }, []);
-
   return (
     <main
-      ref={sectionRef}
       className="animated-border my-6 overflow-hidden md:rounded-xl"
       role="main"
       aria-labelledby="experience-main-heading"
@@ -47,9 +20,7 @@ const ExpDetails = () => {
       <div className="bg-white p-6 dark:bg-discordDark md:p-10">
         {/* Header with Back Button */}
         <nav
-          className={`mb-12 transition-all duration-700 ${
-            isVisible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
-          }`}
+          className="mb-12"
           aria-label="Breadcrumb navigation"
         >
           <Link
@@ -86,12 +57,7 @@ const ExpDetails = () => {
                 key={index}
                 className={`relative flex gap-3 sm:gap-5 ${
                   index < experiences.length - 1 ? "pb-10 sm:pb-12" : ""
-                } ${
-                  isVisible
-                    ? "translate-y-0 opacity-100"
-                    : "translate-y-8 opacity-0"
-                } transition-all duration-700`}
-                style={{ transitionDelay: `${index * 150}ms` }}
+                }`}
                 role="listitem"
                 itemScope
                 itemType="https://schema.org/Organization"

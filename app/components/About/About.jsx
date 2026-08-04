@@ -146,9 +146,7 @@
 
 // export default About;
 
-"use client";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
 import { IoMdArrowRoundForward } from "react-icons/io";
 import {
   IoFlashOutline,
@@ -168,31 +166,6 @@ import {
 } from "react-icons/si";
 
 const About = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const sectionRef = useRef(null);
-
-  useEffect(() => {
-    const currentSection = sectionRef.current;
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    if (currentSection) {
-      observer.observe(currentSection);
-    }
-
-    return () => {
-      if (currentSection) {
-        observer.unobserve(currentSection);
-      }
-    };
-  }, []);
-
   const techStack = {
     coreArchitecture: [
       { name: "Node.js", icon: FaNodeJs, color: "text-[#339933]" },
@@ -257,19 +230,12 @@ const About = () => {
   return (
     <section
       id="about"
-      ref={sectionRef}
       className="animated-border my-6 overflow-hidden md:rounded-xl"
       aria-labelledby="about-heading"
     >
       <div className="bg-white p-6 dark:bg-discordDark md:p-10">
         {/* Header */}
-        <div
-          className={`mb-10 transition-all duration-700 ${
-            isVisible
-              ? "translate-y-0 opacity-100"
-              : "translate-y-4 opacity-0"
-          }`}
-        >
+        <div className="mb-10">
           <div className="flex items-center gap-4">
             <div className="h-10 w-1.5 rounded-full bg-SkyBlue"></div>
             <div>
@@ -288,13 +254,7 @@ const About = () => {
           {/* Left Column: Story & Highlights */}
           <div>
             {/* Intro Text */}
-            <div
-              className={`mb-10 space-y-5 text-base leading-relaxed text-lightSecondarytext dark:text-darkPrimaryGray transition-all duration-700 delay-100 ${
-                isVisible
-                  ? "translate-y-0 opacity-100"
-                  : "translate-y-4 opacity-0"
-              }`}
-            >
+            <div className="mb-10 space-y-5 text-base leading-relaxed text-lightSecondarytext dark:text-darkPrimaryGray">
               <p>
                 I deliver production systems teams run day to day:{" "}
                 <span className="font-semibold text-lightPrimarytext dark:text-white">
@@ -333,13 +293,7 @@ const About = () => {
             </div>
 
             {/* Key Highlights (No Boxes) */}
-            <div
-              className={`mb-10 transition-all duration-700 delay-200 ${
-                isVisible
-                  ? "translate-y-0 opacity-100"
-                  : "translate-y-4 opacity-0"
-              }`}
-            >
+            <div className="mb-10">
               <h3 className="mb-6 text-base font-bold text-lightPrimarytext dark:text-white md:text-lg">
                 Where I add the most value
               </h3>
@@ -366,13 +320,7 @@ const About = () => {
           {/* Right Column: Stats & Tech (Clean Layout) */}
           <div className="space-y-10">
             {/* Stats Row */}
-            <div
-              className={`flex flex-wrap gap-8 border-b border-lightBorder pb-8 dark:border-darkSecondaryGray transition-all duration-700 delay-300 ${
-                isVisible
-                  ? "translate-y-0 opacity-100"
-                  : "translate-y-4 opacity-0"
-              }`}
-            >
+            <div className="flex flex-wrap gap-8 border-b border-lightBorder pb-8 dark:border-darkSecondaryGray">
               {experience.map((stat, index) => (
                 <div key={index}>
                   <div className="text-2xl font-bold text-SkyBlue md:text-3xl">
@@ -386,13 +334,7 @@ const About = () => {
             </div>
 
             {/* Tech Stack (Minimal Lists) */}
-            <div
-              className={`transition-all duration-700 delay-400 ${
-                isVisible
-                  ? "translate-y-0 opacity-100"
-                  : "translate-y-4 opacity-0"
-              }`}
-            >
+            <div>
               <div className="space-y-6">
                 {/* Core Architecture */}
                 <div>
@@ -457,13 +399,7 @@ const About = () => {
             </div>
             
              {/* Simple Link */}
-             <div
-              className={`pt-4 transition-all duration-700 delay-500 ${
-                isVisible
-                  ? "translate-y-0 opacity-100"
-                  : "translate-y-4 opacity-0"
-              }`}
-            >
+             <div className="pt-4">
               <Link
                 href="/details/skills"
                 className="group inline-flex items-center gap-2 text-sm font-semibold text-SkyBlue transition-colors hover:text-lightHover dark:hover:text-darkHover"

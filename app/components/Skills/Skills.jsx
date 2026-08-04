@@ -1,4 +1,3 @@
-"use client";
 import {
   IoTrendingUpOutline,
 } from "react-icons/io5";

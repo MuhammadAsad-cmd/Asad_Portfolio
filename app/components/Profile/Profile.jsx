@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { BsSendFill, BsDownload } from "react-icons/bs";
 import { IoLocationOutline, IoCheckmarkCircle } from "react-icons/io5";
 import { FaWhatsapp, FaLinkedin, FaGithub, FaEnvelope, FaInstagram } from "react-icons/fa";
@@ -12,11 +12,6 @@ import Link from "next/link";
 
 const Profile = () => {
   const [isOpenModal, setIsOpenModal] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
 
   const handleCloseModal = () => {
     setIsOpenModal(false);
@@ -41,16 +36,15 @@ const Profile = () => {
 
           <div className="relative flex flex-col gap-x-6 p-6 max-md:gap-y-8 md:flex-row md:px-8 md:py-10">
             <div className="flex w-full items-center justify-center md:w-1/2">
-              <div
-                className={`relative transition-all duration-1000 ${isVisible ? "scale-100 opacity-100" : "scale-95 opacity-0"}`}
-              >
+              <div className="relative">
                 <div className="relative size-[280px] md:size-[320px] lg:size-[380px]">
-                  <div className="animate-spin-slow absolute inset-0 rounded-full bg-gradient-to-r from-SkyBlue via-lightHover to-SkyBlue p-1 dark:to-darkHover">
+                  <div className="absolute inset-0 rounded-full bg-gradient-to-r from-SkyBlue via-lightHover to-SkyBlue p-1 dark:to-darkHover">
                     <div className="h-full w-full rounded-full bg-white p-2 dark:bg-discordDark">
                       <div className="group relative h-full w-full overflow-hidden rounded-full border-4 border-lightbg dark:border-darkSecondaryGray">
                         <Image
                           width={380}
                           height={380}
+                          sizes="(max-width: 768px) 280px, (max-width: 1024px) 320px, 380px"
                           src="/images/asadimg.avif"
                           alt="Muhammad Asad — Enterprise ERP and infrastructure engineer building high-scale business systems with Next.js, Node.js, and React."
                           className="h-full w-full object-cover transition-transform duration-500"
@@ -74,9 +68,7 @@ const Profile = () => {
               </div>
             </div>
 
-            <div
-              className={`w-full space-y-6 transition-all delay-300 duration-1000 md:w-1/2 md:max-w-[600px] ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}
-            >
+            <div className="w-full space-y-6 md:w-1/2 md:max-w-[600px]">
               <div className="space-y-1">
                 <p className="text-base text-lightSecondarytext dark:text-darkPrimaryGray sm:text-lg">
                   Hey, I&apos;m{" "}

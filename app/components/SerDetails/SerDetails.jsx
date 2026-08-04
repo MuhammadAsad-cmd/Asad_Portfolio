@@ -26,37 +26,13 @@ import {
   IoStarOutline,
   IoArrowBack,
 } from "react-icons/io5";
-import { useState, useEffect, useRef } from "react";
+import { useState } from "react";
 import { enhancedServicesData } from "@/app/Data/enhancedServices";
 
 
 const SerDetails = () => {
   const [expandedFeatures, setExpandedFeatures] = useState({});
   const [expandedTech, setExpandedTech] = useState({});
-  const [isVisible, setIsVisible] = useState(false);
-  const sectionRef = useRef(null);
-
-  useEffect(() => {
-    const currentSection = sectionRef.current;
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    if (currentSection) {
-      observer.observe(currentSection);
-    }
-
-    return () => {
-      if (currentSection) {
-        observer.unobserve(currentSection);
-      }
-    };
-  }, []);
 
   const getServiceIcon = (serviceName) => {
     const name = serviceName.toLowerCase();
@@ -169,7 +145,6 @@ const SerDetails = () => {
     <>
       <main
         id="services"
-        ref={sectionRef}
         className="animated-border my-6 overflow-hidden rounded-t-lg sm:rounded-xl"
         role="main"
         aria-labelledby="services-main-heading"
@@ -178,9 +153,7 @@ const SerDetails = () => {
           <div className="p-6 md:p-10">
             {/* Header with Back Button */}
             <nav
-              className={`mb-10 transition-all duration-700 ${
-                isVisible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
-              }`}
+              className="mb-10"
               aria-label="Breadcrumb navigation"
             >
               <Link
