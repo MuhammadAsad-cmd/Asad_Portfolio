@@ -76,6 +76,35 @@ const Footer = () => {
         </Link> */}
       </div>
 
+      <div className="relative flex w-full max-w-[414px] flex-col items-center gap-2">
+        <p className="text-xs text-lightSecondarytext dark:text-darkPrimaryGray">
+          Sponsored
+        </p>
+        <a
+          rel="sponsored noopener noreferrer"
+          href="https://imagineartinc.pxf.io/c/7853080/3793517/43678?u=https%3A%2F%2Fwww.imagine.art%2F"
+          target="_blank"
+          id="3793517"
+          aria-label="Imagine Art"
+          className="block max-w-full overflow-hidden rounded-md bg-[#111111]"
+        >
+          <img
+            src="https://a.impactradius-go.com/display-ad/43678-3793517"
+            alt=""
+            width={414}
+            height={66}
+            className="h-auto w-full max-w-[414px]"
+          />
+        </a>
+        <img
+          alt=""
+          height={0}
+          width={0}
+          src="https://imp.pxf.io/i/7853080/3793517/43678"
+          style={{ position: "absolute", visibility: "hidden" }}
+        />
+      </div>
+
       <div className="flex w-full flex-wrap items-center justify-center gap-x-4 gap-y-2 px-4 md:gap-6">
         <NavLink href="/details/services" title="Go to Services page">
           Services
