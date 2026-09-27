@@ -1,4 +1,5 @@
 import "./globals.css";
+import Script from "next/script";
 import { Outfit } from "next/font/google";
 import MainLayout from "./components/Layouts/MainLayouts";
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -172,6 +173,9 @@ export default function RootLayout({ children }) {
           }}
         />
         <MainLayout>{children}</MainLayout>
+        <Script id="impact-stat" strategy="afterInteractive">
+          {`(function(i,m,p,a,c,t){c.ire_o=p;c[p]=c[p]||function(){(c[p].a=c[p].a||[]).push(arguments)};t=a.createElement(m);var z=a.getElementsByTagName(m)[0];t.async=1;t.src=i;z.parentNode.insertBefore(t,z)})('https://utt.impactcdn.com/P-A7853080-eb3e-44a0-88d8-43ba869d2db31.js','script','impactStat',document,window);impactStat('transformLinks');impactStat('trackImpression');`}
+        </Script>
         <SpeedInsights />
         <Analytics />
       </body>
