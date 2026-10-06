@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import { SITE_URL } from "@/app/lib/site";
 import { FaCode, FaGithub, FaInstagram } from "react-icons/fa";
 import { TfiLinkedin } from "react-icons/tfi";
 import { SiUpwork } from "react-icons/si";
@@ -25,6 +26,13 @@ const Footer = () => {
           </span>
         </h1>
       </Link>
+
+      <a
+        href={SITE_URL}
+        className="text-sm font-medium text-lightSecondarytext transition-colors hover:text-SkyBlue dark:text-darkPrimaryGray"
+      >
+        www.masadali.com
+      </a>
 
       <div className="flex items-center justify-center gap-4 text-xl">
         <Link

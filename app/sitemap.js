@@ -1,55 +1,56 @@
+import { absoluteUrl, SITE_URL } from "@/app/lib/site";
+
 export default function sitemap() {
-  const baseUrl = `${process.env.NEXT_PUBLIC_SITE_URL}`
-  const currentDate = new Date()
+  const currentDate = new Date();
 
   return [
     {
-      url: baseUrl,
+      url: SITE_URL,
       lastModified: currentDate,
-      changeFrequency: 'monthly',
+      changeFrequency: "monthly",
       priority: 1,
     },
     {
-      url: `${baseUrl}/case-study/hector`,
+      url: absoluteUrl("/case-study/hector"),
       lastModified: currentDate,
-      changeFrequency: 'monthly',
+      changeFrequency: "monthly",
       priority: 0.95,
     },
     {
-      url: `${baseUrl}/details/services`,
+      url: absoluteUrl("/details/services"),
       lastModified: currentDate,
-      changeFrequency: 'monthly',
+      changeFrequency: "monthly",
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/details/experience`,
+      url: absoluteUrl("/details/experience"),
       lastModified: currentDate,
-      changeFrequency: 'monthly',
+      changeFrequency: "monthly",
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/details/projects`,
+      url: absoluteUrl("/details/projects"),
       lastModified: currentDate,
-      changeFrequency: 'weekly',
+      changeFrequency: "weekly",
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/details/education`,
+      url: absoluteUrl("/details/education"),
       lastModified: currentDate,
-      changeFrequency: 'yearly',
+      changeFrequency: "yearly",
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/details/certifications`,
+      url: absoluteUrl("/details/certifications"),
       lastModified: currentDate,
-      changeFrequency: 'yearly',
+      changeFrequency: "yearly",
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/details/skills`,
+      url: absoluteUrl("/details/skills"),
       lastModified: currentDate,
-      changeFrequency: 'monthly',
+      changeFrequency: "monthly",
       priority: 0.8,
     },
-  ]
+  ];
 }

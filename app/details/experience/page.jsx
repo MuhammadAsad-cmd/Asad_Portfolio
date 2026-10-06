@@ -1,6 +1,7 @@
 import React from "react";
 import ExpDetails from "@/app/components/ExpDetails/ExpDetails";
 import { experiences } from "@/app/Data/experiences";
+import { SITE_URL } from "@/app/lib/site";
 
 export const metadata = {
   title: "Professional Experience | M. Asad - Enterprise ERP Engineer | Career Journey",
@@ -35,9 +36,9 @@ export const metadata = {
     shortcut: "/images/logo a.png",
     apple: "/images/logo a.png",
   },
-  metadataBase: new URL(`${process.env.NEXT_PUBLIC_SITE_URL}`),
+  metadataBase: new URL(`${SITE_URL}`),
   alternates: {
-    canonical: `${process.env.NEXT_PUBLIC_SITE_URL}/details/experience`,
+    canonical: `${SITE_URL}/details/experience`,
   },
   robots: {
     index: true,
@@ -54,10 +55,10 @@ export const metadata = {
     title: "Professional Experience | Muhammad Asad - Enterprise ERP Engineer",
     description:
       "Learn about Muhammad Asad's professional journey with 3+ years of experience. Work history at Retrovgames, Motive Coder, and EVS Institute. Specializing in enterprise ERP systems, React.js, Next.js, and backend infrastructure.",
-    url: `${process.env.NEXT_PUBLIC_SITE_URL}/details/experience`,
+    url: `${SITE_URL}/details/experience`,
     images: [
       {
-        url: `${process.env.NEXT_PUBLIC_SITE_URL}/images/exp.png`,
+        url: `${SITE_URL}/images/exp.png`,
         width: 1200,
         height: 630,
         alt: "Professional experience and career journey of Muhammad Asad - Enterprise ERP Engineer",
@@ -73,12 +74,12 @@ export const metadata = {
     title: "Professional Experience | M. Asad - Enterprise ERP Engineer",
     description:
       "Discover Muhammad Asad's professional experience with 3+ years in enterprise engineering. Work history at Retrovgames, Motive Coder, and EVS Institute. Specializing in Node.js, React.js, and Next.js.",
-    images: [`${process.env.NEXT_PUBLIC_SITE_URL}/images/exp.png`],
+    images: [`${SITE_URL}/images/exp.png`],
   },
 };
 
 const page = () => {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "";
+  const baseUrl = SITE_URL;
 
   // Helper function to format dates for schema
   const formatDateForSchema = (date) => {

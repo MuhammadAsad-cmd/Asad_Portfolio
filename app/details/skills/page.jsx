@@ -1,6 +1,7 @@
 import PageHeader from "@/app/components/PageHeader";
 import React from "react";
 import Link from "next/link";
+import { SITE_URL } from "@/app/lib/site";
 
 export const metadata = {
   title: "Skills & Expertise | M. Asad - Full Stack Engineer | Technical Skills",
@@ -38,9 +39,9 @@ export const metadata = {
     shortcut: "/images/logo a.png",
     apple: "/images/logo a.png",
   },
-  metadataBase: new URL(`${process.env.NEXT_PUBLIC_SITE_URL}`),
+  metadataBase: new URL(`${SITE_URL}`),
   alternates: {
-    canonical: `${process.env.NEXT_PUBLIC_SITE_URL}/details/skills`,
+    canonical: `${SITE_URL}/details/skills`,
   },
   robots: {
     index: true,
@@ -57,10 +58,10 @@ export const metadata = {
     title: "Skills & Expertise | Muhammad Asad - Full Stack Engineer",
     description:
       "Explore the comprehensive technical skills of Muhammad Asad. Expert in React.js, Next.js, Node.js, MongoDB, TypeScript, and 15+ modern web technologies with 3+ years of professional experience.",
-    url: `${process.env.NEXT_PUBLIC_SITE_URL}/details/skills`,
+    url: `${SITE_URL}/details/skills`,
     images: [
       {
-        url: `${process.env.NEXT_PUBLIC_SITE_URL}/images/asadimg.avif`,
+        url: `${SITE_URL}/images/asadimg.avif`,
         width: 1200,
         height: 630,
         alt: "Technical skills and expertise of Muhammad Asad - Full Stack Engineer",
@@ -76,7 +77,7 @@ export const metadata = {
     title: "Skills & Expertise | M. Asad - Full Stack Engineer",
     description:
       "Comprehensive technical skills including React.js, Next.js, Node.js, MongoDB, TypeScript, and 15+ modern web technologies. 3+ years of professional experience.",
-    images: [`${process.env.NEXT_PUBLIC_SITE_URL}/images/asadimg.avif`],
+    images: [`${SITE_URL}/images/asadimg.avif`],
   },
 };
 import {
@@ -381,7 +382,7 @@ const skillsData = {
 };
 
 const SkillsDetailPage = () => {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "";
+  const baseUrl = SITE_URL;
 
   const getSkillLevelColor = (level) => {
     if (level >= 90) return "from-green-500 to-emerald-500";

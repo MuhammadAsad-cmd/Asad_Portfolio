@@ -1,6 +1,7 @@
 import React from "react";
 import SerDetails from "@/app/components/SerDetails/SerDetails";
 import { enhancedServicesData } from "@/app/Data/enhancedServices";
+import { SITE_URL } from "@/app/lib/site";
 
 export const metadata = {
   title: "Business Solutions | M. Asad - ERP, Automation & Enterprise Infrastructure",
@@ -44,9 +45,9 @@ export const metadata = {
     shortcut: "/images/logo a.png",
     apple: "/images/logo a.png",
   },
-  metadataBase: new URL(`${process.env.NEXT_PUBLIC_SITE_URL}`),
+  metadataBase: new URL(`${SITE_URL}`),
   alternates: {
-    canonical: `${process.env.NEXT_PUBLIC_SITE_URL}/details/services`,
+    canonical: `${SITE_URL}/details/services`,
   },
   robots: {
     index: true,
@@ -63,10 +64,10 @@ export const metadata = {
     title: "ERP, Automation & Business Solutions | Muhammad Asad",
     description:
       "Explore business-focused services by Muhammad Asad: ERP-style tooling, workflow automation, integrations, dashboards, e-commerce operations systems, and scalable Node.js/Next.js applications.",
-    url: `${process.env.NEXT_PUBLIC_SITE_URL}/details/services`,
+    url: `${SITE_URL}/details/services`,
     images: [
       {
-        url: `${process.env.NEXT_PUBLIC_SITE_URL}/images/servicsmeta.png`,
+        url: `${SITE_URL}/images/servicsmeta.png`,
         width: 1200,
         height: 630,
         alt: "Web development services by Muhammad Asad - Full Stack Engineer offering professional web solutions",
@@ -82,12 +83,12 @@ export const metadata = {
     title: "Business Solutions | M. Asad - ERP & Automation",
     description:
       "ERP, automation, integrations, dashboards, and scalable enterprise business systems for growing operations.",
-    images: [`${process.env.NEXT_PUBLIC_SITE_URL}/images/servicsmeta.png`],
+    images: [`${SITE_URL}/images/servicsmeta.png`],
   },
 };
 
 const page = () => {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "";
+  const baseUrl = SITE_URL;
 
   // Service ItemList Schema for all services
   const serviceListSchema = {

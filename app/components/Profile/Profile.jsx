@@ -80,18 +80,13 @@ const Profile = () => {
 
               <div className="space-y-2">
                 <h1 className="text-balance text-2xl font-bold leading-tight tracking-tight text-lightPrimarytext dark:text-white sm:text-3xl md:text-[2.35rem] lg:text-5xl">
-                  Building High-Scale{" "}
                   <span className="bg-gradient-to-r from-SkyBlue to-lightHover bg-clip-text text-transparent dark:to-darkHover">
-                    ERP &amp; Business Infrastructure
+                    Software Engineer
                   </span>
                 </h1>
                 <p className="max-w-xl text-sm font-medium text-lightSecondarytext dark:text-darkPrimaryGray sm:text-base">
-                  Full-Stack Developer{" "}
-                  <span className="text-lightPrimarytext dark:text-white">
-                    (Node.js, Next.js, React)
-                  </span>{" "}
-                  specializing in optimizing enterprise workflows, custom data
-                  pipelines, and high-performance business applications.
+                  I take a problem and ship the software that solves it — built
+                  properly, and ready for real use.
                 </p>
               </div>
 

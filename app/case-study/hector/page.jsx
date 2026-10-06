@@ -1,6 +1,5 @@
 import HectorCaseStudy from "@/app/components/CaseStudy/HectorCaseStudy";
-
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+import { SITE_URL as siteUrl } from "@/app/lib/site";
 
 export const metadata = {
   title: "Hector Case Study | M. Asad — Enterprise ERP Operations Platform",

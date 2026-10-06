@@ -243,7 +243,7 @@ const About = () => {
                 About Muhammad Asad
               </h2>
               <p className="mt-1 text-sm leading-relaxed text-lightSecondarytext dark:text-darkPrimaryGray md:text-base">
-                Outcomes and track record—the Services section is the menu of what I build
+                Software engineer in Lahore. I build whatever the work requires.
               </p>
             </div>
           </div>
@@ -255,6 +255,12 @@ const About = () => {
           <div>
             {/* Intro Text */}
             <div className="mb-10 space-y-5 text-base leading-relaxed text-lightSecondarytext dark:text-darkPrimaryGray">
+              <p>
+                Muhammad Asad is a software engineer in Lahore, Pakistan. He
+                designs and builds software and ships it into production. The
+                work follows the problem, not a fixed menu of project types.
+                This portfolio is at masadali.com.
+              </p>
               <p>
                 I deliver production systems teams run day to day:{" "}
                 <span className="font-semibold text-lightPrimarytext dark:text-white">

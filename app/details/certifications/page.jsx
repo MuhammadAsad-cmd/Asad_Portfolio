@@ -1,4 +1,5 @@
 import Certifications from "@/app/components/Certifications/Certifications";
+import { SITE_URL, indexRobots } from "@/app/lib/site";
 
 export const dynamic = "force-static";
 
@@ -22,18 +23,34 @@ export const metadata = {
     shortcut: "/images/logo a.png",
     apple: "/images/logo a.png",
   },
+  metadataBase: new URL(SITE_URL),
+  alternates: {
+    canonical: `${SITE_URL}/details/certifications`,
+  },
+  robots: indexRobots,
   openGraph: {
     title: "Certifications | M. Asad",
     description:
       "Front-end, full-stack, and Cisco credentials for Muhammad Asad.",
-    url: `${process.env.NEXT_PUBLIC_SITE_URL}/details/certifications`,
+    url: `${SITE_URL}/details/certifications`,
+    images: [
+      {
+        url: `${SITE_URL}/images/asadimg.avif`,
+        width: 1200,
+        height: 630,
+        alt: "Certifications of Muhammad Asad",
+      },
+    ],
     type: "website",
+    siteName: "Muhammad Asad Portfolio",
+    locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
     title: "Certifications | M. Asad",
     description:
       "Verified training and credentials—full-stack, front-end, Cisco C++ Essentials.",
+    images: [`${SITE_URL}/images/asadimg.avif`],
   },
 };
 

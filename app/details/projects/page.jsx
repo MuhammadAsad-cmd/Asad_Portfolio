@@ -1,6 +1,7 @@
 import ProjectDetails from "@/app/components/ProjectDetails/ProjectDetails";
 import React from "react";
 import { projectsData } from "@/app/Data/projects";
+import { SITE_URL } from "@/app/lib/site";
 
 export const dynamic = "force-static";
 
@@ -37,9 +38,9 @@ export const metadata = {
     shortcut: "/images/logo a.png",
     apple: "/images/logo a.png",
   },
-  metadataBase: new URL(`${process.env.NEXT_PUBLIC_SITE_URL}`),
+  metadataBase: new URL(`${SITE_URL}`),
   alternates: {
-    canonical: `${process.env.NEXT_PUBLIC_SITE_URL}/details/projects`,
+    canonical: `${SITE_URL}/details/projects`,
   },
   robots: {
     index: true,
@@ -56,10 +57,10 @@ export const metadata = {
     title: "Projects Portfolio | Muhammad Asad - Enterprise ERP Engineer",
     description:
       "Discover 20+ professional web development projects by Muhammad Asad. Enterprise ERP systems, e-commerce platforms, customer portals, and modern web applications built with React.js, Next.js, Node.js, and MongoDB.",
-    url: `${process.env.NEXT_PUBLIC_SITE_URL}/details/projects`,
+    url: `${SITE_URL}/details/projects`,
     images: [
       {
-        url: `${process.env.NEXT_PUBLIC_SITE_URL}/images/proj.png`,
+        url: `${SITE_URL}/images/proj.png`,
         width: 1200,
         height: 630,
         alt: "Web development projects portfolio by Muhammad Asad - Enterprise ERP Engineer",
@@ -75,12 +76,12 @@ export const metadata = {
     title: "Projects Portfolio | M. Asad - Enterprise ERP Engineer",
     description:
       "Explore 20+ projects by Muhammad Asad, featuring multi-tenant ERP systems, enterprise applications, e-commerce platforms, and modern web solutions built with React.js, Next.js, and Node.js.",
-    images: [`${process.env.NEXT_PUBLIC_SITE_URL}/images/proj.png`],
+    images: [`${SITE_URL}/images/proj.png`],
   },
 };
 
 const page = () => {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "";
+  const baseUrl = SITE_URL;
 
   // Projects ItemList Schema
   const projectsListSchema = {
