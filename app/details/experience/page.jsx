@@ -116,31 +116,32 @@ const page = () => {
     },
   };
 
-  // Work History ItemList Schema
+  const roleDescription = (exp, role) =>
+    role.description || `${role.title} at ${exp.company}.`;
+
+  // Work history as roles held, not open job ads.
   const workHistorySchema = {
     "@context": "https://schema.org",
     "@type": "ItemList",
     name: "Professional Work Experience of Muhammad Asad",
     description:
-      "Complete work history and professional experience of Muhammad Asad, Enterprise ERP & Infrastructure Engineer",
+      "Work history of Muhammad Asad, software engineer, including roles, dates, and what each role covered.",
     itemListElement: experiences.flatMap((exp, expIndex) =>
       exp.roles.map((role, roleIndex) => ({
         "@type": "ListItem",
         position: expIndex * 10 + roleIndex + 1,
         item: {
-          "@type": "JobPosting",
-          title: role.title,
-          employmentType: role.type,
-          datePosted: formatDateForSchema(role.startDate),
-          validThrough: role.endDate ? formatDateForSchema(role.endDate) : undefined,
-          hiringOrganization: {
+          "@type": "EmployeeRole",
+          roleName: role.title,
+          description: roleDescription(exp, role),
+          startDate: formatDateForSchema(role.startDate),
+          ...(role.endDate ? { endDate: formatDateForSchema(role.endDate) } : {}),
+          skills: role.skills,
+          worksFor: {
             "@type": "Organization",
             name: exp.company,
             url: exp.link || undefined,
             logo: exp.image ? `${baseUrl}${exp.image}` : undefined,
-          },
-          jobLocation: {
-            "@type": "Place",
             address: {
               "@type": "PostalAddress",
               addressLocality: exp.location.split(",")[0]?.trim() || "Lahore",
@@ -148,7 +149,6 @@ const page = () => {
               addressCountry: "PK",
             },
           },
-          skills: role.skills,
         },
       }))
     ),

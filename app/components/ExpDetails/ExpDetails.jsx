@@ -120,19 +120,13 @@ const ExpDetails = () => {
                               ? "border-b border-lightBorder pb-6 dark:border-darkSecondaryGray sm:pb-8"
                               : ""
                           }`}
-                          itemScope
-                          itemType="https://schema.org/JobPosting"
                         >
                           <div className="flex flex-col gap-1.5 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4">
-                            <h4
-                              className="text-base font-bold leading-snug text-lightPrimarytext dark:text-white sm:text-lg"
-                              itemProp="title"
-                            >
+                            <h4 className="text-base font-bold leading-snug text-lightPrimarytext dark:text-white sm:text-lg">
                               {role.title}
                             </h4>
                             <time
                               className="shrink-0 text-xs font-medium text-lightSecondarytext dark:text-darkPrimaryGray sm:text-sm"
-                              itemProp="datePosted"
                               dateTime={role.startDate}
                             >
                               {formatDate(role.startDate)} –{" "}
@@ -141,13 +135,16 @@ const ExpDetails = () => {
                           </div>
 
                           <div className="mt-2 flex flex-wrap items-center gap-2 text-sm">
-                            <span
-                              className="rounded-md bg-SkyBlue/10 px-2.5 py-0.5 text-xs font-medium text-SkyBlue dark:bg-SkyBlue/20 sm:text-sm"
-                              itemProp="employmentType"
-                            >
+                            <span className="rounded-md bg-SkyBlue/10 px-2.5 py-0.5 text-xs font-medium text-SkyBlue dark:bg-SkyBlue/20 sm:text-sm">
                               {role.type}
                             </span>
                           </div>
+
+                          {role.description && (
+                            <p className="mt-3 text-sm leading-relaxed text-lightSecondarytext dark:text-darkPrimaryGray">
+                              {role.description}
+                            </p>
+                          )}
 
                           {role.skills && (
                             <div className="mt-3 flex flex-wrap gap-1.5 sm:gap-2" aria-label="Skills used in this role">
@@ -155,7 +152,6 @@ const ExpDetails = () => {
                                 <span
                                   key={sIdx}
                                   className="max-w-full break-words rounded-md border border-lightBorder bg-lightbg px-2 py-0.5 text-[11px] font-medium leading-tight text-lightSecondarytext dark:border-darkSecondaryGray dark:bg-darkSecondaryGray/80 dark:text-darkPrimaryGray sm:text-xs"
-                                  itemProp="skills"
                                 >
                                   {skill.trim()}
                                 </span>

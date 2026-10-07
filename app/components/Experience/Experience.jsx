@@ -112,6 +112,12 @@ const Experience = () => {
                           </span>
                         </div>
 
+                        {role.description && (
+                          <p className="mt-3 text-sm leading-relaxed text-lightSecondarytext dark:text-darkPrimaryGray">
+                            {role.description}
+                          </p>
+                        )}
+
                         {role.skills && (
                           <div className="mt-3 flex flex-wrap gap-1.5 sm:gap-2">
                             {role.skills.split(",").map((skill, sIdx) => (

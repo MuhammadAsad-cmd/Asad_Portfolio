@@ -13,10 +13,8 @@ export const experiences = [
         startDate: "2025-10",
         endDate: null, // Present
         skills: "MongoDB, Express.js, React, Node.js, Next.js, Redux Toolkit",
-        highlights: [
-          "Designed and maintained the core backend infrastructure utilizing Node.js and Next.js, optimizing database query times for high-volume traffic.",
-          "Engineered custom API endpoints to securely automate core internal workflows and external system syncs.",
-        ],
+        description:
+          "Own end-to-end work on the Hector ERP platform, from Node.js and Express APIs and MongoDB schemas to React interfaces, including procurement, order fulfillment, and workforce modules.",
       },
       {
         title: "Front End Next.js Developer",
@@ -24,6 +22,8 @@ export const experiences = [
         startDate: "2025-04",
         endDate: "2025-09",
         skills: "React, Next.js, Tailwind Css, Redux Toolkit, Rest Api",
+        description:
+          "Built the Hector ERP interface in React and Next.js, covering order processing, inventory, fulfillment, and procurement, and the RetroFam and RetrovGames customer portals for tracking, trade-ins, and invoices.",
       },
     ],
   },
@@ -41,6 +41,8 @@ export const experiences = [
         startDate: "2023-12",
         endDate: "2025-03",
         skills: "React, Next.js, Tailwind Css, Redux Toolkit, Rest Api",
+        description:
+          "Designed and built client e-commerce sites in Next.js, React, and Tailwind CSS, from wireframe through deployment, including SEO, accessibility, and UI variations for each client.",
       },
       {
         title: "Full Stack Developer",
@@ -48,6 +50,8 @@ export const experiences = [
         startDate: "2023-09",
         endDate: "2023-12",
         skills: "React, Next.js, Tailwind Css, Redux Toolkit",
+        description:
+          "Internship building responsive web applications with HTML, CSS, JavaScript, React, and Next.js alongside the Motive Coder team.",
       },
     ],
   },
@@ -63,6 +67,8 @@ export const experiences = [
         startDate: "2023-05",
         endDate: "2023-08",
         skills: "Html, Css, JavaScript",
+        description:
+          "Web development internship building pages with HTML, CSS, and JavaScript.",
       },
     ],
   },
