@@ -81,12 +81,12 @@ const Profile = () => {
               <div className="space-y-2">
                 <h1 className="text-balance text-2xl font-bold leading-tight tracking-tight text-lightPrimarytext dark:text-white sm:text-3xl md:text-[2.35rem] lg:text-5xl">
                   <span className="bg-gradient-to-r from-SkyBlue to-lightHover bg-clip-text text-transparent dark:to-darkHover">
-                    Software Engineer
+                    Custom ERP &amp; Operations Systems Engineer
                   </span>
                 </h1>
                 <p className="max-w-xl text-sm font-medium text-lightSecondarytext dark:text-darkPrimaryGray sm:text-base">
-                  I take a problem and ship the software that solves it — built
-                  properly, and ready for real use.
+                  Order, inventory, and warehouse software for Shopify, Walmart,
+                  and Amazon sellers — built properly, and ready for real use.
                 </p>
               </div>
 
@@ -95,7 +95,7 @@ const Profile = () => {
               <div className="flex flex-wrap items-center gap-x-4 gap-y-1.5">
                 <div className="flex items-center gap-2 text-lightSecondarytext dark:text-darkPrimaryGray">
                   <IoLocationOutline className="shrink-0 text-SkyBlue" />
-                  <span className="text-sm">Lahore, Punjab, Pakistan</span>
+                  <span className="text-sm">Remote · based in Lahore</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <IoCheckmarkCircle className="shrink-0 text-sm text-green-500" />
@@ -125,7 +125,7 @@ const Profile = () => {
                 </Link>
 
                 <a
-                  href="/Asad Front End resume.pdf"
+                  href="/Muhammad-Asad-Resume.pdf"
                   download
                   className="group flex items-center justify-center gap-1.5 rounded-xl border-2 border-slate-200 px-3 py-2.5 text-sm font-semibold text-slate-600 transition-all duration-300 hover:border-SkyBlue hover:text-SkyBlue dark:border-white/10 dark:text-white/70 dark:hover:border-SkyBlue dark:hover:text-SkyBlue sm:min-w-[160px] sm:gap-2 sm:px-6 sm:py-3"
                 >

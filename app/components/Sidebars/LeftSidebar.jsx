@@ -8,9 +8,9 @@ const LeftSidebar = () => {
   return (
     <>
       <div className="p-[30px]">
-        <h1 className="mt-4 flex justify-between border-b-2 border-SkyBlue pb-8 text-center text-4xl font-medium tracking-widest text-lightPrimarytext dark:text-neutral-200">
+        <p className="mt-4 flex justify-between border-b-2 border-SkyBlue pb-8 text-center text-4xl font-medium tracking-widest text-lightPrimarytext dark:text-neutral-200">
           <span>Get</span> <span>in</span> <span>touch</span>
-        </h1>
+        </p>
         <div className="mb-[30px] pt-6">
           <p className="mb-6 text-base leading-[26px] tracking-widest text-lightPrimarytext dark:text-neutral-200">
             I&apos;m always excited to take on new projects and collaborate with
@@ -60,9 +60,9 @@ const LeftSidebar = () => {
 
           <div className="mb-4 text-base leading-[26px]">
             <p className="capitalize tracking-widest text-gray-900 dark:text-gray-400">
-              Address
+              Based in
             </p>
-            <p className="text-gray-700 dark:text-gray-200">Lahore, Pakistan</p>
+            <p className="text-gray-700 dark:text-gray-200">Lahore, Pakistan · remote</p>
           </div>
 
           <div className="mb-4 text-base leading-[26px]">

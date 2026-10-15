@@ -61,11 +61,11 @@ export const metadata = {
     url: `${SITE_URL}/details/skills`,
     images: [
       {
-        url: `${SITE_URL}/images/asadimg.avif`,
+        url: `${SITE_URL}/opengraph-image`,
         width: 1200,
         height: 630,
         alt: "Technical skills and expertise of Muhammad Asad - Full Stack Engineer",
-        type: "image/avif",
+        type: "image/png",
       },
     ],
     type: "profile",
@@ -77,7 +77,7 @@ export const metadata = {
     title: "Skills & Expertise | M. Asad - Full Stack Engineer",
     description:
       "Comprehensive technical skills including React.js, Next.js, Node.js, MongoDB, TypeScript, and 15+ modern web technologies. 3+ years of professional experience.",
-    images: [`${SITE_URL}/images/asadimg.avif`],
+    images: [`${SITE_URL}/opengraph-image`],
   },
 };
 import {

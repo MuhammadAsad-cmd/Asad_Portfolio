@@ -47,12 +47,12 @@ const Header = () => {
           <div className="flex w-full items-center justify-between px-4">
             <Link href="/" className="flex items-center gap-2">
               <FaCode className="text-4xl text-SkyBlue" />
-              <h1 className="text-2xl font-semibold text-black dark:text-white">
+              <span className="text-2xl font-semibold text-black dark:text-white">
                 Asad
                 <span className="bg-gradient-to-r from-black to-black/20 bg-clip-text text-transparent dark:from-white dark:to-white/20">
                   .dev
                 </span>
-              </h1>
+              </span>
             </Link>
             <nav className="hidden h-full w-full items-center justify-center gap-12 px-4 lg:flex">
               <Link href="/details/services" title="Go to Services page"

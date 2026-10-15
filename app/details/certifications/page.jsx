@@ -35,7 +35,7 @@ export const metadata = {
     url: `${SITE_URL}/details/certifications`,
     images: [
       {
-        url: `${SITE_URL}/images/asadimg.avif`,
+        url: `${SITE_URL}/opengraph-image`,
         width: 1200,
         height: 630,
         alt: "Certifications of Muhammad Asad",
@@ -50,7 +50,7 @@ export const metadata = {
     title: "Certifications | M. Asad",
     description:
       "Verified training and credentials—full-stack, front-end, Cisco C++ Essentials.",
-    images: [`${SITE_URL}/images/asadimg.avif`],
+    images: [`${SITE_URL}/opengraph-image`],
   },
 };
 

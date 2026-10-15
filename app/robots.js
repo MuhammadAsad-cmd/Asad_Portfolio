@@ -18,6 +18,8 @@ const answerEngines = [
   "Applebot-Extended",
   "Amazonbot",
   "Bingbot",
+  "GrokBot",
+  "xAI-Bot",
 ];
 
 export default function robots() {

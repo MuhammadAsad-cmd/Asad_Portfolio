@@ -1,5 +1,12 @@
 import HectorCaseStudy from "@/app/components/CaseStudy/HectorCaseStudy";
-import { SITE_URL as siteUrl } from "@/app/lib/site";
+import {
+  JOB_TITLE,
+  PERSON_ID,
+  SITE_URL as siteUrl,
+} from "@/app/lib/site";
+
+const DATE_PUBLISHED = "2026-07-19";
+const DATE_MODIFIED = "2026-08-04";
 
 export const metadata = {
   title: "Hector Case Study | M. Asad — Enterprise ERP Operations Platform",
@@ -50,6 +57,9 @@ export const metadata = {
       },
     ],
     type: "article",
+    publishedTime: DATE_PUBLISHED,
+    modifiedTime: DATE_MODIFIED,
+    authors: [siteUrl],
     siteName: "Muhammad Asad Portfolio",
     locale: "en_US",
   },
@@ -73,18 +83,24 @@ export default function HectorCaseStudyPage() {
       "Case study of a full-stack internal operations platform for multi-brand e-commerce with 28+ modules and 20+ integrations.",
     author: {
       "@type": "Person",
+      "@id": PERSON_ID,
       name: "Muhammad Asad",
-      jobTitle: "Enterprise ERP & Infrastructure Engineer",
+      jobTitle: JOB_TITLE,
       url: baseUrl,
     },
-    publisher: {
-      "@type": "Person",
-      name: "Muhammad Asad",
-    },
+    publisher: { "@id": PERSON_ID },
     image: `${baseUrl}/images/hector.png`,
     url: `${baseUrl}/case-study/hector`,
     mainEntityOfPage: `${baseUrl}/case-study/hector`,
+    datePublished: DATE_PUBLISHED,
+    dateModified: DATE_MODIFIED,
     inLanguage: "en-US",
+    about: [
+      "Enterprise resource planning",
+      "Order management system",
+      "Warehouse management system",
+      "Multi-channel e-commerce",
+    ],
   };
 
   const breadcrumbSchema = {
@@ -101,7 +117,7 @@ export default function HectorCaseStudyPage() {
         "@type": "ListItem",
         position: 2,
         name: "Projects",
-        item: `${baseUrl}/#projects`,
+        item: `${baseUrl}/details/projects`,
       },
       {
         "@type": "ListItem",

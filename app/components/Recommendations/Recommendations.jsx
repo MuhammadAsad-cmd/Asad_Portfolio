@@ -44,9 +44,9 @@ const Recommendations = () => {
           <div className="flex items-center gap-4">
             <div className="h-10 w-1.5 rounded-full bg-SkyBlue"></div>
             <div>
-              <h1 className="text-2xl font-bold tracking-tight text-lightPrimarytext dark:text-white md:text-3xl">
+              <h2 className="text-2xl font-bold tracking-tight text-lightPrimarytext dark:text-white md:text-3xl">
                 Recommendations
-              </h1>
+              </h2>
               <p className="mt-1 text-sm leading-relaxed text-lightSecondarytext dark:text-darkPrimaryGray md:text-base">
                 Feedback from colleagues and peers
               </p>

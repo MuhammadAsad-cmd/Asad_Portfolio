@@ -59,14 +59,6 @@ export const metadata = {
   openGraph: {
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
-    images: [
-      {
-        url: `${SITE_URL}/images/asadimg.avif`,
-        width: 1200,
-        height: 630,
-        alt: "Muhammad Asad — Enterprise ERP and infrastructure engineer",
-      },
-    ],
     type: "website",
     url: SITE_URL,
     siteName: SITE_NAME,
@@ -81,7 +73,6 @@ export const metadata = {
       "Node.js, Next.js, React—ERP systems, automation, and enterprise infrastructure for operations teams.",
     site: "@MAsad96668934",
     creator: "@MAsad96668934",
-    images: [`${SITE_URL}/images/asadimg.avif`],
   },
 
   // Search engine verification

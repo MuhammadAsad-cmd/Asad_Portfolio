@@ -7,6 +7,7 @@ import { certificationsData } from "@/app/Data/certifications";
 
 const Certifications = ({ variant = "section" }) => {
   const isStandalone = variant === "standalone";
+  const HeadingTag = isStandalone ? "h1" : "h2";
 
   return (
     <div className="animated-border my-6 overflow-hidden md:rounded-xl">
@@ -25,9 +26,9 @@ const Certifications = ({ variant = "section" }) => {
         <div className="mb-10 flex items-center gap-4">
           <div className="h-10 w-1.5 rounded-full bg-SkyBlue"></div>
           <div>
-            <h1 className="text-2xl font-bold tracking-tight text-lightPrimarytext dark:text-white md:text-3xl">
+            <HeadingTag className="text-2xl font-bold tracking-tight text-lightPrimarytext dark:text-white md:text-3xl">
               Certifications
-            </h1>
+            </HeadingTag>
             <p className="mt-1 text-sm leading-relaxed text-lightSecondarytext dark:text-darkPrimaryGray md:text-base">
               Verified credentials and licenses
             </p>

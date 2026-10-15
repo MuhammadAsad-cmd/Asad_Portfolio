@@ -62,14 +62,6 @@ export const metadata = {
     apple: "/images/logo a.png",
   },
   metadataBase: new URL(`${SITE_URL}`),
-  images: [
-    {
-      url: `${SITE_URL}/images/asadimg.avif`,
-      width: 1200,
-      height: 630,
-      alt: "Muhammad Asad — Enterprise ERP and infrastructure engineer",
-    },
-  ],
   alternates: {
     canonical: `${SITE_URL}`,
   },
@@ -86,26 +78,11 @@ export const metadata = {
   },
   category: "Portfolio",
   classification: "Software Development Portfolio",
-  other: {
-    "geo.region": "PK-PB",
-    "geo.placename": "Lahore",
-    "geo.position": "31.5204;74.3587",
-    "ICBM": "31.5204, 74.3587",
-  },
 
   // Open Graph metadata
   openGraph: {
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
-    images: [
-      {
-        url: `${SITE_URL}/images/asadimg.avif`,
-        width: 1200,
-        height: 630,
-        alt: "Muhammad Asad — Enterprise ERP and infrastructure engineer",
-        type: "image/avif",
-      },
-    ],
     type: "profile",
     url: `${SITE_URL}`,
     siteName: SITE_NAME,
@@ -123,7 +100,6 @@ export const metadata = {
       "Node.js, Next.js, React—ERP systems, automation, and enterprise infrastructure for operations teams.",
     site: "@MAsad96668934",
     creator: "@MAsad96668934",
-    images: [`${SITE_URL}/images/asadimg.avif`],
   },
 };
 

@@ -37,9 +37,21 @@ export const SAME_AS = [
 ];
 
 export const SITE_DESCRIPTION =
-  "Muhammad Asad is a software engineer in Lahore, Pakistan. He designs and builds software and ships it into production. Official site: https://www.masadali.com.";
+  "Muhammad Asad builds custom ERP, order management, and warehouse systems for Shopify, Walmart, and Amazon sellers with Node.js and Next.js. Remote from Lahore for US, UK, and UAE teams.";
 
-export const SITE_TITLE = "Muhammad Asad — Software Engineer";
+export const SITE_TITLE = "Muhammad Asad — Custom ERP & Operations Systems Engineer";
+
+export const JOB_TITLE = "Enterprise ERP & Infrastructure Engineer";
+
+export const AREA_SERVED = [
+  { "@type": "Country", name: "United States" },
+  { "@type": "Country", name: "United Kingdom" },
+  { "@type": "Country", name: "United Arab Emirates" },
+  { "@type": "Country", name: "Saudi Arabia" },
+  { "@type": "Country", name: "Canada" },
+  { "@type": "Country", name: "Pakistan" },
+  { "@type": "Place", name: "Worldwide" },
+];
 
 export function absoluteUrl(path = "/") {
   if (!path || path === "/") return SITE_URL;
@@ -103,7 +115,7 @@ export function buildPersonSchema() {
     "@id": PERSON_ID,
     name: PERSON_NAME,
     alternateName: ["M. Asad", "masadali"],
-    jobTitle: "Software Engineer",
+    jobTitle: JOB_TITLE,
     description: SITE_DESCRIPTION,
     url: SITE_URL,
     image: `${SITE_URL}/images/asadimg.png`,
@@ -130,6 +142,12 @@ export function buildPersonSchema() {
       "TypeScript",
       "System integration",
       "E-commerce operations",
+      "Order management systems",
+      "Warehouse management",
+      "Shopify API",
+      "Walmart Marketplace API",
+      "Amazon SP-API",
+      "ShipStation API",
     ],
     knowsLanguage: ["en"],
     alumniOf: {
@@ -143,7 +161,7 @@ export function buildPersonSchema() {
     },
     hasOccupation: {
       "@type": "Occupation",
-      name: "Software Engineer",
+      name: JOB_TITLE,
       occupationLocation: {
         "@type": "City",
         name: "Lahore",
@@ -251,7 +269,7 @@ export function buildProfessionalServiceSchema() {
     provider: { "@id": PERSON_ID },
     description:
       "Custom multi-tenant ERP systems, workflow automation, e-commerce operations platforms, API integrations, admin dashboards, and scalable Node.js and Next.js applications.",
-    areaServed: ["Lahore", "Pakistan", "Worldwide"],
+    areaServed: AREA_SERVED,
     availableLanguage: "English",
     serviceType: [
       "ERP Development",
@@ -349,10 +367,13 @@ Muhammad Asad publishes this portfolio at ${SITE_URL}. The previous host ${LEGAC
 
 ## Facts
 
-- Role: Software engineer in Lahore, Pakistan. Available for freelance and contract work. Currently at Retrovgames.
+- Role: ${JOB_TITLE} based in Lahore, Pakistan. Available for freelance and contract work. Currently at Retrovgames.
+- Builds: custom ERP, order management, inventory, procurement, and warehouse systems for multi-channel e-commerce; Shopify customer portals; admin dashboards.
+- Markets served remotely: United States, United Kingdom, United Arab Emirates, Saudi Arabia, Canada, and worldwide.
 - Experience: 3+ years, 20+ projects, 15+ clients.
-- Stack: Node.js, Next.js, React, Express.js, TypeScript, MongoDB, Redux Toolkit, TanStack Query, Tailwind CSS.
-- Flagship project: Hector, a multi-tenant ERP for orders, inventory, procurement, fulfillment, RBAC, and barcode scanning.
+- Stack: Node.js, Next.js, React, Express.js, TypeScript, MongoDB, Redis, BullMQ, Socket.IO, Redux Toolkit, TanStack Query, Tailwind CSS.
+- Flagship project: Hector, a multi-tenant ERP with 28+ modules across 7 business domains. It ingests orders from 11 sales channels (Shopify, Walmart US/CA/MX, Amazon SP-API, Temu, Newegg, WooCommerce, eBay, Mercari, manual), runs 20+ API integrations, prints ShipStation labels silently through QZ Tray, reads DYMO USB scales, and enforces RBAC per module.
+- Customer portals: Shopify post-purchase portals for RetrovGames (https://app.retrovgames.com) and RetroFam (https://app.retrofam.com) covering orders, tracking, returns, PDF invoices, gift cards, and trade-ins.
 
 ## Pages
 

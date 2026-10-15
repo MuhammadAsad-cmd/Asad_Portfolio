@@ -14,6 +14,7 @@ const PageHeader = ({
   showBreadcrumb = true,
   rightContent,
   experienceYears,
+  titleAs: TitleTag = "h1",
 }) => {
   const router = useRouter();
 
@@ -78,9 +79,9 @@ const PageHeader = ({
           <div className="flex min-w-0 flex-1 items-center gap-2 sm:gap-3">
             <div className="h-6 w-1 flex-shrink-0 rounded-full bg-gradient-to-b from-SkyBlue to-lightHover dark:to-darkHover sm:h-8"></div>
             <div className="min-w-0 flex-1">
-              <h1 className="truncate text-lg font-bold text-lightPrimarytext dark:text-white sm:text-xl md:text-2xl">
+              <TitleTag className="truncate text-lg font-bold text-lightPrimarytext dark:text-white sm:text-xl md:text-2xl">
                 {title}
-              </h1>
+              </TitleTag>
               {subtitle && (
                 <p className="line-clamp-1 text-xs text-lightSecondarytext dark:text-darkPrimaryGray sm:line-clamp-none sm:text-sm">
                   {subtitle}
@@ -117,7 +118,7 @@ const PageHeader = ({
             </button>
 
             <Link
-              href="/Asad Front End resume.pdf"
+              href="/Muhammad-Asad-Resume.pdf"
               target="_blank"
               className="group flex h-8 w-8 items-center justify-center rounded-md border border-lightBorder bg-lightbg transition-all duration-300 hover:scale-105 hover:border-SkyBlue hover:bg-SkyBlue/5 dark:border-darkPrimaryGray/30 dark:bg-darkSecondaryGray dark:hover:border-darkHover dark:hover:bg-SkyBlue/10 sm:h-9 sm:w-9 sm:rounded-lg"
               title="Download Resume"

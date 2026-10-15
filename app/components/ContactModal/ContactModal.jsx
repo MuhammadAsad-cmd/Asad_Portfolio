@@ -98,15 +98,10 @@ const ContactModal = ({ onClose }) => {
                   <FaLocationDot className="text-2xl font-medium" />
                 </div>
                 <div>
-                  <h3 className="text-base font-semibold">Address</h3>
-                  <a
-                    target="_blank"
-                    href="https://www.google.com/maps/search/?api=1&query=Lahore"
-                  >
-                    <p className="mb-6 overflow-hidden truncate text-sm font-semibold text-SkyBlue">
-                      Hasilpur, Punjab Pakistan
-                    </p>
-                  </a>
+                  <h3 className="text-base font-semibold">Based in</h3>
+                  <p className="mb-6 overflow-hidden truncate text-sm font-semibold text-lightPrimarytext dark:text-white">
+                    Lahore, Pakistan · remote
+                  </p>
                 </div>
               </div>
             </div>

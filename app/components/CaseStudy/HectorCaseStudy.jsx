@@ -94,6 +94,7 @@ export default function HectorCaseStudy() {
             subtitle="Enterprise operations platform · Full system review"
             backUrl="/#projects"
             experienceYears="28+ Modules"
+            titleAs="p"
           />
         </div>
 

@@ -16,6 +16,15 @@ const nextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: '/Asad Front End resume.pdf',
+        destination: '/Muhammad-Asad-Resume.pdf',
+        permanent: true,
+      },
+    ];
+  },
   // Security headers
   async headers() {
     return [

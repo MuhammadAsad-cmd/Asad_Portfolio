@@ -16,7 +16,7 @@ const Footer = () => {
           title="Asad.dev logo"
           aria-label="Site logo"
         />
-        <h1
+        <p
           className="text-2xl font-semibold text-black dark:text-white"
           title="Asad.dev"
         >
@@ -24,7 +24,7 @@ const Footer = () => {
           <span className="bg-gradient-to-r from-black to-black/20 bg-clip-text text-transparent dark:from-white dark:to-white/20">
             .dev
           </span>
-        </h1>
+        </p>
       </Link>
 
       <a

@@ -1,7 +1,14 @@
 import React from "react";
 import SerDetails from "@/app/components/SerDetails/SerDetails";
 import { enhancedServicesData } from "@/app/Data/enhancedServices";
-import { SITE_URL } from "@/app/lib/site";
+import {
+  AREA_SERVED,
+  EMAIL,
+  JOB_TITLE,
+  PERSON_ID,
+  SAME_AS,
+  SITE_URL,
+} from "@/app/lib/site";
 
 export const metadata = {
   title: "Business Solutions | M. Asad - ERP, Automation & Enterprise Infrastructure",
@@ -32,13 +39,13 @@ export const metadata = {
     "Node.js Services",
     "MongoDB Development",
     "Performance Optimization",
-    "SEO Services",
-    "Website Development",
     "Web Application Development",
+    "Custom ERP Developer",
+    "Shopify Walmart Amazon Integration",
+    "ShipStation Integration",
+    "Warehouse Management System",
     "Muhammad Asad Services",
-    "Lahore Web Developer",
-    "Pakistan Web Development",
-    "Freelance Web Developer",
+    "Remote ERP Developer",
   ],
   icons: {
     icon: "/images/logo a.png",
@@ -70,7 +77,7 @@ export const metadata = {
         url: `${SITE_URL}/images/servicsmeta.png`,
         width: 1200,
         height: 630,
-        alt: "Web development services by Muhammad Asad - Full Stack Engineer offering professional web solutions",
+        alt: "ERP, automation, and integration services by Muhammad Asad",
         type: "image/png",
       },
     ],
@@ -105,14 +112,8 @@ const page = () => {
         name: service.name,
         description: service.description,
         serviceType: service.category,
-        provider: {
-          "@type": "Person",
-          name: "Muhammad Asad",
-        },
-        areaServed: {
-          "@type": "Country",
-          name: "Pakistan",
-        },
+        provider: { "@id": PERSON_ID },
+        areaServed: AREA_SERVED,
         offers: {
           "@type": "Offer",
           availability: "https://schema.org/InStock",
@@ -150,19 +151,14 @@ const page = () => {
       "Professional services for ERP-style tooling, workflow automation, business dashboards, e-commerce operations, API integrations, and scalable Node.js/Next.js applications.",
     provider: {
       "@type": "Person",
+      "@id": PERSON_ID,
       name: "Muhammad Asad",
-      jobTitle: "Enterprise ERP & Infrastructure Engineer",
-      email: "189asadali@gmail.com",
+      jobTitle: JOB_TITLE,
+      email: EMAIL,
       url: baseUrl,
-      sameAs: [
-        "https://www.linkedin.com/in/masadali",
-        "https://github.com/MuhammadAsad-cmd",
-      ],
+      sameAs: SAME_AS,
     },
-    areaServed: {
-      "@type": "Country",
-      name: "Pakistan",
-    },
+    areaServed: AREA_SERVED,
     serviceType: [
       "ERP Development",
       "Internal Tooling",
