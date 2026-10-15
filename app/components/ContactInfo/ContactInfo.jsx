@@ -48,27 +48,15 @@ const ContactInfo = () => {
             <FaPhoneAlt className="text-2xl" />
           </div>
           <div>
-            <h3 className="text-base font-semibold">Phone</h3>
-            <p className="mb-6 text-sm font-semibold">
-              <a
-                href="tel:+923193148320"
-                className="text-SkyBlue hover:underline"
-              >
-                +923193148320
-              </a>
-              <span className="ml-1 font-normal text-[#FFFFFF99]">
-                (
-                <a
-                  href="https://wa.me/923059971189"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-inherit"
-                >
-                  Mobile/Whatsapp
-                </a>
-                )
-              </span>
-            </p>
+            <h3 className="text-base font-semibold">WhatsApp</h3>
+            <a
+              href="https://wa.me/923193148320"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mb-6 block text-sm font-semibold text-SkyBlue hover:underline"
+            >
+              +92 319 3148320
+            </a>
           </div>
         </div>
         {/* Email */}

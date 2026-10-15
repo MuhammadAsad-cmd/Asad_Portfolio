@@ -1,9 +1,9 @@
 export const hectorCaseStudy = {
   slug: "hector",
   title: "Hector",
-  subtitle: "Multi-Tenant Enterprise Operations Platform",
+  subtitle: "Multi-brand operations platform",
   tagline:
-    "A full-stack internal operations platform powering multi-brand e-commerce — from 11 sales channels through warehouse, supply chain, HR, and analytics in one system.",
+    "One system for several brands. Each brand's orders, stock, and users stay isolated from the others. It covers 11 sales channels through warehouse, supply chain, HR, and analytics.",
   image: "/images/hector.png",
   role: "Full Stack Engineer",
   repoStructure:
@@ -37,7 +37,7 @@ export const hectorCaseStudy = {
     solution:
       "Hector unifies the entire operational lifecycle in one platform: order intake from 11 channels, warehouse fulfillment with hardware integrations, supply chain procurement, inventory (dual-system migration), post-sale workflows, analytics, and granular RBAC across every module.",
     impact:
-      "One system replaces fragmented ops tooling — with async SSOT aggregation, silent label printing on the warehouse floor, real-time auctions and SLA alerts, and multi-warehouse scoping baked into procurement, transfers, and QA from day one.",
+      "Three to four people were doing this order work by hand. The same flow now runs with one person. Hector processes 200 to 300 orders a day across the marketplaces. Report corrections that used to be pulled from separate tools now come out of Hector in one click.",
   },
 
   architecture: [

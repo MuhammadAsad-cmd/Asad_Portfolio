@@ -63,17 +63,14 @@ const ContactModal = ({ onClose }) => {
                   <FaPhoneAlt className="text-2xl" />
                 </div>
                 <div>
-                  <h3 className="text-base font-semibold">Phone</h3>
+                  <h3 className="text-base font-semibold">WhatsApp</h3>
                   <a
-                    href="https://wa.me/923059971189"
+                    href="https://wa.me/923193148320"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <p className="mb-6 text-sm font-semibold">
-                      +923193148320
-                      <span className="ml-1 font-normal text-[#FFFFFF99]">
-                        (Mobile/Whatsapp)
-                      </span>
+                    <p className="mb-6 text-sm font-semibold text-SkyBlue">
+                      +92 319 3148320
                     </p>
                   </a>
                 </div>

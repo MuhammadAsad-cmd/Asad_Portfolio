@@ -7,6 +7,7 @@ import Profile from "./components/Profile/Profile";
 import Services from "./components/Services/Services";
 import Skills from "./components/Skills/Skills";
 import WhoIWorkWith from "./components/WhoIWorkWith/WhoIWorkWith";
+import Quotes from "./components/Quotes/Quotes";
 import {
   SITE_DESCRIPTION,
   SITE_NAME,
@@ -20,9 +21,6 @@ import {
 } from "./lib/site";
 
 const Projects2 = dynamic(() => import("./components/Projects/Projects2"));
-const Recommendations = dynamic(
-  () => import("./components/Recommendations/Recommendations"),
-);
 
 export const metadata = {
   title: SITE_TITLE,
@@ -148,6 +146,7 @@ export default function Home() {
         <div className="below-fold">
           <Projects2 />
         </div>
+        <Quotes />
         <div className="below-fold">
           <WhoIWorkWith />
         </div>
@@ -162,9 +161,6 @@ export default function Home() {
         </div>
         <div className="below-fold">
           <Skills />
-        </div>
-        <div className="below-fold">
-          <Recommendations />
         </div>
         <Faq />
       </div>

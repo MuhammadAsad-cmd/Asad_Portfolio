@@ -4,8 +4,12 @@ export const projectsData = [
   {
     id: 0,
     slug: "hector",
-    title: "Hector — Multi-Tenant Enterprise ERP System",
+    title: "Hector — Multi-brand ERP System",
     category: "Full Stack",
+    lane: "operations",
+    builtAt: "Built at Retrovgames",
+    result:
+      "The manual order flow took 3 to 4 people. It now runs with 1. Hector processes 200 to 300 marketplace orders a day, and reports come out in one click.",
     description: `A high-scale, multi-tenant ERP infrastructure designed to manage cross-business operations safely. Engineered with rigid data isolation, granular role-based access control (RBAC), and custom API pipelines to maximize database read/write speeds under heavy transactional load.
 
     Core modules span Order Processing, Inventory Management, User & Role Management, Product Management, Employee Management, Attendance, Sourcing, Procurement, Order Fulfillment, and Barcode Scanning—unified under one platform built for teams that cannot afford downtime or data leakage between tenants.`,
@@ -99,6 +103,10 @@ export const projectsData = [
     slug: "retrovgames-customer-portal",
     title: "RetrovGames — Customer Portal",
     category: "Customer Portals",
+    lane: "operations",
+    builtAt: "Built at Retrovgames",
+    result:
+      "Signed-in customers track orders, start returns, download invoices, and submit trade-ins.",
     description: `A responsive Shopify customer portal that centralizes post-purchase operations: order management, shipment tracking, returns, PDF invoices, coupons & gift cards, and a trade-in program for selling gaming items. I led the frontend — implementing the full UI, interactions, and dynamic client-side behavior, while backend APIs were provided by a Node.js service.`,
     stackUsed: [
       "Next.js",
@@ -112,6 +120,7 @@ export const projectsData = [
       "Frontend Engineer — UI/UX design, client-side logic, responsive layouts, TanStack data fetching and state, PDF invoice UI, trade-in & return flows",
     image: "/images/retrovgamecp.png",
     Link: "https://app.retrovgames.com/",
+    caseStudy: "/case-study/customer-portals",
   },
 
   // 3. RetroFam CP - Customer Portal
@@ -120,6 +129,10 @@ export const projectsData = [
     slug: "retrofam-customer-portal",
     title: "RetroFam — Customer Portal",
     category: "Customer Portals",
+    lane: "operations",
+    builtAt: "Built at Retrovgames",
+    result:
+      "Signed-in customers track orders, start returns, download invoices, and submit trade-ins.",
     description: `RetroFam's Shopify customer portal — built for a sibling gaming retail brand — centralizes post-purchase operations: order management, shipment tracking, returns, PDF invoices, coupons & gift cards, and a trade-in program for selling gaming items. I led the frontend for RetroFam specifically, implementing the full UI, interactions, and dynamic client-side behavior, while backend APIs were provided by a Node.js service.`,
     stackUsed: [
       "Next.js",
@@ -133,6 +146,7 @@ export const projectsData = [
       "Frontend Engineer — UI/UX design, client-side logic, responsive layouts, TanStack data fetching and state, PDF invoice UI, trade-in & return flows",
     image: "/images/customer portal.png",
     Link: "https://app.retrofam.com",
+    caseStudy: "/case-study/customer-portals",
   },
 
   // 7. Canrover - Admin Dashboard
@@ -141,6 +155,9 @@ export const projectsData = [
     slug: "canrover-admin",
     title: "Canrover Admin Panel",
     category: "Admin Dashboards",
+    lane: "operations",
+    result:
+      "Operators see the fleet on a live map, lock scooters remotely, and start rides with a QR code.",
     description: `Developed a fully dynamic Next.js/Node.js admin dashboard for a US scooter-rental client, featuring live map tracking, remote lock/unlock, QR-code ride activation, form validation, and secure access. Added Google Maps-based zone management to visualize parking zones, maintenance areas, danger zones, and more—all in a responsive, server-rendered interface for robust type safety and performance.`,
     stackUsed: [
       "Next.js",
@@ -154,6 +171,7 @@ export const projectsData = [
     ],
     image: "/images/canrover.png",
     Link: "https://canrover.vercel.app",
+    caseStudy: "/case-study/canrover",
   },
 
   // 8. Bourter - Landing Page
@@ -236,6 +254,7 @@ export const projectsData = [
     slug: "bourter-admin",
     title: "Bourter — Admin Dashboard",
     category: "Admin Dashboards",
+    lane: "operations",
     description: `Bourter is a modern, feature-rich admin dashboard built with the latest web technologies. The dashboard provides comprehensive data visualization, user management, analytics tracking, and administrative controls. Features include interactive charts and graphs, real-time data updates with TanStack Query, smooth animations powered by Framer Motion, responsive design for all devices, and an intuitive interface for managing complex data. Built with performance and user experience in mind, utilizing server-side rendering and optimized data fetching strategies.`,
     stackUsed: [
       "Next.js",
@@ -291,6 +310,7 @@ export const projectsData = [
     slug: "hairoil-ecommerce",
     title: "HairOil — Premium E-commerce Platform",
     category: "E-commerce",
+    lane: "operations",
     description: `A full-stack e-commerce platform for premium hair oil products featuring a modern customer-facing website and comprehensive admin dashboard. The platform includes dynamic product catalog with 10+ premium hair oils, advanced shopping cart with Redux state management, secure checkout process with address validation, order management system, and real-time admin analytics. Built with Next.js 15 and React 19, featuring responsive design, smooth animations, and seamless user experience across all devices.`,
     stackUsed: [
       "Next.js 15",
@@ -336,7 +356,7 @@ export const projectsData = [
     id: 18,
     slug: "minimog-template",
     title: "E-Commerce Minimog Template",
-    category: "E-commerce",
+    category: "Archive",
     description: `A sleek, minimal e-commerce storefront template with product grids, filters, and checkout flows. Optimized for performance and responsive across all devices, it delivers a smooth shopping experience.`,
     stackUsed: ["Next.js", "Tailwind CSS", "JavaScript"],
     image: "/images/nextjsweb.png",
@@ -346,7 +366,7 @@ export const projectsData = [
     id: 19,
     slug: "github-profile-viewer",
     title: "Github Profile Viewer",
-    category: "UI/UX",
+    category: "Archive",
     description: `A real-time GitHub user lookup tool that fetches and displays profile data, repositories, and stats. It features live search, responsive design, and error handling for seamless browsing.`,
     stackUsed: ["Next.js", "React.js", "JavaScript", "Tailwind CSS"],
     image: "/images/github.png",
@@ -356,7 +376,7 @@ export const projectsData = [
     id: 20,
     slug: "clickup-template",
     title: "ClickUp Template",
-    category: "UI/UX",
+    category: "Archive",
     description: `A customizable ClickUp dashboard clone with task lists, statuses, and filters. Built for teams to visualize workflows, assign tasks, and track progress in a clean, responsive interface.`,
     stackUsed: ["Next.js", "React.js", "Tailwind CSS", "JavaScript"],
     image: "/images/clickuptemp.png",
@@ -366,7 +386,7 @@ export const projectsData = [
     id: 21,
     slug: "dental-health",
     title: "Dental Health Frontend",
-    category: "UI/UX",
+    category: "Archive",
     description: `A dental clinic frontend template with service showcases, appointment booking UI, and doctor profiles. Features a crisp, responsive design optimized for patient engagement.`,
     stackUsed: ["Next.js", "Tailwind CSS", "React.js", "JavaScript"],
     image: "/images/medical.png",
@@ -376,7 +396,7 @@ export const projectsData = [
     id: 22,
     slug: "dashstack-dashboard",
     title: "DashStack-Dashboard",
-    category: "Admin Dashboards",
+    category: "Archive",
     description: `An analytics dashboard template with charts, tables, and KPI widgets. It provides real-time data visualization, filtering, and a modular layout for enterprise applications.`,
     stackUsed: [
       "Next.js",
@@ -391,4 +411,4 @@ export const projectsData = [
 ];
 
 /** Featured on homepage (`/`) in this order. Match `id` on each project. */
-export const homepageFeaturedProjectIds = [0, 1, 2, 3, 4, 5];
+export const homepageFeaturedProjectIds = [0, 4, 5, 6, 11, 15];

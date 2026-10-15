@@ -21,14 +21,14 @@ const RightSidebar = ({ id }) => {
       <NavLink onClick={handleLinkClick} href="/details/experience">
         Experience
       </NavLink>
-      <NavLink onClick={handleLinkClick} href="/details/education">
-        Education
-      </NavLink>
       <NavLink onClick={handleLinkClick} href="/details/certifications">
         Certifications
       </NavLink>
       <NavLink onClick={handleLinkClick} href="/details/projects">
         Projects
+      </NavLink>
+      <NavLink onClick={handleLinkClick} href="/blog">
+        Blogs
       </NavLink>
       <NavLink onClick={handleLinkClick} href="/details/skills">
         Skills
@@ -36,6 +36,15 @@ const RightSidebar = ({ id }) => {
       <NavLink onClick={handleLinkClick} href="#contact">
         Contact
       </NavLink>
+      <a
+        href="https://cal.com/muhammad-asad-189/15min"
+        target="_blank"
+        rel="noopener noreferrer"
+        onClick={handleLinkClick}
+        className="font-semibold text-SkyBlue"
+      >
+        Book a call
+      </a>
     </div>
   );
 };

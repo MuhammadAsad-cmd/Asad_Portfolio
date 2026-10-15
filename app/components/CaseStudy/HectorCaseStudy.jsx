@@ -13,6 +13,7 @@ import {
   IoShieldCheckmarkOutline,
   IoFlashOutline,
 } from "react-icons/io5";
+import { BOOKING_URL } from "@/app/lib/site";
 import PageHeader from "../PageHeader";
 import { hectorCaseStudy as data } from "@/app/Data/caseStudies/hector";
 
@@ -78,8 +79,18 @@ function DomainAccordion({ domain, isOpen, onToggle }) {
 }
 
 export default function HectorCaseStudy() {
-  const [openDomain, setOpenDomain] = useState(data.domains[0]?.id ?? null);
-  const [activeIntegration, setActiveIntegration] = useState(0);
+  const [openDomains, setOpenDomains] = useState(
+    () => new Set(data.domains.map((domain) => domain.id)),
+  );
+
+  const toggleDomain = (id) => {
+    setOpenDomains((current) => {
+      const next = new Set(current);
+      if (next.has(id)) next.delete(id);
+      else next.add(id);
+      return next;
+    });
+  };
 
   return (
     <article
@@ -119,6 +130,11 @@ export default function HectorCaseStudy() {
               <p className="mt-4 max-w-xl text-sm leading-relaxed text-lightSecondarytext dark:text-darkPrimaryGray md:text-base">
                 {data.tagline}
               </p>
+              <p className="mt-3 max-w-xl text-sm leading-relaxed text-lightSecondarytext dark:text-darkPrimaryGray">
+                Built as a full-stack engineer at Retrovgames. The platform
+                belongs to them. This page describes the system I designed and
+                shipped there.
+              </p>
               <div className="mt-4 flex flex-wrap gap-2">
                 {data.brands.map((brand) => (
                   <span
@@ -131,13 +147,34 @@ export default function HectorCaseStudy() {
               </div>
               <div className="mt-6 flex flex-wrap gap-3">
                 <Link
-                  href="/#contact"
+                  href={BOOKING_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-full bg-SkyBlue px-6 py-2.5 text-sm font-semibold text-white shadow-lg shadow-SkyBlue/25 transition-transform hover:-translate-y-0.5 hover:shadow-xl hover:shadow-SkyBlue/30"
                 >
-                  Discuss a Similar Build
+                  Book a 20-min workflow call
                   <IoArrowForward aria-hidden />
                 </Link>
+                <a
+                  href="https://app.retrofam.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full border border-lightBorder bg-white/80 px-6 py-2.5 text-sm font-semibold text-lightPrimarytext dark:border-darkSecondaryGray dark:bg-discordDark dark:text-white"
+                >
+                  RetroFam portal
+                </a>
+                <a
+                  href="https://app.retrovgames.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full border border-lightBorder bg-white/80 px-6 py-2.5 text-sm font-semibold text-lightPrimarytext dark:border-darkSecondaryGray dark:bg-discordDark dark:text-white"
+                >
+                  RetrovGames portal
+                </a>
               </div>
+              <p className="mt-3 text-xs text-lightSecondarytext dark:text-darkPrimaryGray">
+                Both store portals open after the customer signs in.
+              </p>
             </div>
 
             <div className="relative">
@@ -273,7 +310,7 @@ export default function HectorCaseStudy() {
                   7 Business Domains · 28+ Modules
                 </h2>
                 <p className="text-sm text-lightSecondarytext dark:text-darkPrimaryGray">
-                  Expand each domain to explore the full module breakdown
+                  Every domain is open. Collapse any section you do not need.
                 </p>
               </div>
             </div>
@@ -282,10 +319,8 @@ export default function HectorCaseStudy() {
                 <DomainAccordion
                   key={domain.id}
                   domain={domain}
-                  isOpen={openDomain === domain.id}
-                  onToggle={() =>
-                    setOpenDomain(openDomain === domain.id ? null : domain.id)
-                  }
+                  isOpen={openDomains.has(domain.id)}
+                  onToggle={() => toggleDomain(domain.id)}
                 />
               ))}
             </div>
@@ -359,48 +394,38 @@ export default function HectorCaseStudy() {
               </div>
             </div>
 
-            <div className="mb-6 flex gap-2 overflow-x-auto pb-1">
-              {data.integrations.map((group, idx) => (
-                <button
+            <div className="space-y-6">
+              {data.integrations.map((group) => (
+                <div
                   key={group.category}
-                  type="button"
-                  onClick={() => setActiveIntegration(idx)}
-                  className={`shrink-0 rounded-full px-4 py-2 text-xs font-semibold transition-all md:text-sm ${
-                    activeIntegration === idx
-                      ? "bg-SkyBlue text-white shadow-md shadow-SkyBlue/25"
-                      : "border border-lightBorder bg-lightbg text-lightSecondarytext hover:border-SkyBlue/50 dark:border-darkSecondaryGray dark:bg-darkSecondaryGray dark:text-darkPrimaryGray"
-                  }`}
+                  className="rounded-2xl border border-lightBorder bg-lightbg/50 p-5 dark:border-darkSecondaryGray dark:bg-darkSecondaryGray/30 md:p-6"
                 >
-                  {group.category}
-                </button>
-              ))}
-            </div>
-
-            <div className="rounded-2xl border border-lightBorder bg-lightbg/50 p-5 dark:border-darkSecondaryGray dark:bg-darkSecondaryGray/30 md:p-6">
-              <div className="mb-4 flex items-center gap-2">
-                <IoHardwareChipOutline className="text-SkyBlue" aria-hidden />
-                <h3 className="font-bold text-lightPrimarytext dark:text-white">
-                  {data.integrations[activeIntegration].category}
-                </h3>
-                <span className="rounded-full bg-SkyBlue/10 px-2 py-0.5 text-xs font-medium text-SkyBlue">
-                  {data.integrations[activeIntegration].count} integrations
-                </span>
-              </div>
-              <div className="grid gap-3 sm:grid-cols-2">
-                {data.integrations[activeIntegration].items.map((item) => (
-                  <div
-                    key={item.name}
-                    className="rounded-xl border border-lightBorder bg-white p-4 dark:border-darkPrimaryGray/20 dark:bg-discordDark"
-                  >
-                    <div className="font-semibold text-lightPrimarytext dark:text-white">
-                      {item.name}
-                    </div>
-                    <p className="mt-1 text-xs leading-relaxed text-lightSecondarytext dark:text-darkPrimaryGray md:text-sm">
-                      {item.detail}
-                    </p>
+                  <div className="mb-4 flex items-center gap-2">
+                    <IoHardwareChipOutline className="text-SkyBlue" aria-hidden />
+                    <h3 className="font-bold text-lightPrimarytext dark:text-white">
+                      {group.category}
+                    </h3>
+                    <span className="rounded-full bg-SkyBlue/10 px-2 py-0.5 text-xs font-medium text-SkyBlue">
+                      {group.count} integrations
+                    </span>
                   </div>
-                ))}
-              </div>
+                  <div className="grid gap-3 sm:grid-cols-2">
+                    {group.items.map((item) => (
+                      <div
+                        key={item.name}
+                        className="rounded-xl border border-lightBorder bg-white p-4 dark:border-darkPrimaryGray/20 dark:bg-discordDark"
+                      >
+                        <div className="font-semibold text-lightPrimarytext dark:text-white">
+                          {item.name}
+                        </div>
+                        <p className="mt-1 text-xs leading-relaxed text-lightSecondarytext dark:text-darkPrimaryGray md:text-sm">
+                          {item.detail}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </section>
@@ -442,10 +467,12 @@ export default function HectorCaseStudy() {
             </p>
             <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
               <Link
-                href="/#contact"
+                href={BOOKING_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-full bg-SkyBlue px-8 py-3 text-sm font-semibold text-white shadow-lg shadow-SkyBlue/25 transition-transform hover:-translate-y-0.5"
               >
-                Start a Conversation
+                Book a 20-min workflow call
                 <IoArrowForward aria-hidden />
               </Link>
               <Link

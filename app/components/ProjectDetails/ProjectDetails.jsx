@@ -1,6 +1,6 @@
 "use client";
 import { projectsData } from "@/app/Data/projects";
-import { projectCategories } from "@/app/Data/projectCategories";
+import { projectCategories, projectMatchesCategory } from "@/app/Data/projectCategories";
 import React, { useState, useMemo } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -12,31 +12,30 @@ import CollapsibleDescription from "../Projects/CollapsibleDescription";
 import ProjectTabs from "../Projects/ProjectTabs";
 
 const ProjectDetails = () => {
-  const [activeCategory, setActiveCategory] = useState("all");
+  const [activeCategory, setActiveCategory] = useState("operations");
 
-  // Filter projects based on active category
+  const visibleProjects = useMemo(
+    () => projectsData.filter((project) => project.category !== "Archive"),
+    [],
+  );
+
   const filteredProjects = useMemo(() => {
-    if (activeCategory === "all") {
-      return projectsData;
-    }
+    if (activeCategory === "all") return visibleProjects;
     const category = projectCategories.find((cat) => cat.id === activeCategory);
-    return projectsData.filter(
-      (project) => project.category === category?.filterValue
-    );
-  }, [activeCategory]);
+    return projectsData.filter((project) => projectMatchesCategory(project, category));
+  }, [activeCategory, visibleProjects]);
 
-  // Calculate project counts for each category
   const projectCounts = useMemo(() => {
-    const counts = { all: projectsData.length };
+    const counts = { all: visibleProjects.length };
     projectCategories.forEach((category) => {
       if (category.id !== "all") {
-        counts[category.id] = projectsData.filter(
-          (project) => project.category === category.filterValue
+        counts[category.id] = projectsData.filter((project) =>
+          projectMatchesCategory(project, category),
         ).length;
       }
     });
     return counts;
-  }, []);
+  }, [visibleProjects]);
 
 
   return (
@@ -58,14 +57,11 @@ const ProjectDetails = () => {
               backUrl="/"
             />
 
-            {/* Project Tabs — flush with section edges on small screens */}
-            <div className="-mx-4 md:-mx-6">
-              <ProjectTabs
-                activeCategory={activeCategory}
-                onCategoryChange={setActiveCategory}
-                projectCounts={projectCounts}
-              />
-            </div>
+            <ProjectTabs
+              activeCategory={activeCategory}
+              onCategoryChange={setActiveCategory}
+              projectCounts={projectCounts}
+            />
 
               {/* Projects Grid */}
               <section aria-labelledby="projects-list-heading" className="mb-8">
@@ -135,6 +131,12 @@ const ProjectDetails = () => {
                           >
                             {project?.title}
                           </h3>
+                          {project.builtAt && (
+                            <p className="mb-2 text-sm font-medium text-SkyBlue">{project.builtAt}</p>
+                          )}
+                          {project.result && (
+                            <p className="mb-3 text-sm font-medium text-lightPrimarytext dark:text-white">{project.result}</p>
+                          )}
 
                           <div className="mb-6" itemProp="description">
                              <CollapsibleDescription

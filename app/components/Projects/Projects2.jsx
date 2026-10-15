@@ -1,6 +1,6 @@
 "use client";
 import { homepageFeaturedProjectIds, projectsData } from "@/app/Data/projects";
-import { projectCategories } from "@/app/Data/projectCategories";
+import { projectCategories, projectMatchesCategory } from "@/app/Data/projectCategories";
 import { useState, useMemo } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -14,18 +14,18 @@ import ProjectTabs from "./ProjectTabs";
 const HOME_FEATURED_LIMIT = 6;
 
 const Projects2 = () => {
-  const [activeCategory, setActiveCategory] = useState("all");
+  const [activeCategory, setActiveCategory] = useState("operations");
 
-  // Filter projects based on active category
+  const visibleProjects = useMemo(
+    () => projectsData.filter((project) => project.category !== "Archive"),
+    [],
+  );
+
   const filteredProjects = useMemo(() => {
-    if (activeCategory === "all") {
-      return projectsData;
-    }
+    if (activeCategory === "all") return visibleProjects;
     const category = projectCategories.find((cat) => cat.id === activeCategory);
-    return projectsData.filter(
-      (project) => project.category === category?.filterValue,
-    );
-  }, [activeCategory]);
+    return projectsData.filter((project) => projectMatchesCategory(project, category));
+  }, [activeCategory, visibleProjects]);
 
   const displayedProjects = useMemo(() => {
     if (activeCategory === "all") {
@@ -39,16 +39,16 @@ const Projects2 = () => {
 
   // Calculate project counts for each category
   const projectCounts = useMemo(() => {
-    const counts = { all: projectsData.length };
+    const counts = { all: visibleProjects.length };
     projectCategories.forEach((category) => {
       if (category.id !== "all") {
-        counts[category.id] = projectsData.filter(
-          (project) => project.category === category.filterValue,
+        counts[category.id] = projectsData.filter((project) =>
+          projectMatchesCategory(project, category),
         ).length;
       }
     });
     return counts;
-  }, []);
+  }, [visibleProjects]);
 
   return (
     <>
@@ -87,14 +87,11 @@ const Projects2 = () => {
               </Link>
             </div>
 
-            {/* Project Tabs — edge-to-edge row (arrows overlap; cancels horizontal padding) */}
-            <div className="-mx-5 md:-mx-8">
-              <ProjectTabs
-                activeCategory={activeCategory}
-                onCategoryChange={setActiveCategory}
-                projectCounts={projectCounts}
-              />
-            </div>
+            <ProjectTabs
+              activeCategory={activeCategory}
+              onCategoryChange={setActiveCategory}
+              projectCounts={projectCounts}
+            />
 
             {(() => {
               const filteredCount = filteredProjects.length;
@@ -200,6 +197,12 @@ const Projects2 = () => {
                         <h3 className="mb-3 text-2xl font-bold text-lightPrimarytext dark:text-white md:text-3xl">
                           {project?.title}
                         </h3>
+                        {project.builtAt && (
+                          <p className="mb-2 text-sm font-medium text-SkyBlue">{project.builtAt}</p>
+                        )}
+                        {project.result && (
+                          <p className="mb-3 text-sm font-medium text-lightPrimarytext dark:text-white">{project.result}</p>
+                        )}
 
                         <div className="mb-4">
                           <CollapsibleDescription

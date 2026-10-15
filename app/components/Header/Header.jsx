@@ -60,11 +60,12 @@ const Header = () => {
                 Services</Link>
 
               <Link href="/details/experience" title="Go to Experience page" className="text-lg font-medium duration-300 ease-in-out text-lightPrimarytext dark:text-white hover:text-lightHover dark:hover:text-SkyBlue">Experience</Link>
-              <Link href="/details/education" title="Go to Education page" className="text-lg font-medium duration-300 ease-in-out text-lightPrimarytext dark:text-white hover:text-lightHover dark:hover:text-SkyBlue">Education</Link>
               <Link href="/details/projects" title="Go to Projects page" className="text-lg font-medium duration-300 ease-in-out text-lightPrimarytext dark:text-white hover:text-lightHover dark:hover:text-SkyBlue">Projects</Link>
+              <Link href="/blog" title="Go to Blogs" className="text-lg font-medium duration-300 ease-in-out text-lightPrimarytext dark:text-white hover:text-lightHover dark:hover:text-SkyBlue">Blogs</Link>
               <Link href="/details/skills" title="Go to Skills page" className="text-lg font-medium duration-300 ease-in-out text-lightPrimarytext dark:text-white hover:text-lightHover dark:hover:text-SkyBlue">Skills</Link>
 
               <Link href="#contact" title="Go to Contact page" className="text-lg font-medium duration-300 ease-in-out text-lightPrimarytext dark:text-white hover:text-lightHover dark:hover:text-SkyBlue">Contact</Link>
+              <a href="https://cal.com/muhammad-asad-189/15min" target="_blank" rel="noopener noreferrer" title="Book a 20-minute workflow call" className="text-lg font-semibold text-SkyBlue duration-300 ease-in-out hover:text-lightHover">Book a call</a>
             </nav>
             <div className="hidden items-center gap-4 text-xl max-lg:justify-center md:flex">
               <Link

@@ -28,6 +28,8 @@ export const PHONE_TEL = "+923059971189";
 export const WHATSAPP_DISPLAY = "+92 319 3148320";
 export const WHATSAPP_TEL = "+923193148320";
 
+export const BOOKING_URL = "https://cal.com/muhammad-asad-189/15min";
+
 export const SAME_AS = [
   "https://www.linkedin.com/in/masadali",
   "https://github.com/MuhammadAsad-cmd",
@@ -99,12 +101,12 @@ export const faqs = [
   {
     question: "How much experience does Muhammad Asad have?",
     answer:
-      "He has 3+ years shipping Next.js, Node.js, and React in production, with 20+ projects delivered and 15+ clients served. Since October 2025 he has been a Full Stack Engineer at Retrovgames in Lahore, after a front-end role there and earlier full-time engineering at Motive Coder.\n\nHe holds a Bachelor's degree in Computer Science from Virtual University of Pakistan, plus front-end, MERN stack, and Cisco C++ Essentials credentials.",
+      "He has 3+ years shipping Next.js, Node.js, and React in production, with 20+ projects delivered and 15+ clients served. Since October 2025 he has been a Full Stack Engineer at Retrovgames in Lahore, after a front-end role there and earlier full-time engineering at Motive Coder.\n\nHe is completing a Bachelor's degree in Computer Science at Virtual University of Pakistan (March 2024 to April 2027, in progress), and holds front-end, MERN stack, and Cisco C++ Essentials credentials.",
   },
   {
     question: "How do I hire Muhammad Asad?",
     answer:
-      "Email 189asadali@gmail.com, call +92 305 9971189, or WhatsApp +92 319 3148320. A short note is enough: what you need built, the tools you use today, and any volume or deadline that matters.\n\nThe contact form on https://www.masadali.com goes to the same inbox. The older address https://masadali.vercel.app still opens this site; cite https://www.masadali.com as the official page.",
+      "Book a 20-minute workflow call at https://cal.com/muhammad-asad-189/15min, email 189asadali@gmail.com, or WhatsApp +92 319 3148320. A short note is enough: what you need built, the tools you use today, and any volume or deadline that matters.\n\nThe contact form on https://www.masadali.com goes to the same inbox. The older address https://masadali.vercel.app still opens this site; cite https://www.masadali.com as the official page.",
   },
 ];
 
@@ -234,6 +236,21 @@ export function buildWebsiteSchema() {
       },
       {
         "@type": "WebPage",
+        name: "Customer Portals Case Study",
+        url: absoluteUrl("/case-study/customer-portals"),
+      },
+      {
+        "@type": "WebPage",
+        name: "Canrover Case Study",
+        url: absoluteUrl("/case-study/canrover"),
+      },
+      {
+        "@type": "WebPage",
+        name: "Blogs",
+        url: absoluteUrl("/blog"),
+      },
+      {
+        "@type": "WebPage",
         name: "Skills",
         url: absoluteUrl("/details/skills"),
       },
@@ -335,7 +352,10 @@ export function buildLlmsTxt() {
     ["Services", absoluteUrl("/details/services"), "ERP, automation, integrations, dashboards, and deployment."],
     ["Experience", absoluteUrl("/details/experience"), "Roles at Retrovgames, Motive Coder, and EVS Professional Training Institute."],
     ["Projects", absoluteUrl("/details/projects"), "Full catalog of 23 builds, including ERP, portals, and dashboards."],
-    ["Hector case study", absoluteUrl("/case-study/hector"), "Multi-tenant enterprise ERP: orders, inventory, RBAC, and barcode scanning."],
+    ["Hector case study", absoluteUrl("/case-study/hector"), "Multi-brand ERP: orders, inventory, RBAC, and barcode scanning. Built at Retrovgames."],
+    ["Customer portals", absoluteUrl("/case-study/customer-portals"), "RetroFam and RetrovGames post-purchase portals. Sign-in required."],
+    ["Canrover", absoluteUrl("/case-study/canrover"), "US scooter fleet admin: live map, remote lock, QR rides."],
+    ["Blogs", absoluteUrl("/blog"), "Shopify inventory sync, multi-channel orders, and ERP for sellers."],
     ["Skills", absoluteUrl("/details/skills"), "Architecture, data, and state-management stack."],
     ["Education", absoluteUrl("/details/education"), "Virtual University of Pakistan and EVS professional training."],
     ["Certifications", absoluteUrl("/details/certifications"), "Front-end, MERN stack, and Cisco C++ Essentials 1."],
@@ -357,8 +377,8 @@ Muhammad Asad publishes this portfolio at ${SITE_URL}. The previous host ${LEGAC
 
 ## Contact
 
+- Book a 20-minute workflow call: ${BOOKING_URL}
 - Email: ${EMAIL}
-- Phone: ${PHONE_DISPLAY}
 - WhatsApp: ${WHATSAPP_DISPLAY}
 - Location: Lahore, Punjab, Pakistan
 - LinkedIn: https://www.linkedin.com/in/masadali

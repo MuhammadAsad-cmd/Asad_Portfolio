@@ -9,20 +9,13 @@ import Code from "../Icons/Code";
 import XLogo from "../Icons/XLogo";
 import EnhancedMarquee from "../Marquee/Marquee";
 import Link from "next/link";
+import { BOOKING_URL } from "@/app/lib/site";
 
 const Profile = () => {
   const [isOpenModal, setIsOpenModal] = useState(false);
 
   const handleCloseModal = () => {
     setIsOpenModal(false);
-  };
-
-  const openWhatsApp = () => {
-    const phoneNumber = "923193148320";
-    const message =
-      "Hello Muhammad Asad! I found your portfolio online and would like to discuss a potential project. Could you please provide me with more details about your services?";
-    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-    window.open(url, "_blank");
   };
 
   return (
@@ -106,14 +99,15 @@ const Profile = () => {
               </div>
 
               <div className="grid grid-cols-2 gap-2 sm:flex sm:flex-row sm:items-center sm:gap-4">
-                <button
-                  onClick={openWhatsApp}
-                  title="Start WhatsApp Chat"
-                  className="group col-span-2 flex items-center justify-center gap-2 rounded-xl bg-SkyBlue px-4 py-2.5 text-sm font-semibold text-white transition-all duration-300 hover:bg-opacity-90 hover:shadow-lg hover:shadow-SkyBlue/30 active:scale-95 sm:col-span-1 sm:min-w-[160px] sm:px-6 sm:py-3"
+                <a
+                  href={BOOKING_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Book a 20-minute workflow call"
+                  className="group col-span-2 flex items-center justify-center gap-2 rounded-xl bg-SkyBlue px-4 py-2.5 text-center text-sm font-semibold text-white transition-all duration-300 hover:bg-opacity-90 hover:shadow-lg hover:shadow-SkyBlue/30 active:scale-95 sm:col-span-1 sm:min-w-[160px] sm:px-6 sm:py-3"
                 >
-                  <FaWhatsapp className="text-lg transition-transform group-hover:rotate-12 sm:text-xl" />
-                  <span>Let&apos;s Talk</span>
-                </button>
+                  <span>Book a 20-min call</span>
+                </a>
 
                 <Link
                   href="mailto:189asadali@gmail.com"
@@ -139,6 +133,15 @@ const Profile = () => {
                   Connect:
                 </span>
                 <div className="flex gap-3">
+                  <Link
+                    href="https://wa.me/923193148320"
+                    target="_blank"
+                    title="WhatsApp Muhammad Asad"
+                    aria-label="Open WhatsApp chat"
+                    className="flex h-10 w-10 items-center justify-center rounded-full bg-[#25D366] text-white transition-transform duration-300 hover:scale-110 hover:shadow-lg"
+                  >
+                    <FaWhatsapp className="text-sm" />
+                  </Link>
                   <Link href="https://www.linkedin.com/in/masadali">
                     <button
                       title="LinkedIn Profile - Muhammad Asad"

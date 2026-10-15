@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { BsSendFill } from "react-icons/bs";
-import { IoMailOutline, IoCallOutline } from "react-icons/io5";
+import { IoMailOutline, IoCallOutline, IoCalendarOutline } from "react-icons/io5";
 import { FaLinkedinIn } from "react-icons/fa";
 import { toast } from "sonner";
 import useFormLogic from "@/Hooks/FormLogic";
@@ -36,6 +36,13 @@ const ContactForm = () => {
 
   const contactMethods = [
     {
+      icon: IoCalendarOutline,
+      label: "Book a call",
+      value: "20-min workflow call",
+      link: "https://cal.com/muhammad-asad-189/15min",
+      color: "text-SkyBlue",
+    },
+    {
       icon: IoMailOutline,
       label: "Email",
       value: "189asadali@gmail.com",
@@ -44,7 +51,7 @@ const ContactForm = () => {
     },
     {
       icon: IoCallOutline,
-      label: "Phone / WhatsApp",
+      label: "WhatsApp",
       value: "+923193148320",
       link: "https://wa.me/923193148320",
       color: "text-green-500",

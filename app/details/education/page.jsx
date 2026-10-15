@@ -5,9 +5,9 @@ import { SITE_URL, indexRobots } from "@/app/lib/site";
 export const dynamic = "force-static";
 
 export const metadata = {
-  title: "Education Details | M. Asad - Web Developer",
+  title: "Education | M. Asad — Computer Science, in progress",
   description:
-    "Explore the educational background of Muhammad Asad, a skilled web developer with expertise in modern technologies and a strong foundation in computer science.",
+    "Muhammad Asad is completing a Bachelor's degree in Computer Science at Virtual University of Pakistan, March 2024 to April 2027.",
   authors: [{ name: "M. Asad" }],
   creator: "Muhammad Asad",
   publisher: "Muhammad Asad",

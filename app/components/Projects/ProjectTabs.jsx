@@ -1,25 +1,18 @@
 "use client";
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import { projectCategories } from "@/app/Data/projectCategories";
-import {
-    Rocket,
-    Zap,
-    ShoppingCart,
-    LayoutDashboard,
-    Palette,
-    Users,
-    ChevronLeft,
-    ChevronRight,
-} from "lucide-react";
+import { Archive, ChevronLeft, ChevronRight, LayoutDashboard, Palette, Rocket, ShoppingCart, Users, Workflow, Zap } from "lucide-react";
 
 // Icon mapping for categories
 const categoryIcons = {
+    operations: Workflow,
     all: Rocket,
     fullstack: Zap,
     ecommerce: ShoppingCart,
     dashboards: LayoutDashboard,
     uiux: Palette,
     portals: Users,
+    archive: Archive,
 };
 
 const ProjectTabs = ({ activeCategory, onCategoryChange, projectCounts }) => {
@@ -67,7 +60,7 @@ const ProjectTabs = ({ activeCategory, onCategoryChange, projectCounts }) => {
                 {/* Horizontal scrollable tabs — full width; arrows sit on top */}
                 <div
                     ref={scrollRef}
-                    className="hide-scrollbar mx-auto flex w-fit max-w-full touch-pan-x scroll-smooth justify-center gap-3 overflow-x-auto pb-2 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+                    className="hide-scrollbar flex w-full min-w-0 touch-pan-x scroll-smooth justify-start gap-3 overflow-x-auto px-1 pb-2 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
                 >
                     {projectCategories.map((category) => {
                         const isActive =
@@ -113,39 +106,38 @@ const ProjectTabs = ({ activeCategory, onCategoryChange, projectCounts }) => {
                     })}
                 </div>
 
-                <div
-                    className="pointer-events-none absolute inset-y-0 left-0 z-10 w-11 bg-gradient-to-r from-white to-transparent dark:from-discordDark lg:hidden"
-                    aria-hidden
-                />
-                <div
-                    className="pointer-events-none absolute inset-y-0 right-0 z-10 w-11 bg-gradient-to-l from-white to-transparent dark:from-discordDark lg:hidden"
-                    aria-hidden
-                />
-
-                <button
-                    type="button"
-                    onClick={() => scrollTabs(-1)}
-                    disabled={!canScrollLeft}
-                    aria-label="Scroll project categories left"
-                    className={`${overlayBtn} left-0 ${canScrollLeft
-                        ? "text-lightPrimarytext hover:border-SkyBlue hover:text-SkyBlue dark:hover:border-darkHover dark:hover:text-darkHover"
-                        : "cursor-not-allowed opacity-35"
-                        }`}
-                >
-                    <ChevronLeft className="h-5 w-5 shrink-0" aria-hidden />
-                </button>
-                <button
-                    type="button"
-                    onClick={() => scrollTabs(1)}
-                    disabled={!canScrollRight}
-                    aria-label="Scroll project categories right"
-                    className={`${overlayBtn} right-0 ${canScrollRight
-                        ? "text-lightPrimarytext hover:border-SkyBlue hover:text-SkyBlue dark:hover:border-darkHover dark:hover:text-darkHover"
-                        : "cursor-not-allowed opacity-35"
-                        }`}
-                >
-                    <ChevronRight className="h-5 w-5 shrink-0" aria-hidden />
-                </button>
+                {canScrollLeft && (
+                    <>
+                        <div
+                            className="pointer-events-none absolute inset-y-0 left-0 z-10 w-11 bg-gradient-to-r from-white to-transparent dark:from-discordDark lg:hidden"
+                            aria-hidden
+                        />
+                        <button
+                            type="button"
+                            onClick={() => scrollTabs(-1)}
+                            aria-label="Scroll project categories left"
+                            className={`${overlayBtn} left-0 text-lightPrimarytext hover:border-SkyBlue hover:text-SkyBlue dark:hover:border-darkHover dark:hover:text-darkHover`}
+                        >
+                            <ChevronLeft className="h-5 w-5 shrink-0" aria-hidden />
+                        </button>
+                    </>
+                )}
+                {canScrollRight && (
+                    <>
+                        <div
+                            className="pointer-events-none absolute inset-y-0 right-0 z-10 w-11 bg-gradient-to-l from-white to-transparent dark:from-discordDark lg:hidden"
+                            aria-hidden
+                        />
+                        <button
+                            type="button"
+                            onClick={() => scrollTabs(1)}
+                            aria-label="Scroll project categories right"
+                            className={`${overlayBtn} right-0 text-lightPrimarytext hover:border-SkyBlue hover:text-SkyBlue dark:hover:border-darkHover dark:hover:text-darkHover`}
+                        >
+                            <ChevronRight className="h-5 w-5 shrink-0" aria-hidden />
+                        </button>
+                    </>
+                )}
             </div>
 
             {/* Active category description (optional) */}

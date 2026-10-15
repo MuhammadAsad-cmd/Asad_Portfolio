@@ -1,4 +1,5 @@
 import { absoluteUrl, SITE_URL } from "@/app/lib/site";
+import { posts } from "@/app/Data/writing";
 
 export default function sitemap() {
   const currentDate = new Date();
@@ -16,6 +17,30 @@ export default function sitemap() {
       changeFrequency: "monthly",
       priority: 0.95,
     },
+    {
+      url: absoluteUrl("/case-study/customer-portals"),
+      lastModified: currentDate,
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
+      url: absoluteUrl("/case-study/canrover"),
+      lastModified: currentDate,
+      changeFrequency: "monthly",
+      priority: 0.85,
+    },
+    {
+      url: absoluteUrl("/blog"),
+      lastModified: currentDate,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    ...posts.map((post) => ({
+      url: absoluteUrl(`/blog/${post.slug}`),
+      lastModified: new Date(post.date),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    })),
     {
       url: absoluteUrl("/details/services"),
       lastModified: currentDate,

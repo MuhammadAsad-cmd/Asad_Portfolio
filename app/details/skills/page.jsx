@@ -4,7 +4,7 @@ import Link from "next/link";
 import { SITE_URL } from "@/app/lib/site";
 
 export const metadata = {
-  title: "Skills & Expertise | M. Asad - Full Stack Engineer | Technical Skills",
+  title: "Skills & Expertise | M. Asad — ERP & Operations Systems",
   description:
     "Comprehensive technical skills and expertise of Muhammad Asad - Full Stack Engineer. Proficient in React.js, Next.js, TanStack Query, Node.js, MongoDB, TypeScript, Tailwind CSS, Redux Toolkit, and 15+ modern web technologies.",
   authors: [{ name: "M. Asad" }],
@@ -373,10 +373,10 @@ const skillsData = {
       description: "Professional development experience",
     },
     {
-      title: "Client Satisfaction",
-      count: "100%",
+      title: "Clients Served",
+      count: "15+",
       icon: IoStarOutline,
-      description: "Positive feedback and recommendations",
+      description: "Freelance and full-time delivery",
     },
   ],
 };

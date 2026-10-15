@@ -70,7 +70,7 @@ const Certifications = ({ variant = "section" }) => {
                     {cert.credentialId && (
                       <>
                         <span>•</span>
-                        <span>ID: {cert.credentialId}</span>
+                        <span>Registration no. {cert.credentialId}</span>
                       </>
                     )}
                   </div>

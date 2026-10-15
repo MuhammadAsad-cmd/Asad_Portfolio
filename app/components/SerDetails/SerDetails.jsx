@@ -179,6 +179,37 @@ const SerDetails = () => {
               </header>
             </nav>
 
+            <section aria-label="How an engagement starts" className="mb-12">
+              <h2 className="mb-4 text-lg font-bold text-lightPrimarytext dark:text-white">
+                Three ways to start
+              </h2>
+              <div className="grid gap-4 md:grid-cols-3">
+                <a
+                  href="https://cal.com/muhammad-asad-189/15min"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded-xl border border-SkyBlue/40 bg-SkyBlue/5 p-5"
+                >
+                  <h3 className="text-lg font-bold text-lightPrimarytext dark:text-white">20-min ops call</h3>
+                  <p className="mt-2 text-sm text-lightSecondarytext dark:text-darkPrimaryGray">
+                    Map your channels, where orders get retyped, and whether a build is the right next step.
+                  </p>
+                </a>
+                <a href="/blog/multi-channel-order-management" className="rounded-xl border border-lightBorder p-5 dark:border-darkSecondaryGray">
+                  <h3 className="text-lg font-bold text-lightPrimarytext dark:text-white">Workflow sprint</h3>
+                  <p className="mt-2 text-sm text-lightSecondarytext dark:text-darkPrimaryGray">
+                    One painful handoff: a marketplace, a carrier, or the reports your team still builds by hand. Hector&apos;s order and shipping modules are the reference.
+                  </p>
+                </a>
+                <a href="/case-study/hector" className="rounded-xl border border-lightBorder p-5 dark:border-darkSecondaryGray">
+                  <h3 className="text-lg font-bold text-lightPrimarytext dark:text-white">Custom ERP build</h3>
+                  <p className="mt-2 text-sm text-lightSecondarytext dark:text-darkPrimaryGray">
+                    Orders, inventory, warehouse, and roles in one platform. The Hector case study is the depth of system this covers.
+                  </p>
+                </a>
+              </div>
+            </section>
+
             {/* Services Grid */}
             <section aria-labelledby="services-list-heading" className="mb-12">
               <h2 id="services-list-heading" className="sr-only">

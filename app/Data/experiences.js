@@ -14,7 +14,7 @@ export const experiences = [
         endDate: null, // Present
         skills: "MongoDB, Express.js, React, Node.js, Next.js, Redux Toolkit",
         description:
-          "Own end-to-end work on the Hector ERP platform, from Node.js and Express APIs and MongoDB schemas to React interfaces, including procurement, order fulfillment, and workforce modules.",
+          "Own end-to-end work on the Hector ERP platform, from Node.js and Express APIs and MongoDB schemas to React interfaces, including procurement, order fulfillment, and workforce modules. The manual order flow that took 3 to 4 people now runs with 1. The platform processes 200 to 300 marketplace orders a day, and operational reports come out of Hector in one click.",
       },
       {
         title: "Front End Next.js Developer",
@@ -23,7 +23,7 @@ export const experiences = [
         endDate: "2025-09",
         skills: "React, Next.js, Tailwind Css, Redux Toolkit, Rest Api",
         description:
-          "Built the Hector ERP interface in React and Next.js, covering order processing, inventory, fulfillment, and procurement, and the RetroFam and RetrovGames customer portals for tracking, trade-ins, and invoices.",
+          "Built the Hector ERP interface in React and Next.js, covering order processing, inventory, fulfillment, and procurement, and the RetroFam and RetrovGames customer portals (app.retrofam.com and app.retrovgames.com) for tracking, trade-ins, and invoices. Both portals open after the customer signs in.",
       },
     ],
   },
